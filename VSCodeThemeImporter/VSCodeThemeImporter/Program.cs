@@ -104,7 +104,7 @@
             TranslateVsTheme(theme, colorCategories);
 
             // Compile VS theme.
-            var pkgdefFilePath = CompileTheme();
+            var pkgdefFilePath = CompileTheme(deployInstall);
 
             // Deploy pkgdef to specified folder
             if (!string.IsNullOrEmpty(pkgdefOutputPath))
@@ -122,10 +122,11 @@
         }
 
         #region Compile VS Theme
-        private static string CompileTheme()
+        private static string CompileTheme(string deployInstall)
         {
             // Compile theme.
-            var colorCompilerProcess = Process.Start("VsixColorCompiler.exe", $"/registerTheme after.vstheme");
+            var compilerPath = Path.Combine(deployInstall, @"VSSDK\VisualStudioIntegration\Tools\Bin\VsixColorCompiler.exe");
+            var colorCompilerProcess = Process.Start(compilerPath, $"/registerTheme after.vstheme");
             colorCompilerProcess.WaitForExit();
             if (colorCompilerProcess.ExitCode != 0)
                 throw new ApplicationException("Fatal error running VsixColorCompiler.exe");
