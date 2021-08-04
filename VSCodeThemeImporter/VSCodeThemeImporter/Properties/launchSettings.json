@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "VSCodeThemeImporter": {
+      "commandName": "Project",
+      "commandLineArgs": "\"ImportedThemes\\Dracula Soft.json\" \"C:\\Program Files\\Microsoft Visual Studio\\2022\\Preview\""
+    }
+  }
+}

@@ -1,0 +1,4 @@
+{
+    "$schema": "https://xunit.net/schema/current/xunit.runner.schema.json",
+    "diagnosticMessages": true // set to true to see test diagnostics in the Test pane in output window
+}

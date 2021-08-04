@@ -1,0 +1,9 @@
+{
+  "$schema": "vscode://schemas/testing",
+  "object": {
+    "color": "#ffffff1a",
+    "text": "hello world",
+    "boolean": true,
+    "array": [ 100, 200, 300 ]
+  }
+}

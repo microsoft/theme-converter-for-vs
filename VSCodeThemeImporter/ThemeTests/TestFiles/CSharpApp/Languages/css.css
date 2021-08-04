@@ -1,0 +1,18 @@
+li a, h1 {
+    font-family: 'Courier New', Courier, Serif;
+}
+
+a:hover {
+    background-color: green;
+}
+
+nav {
+    background-color: aliceblue;
+}
+
+.jumbotron {
+    padding: 2rem 1rem;
+    margin-bottom: 2rem;
+    background-color: #e9ecef;
+    border-radius: .3rem;
+}

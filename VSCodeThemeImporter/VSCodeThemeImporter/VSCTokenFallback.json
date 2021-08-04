@@ -1,0 +1,8 @@
+{
+  "list.inactiveSelectionForeground": "foreground",
+  "sideBar.foreground": "foreground",
+  "inputOption.activeBorder": "input.border",
+  "input.border": "inputOption.activeBorder",
+  "inputOption.activeBackground": "input.background",
+  "inputOption.activeForeground": "input.foreground"
+}

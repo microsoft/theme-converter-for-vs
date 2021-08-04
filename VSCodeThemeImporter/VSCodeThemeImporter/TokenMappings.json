@@ -1,0 +1,4114 @@
+{
+  "tokenColors": [
+    {
+      "VSC Token": "comment.block.documentation",
+      "VS Token": [
+        "Text Editor Language Service Items&Comment",
+        "Roslyn Text Editor MEF Items&xml doc comment - delimiter",
+        "Roslyn Text Editor MEF Items&xml doc comment - text"
+      ]
+    },
+    {
+      "VSC Token": "keyword.type",
+      "VS Token": [
+        "Text Editor Language Service Items&Keyword"
+      ]
+    },
+    {
+      "VSC Token": "variable.other.readwrite.cs",
+      "VS Token": [
+        "Text Editor Language Service Items&Identifier"
+      ]
+    },
+    {
+      "VSC Token": "entity.name.function",
+      "VS Token": [
+        "Roslyn Text Editor MEF Items&method name"
+      ]
+    },
+    {
+      "VSC Token": "entity.name.tag",
+      "VS Token": [
+        "Roslyn Text Editor MEF Items&xml doc comment - name"
+      ]
+    },
+    {
+      "VSC Token": "keyword.operator",
+      "VS Token": [
+        "Text Editor MEF Items&Operator"
+      ]
+    },
+    {
+      "VSC Token": "keyword.control",
+      "VS Token": [
+        "Roslyn Text Editor MEF Items&keyword - control"
+      ]
+    },
+    {
+      "VSC Token": "entity.name.type.class.cs",
+      "VS Token": [
+        "Roslyn Text Editor MEF Items&class name"
+      ]
+    },
+    {
+      "VSC Token": "constant",
+      "VS Token": [
+        "Text Editor MEF Items&Literal"
+      ]
+    },
+    {
+      "VSC Token": "constant.numeric",
+      "VS Token": [
+        "Text Editor MEF Items&Number"
+      ]
+    },
+    {
+      "VSC Token": "string",
+      "VS Token": [
+        "Text Editor Language Service Items&String"
+      ]
+    },
+    {
+      "VSC Token": "entity.name.variable.event.cs",
+      "VS Token": [
+        "Roslyn Text Editor MEF Items&event name"
+      ]
+    },
+    {
+      "VSC Token": "entity.name.type.namespace.cs",
+      "VS Token": [
+        "Roslyn Text Editor MEF Items&namespace name"
+      ]
+    },
+    {
+      "VSC Token": "entity.name.variable.local.cs",
+      "VS Token": [
+        "Roslyn Text Editor MEF Items&local name"
+      ]
+    },
+    {
+      "VSC Token": "entity.name.variable.field.cs",
+      "VS Token": [
+        "Roslyn Text Editor MEF Items&field name",
+        "Roslyn Text Editor MEF Items&constant name"
+      ]
+    },
+    {
+      "VSC Token": "string.quoted.double.cs",
+      "VS Token": [
+        "Roslyn Text Editor MEF Items&string - verbatim",
+        "Roslyn Text Editor MEF Items&xml doc comment - attribute value"
+      ]
+    },
+    {
+      "VSC Token": "keyword.preprocessor",
+      "VS Token": [
+        "Roslyn Text Editor MEF Items&preprocessor text",
+        "Text Editor MEF Items&Preprocessor Keyword"
+      ]
+    },
+    {
+      "VSC Token": "entity.other.attribute-name.localname.cs",
+      "VS Token": [
+        "Roslyn Text Editor MEF Items&xml doc comment - attribute name"
+      ]
+    },
+    {
+      "VSC Token": "entity.name.type.delegate.cs",
+      "VS Token": [
+        "Roslyn Text Editor MEF Items&delegate name"
+      ]
+    },
+    {
+      "VSC Token": "entity.name.type.enum.cs",
+      "VS Token": [
+        "Roslyn Text Editor MEF Items&enum name"
+      ]
+    },
+    {
+      "VSC Token": "entity.name.type.interface.cs",
+      "VS Token": [
+        "Roslyn Text Editor MEF Items&interface name"
+      ]
+    },
+    {
+      "VSC Token": "entity.name.type.struct.cs",
+      "VS Token": [
+        "Roslyn Text Editor MEF Items&struct name"
+      ]
+    },
+    {
+      "VSC Token": "entity.name.type.type-parameter.cs",
+      "VS Token": [
+        "Roslyn Text Editor MEF Items&type parameter name"
+      ]
+    },
+    {
+      "VSC Token": "entity.name.variable.enum-member.cs",
+      "VS Token": [
+        "Roslyn Text Editor MEF Items&enum member name"
+      ]
+    },
+    {
+      "VSC Token": "entity.name.variable.parameter.cs",
+      "VS Token": [
+        "Roslyn Text Editor MEF Items&parameter name"
+      ]
+    },
+    {
+      "VSC Token": "entity.name.variable.property.cs",
+      "VS Token": [
+        "Roslyn Text Editor MEF Items&property name"
+      ]
+    },
+    {
+      "VSC Token": "entity.name.label.cs",
+      "VS Token": [
+        "Roslyn Text Editor MEF Items&label name"
+      ]
+    },
+    {
+      "VSC Token": "statusBar.background",
+      "VS Token": [
+        "Environment&StatusBarBuilding&Background",
+        "Environment&StatusBarDefault&Background",
+        "Environment&StatusBarNoSolution&Background",
+        "UserNotifications&ToastPanelBorder&Background"
+      ]
+    },
+    {
+      "VSC Token": "sideBar.background",
+      "VS Token": [
+        "ACDCOverview&NumberedListItem&Background",
+        "Cider&ListItemTier2&Background",
+        "Cider&ListItemTier2Border&Background",
+        "Cider&ListItemTier3&Background",
+        "Cider&ListItemTier3Border&Background",
+        "NewProjectDialog&Content&Background",
+        "ThemedDialog&ListBox&Background",
+        "ThemedDialog&WindowPanel&Background",
+        "ThemedUtilityDialog&WindowPanel&Background",
+        "TreeView&Background&Background",
+        "UserNotifications&NotificationGlyph&Background",
+        "UserNotifications&NotificationGlyphMouseDown&Background",
+        "UserNotifications&NotificationGlyphMouseDownBorder&Background",
+        "UserNotifications&NotificationGlyphMouseOver&Background",
+        "UserNotifications&NotificationGlyphMouseOverBorder&Background",
+        "VSSearch&WindowPanel&Background",
+        "ThemedDialog&ActionButtonBackground&Background",
+        "ThemedDialog&ActionButtonStroke&Background",
+        "ThemedDialog&ActionButtonStrokeHover&Background",
+        "NewProjectDialog&BackgroundLowerRegion&Background",
+        "CommonDocument&Page&Background",
+        "Environment&BrandedUIBackground&Background",
+        "NewProjectDialog&Wonderbar&Background" //
+      ]
+    },
+    {
+      "VSC Token": "sideBar.foreground",
+      "VS Token": [
+        "Cider&AnimationRecordingOff&Foreground",
+        "Cider&AnimationRecordingOn&Foreground",
+        "Cider&BreadcrumbButtonInactive&Foreground",
+        "Cider&BreadcrumbButtonInactiveBorder&Background",
+        "Cider&Command&Foreground",
+        "Cider&CommandMouseOver&Foreground",
+        "Cider&DialogExpanderGlyph&Background",
+        "Cider&DialogExpanderSelectedItemActiveGlyph&Background",
+        "Cider&HueSelectionGlyph&Background",
+        "Cider&InputMouseOver&Foreground",
+        "Cider&InteractiveIcon&Foreground",
+        "Cider&InteractiveIconMouseOver&Foreground",
+        "Cider&Menu&Foreground",
+        "Cider&PropertyValueLocal&Background",
+        "Cider&SplitBarTab&Foreground",
+        "Cider&SplitBarTabSelected&Foreground",
+        "Cider&TabItem&Foreground",
+        "Cider&TabItemMouseOver&Foreground",
+        "Cider&TabItemSelected&Foreground",
+        "ThemedDialog&WindowPanel&Foreground",
+        "Cider&TimelineXamlForeground&Background",
+        "Cider&Toggle&Foreground",
+        "Cider&ToggleMouseOver&Foreground",
+        "Cider&ToggleSelected&Foreground",
+        "Cider&ToolWindow&Foreground",
+        "Cider&ToolWindowGroup&Foreground",
+        "Cider&ToolWindowGroupSecondary&Foreground",
+        "CommonControls&FocusVisual&Foreground",
+        "CommonControls&InnerTabActiveText&Background",
+        "CommonControls&InnerTabInactiveHoverText&Background",
+        "CommonControls&InnerTabInactiveText&Background",
+        "CommonDocument&Caption&Foreground",
+        "CommonDocument&Container&Foreground",
+        "CommonDocument&GridHeadingHoverText&Background",
+        "CommonDocument&HeaderText&Background",
+        "CommonDocument&Page&Foreground",
+        "CommonDocument&StatusBannerError&Foreground",
+        "CommonDocument&StatusBannerInfo&Foreground",
+        "CommonDocument&StatusBannerProgress&Foreground",
+        "CommonDocument&StatusBannerSuccess&Foreground",
+        "CommonDocument&TileViewText&Background",
+        "CommonDocument&TileViewTextFocused&Background",
+        "CommonDocument&TileViewTextHover&Background",
+        "CommonDocument&TileViewTextPressed&Background",
+        "CommonDocument&TileViewTextSelected&Background",
+        "CommonDocument&TileViewTextUnfocused&Background",
+        "Diagnostics&ControlContent&Foreground",
+        "Diagnostics&ControlHeader&Foreground",
+        "Environment&DropDownGlyph&Background",
+        "Environment&DropDownMouseDownGlyph&Background",
+        "Environment&DropDownMouseDownText&Background",
+        "Environment&LightCaption&Background",
+        "Environment&MainWindowCloudEnvironmentActive&Foreground",
+        "Environment&MainWindowCloudEnvironmentInactive&Foreground",
+        "Environment&PanelHyperlinkInsideSelection&Foreground",
+        "Environment&PanelHyperlinkInsideSelectionActive&Foreground",
+        "Environment&StartPageTextDate&Background",
+        "Environment&ToolboxContent&Foreground",
+        "Environment&ToolboxContentMouseOver&Foreground",
+        "Environment&ToolWindowTabSelectedActiveText&Background",
+        "Environment&ToolWindowTabSelectedText&Background",
+        "Header&Default&Foreground",
+        "Header&MouseOver&Foreground",
+        "Header&MouseOverGlyph&Background",
+        "IntelliTrace&DebugHistoryControlPanel&Foreground",
+        "IntelliTrace&ReportHeaderActive&Foreground",
+        "ManifestDesigner&Background&Foreground",
+        "ManifestDesigner&DescriptionPane&Foreground",
+        "ManifestDesigner&TabActive&Foreground",
+        "ManifestDesigner&TabInactive&Foreground",
+        "ManifestDesigner&TabMouseOver&Foreground",
+        "NewProjectDialog&BackgroundLowerRegion&Foreground",
+        "NewProjectDialog&CheckBoxMouseOver&Foreground",
+        "NewProjectDialog&Content&Foreground",
+        "NewProjectDialog&ContentMouseOver&Foreground",
+        "NewProjectDialog&Details&Foreground",
+        "NewProjectDialog&ImageBorder&Foreground",
+        "NewProjectDialog&TextBoxBackground&Foreground",
+        "NewProjectDialog&TreeArrow&Foreground",
+        "NotificationBubble&NotificationBubbleForeground&Foreground",
+        "NotificationBubble&NotificationBubbleWindowPanel&Foreground",
+        "ProjectDesigner&CategoryTab&Foreground",
+        "ProjectDesigner&MouseOverCategoryTab&Foreground",
+        "ProjectDesigner&SelectedCategoryTab&Foreground",
+        "SearchControl&FocusedDropDownButtonGlyph&Background",
+        "SearchControl&MouseOverWatermarkText&Background",
+        "SearchControl&PopupButtonMouseDownText&Background",
+        "SearchControl&PopupCheckboxCheckmark&Background",
+        "SearchControl&PopupCheckboxMouseDownText&Background",
+        "SearchControl&PopupCheckboxMouseOverText&Background",
+        "SearchControl&PopupCheckboxText&Background",
+        "SearchControl&PopupItemText&Background",
+        "SearchControl&PopupMouseOverItemText&Background",
+        "SharePointTools&DesignerDefaultTab&Foreground",
+        "SharePointTools&DesignerMouseOverTab&Foreground",
+        "ThemedDialog&GridHeadingHoverText&Background",
+        "ThemedDialog&HeaderText&Background",
+        "ThemedDialog&ListBox&Foreground",
+        "ThemedDialog&ActionButtonText&Background",
+        "ThemedDialog&StartWindowDescription&Foreground",
+        "ThemedDialog&PromotionBoxText&Background",
+        "ThemedDialog&TagText&Background",
+        "TreeView&DragOverItem&Foreground",
+        "TreeView&Glyph&Background",
+        "UserInformation&ErrorText&Background",
+        "UserInformation&IDCardMinimalModeInactiveWindowText&Background",
+        "UserInformation&IDCardMinimalModeText&Background",
+        "UserInformation&IDCardSeparator&Foreground",
+        "UserInformation&IDCardText&Background",
+        "UserNotifications&Content&Foreground",
+        "UserNotifications&TitleMouseOverText&Background",
+        "UserNotifications&TitleSelectedText&Background",
+        "UserNotifications&TitleText&Background",
+        "UserNotifications&ToastGlyphButton&Background",
+        "UserNotifications&ToastMessageText&Background",
+        "UserNotifications&ToastTitleText&Background",
+        "VisualStudioInstaller&BodyText&Background",
+        "VisualStudioInstaller&HeaderText&Background",
+        "VisualStudioInstaller&PivotText&Background",
+        "VisualStudioInstaller&SectionHeaderText&Background",
+        "VSSearch&WindowPanelText&Foreground",
+        "NewProjectDialog&Wonderbar&Foreground" //
+      ]
+    },
+    {
+      "VSC Token": "textLink.foreground",
+      "VS Token": [
+        "ACDCOverview&Hyperlink&Foreground",
+        "ACDCOverview&HyperlinkActive&Foreground",
+        "ACDCOverview&HyperlinkHover&Foreground",
+        "Cider&Hyperlink&Background",
+        "CommonDocument&Hyperlink&Background",
+        "Diagnostics&AdvancedListItemLink&Background",
+        "Environment&ControlLinkText&Background",
+        "Environment&EditorExpansionLink&Background",
+        "Environment&HelpHowDoIPaneLink&Background",
+        "Environment&HelpHowDoITaskLink&Background",
+        "Environment&HelpSearchResultLinkSelected&Background",
+        "Environment&HelpSearchResultLinkUnselected&Background",
+        "Environment&PanelHyperlinkInsideSelectionInactive&Foreground",
+        "NewProjectDialog&Hyperlink&Background",
+        "NotificationBubble&NotificationBubbleHyperlink&Background",
+        "ThemedDialog&Hyperlink&Background",
+        "UnthemedDialog&Hyperlink&Foreground",
+        "UnthemedDialog&HyperlinkPressed&Foreground",
+        "UserNotifications&IgnoredHyperlink&Background",
+        "DiagnosticsHub&Hyperlink&Background"
+      ]
+    },
+    {
+      "VSC Token": "editorGroupHeader.tabsBackground",
+      "VS Token": [
+        "ACDCOverview&Chevron&Foreground",
+        "ACDCOverview&ContentSectionHeader&Foreground",
+        "ACDCOverview&H1&Foreground",
+        "CommonDocument&TitleText&Background",
+        "Environment&AutoHideTabBackgroundBegin&Background",
+        "Environment&AutoHideTabBackgroundEnd&Background",
+        "Environment&AutoHideTabMouseOverBackgroundBegin&Background",
+        "Environment&AutoHideTabMouseOverBackgroundEnd&Background",
+        "Environment&EnvironmentBackground&Background",
+        "Environment&EnvironmentBackgroundGradientBegin&Backgrsound",
+        "Environment&EnvironmentBackgroundGradientEnd&Background",
+        "Environment&EnvironmentBackgroundGradientMiddle1&Background",
+        "Environment&EnvironmentBackgroundGradientMiddle2&Background",
+        "Environment&EnvironmentBackgroundTexture1&Background",
+        "Environment&EnvironmentBackgroundTexture2&Background",
+        "Environment&ToolWindowBorder&Background",
+        "Environment&ToolWindowTabBorder&Background",
+        "Environment&ToolWindowTabMouseOverBorder&Background",
+        "Environment&ToolWindowTabSeparator&Background",
+        "Environment&FileTabActiveGroupBackground&Background"
+      ]
+    },
+    {
+      "VSC Token": "titleBar.activeBackground",
+      "VS Token": [
+        "Cider&AnimationRecordingOff&Background",
+        "Cider&AnimationRecordingOn&Background",
+        "Cider&ComboBoxDisabled&Background",
+        "Cider&Dialog&Background",
+        "Cider&GridSplitter&Background",
+        "Cider&InputDisabled&Background",
+        "Cider&SplitBar&Background",
+        "Cider&TimelinePropertyXamlBackground&Background",
+        "Cider&Toolbar&Background",
+        "Cider&ToolWindowShelf&Background",
+        "CommonDocument&Caption&Background",
+        "Environment&AccentMedium&Background",
+        "Environment&AccentPale&Background",
+        "Environment&AppWorkspace&Background",
+        "Environment&ComboBoxDisabledBackground&Background",
+        "Environment&CommandBarCheckBoxDisabled&Background",
+        "Environment&CommandBarGradientBegin&Background",
+        "Environment&CommandBarGradientEnd&Background",
+        "Environment&CommandBarGradientMiddle&Background",
+        "Environment&CommandBarHoverOverSelectedIconBorder&Background",
+        "Environment&CommandBarMouseOverUnfocused&Background",
+        "Environment&CommandBarOptionsBackground&Background",
+        "Environment&CommandBarOptionsMouseDownBackgroundBegin&Background",
+        "Environment&CommandBarOptionsMouseDownBackgroundEnd&Background",
+        "Environment&CommandBarOptionsMouseDownBackgroundMiddle&Background",
+        "Environment&CommandBarOptionsMouseOverBackgroundBegin&Background",
+        "Environment&CommandBarOptionsMouseOverBackgroundEnd&Background",
+        "Environment&CommandBarOptionsMouseOverBackgroundMiddle1&Background",
+        "Environment&CommandBarOptionsMouseOverBackgroundMiddle2&Background",
+        "Environment&CommandBarSplitButtonMouseDownGlyph&Background",
+        "Environment&CommandBarSplitButtonMouseOverGlyph&Background",
+        "Environment&CommandBarToolBarBorder&Background",
+        "Environment&CommandShelfBackgroundGradientBegin&Background",
+        "Environment&CommandShelfBackgroundGradientEnd&Background",
+        "Environment&CommandShelfBackgroundGradientMiddle&Background",
+        "Environment&CommandShelfHighlightGradientBegin&Background",
+        "Environment&CommandShelfHighlightGradientEnd&Background",
+        "Environment&CommandShelfHighlightGradientMiddle&Background",
+        "Environment&CompletionBorder&Background",
+        "Environment&DebuggerDataTipInactiveBackground&Background",
+        "Environment&DropDownDisabledBackground&Background",
+        "Environment&EditorAdditionalContentBorder&Background",
+        "Environment&FileTabProvisionalInactiveForeground&Background",
+        "Environment&FileTabProvisionalSelectedInactive&Background",
+        "Environment&FileTabProvisionalSelectedInactiveBorder&Background",
+        "Environment&FileTabScrollBarArrowGlyphHover&Background",
+        "Environment&FileTabScrollBarThumbHover&Background",
+        "Environment&Halo&Background",
+        "Environment&HorizontalResizeGrip&Background",
+        "Environment&InactiveCaption&Background",
+        "Environment&MainWindowActiveCaption&Background",
+        "Environment&MainWindowCloudEnvironmentInactive&Background",
+        "Environment&PanelSeparator&Background",
+        "Environment&PanelSubGroupSeparator&Background",
+        "Environment&PanelTitleBar&Background",
+        "Environment&PanelTitleBarUnselected&Background",
+        "Environment&ProjectDesignerBackgroundGradientBegin&Background",
+        "Environment&ProjectDesignerBackgroundGradientEnd&Background",
+        "Environment&ProjectDesignerBorderInside&Background",
+        "Environment&ProjectDesignerBorderOutside&Background",
+        "Environment&ProjectDesignerContentsBackground&Background",
+        "Environment&ProjectDesignerTabBackgroundGradientBegin&Background",
+        "Environment&ProjectDesignerTabBackgroundGradientEnd&Background",
+        "Environment&ProjectDesignerTabSepBottomGradientBegin&Background",
+        "Environment&ProjectDesignerTabSepTopGradientEnd&Background",
+        "Environment&TitleBarActiveBorder&Background",
+        "Environment&TitleBarDragHandleActive&Background",
+        "Environment&TitleBarInactiveGradientBegin&Background",
+        "Environment&TitleBarInactiveGradientEnd&Background",
+        "Environment&ToolboxSelectedHeadingBegin&Background",
+        "Environment&ToolboxSelectedHeadingEnd&Background",
+        "Environment&ToolboxSelectedHeadingMiddle1&Background",
+        "Environment&ToolboxSelectedHeadingMiddle2&Background",
+        "Environment&ToolWindowButtonInactive&Background",
+        "Environment&ToolWindowButtonInactiveBorder&Background",
+        "Environment&ToolWindowFloatingFrame&Background",
+        "Environment&ToolWindowFloatingFrameInactive&Background",
+        "Environment&VerticalResizeGripBegin&Background",
+        "Environment&VerticalResizeGripEnd&Background",
+        "Environment&VerticalResizeGripMiddle&Background",
+        "NewProjectDialog&Background&Background",
+        "NewProjectDialog&CheckBox&Background",
+        "NewProjectDialog&Details&Background",
+        "NewProjectDialog&TextBoxDisabled&Background",
+        "SearchControl&Disabled&Background",
+        "StartPage&StartPageNewsBackground&Background",
+        "ThemedDialog&WizardFooter&Background",
+        "ThemedUtilityDialog&ActiveCaption&Background",
+        "VSSearch&WindowPanelBorder&Background",
+        "VSSearch&WindowPanelTabDivider&Background",
+        "Environment&TitleBarActiveGradientBegin&Background",
+        "Environment&TitleBarActiveGradientEnd&Background",
+        "Environment&TitleBarActiveGradientMiddle1&Background",
+        "Environment&TitleBarActiveGradientMiddle2&Background"
+      ]
+    },
+    {
+      "VSC Token": "titleBar.activeForeground",
+      "VS Token": [
+        "Environment&FileTabIndicatorTextSelectedInactive&Background",
+        "Environment&CommandBarTextMouseDown&Background",
+        "Environment&TitleBarActive&Background"
+      ]
+    },
+    {
+      "VSC Token": "scrollbarSlider.background",
+      "VS Token": [
+        "Environment&AutoHideResizeGrip&Background",
+        "Environment&AutoHideResizeGripDisabled&Background",
+        "Environment&ScrollBarArrowDisabledBackground&Background",
+        "Environment&ScrollBarDisabledBackground&Background",
+        "Environment&ScrollBarThumbDisabled&Background",
+        "StartPage&StartPagePartitionLine&Background",
+        "StartPage&VideoRSSItem&Background",
+        "Environment&ScrollBarThumbGlyph&Background",
+        "Environment&ScrollBarThumbBackground&Background"
+      ]
+    },
+    {
+      "VSC Token": "scrollbar.shadow",
+      "VS Token": [
+        "Environment&ScrollBarThumbBorder&Background",
+        "Environment&ScrollBarArrowBackground&Background",
+        "Environment&ScrollBar&Background", //
+        "Environment&ScrollBarBackground&Background" //
+      ]
+    },
+    {
+      "VSC Token": "scrollbarSlider.hoverBackground",
+      "VS Token": [
+        "Environment&ScrollBarArrowPressedBackground&Background", //
+        "Environment&ScrollBarArrowMouseOverBackground&Background",
+        "Environment&ScrollBarThumbGlyphMouseOverBorder&Background",
+        "Environment&ScrollBarThumbMouseOverBackground&Background",
+        "Environment&ScrollBarThumbMouseOverBorder&Background"
+      ]
+    },
+    {
+      "VSC Token": "tab.activeBackground",
+      "VS Token": [
+        "Environment&FileTabButtonDownSelectedActiveGlyph&Background",
+        "Environment&FileTabProvisionalSelectedActive&Background",
+        "Environment&FileTabSelectedBackground&Background",
+        "Environment&FileTabSelectedGradientBottom&Background",
+        "Environment&FileTabSelectedGradientMiddle1&Background",
+        "Environment&FileTabSelectedGradientMiddle2&Background",
+        "Environment&FileTabSelectedGradientTop&Background"
+      ]
+    },
+    {
+      "VSC Token": "tab.activeForeground",
+      "VS Token": [
+        "Environment&FileTabIndicatorTextSelectedActive&Background",
+        "Environment&FileTabSelectedText&Background"
+      ]
+    },
+    {
+      "VSC Token": "tab.activeBorder",
+      "VS Token": [
+        "Environment&FileTabDocumentBorderBackground&Background",
+        "Environment&FileTabProvisionalSelectedActiveBorder&Background",
+        "Environment&FileTabSelectedBorder&Background",
+        "NavigateTo&ResultListAccentBorder&Background"
+      ]
+    },
+    {
+      "VSC Token": "tab.inactiveBackground",
+      "VS Token": [
+        "Environment&FileTabBackground&Background",
+        "Environment&FileTabButtonDownInactiveGlyph&Background",
+        "Environment&FileTabButtonDownSelectedInactive&Background",
+        "Environment&FileTabButtonDownSelectedInactiveBorder&Background",
+        "Environment&FileTabInactiveDocumentBorderBackground&Background",
+        "Environment&FileTabInactiveGradientBottom&Background",
+        "Environment&FileTabInactiveGradientTop&Background"
+      ]
+    },
+    {
+      "VSC Token": "tab.inactiveForeground",
+      "VS Token": [
+        "Environment&FileTabText&Background",
+        "Environment&FileTabInactiveText&Background",
+        "Environment&FileTabLastActiveText&Background",
+        "Environment&FileTabButtonProvisionalDownSelectedInactiveGlyph&Background",
+        "Environment&FileTabButtonDownSelectedInactiveGlyph&Background",
+        "Environment&FileTabButtonProvisionalHoverInactiveGlyph&Background",
+        "Environment&AutoHideTabText&Background"
+      ]
+    },
+    {
+      "VSC Token": "input.border",
+      "VS Token": [
+        "Cider&ArtboardTick&Background",
+        "Cider&ComboBoxBorder&Background",
+        "Cider&InputBorder&Background",
+        "Cider&ListBorder&Background",
+        "CommonControls&TextBoxBorder&Background", //
+        "CommonControls&TextBoxBorderFocused&Background", //
+        "Environment&BrandedUIBorder&Background",
+        "Environment&ControlOutline&Background",
+        "Environment&DebuggerDataTipActiveBorder&Background",
+        "Environment&PanelBorder&Background",
+        "Environment&SearchBoxBorder&Background",
+        "Environment&SplashScreenBorder&Background",
+        "Environment&ToolboxDivider&Background",
+        "SearchControl&ActionButtonMouseDownBorder&Background",
+        "SearchControl&ActionButtonMouseOverBorder&Background", //
+        "SearchControl&DropDownSeparator&Background",
+        "SearchControl&FocusedBorder&Background",
+        "SearchControl&FocusedDropDownButtonBorder&Background", //
+        "SearchControl&FocusedDropDownSeparator&Background",
+        "SearchControl&MouseDownDropDownButtonBorder&Background",
+        "SearchControl&MouseOverBorder&Background", //
+        "SearchControl&MouseOverDropDownButtonBorder&Background", //
+        "SearchControl&MouseOverDropDownSeparator&Background", //
+        "SearchControl&UnfocusedBorder&Background", //
+        "SearchControl&UnfocusedDropDownButtonBorder&Background", // 
+        "TaskRunnerExplorerControls&ComboBoxBorder&Background",
+        "TeamExplorer&TextBoxBorder&Background",
+        "ThemedDialog&ListBoxBorder&Background"
+      ]
+    },
+    {
+      "VSC Token": "tab.unfocusedHoverBackground",
+      "VS Token": [
+        "Environment&CommandBarSelectedIconBorder&Background",
+        "Environment&CommandBarSelectedIconDisabledBorder&Background",
+        "Environment&CommandBarShadow&Background",
+        "Environment&DocWellOverflowButtonGlyph&Background",
+        "Environment&FileTabHotGradientBottom&Background",
+        "Environment&FileTabHotGradientTop&Background",
+        "Environment&FileTabLastActiveGradientBottom&Background",
+        "Environment&FileTabLastActiveGradientMiddle1&Background",
+        "Environment&FileTabLastActiveGradientMiddle2&Background",
+        "Environment&FileTabLastActiveGradientTop&Background",
+        "Environment&FileTabProvisionalHover&Background",
+        "Environment&FileTabProvisionalHoverBorder&Background"
+      ]
+    },
+    {
+      "VSC Token": "menu.selectionBackground",
+      "VS Token": [
+        "Cider&BreadcrumbButtonOnHover&Background",
+        "Cider&CommandMouseOver&Background",
+        "Cider&ToggleSelected&Background",
+        "Environment&AutoHideTabMouseOverBorder&Background",
+        "Environment&CommandBarMenuItemMouseOver&Background",
+        "Environment&DebuggerDataTipActiveHighlight&Background",
+        "Environment&ToolboxContentMouseOver&Background",
+        "Environment&ToolboxDisabledContentMouseOver&Background",
+        "NotificationBubble&NotificationBubbleWindowButtonHover&Background",
+        "SearchControl&PopupSectionHeaderGradientBegin&Background",
+        "SearchControl&PopupSectionHeaderGradientEnd&Background",
+        "SearchControl&PopupSectionHeaderSeparator&Background",
+        "StartPage&DefaultBannerLinkHover&Foreground",
+        "StartPage&VideoRSSItemTitlePressed&Foreground",
+        "UserNotifications&IgnoredMouseOverBackground&Background",
+        "UserNotifications&IgnoredMouseOverBorder&Background",
+        "Environment&CommandBarMouseOverBackgroundGradient&Background", //
+        "Environment&CommandBarHoverOverSelectedIcon&Background" //
+      ]
+    },
+    {
+      "VSC Token": "menubar.selectionBackground",
+      "VS Token": [
+        "Environment&CommandBarHover&Background",
+        "Environment&CommandBarHoverOverSelected&Background",
+        "Environment&CommandBarMouseDownBackgroundBegin&Background",
+        "Environment&CommandBarMouseDownBackgroundEnd&Background",
+        "Environment&CommandBarMouseDownBackgroundMiddle&Background",
+        "Environment&CommandBarMouseDownBorder&Background",
+        "Environment&CommandBarMouseOverBackgroundBegin&Background",
+        "Environment&CommandBarMouseOverBackgroundEnd&Background",
+        "Environment&CommandBarMouseOverBackgroundMiddle1&Background",
+        "Environment&CommandBarMouseOverBackgroundMiddle2&Background",
+        "Environment&CommandBarSelected&Background",
+        "Environment&StartPageTextControlLinkSelectedHover&Background"
+      ]
+    },
+    {
+      "VSC Token": "button.background",
+      "VS Token": [
+        "Cider&BreadcrumbButton&Background",
+        "Cider&ComboBoxButton&Background",
+        "Cider&ComboBoxButtonPressed&Background",
+        "Cider&IconButton&Background",
+        "Cider&IconButtonPressed&Background",
+        "ClientDiagnosticsMemory&DropDownButton&Background",
+        "ClientDiagnosticsMemory&SnapshotButton&Background",
+        "ClientDiagnosticsMemory&SnapshotButtonActive&Background",
+        "CodeSenseControls&PopupPinButtonMouseDown&Background",
+        "CommonControls&Button&Background",
+        "CommonControls&ButtonDefault&Background",
+        "CommonControls&ButtonPressed&Background",
+        "Environment&ButtonHighlight&Background",
+        "Environment&ComboBoxFocusedButtonBackground&Background",
+        "Environment&DockTargetButtonBackgroundBegin&Background",
+        "Environment&DockTargetButtonBackgroundEnd&Background",
+        "Environment&DocWellOverflowButtonMouseDownBackground&Background",
+        "Environment&DocWellOverflowButtonMouseDownGlyph&Background",
+        "Environment&DropDownButtonMouseDownBackground&Background",
+        "Environment&FileTabButtonDownInactive&Background",
+        "Environment&FileTabButtonDownSelectedActive&Background",
+        "Environment&FileTabButtonProvisionalDownInactiveGlyph&Background",
+        "Environment&FileTabButtonProvisionalDownSelectedActive&Background",
+        "Environment&FileTabButtonProvisionalSelectedActiveGlyph&Background",
+        "Environment&FileTabButtonSelectedActiveGlyph&Background",
+        "Environment&QuickCustomizeButton&Background",
+        "Environment&StartPageButtonPinDown&Background",
+        "Environment&StartPageButtonUnpinned&Background",
+        "Environment&ToolWindowButtonActiveGlyph&Background",
+        "Environment&ToolWindowButtonDown&Background",
+        "Environment&ToolWindowButtonDownActiveGlyph&Background",
+        "Environment&ToolWindowButtonDownInactiveGlyph&Background",
+        "GraphDocumentColors&ExpandoButtonBackground&Background",
+        "GraphDocumentColors&LinkNavigatorButtonFillEndColor&Background",
+        "GraphDocumentColors&LinkNavigatorButtonFillStartColor&Background",
+        "GraphDocumentColors&LinkNavigatorButtonStrokeEndColor&Background",
+        "GraphDocumentColors&LinkNavigatorButtonStrokeStartColor&Background",
+        "GraphDocumentColors&MultiOperationButtonPressedBackground&Background",
+        "GraphicsDesigners&DropDownButton&Background",
+        "GraphicsDesigners&SnapshotButton&Background",
+        "GraphicsDesigners&SnapshotButtonActive&Background",
+        "InfoBar&Button&Background",
+        "InfoBar&ButtonMouseDown&Background",
+        "InfoBar&CloseButtonDownGlyph&Background",
+        "InformationBadge&Background&Background",
+        "NotificationBubble&NotificationBubbleWindowButton&Background",
+        "NotificationBubble&NotificationBubbleWindowButtonDownGlyph&Background",
+        "Promotion&LightboxDialogButton&Background",
+        "Promotion&LightboxDialogButtonFocused&Background",
+        "Promotion&LightboxDialogButtonPressed&Background",
+        "StartPage&StartPageButton&Background",
+        "TaskRunnerExplorerControls&Button&Background",
+        "TeamExplorer&Button&Background",
+        "TeamExplorer&ButtonPressed&Background",
+        "TeamExplorer&CallToActionButton&Background",
+        "TeamExplorer&CallToActionButtonPressed&Background",
+        "ThemedDialog&WindowButton&Background",
+        "ThemedDialog&WindowButtonDown&Background",
+        "ThemedDialog&WindowButtonDownGlyph&Background",
+        "ThemedUtilityDialog&WindowButton&Background",
+        "UserNotifications&BadgeButtonCountActive&Background",
+        "UserNotifications&BadgeButtonCountInactive&Background",
+        "UserNotifications&BadgeButtonCountMouseDown&Background",
+        "UserNotifications&BadgeButtonCriticalActiveGlyph&Background",
+        "UserNotifications&BadgeButtonCriticalInactiveGlyph&Background",
+        "UserNotifications&ToastActionButton&Background",
+        "WelcomeExperience&WelcomeExperienceBackground&Background",
+        "WelcomeExperience&WelcomeExperienceButtonBackground&Background",
+        "WelcomeExperience&WelcomeExperienceButtonMousedownBackground&Background",
+        "WelcomeExperience&WelcomeExperienceDistinctButtonBackground&Background",
+        "WelcomeExperience&WelcomeExperienceDistinctButtonMousedownBackground&Background"
+      ]
+    },
+    {
+      "VSC Token": "button.foreground",
+      "VS Token": [
+        "Cider&BreadcrumbButtonOnHover&Foreground",
+        "Cider&BreadcrumbButtonSelected&Foreground",
+        "Cider&BreadcrumbButtonSelectedOnHover&Foreground",
+        "Cider&ComboBoxButtonMouseOver&Foreground",
+        "Cider&IconButton&Foreground",
+        "Cider&IconButtonMouseOver&Foreground",
+        "Cider&IconButtonPressed&Foreground",
+        "ClientDiagnosticsMemory&SnapshotButtonActive&Foreground",
+        "CodeSenseControls&PopupPinButtonMouseDown&Foreground",
+        "CommonControls&Button&Foreground",
+        "CommonControls&ButtonFocused&Foreground",
+        "CommonControls&ButtonHover&Foreground",
+        "CommonControls&ButtonPressed&Foreground",
+        "Environment&QuickCustomizeButtonTextHover&Background",
+        "Environment&StartPageButtonTextHover&Background",
+        "Environment&ToolWindowButtonHoverActiveGlyph&Background",
+        "Environment&ToolWindowButtonHoverInactiveGlyph&Background",
+        "GraphicsDesigners&SnapshotButtonActive&Foreground",
+        "GraphicsDesigners&SnapshotButtonHover&Foreground",
+        "InfoBar&ButtonMouseDown&Foreground",
+        "InformationBadge&Text&Background",
+        "InformationBadge&TextHover&Background",
+        "NotificationBubble&NotificationBubbleCloseButtonGlyph&Foreground",
+        "NotificationBubble&NotificationBubbleCloseButtonHoverGlyph&Foreground",
+        "NotificationBubble&NotificationBubbleCloseButtonPressedGlyph&Foreground",
+        "Promotion&LightboxDialogButtonFocused&Foreground",
+        "Promotion&LightboxDialogButtonHover&Foreground",
+        "Promotion&LightboxDialogButtonPressed&Foreground",
+        "Promotion&LightboxDialogCloseButtonGlyph&Foreground",
+        "Promotion&LightboxDialogCloseButtonGlyphFocused&Foreground",
+        "Promotion&LightboxDialogCloseButtonGlyphHover&Foreground",
+        "StartPage&StartPageButton&Foreground",
+        "StartPage&StartPageButtonMouseDown&Foreground",
+        "StartPage&StartPageButtonMouseOver&Foreground",
+        "StartPage&StartPageCloseButtonDownGlyph&Foreground",
+        "StartPage&StartPageCloseButtonGlyph&Foreground",
+        "StartPage&StartPageCloseButtonHoverGlyph&Foreground",
+        "TaskRunnerExplorerControls&ButtonPressed&Foreground",
+        "TeamExplorer&Button&Foreground",
+        "TeamExplorer&ButtonMouseOver&Foreground",
+        "TeamExplorer&ButtonPressed&Foreground",
+        "TeamExplorer&CallToActionButtonMouseOver&Foreground",
+        "TeamExplorer&CallToActionButtonPressed&Foreground",
+        "ThemedDialog&CloseWindowButtonHover&Foreground",
+        "ThemedDialog&WindowButtonHoverGlyph&Background",
+        "NotificationBubble&NotificationBubbleWindowButtonHoverGlyph&Background",
+        "UserNotifications&BadgeButtonCountActive&Foreground",
+        "UserNotifications&BadgeButtonCountInactive&Foreground",
+        "UserNotifications&BadgeButtonCountMouseDown&Foreground",
+        "UserNotifications&BadgeButtonCountMouseOverActive&Foreground",
+        "UserNotifications&BadgeButtonCountMouseOverInactive&Foreground",
+        "UserNotifications&ToastActionButtonTextHover&Background",
+        "UserNotifications&ToastActionButtonTextPressed&Background",
+        "WelcomeExperience&WelcomeExperienceButtonMousedownForeground&Foreground",
+        "WelcomeExperience&WelcomeExperienceButtonMouseoverForeground&Foreground",
+        "WelcomeExperience&WelcomeExperienceDistinctButtonForeground&Foreground",
+        "WelcomeExperience&WelcomeExperienceDistinctButtonMousedownForeground&Foreground",
+        "WelcomeExperience&WelcomeExperienceDistinctButtonMouseoverForeground&Foreground"
+      ]
+    },
+    {
+      "VSC Token": "panel.background",
+      "VS Token": [
+        "Cider&ToolWindow&Background",
+        "Environment&ToolWindowContentGrid&Background",
+        "ACDCOverview&NumberedListItemActive&Background",
+        "ACDCOverview&NumberedListItemActiveBorder&Background",
+        "ACDCOverview&NumberedListItemHoverBorder&Foreground",
+        "ApplicationInsights&Error&Background",
+        "ApplicationInsights&LiveMetricsFailedRequestStroke&Background",
+        "ApplicationInsights&LiveMetricsRequestStroke&Background",
+        "ApplicationInsights&Squiggly&Background",
+        "ApplicationInsights&Success&Background",
+        "Cider&AnimationRecordingIndication&Background",
+        "Cider&ArtboardDistance&Background",
+        "Cider&ArtboardDistanceSelected&Foreground",
+        "Cider&ComboBoxMouseOver&Background",
+        "Cider&ComboBoxMouseOverBorder&Background",
+        "Cider&CommandMouseOverBorder&Background",
+        "Cider&CommandPressed&Background",
+        "Cider&DialogExpanderGlyphMouseOver&Background",
+        "Cider&InteractiveIconMouseOver&Background",
+        "Cider&ListItemSearchResult&Background",
+        "Cider&ListItemSearchResultBorder&Background",
+        "Cider&ListItemSecondary&Background",
+        "Cider&ListItemSecondaryOnHover&Background",
+        "Cider&ListItemSecondarySelected&Background",
+        "Cider&ListItemSelected&Background",
+        "Cider&LivePropertyExplorerResourceReference&Background",
+        "Cider&StructureViewChildSelected&Background",
+        "Cider&StructureViewDropTargetSplit&Background",
+        "Cider&StructureViewInsertionContainer&Background",
+        "Cider&TabItemMouseOver&Background",
+        "Cider&TabItemSelected&Background",
+        "Cider&TimelineDurationBarIterationDivider&Background",
+        "Cider&TimelineDurationBarKeyframeGripper&Background",
+        "Cider&TimelineDurationBarLiveIteration&Background",
+        "Cider&TimelineDurationBarLiveIterationDivider&Background",
+        "Cider&TimelineDurationBarLiveIterationLabel&Background",
+        "Cider&TimelineDurationLiveKeyframe&Background",
+        "Cider&TimelineElementXamlBackground&Background",
+        "Cider&TimelineKeyframeSelected&Background",
+        "Cider&ToggleMouseOver&Background",
+        "ClientDiagnosticsMemory&TabHover&Background",
+        "ClientDiagnosticsTools&FocusDots&Foreground",
+        "ClientDiagnosticsTools&GridHeaderHover&Background",
+        "ClientDiagnosticsTools&InactiveSelectedBackgroundColor&Background",
+        "ClientDiagnosticsTools&MenuFocus&Background",
+        "ClientDiagnosticsTools&MenuHover&Background",
+        "ClientDiagnosticsTools&MouseOverBackgroundColor&Background",
+        "ClientDiagnosticsTools&Progress&Background",
+        "ClientDiagnosticsTools&SelectedBackgroundColor&Background",
+        "CodeSenseControls&ActionLink&Background",
+        "CodeSenseControls&ActionLinkItem&Foreground",
+        "CodeSenseControls&PopupHover&Background",
+        "CodeSenseControls&PopupSelected&Background",
+        "CodeSenseControls&PopupSelectedInactive&Background",
+        "CodeSenseControls&RankedItemsFifth&Background",
+        "CodeSenseControls&RankedItemsFourth&Background",
+        "CommonDocument&InnerTabActiveIndicator&Background",
+        "CommonDocument&InnerTabSelectedIndicator&Background",
+        "DetailsView&CommandBarHoverOverSelected&Background",
+        "DetailsView&CommandBarMouseOverBackground&Background",
+        "Diagnostics&ControlContent&Background",
+        "Diagnostics&TargetBackground&Background",
+        "Diagnostics&TargetBackgroundHover&Background",
+        "Diagnostics&TargetBackgroundPressed&Background",
+        "DiagnosticsHub&RulerSliderActive&Background",
+        "Environment&ControlEditRequiredBackground&Background",
+        "Environment&Dialog&Background",
+        "Environment&DockTargetGlyphBackgroundBegin&Background",
+        "Environment&DockTargetGlyphBackgroundEnd&Background",
+        "Environment&DropDownMouseDownBackground&Background",
+        "Environment&DropDownMouseDownBorder&Background",
+        "Environment&EditorExpansionFill&Background",
+        "Environment&NewProjectItemSelected&Background",
+        "Environment&NewProjectItemSelectedBorder&Background",
+        "Environment&NewProjectProviderHoverBegin&Background",
+        "Environment&NewProjectProviderHoverEnd&Background",
+        "Environment&NewProjectProviderHoverMiddle1&Background",
+        "Environment&NewProjectProviderHoverMiddle2&Background",
+        "Environment&PageSideBarExpanderHeaderHover&Background",
+        "Environment&PageSideBarExpanderHeaderPressed&Background",
+        "Environment&PanelDisabledHyperlinkInsideSelectionActive&Background",
+        "Environment&PanelDisabledHyperlinkInsideSelectionInactive&Background",
+        "Environment&ProjectDesignerTabSelectedHighlight1&Background",
+        "Environment&ProjectDesignerTabSelectedHighlight2&Background",
+        "Environment&StartPageSelectedItemBackground&Background",
+        "Environment&StartPageSelectedItemStroke&Background",
+        "Environment&StartPageTabMouseOverBackgroundBegin&Background",
+        "Environment&StartPageTabMouseOverBackgroundEnd&Background",
+        "Environment&StartPageUnselectedItemBackgroundBegin&Background",
+        "Find Results&Current List Location&Background",
+        "Find&DropDownMenuMouseDown&Foreground",
+        "GraphDocumentColors&GlassHighlightEndColor&Background",
+        "GraphDocumentColors&GlassHighlightStartColor&Background",
+        "GraphDocumentColors&NoShapeSelectionBorder&Background",
+        "GraphDocumentColors&NoShapeSelectionEndColor&Background",
+        "GraphDocumentColors&NoShapeSelectionStartColor&Background",
+        "GraphDocumentColors&ProgressBarColor&Background",
+        "GraphDocumentColors&SelectionBorder&Background",
+        "GraphDocumentColors&SelectionBrush&Background",
+        "GraphicsDesigners&ColorAdditionalSelectedWireframe&Background",
+        "GraphicsDesigners&ColorLassoOutline&Background",
+        "GraphicsDesigners&ColorLassoRectangle&Background",
+        "GraphicsDesigners&ColorLinkInvalidHighlight&Background",
+        "GraphicsDesigners&ColorLinkLiveHighlight&Background",
+        "GraphicsDesigners&ColorLinkNormalHighlight&Background",
+        "GraphicsDesigners&ColorLinkSelectedHighlight&Background",
+        "GraphicsDesigners&ColorLinkValidHighlight&Background",
+        "GraphicsDesigners&ColorManipulatorSelectedAxis&Background",
+        "GraphicsDesigners&ColorMeshPoint&Background",
+        "GraphicsDesigners&ColorNodeSelected&Background",
+        "GraphicsDesigners&ColorSelectedMaterial&Background",
+        "GraphicsDesigners&ColorSelectedMeshFace&Background",
+        "GraphicsDesigners&ColorSelectedMeshPoint&Background",
+        "GraphicsDesigners&ColorSelectedPolygonEdge&Background",
+        "GraphicsDesigners&ColorSelectedWireframe&Background",
+        "GraphicsDesigners&ColorWireframe&Background",
+        "GraphicsDesigners&ColorZAxis&Background",
+        "GraphicsDesigners&FocusDots&Foreground",
+        "GraphicsDesigners&GridHeaderHover&Background",
+        "GraphicsDesigners&InactiveSelectedBackgroundColor&Background",
+        "GraphicsDesigners&MenuFocus&Background",
+        "GraphicsDesigners&MenuHover&Background",
+        "GraphicsDesigners&MouseOverBackgroundColor&Background",
+        "GraphicsDesigners&Progress&Background",
+        "GraphicsDesigners&SelectedBackgroundColor&Background",
+        "GraphicsDesigners&TabHover&Background",
+        "Header&Default&Background", //
+        "Header&MouseDown&Background", 
+        "Header&MouseOver&Background",
+        "IntelliTrace&IntelliTraceTImelineBreakpointBorder&Background",
+        "IntelliTrace&IntelliTraceTimelineBreakpointFill&Background",
+        "IntelliTrace&IntelliTraceTimelineExceptionBorder&Background",
+        "IntelliTrace&IntelliTraceTimelineExceptionFill&Background",
+        "ManifestDesigner&TabActive&Background",
+        "ManifestDesigner&TabMouseOver&Background",
+        "NavigateTo&ResultListItem&Background",
+        "NewProjectDialog&CheckBoxMouseOver&Background",
+        "NewProjectDialog&ContentSelectedBorder&Background",
+        "NewProjectDialog&InputFocusBorder&Background",
+        "Output Window&OutputError&Foreground",
+        "Output Window&OutputHeading&Foreground",
+        "Output Window&Plain Text&Background",
+        "ProjectDesigner&SelectedCategoryTab&Background",
+        "SharePointTools&DesignerMouseOverTab&Background",
+        "StartPage&DefaultBannerLink&Foreground",
+        "StartPage&DefaultBannerLinkPressed&Foreground",
+        "StartPage&StartPageExpander&Background",
+        "StartPage&StartPageExpanderPressed&Background",
+        "StartPage&StartPageListItemPressed&Background",
+        "StartPage&StartPageNotificationDotBorder&Foreground",
+        "StartPage&VideoRSSItemTitleMouseOver&Foreground",
+        "TaskRunnerExplorerControls&ButtonBorderPressed&Background",
+        "TaskRunnerExplorerControls&ButtonPressed&Background",
+        "TaskRunnerExplorerControls&CheckBoxBackgroundPressed&Background",
+        "TaskRunnerExplorerControls&CheckBoxBorderPressed&Background",
+        "TaskRunnerExplorerControls&ComboBoxBackgroundFocused&Background",
+        "TaskRunnerExplorerControls&ComboBoxBackgroundHover&Background",
+        "TaskRunnerExplorerControls&ComboBoxBackgroundPressed&Background",
+        "TaskRunnerExplorerControls&ComboBoxGlyphBackgroundFocused&Background",
+        "TaskRunnerExplorerControls&ComboBoxGlyphBackgroundHover&Background",
+        "TaskRunnerExplorerControls&ComboBoxGlyphBackgroundPressed&Background",
+        "TaskRunnerExplorerControls&ComboBoxListItemBackgroundHover&Background",
+        "TeamExplorer&ActionLinkItem&Foreground",
+        "TeamExplorer&CodeReviewDiscussionItemSelected&Background",
+        "TeamExplorer&InnerTabMouseOver&Background",
+        "TeamExplorer&InnerTabPressed&Background",
+        "TeamExplorer&TeamExplorerHomeDefaultIconFill&Background",
+        "TeamExplorer&TeamExplorerHomeWITFamilyIconFill&Background",
+        "TeamExplorer&TETileIconBackgroundMouseOver&Background",
+        "TeamExplorer&TETileIconBackgroundSelected&Background",
+        "TeamExplorer&TETileListBackgroundMouseOver&Background",
+        "TeamExplorer&TETileListBackgroundSelected&Background",
+        "ThemedDialog&TemplateNewTag&Background",
+        "ThemedDialog&TemplateNewTagSelected&Background",
+        "VersionControl&AnnotateRegionSelected&Background",
+        "VisualStudioInstaller&Hyperlink&Background",
+        "VisualStudioInstaller&HyperlinkHover&Background",
+        "VisualStudioInstaller&HyperlinkPressed&Background",
+        "VSSearch&ListItemBackgroundHover&Background",
+        "WorkItemEditor&ActiveControl&Background",
+        "WorkItemEditor&ActiveControlBorder&Background",
+        "WorkItemEditor&ButtonSelectedOverride&Background",
+        "WorkItemEditor&DropDownHover&Foreground",
+        "WorkItemEditor&DropDownInactive&Background",
+        "WorkItemEditor&DropDownPressed&Background",
+        "WorkItemEditor&GridActiveCell&Background",
+        "WorkItemEditor&GridActiveColumnHeader&Background",
+        "WorkItemEditor&GridActiveRowHeader&Background",
+        "WorkItemEditor&GridColumnHeaderHover&Background",
+        "WorkItemEditor&GridColumnHeaderPressed&Background",
+        "WorkItemEditor&HtmlControlHyperlink&Background",
+        "WorkItemEditor&TabHeaderHover&Background",
+        "WorkItemEditor&TagActive&Background",
+        "WorkItemEditor&TagActiveGlyphHover&Foreground",
+        "WorkItemEditor&TagActiveGlyphPressed&Foreground",
+        "WorkItemEditor&TagHover&Background",
+        "WorkItemEditor&TagHoverGlyphHover&Foreground",
+        "WorkItemEditor&TagHoverGlyphPressed&Foreground",
+        "Environment&ToolWindowBackground&Background",
+        "Environment&ToolWindowTabSelectedBorder&Background",
+        "Environment&ToolWindowTabSelectedTab&Background",
+        "Environment&Window&Background"
+      ]
+    },
+    {
+      "VSC Token": "welcomePage.background",
+      "VS Token": [
+        "Environment&StartPageButtonBorder&Background",
+        "Environment&StartPageSeparator&Background"
+      ]
+    },
+    {
+      "VSC Token": "input.background",
+      "VS Token": [
+        "CommonControls&TextBoxBackground&Background", //
+        "CommonControls&TextBoxBackgroundDisabled&Background", //
+        "CommonControls&TextBoxBackgroundFocused&Background", //
+        "Environment&SearchBoxBackground&Background",
+        "SearchControl&FocusedBackground&Background", //
+        "SearchControl&FocusedDropDownButton&Background", //
+        "SearchControl&MouseOverBackground&Background", //
+        "SearchControl&SearchActiveBackground&Background",
+        "SearchControl&Unfocused&Background",
+        "SearchControl&UnfocusedDropDownButton&Background", // 
+        "SearchControl&Selection&Background", //
+        "SearchControl&MouseOverDropDownButton&Background", //
+        "SearchControl&MouseDownDropDownButton&Background", //
+        "SearchControl&ActionButtonMouseDown&Background",
+        "SearchControl&ActionButtonMouseOver&Background",
+        "TeamExplorer&TextBox&Background"
+      ]
+    },
+    {
+      "VSC Token": "activityBar.background",
+      "VS Token": [
+      ]
+    },
+    {
+      "VSC Token": "activityBar.foreground",
+      "VS Token": [
+      ]
+    },
+    {
+      "VSC Token": "activityBarBadge.background",
+      "VS Token": [
+      ]
+    },
+    {
+      "VSC Token": "editor.background",
+      "VS Token": [
+        "Diagnostics&ControlHeader&Background",
+        "Environment&GridHeadingBackground&Background",
+        "CommonDocument&GridHeadingBackground&Background",
+        "ThemedDialog&GridHeadingBackground&Background"
+      ]
+    },
+    {
+      "VSC Token": "editor.foreground",
+      "VS Token": [
+        "Environment&WindowText&Background",
+        "Output Window&Plain Text&Foreground",
+        "Text Editor MEF Items&brace matching&Background",
+        "Roslyn Text Editor MEF Items&punctuation&Foreground"
+      ]
+    },
+    {
+      "VSC Token": "editor.lineHighlightBackground",
+      "VS Token": [
+      ]
+    },
+    {
+      "VSC Token": "editorBracketMatch.background",
+      "VS Token": [
+      ]
+    },
+    {
+      "VSC Token": "editorBracketMatch.border",
+      "VS Token": [
+      ]
+    },
+    {
+      "VSC Token": "editorGroupHeader.tabsBorder",
+      "VS Token": [
+      ]
+    },
+    {
+      "VSC Token": "editorIndentGuide.background",
+      "VS Token": [
+      ]
+    },
+    {
+      "VSC Token": "editorLineNumber.foreground",
+      "VS Token": [
+      ]
+    },
+    {
+      "VSC Token": "focusBorder",
+      "VS Token": [
+      ]
+    },
+    {
+      "VSC Token": "inputOption.activeBorder",
+      "VS Token": [
+        "SearchControl&PopupControlMouseDownBorder&Background"
+      ]
+    },
+    {
+      "VSC Token": "quickInputList.focusBackground",
+      "VS Token": [
+        "Environment&ComboBoxItemMouseOverBackground&Background"
+      ]
+    },
+    {
+      "VSC Token": "quickInputList.focusForeground",
+      "VS Token": [
+      ]
+    },
+    {
+      "VSC Token": "sideBar.border",
+      "VS Token": [
+      ]
+    },
+    {
+      "VSC Token": "sideBarSectionHeader.background",
+      "VS Token": [
+      ]
+    },
+    {
+      "VSC Token": "sideBarSectionHeader.foreground",
+      "VS Token": [
+        "Environment&FileTabParentText&Background"
+      ]
+    },
+    {
+      "VSC Token": "sideBarTitle.foreground",
+      "VS Token": [
+      ]
+    },
+    {
+      "VSC Token": "statusBar.border",
+      "VS Token": [
+      ]
+    },
+    {
+      "VSC Token": "statusBar.debuggingBackground",
+      "VS Token": [
+        "Environment&StatusBarDebugging&Background"
+      ]
+    },
+    {
+      "VSC Token": "statusBar.debuggingForeground",
+      "VS Token": [
+        "Environment&StatusBarDebugging&Foreground"
+      ]
+    },
+    {
+      "VSC Token": "statusBar.foreground",
+      "VS Token": [
+        "Environment&StatusBarDefault&Foreground",
+        "Environment&StatusBarText&Background"
+      ]
+    },
+    {
+      "VSC Token": "statusBar.noFolderBackground",
+      "VS Token": [
+      ]
+    },
+    {
+      "VSC Token": "statusBar.noFolderForeground",
+      "VS Token": [
+      ]
+    },
+    {
+      "VSC Token": "tab.border",
+      "VS Token": [
+        "Environment&FileTabBorder&Background",
+        "Environment&FileTabInactiveBorder&Background",
+        "Environment&FileTabInactiveDocumentBorderEdge&Background"
+      ]
+    },
+    {
+      "VSC Token": "titleBar.border",
+      "VS Token": [
+      ]
+    },
+    {
+      "VSC Token": "activityBar.activeBorder",
+      "VS Token": [
+      ]
+    },
+    {
+      "VSC Token": "activityBar.dropBorder",
+      "VS Token": [
+      ]
+    },
+    {
+      "VSC Token": "activityBar.inactiveForeground",
+      "VS Token": [
+      ]
+    },
+    {
+      "VSC Token": "activityBarBadge.foreground",
+      "VS Token": [
+      ]
+    },
+    {
+      "VSC Token": "badge.background",
+      "VS Token": [
+      ]
+    },
+    {
+      "VSC Token": "badge.foreground",
+      "VS Token": [
+      ]
+    },
+    {
+      "VSC Token": "banner.background",
+      "VS Token": [
+        "InfoBar&InfoBarBorder&Background"
+      ]
+    },
+    {
+      "VSC Token": "banner.foreground",
+      "VS Token": [
+        "InfoBar&InfoBarBackground&Foreground"
+      ]
+    },
+    {
+      "VSC Token": "banner.iconForeground",
+      "VS Token": [
+        "InfoBar&Hyperlink&Foreground",
+        "InfoBar&HyperlinkMouseDown&Foreground",
+        "InfoBar&HyperlinkMouseOver&Foreground"
+      ]
+    },
+    {
+      "VSC Token": "breadcrumb.activeSelectionForeground",
+      "VS Token": [
+      ]
+    },
+    {
+      "VSC Token": "breadcrumb.background",
+      "VS Token": [
+      ]
+    },
+    {
+      "VSC Token": "breadcrumb.focusForeground",
+      "VS Token": [
+      ]
+    },
+    {
+      "VSC Token": "breadcrumb.foreground",
+      "VS Token": [
+      ]
+    },
+    {
+      "VSC Token": "breadcrumbPicker.background",
+      "VS Token": [
+      ]
+    },
+
+    {
+      "VSC Token": "button.hoverBackground",
+      "VS Token": [
+        "Cider&BreadcrumbButtonSelectedOnHover&Background",
+        "Cider&ComboBoxButtonMouseOverBorder&Background",
+        "Cider&ComboBoxButtonMouseOver&Background",
+        "Cider&IconButtonMouseOver&Background",
+        "ClientDiagnosticsMemory&DropDownButtonHover&Background",
+        "ClientDiagnosticsMemory&SnapshotButtonHover&Background",
+        "ClientDiagnosticsMemory&SnapshotButtonHover&Foreground",
+        "ClientDiagnosticsTimeline&DropDownButtonHover&Background",
+        "CodeSenseControls&PopupPinButtonHover&Background",
+        "CodeSenseControls&PopupPinButtonHover&Foreground",
+        "CommonControls&ButtonBorderHover&Background",
+        "CommonControls&ButtonHover&Background",
+        "Environment&DocWellOverflowButtonMouseOverBackground&Background",
+        "Environment&DocWellOverflowButtonMouseOverBorder&Background",
+        "Environment&DocWellOverflowButtonMouseOverGlyph&Background",
+        "Environment&FileTabButtonHoverInactive&Background",
+        "Environment&FileTabButtonHoverInactiveBorder&Background",
+        "Environment&FileTabButtonHoverSelectedInactiveGlyph&Background",
+        "Environment&FileTabButtonProvisionalHoverGlyph&Background",
+        "Environment&FileTabButtonProvisionalHoverSelectedActive&Background",
+        "Environment&FileTabButtonProvisionalHoverSelectedActiveBorder&Background",
+        "Environment&FileTabButtonProvisionalHoverSelectedInactiveGlyph&Background",
+        "Environment&QuickCustomizeButtonGlyphHover&Background",
+        "Environment&StartPageButtonMouseOverBackgroundBegin&Background",
+        "Environment&StartPageButtonMouseOverBackgroundEnd&Background",
+        "Environment&StartPageButtonMouseOverBackgroundMiddle1&Background",
+        "Environment&StartPageButtonMouseOverBackgroundMiddle2&Background",
+        "Environment&StartPageButtonPinHover&Background",
+        "Environment&ToolWindowButtonHoverActive&Background",
+        "Environment&ToolWindowButtonHoverActiveBorder&Background",
+        "Environment&ToolWindowButtonHoverInactive&Background",
+        "Environment&ToolWindowButtonHoverInactiveBorder&Background",
+        "GraphDocumentColors&LinkNavigatorButtonHoverFillEndColor&Background",
+        "GraphDocumentColors&LinkNavigatorButtonHoverFillStartColor&Background",
+        "GraphDocumentColors&MultiOperationButtonMouseOverBackground&Background",
+        "GraphicsDesigners&DropDownButtonHover&Background",
+        "GraphicsDesigners&SnapshotButtonHover&Background",
+        "InfoBar&ButtonMouseOver&Background",
+        "InfoBar&CloseButtonHoverGlyph&Background",
+        "InformationBadge&BackgroundFocused&Background",
+        "InformationBadge&BackgroundHover&Background",
+        "InformationBadge&BackgroundPressed&Background",
+        "NotificationBubble&NotificationBubbleWindowButtonHoverBorder&Background",
+        "Promotion&LightboxDialogButtonBorderHover&Background",
+        "Promotion&LightboxDialogButtonHover&Background",
+        "TeamExplorer&ButtonMouseOver&Background",
+        "TeamExplorer&ButtonMouseOverBorder&Background",
+        "TeamExplorer&CallToActionButtonMouseOver&Background",
+        "TeamExplorer&CallToActionButtonMouseOverBorder&Background",
+        "ThemedDialog&WindowButtonHover&Background",
+        "ThemedDialog&WindowButtonHoverBorder&Background",
+        "UserNotifications&BadgeButtonCountMouseOverActive&Background",
+        "UserNotifications&BadgeButtonCountMouseOverInactive&Background",
+        "UserNotifications&ToastActionButtonBorderHover&Background",
+        "WelcomeExperience&WelcomeExperienceButtonMouseoverBackground&Background",
+        "WelcomeExperience&WelcomeExperienceButtonMouseoverBorder&Foreground",
+        "WelcomeExperience&WelcomeExperienceDistinctButtonMousedownBorder&Foreground",
+        "WelcomeExperience&WelcomeExperienceDistinctButtonMouseoverBackground&Background",
+        "WelcomeExperience&WelcomeExperienceDistinctButtonMouseoverBorder&Foreground"
+      ]
+    },
+    {
+      "VSC Token": "button.secondaryBackground",
+      "VS Token": [
+        "CommonControls&ButtonDisabled&Background",
+        "ClientDiagnosticsMemory&SnapshotButtonDisabled&Background",
+        "GraphicsDesigners&SnapshotButtonDisabled&Background",
+        "Promotion&LightboxDialogButtonDisabled&Background",
+        "TeamExplorer&ButtonDisabled&Background",
+        "TeamExplorer&CallToActionButtonDisabled&Background",
+        "UserNotifications&ToastActionButtonDisabled&Background",
+        "Diagnostics&ButtonBackgroundDisabled&Background"
+      ]
+    },
+    {
+      "VSC Token": "button.secondaryForeground",
+      "VS Token": [
+        "CommonControls&ButtonDisabled&Foreground",
+        "Promotion&LightboxDialogButtonDisabled&Foreground",
+        "TeamExplorer&ButtonDisabled&Foreground",
+        "TeamExplorer&CallToActionButtonDisabled&Foreground",
+        "UserNotifications&ToastActionButtonDisabled&Foreground"
+      ]
+    },
+    {
+      "VSC Token": "button.secondaryHoverBackground",
+      "VS Token": [
+      ]
+    },
+    {
+      "VSC Token": "charts.blue",
+      "VS Token": [
+      ]
+    },
+    {
+      "VSC Token": "charts.foreground",
+      "VS Token": [
+      ]
+    },
+    {
+      "VSC Token": "charts.green",
+      "VS Token": [
+      ]
+    },
+    {
+      "VSC Token": "charts.lines",
+      "VS Token": [
+      ]
+    },
+    {
+      "VSC Token": "charts.orange",
+      "VS Token": [
+      ]
+    },
+    {
+      "VSC Token": "charts.purple",
+      "VS Token": [
+      ]
+    },
+    {
+      "VSC Token": "charts.red",
+      "VS Token": [
+      ]
+    },
+    {
+      "VSC Token": "charts.yellow",
+      "VS Token": [
+      ]
+    },
+    {
+      "VSC Token": "checkbox.background",
+      "VS Token": [
+        "CommonControls&CheckBoxBackground&Background",
+        "CommonControls&CheckBoxBackgroundDisabled&Background",
+        "CommonControls&CheckBoxBackgroundFocused&Background",
+        "CommonControls&CheckBoxBackgroundHover&Background",
+        "CommonControls&CheckBoxBackgroundPressed&Background"
+      ]
+    },
+    {
+      "VSC Token": "checkbox.border",
+      "VS Token": [
+        "CommonControls&CheckBoxBorder&Background",
+        "CommonControls&CheckBoxBorderDisabled&Background",
+        "CommonControls&CheckBoxBorderFocused&Background",
+        "CommonControls&CheckBoxBorderHover&Background",
+        "CommonControls&CheckBoxBorderPressed&Background"
+      ]
+    },
+    {
+      "VSC Token": "debugConsole.errorForeground",
+      "VS Token": [
+      ]
+    },
+    {
+      "VSC Token": "debugConsole.infoForeground",
+      "VS Token": [
+      ]
+    },
+    {
+      "VSC Token": "debugConsole.sourceForeground",
+      "VS Token": [
+      ]
+    },
+    {
+      "VSC Token": "debugConsole.warningForeground",
+      "VS Token": [
+      ]
+    },
+    {
+      "VSC Token": "debugConsoleInputIcon.foreground",
+      "VS Token": [
+      ]
+    },
+    {
+      "VSC Token": "debugExceptionWidget.background",
+      "VS Token": [
+      ]
+    },
+    {
+      "VSC Token": "debugExceptionWidget.border",
+      "VS Token": [
+      ]
+    },
+    {
+      "VSC Token": "debugIcon.breakpointCurrentStackframeForeground",
+      "VS Token": [
+      ]
+    },
+    {
+      "VSC Token": "debugIcon.breakpointDisabledForeground",
+      "VS Token": [
+      ]
+    },
+    {
+      "VSC Token": "debugIcon.breakpointForeground",
+      "VS Token": [
+      ]
+    },
+    {
+      "VSC Token": "debugIcon.breakpointStackframeForeground",
+      "VS Token": [
+      ]
+    },
+    {
+      "VSC Token": "debugIcon.breakpointUnverifiedForeground",
+      "VS Token": [
+      ]
+    },
+    {
+      "VSC Token": "debugIcon.continueForeground",
+      "VS Token": [
+      ]
+    },
+    {
+      "VSC Token": "debugIcon.disconnectForeground",
+      "VS Token": [
+      ]
+    },
+    {
+      "VSC Token": "debugIcon.pauseForeground",
+      "VS Token": [
+      ]
+    },
+    {
+      "VSC Token": "debugIcon.restartForeground",
+      "VS Token": [
+      ]
+    },
+    {
+      "VSC Token": "debugIcon.startForeground",
+      "VS Token": [
+      ]
+    },
+    {
+      "VSC Token": "debugIcon.stepBackForeground",
+      "VS Token": [
+      ]
+    },
+    {
+      "VSC Token": "debugIcon.stepIntoForeground",
+      "VS Token": [
+      ]
+    },
+    {
+      "VSC Token": "debugIcon.stepOutForeground",
+      "VS Token": [
+      ]
+    },
+    {
+      "VSC Token": "debugIcon.stepOverForeground",
+      "VS Token": [
+      ]
+    },
+    {
+      "VSC Token": "debugIcon.stopForeground",
+      "VS Token": [
+      ]
+    },
+    {
+      "VSC Token": "debugTokenExpression.boolean",
+      "VS Token": [
+      ]
+    },
+    {
+      "VSC Token": "debugTokenExpression.error",
+      "VS Token": [
+      ]
+    },
+    {
+      "VSC Token": "debugTokenExpression.name",
+      "VS Token": [
+      ]
+    },
+    {
+      "VSC Token": "debugTokenExpression.number",
+      "VS Token": [
+      ]
+    },
+    {
+      "VSC Token": "debugTokenExpression.string",
+      "VS Token": [
+      ]
+    },
+    {
+      "VSC Token": "debugTokenExpression.value",
+      "VS Token": [
+      ]
+    },
+    {
+      "VSC Token": "debugToolBar.background",
+      "VS Token": [
+      ]
+    },
+    {
+      "VSC Token": "debugView.exceptionLabelBackground",
+      "VS Token": [
+      ]
+    },
+    {
+      "VSC Token": "debugView.exceptionLabelForeground",
+      "VS Token": [
+      ]
+    },
+    {
+      "VSC Token": "debugView.stateLabelBackground",
+      "VS Token": [
+      ]
+    },
+    {
+      "VSC Token": "debugView.stateLabelForeground",
+      "VS Token": [
+      ]
+    },
+    {
+      "VSC Token": "debugView.valueChangedHighlight",
+      "VS Token": [
+      ]
+    },
+    {
+      "VSC Token": "descriptionForeground",
+      "VS Token": [
+      ]
+    },
+    {
+      "VSC Token": "diffEditor.diagonalFill",
+      "VS Token": [
+      ]
+    },
+    {
+      "VSC Token": "diffEditor.insertedTextBackground",
+      "VS Token": [
+      ]
+    },
+    {
+      "VSC Token": "diffEditor.removedTextBackground",
+      "VS Token": [
+      ]
+    },
+    {
+      "VSC Token": "dropdown.background",
+      "VS Token": [
+        "Environment&DropDownBackground&Background",
+        "Environment&ComboBoxSelection&Background",
+        "Environment&ComboBoxFocusedBackground&Background",
+        "Environment&ComboBoxMouseOverBackgroundBegin&Background",
+        "Environment&ComboBoxMouseOverBackgroundEnd&Background",
+        "Environment&ComboBoxMouseOverBackgroundMiddle1&Background",
+        "Environment&ComboBoxMouseOverBackgroundMiddle2&Background",
+        "Environment&ComboBoxButtonMouseDownBackground&Background",
+        "Environment&ComboBoxButtonMouseOverBackground&Background",
+        "CommonControls&ComboBoxSelection&Background",
+        "Environment&ComboBoxItemTextInactive&Background",
+        "Environment&ComboBoxBackground&Background",
+        "Environment&ComboBoxFocusBox&Background",
+        "Environment&ComboBoxPopupBackgroundBegin&Background",
+        "Environment&ComboBoxPopupBackgroundEnd&Background",
+        "Environment&ComboBoxMouseDownBackground&Background",
+        "CommonControls&ComboBoxListBackground&Background",
+        "Output Window&Current List Location&Background",
+        "Environment&DropDownMouseOverBackgroundBegin&Background",
+        "Environment&DropDownMouseOverBackgroundEnd&Background",
+        "Environment&DropDownMouseOverBackgroundMiddle1&Background",
+        "Environment&DropDownMouseOverBackgroundMiddle2&Background",
+        "Environment&DropDownButtonMouseOverBackground&Background",
+        "CommonControls&ComboBoxBackground&Background",
+        "CommonControls&ComboBoxBackgroundDisabled&Background",
+        "CommonControls&ComboBoxBackgroundFocused&Background",
+        "CommonControls&ComboBoxBackgroundHover&Background",
+        "CommonControls&ComboBoxBackgroundPressed&Background",
+        "CommonControls&ComboBoxGlyphBackgroundDisabled&Background",
+        "CommonControls&ComboBoxGlyphBackground&Background",
+        "CommonControls&ComboBoxGlyphBackgroundFocused&Background",
+        "CommonControls&ComboBoxGlyphBackgroundPressed&Background"
+      ]
+    },
+    {
+      "VSC Token": "dropdown.border",
+      "VS Token": [
+        "CommonControls&ComboBoxBorder&Background",
+        "CommonControls&ComboBoxBorderDisabled&Background",
+        "CommonControls&ComboBoxBorderFocused&Background",
+        "CommonControls&ComboBoxBorderHover&Background",
+        "CommonControls&ComboBoxBorderPressed&Background",
+        "CommonControls&ComboBoxListBorder&Background",
+        "CommonControls&ComboBoxSeparator&Background",
+        "CommonControls&ComboBoxSeparatorDisabled&Background",
+        "CommonControls&ComboBoxSeparatorFocused&Background",
+        "CommonControls&ComboBoxSeparatorHover&Background",
+        "CommonControls&ComboBoxSeparatorPressed&Background",
+        "Environment&ComboBoxBorder&Background",
+        "Environment&ComboBoxButtonMouseDownSeparator&Background",
+        "Environment&ComboBoxButtonMouseOverSeparator&Background",
+        "Environment&ComboBoxFocusedBorder&Background",
+        "Environment&ComboBoxFocusedButtonSeparator&Background",
+        "Environment&ComboBoxItemMouseOverBorder&Background",
+        "Environment&ComboBoxMouseOverBorder&Background",
+        "Environment&CommandBarSplitButtonSeparator&Background",
+        "Environment&DropDownBorder&Background",
+        "Environment&DropDownButtonMouseDownSeparator&Background",
+        "Environment&DropDownButtonMouseOverSeparator&Background",
+        "Environment&DropDownMouseOverBorder&Background",
+        "CommonControls&ComboBoxGlyphBorder&Background",
+        "CommonControls&ComboBoxGlyphBorderDisabled&Background",
+        "CommonControls&ComboBoxGlyphBorderFocused&Background",
+        "CommonControls&ComboBoxGlyphBorderPressed&Background"
+      ]
+    },
+    {
+      "VSC Token": "editor.findMatchBackground",
+      "VS Token": [
+      ]
+    },
+    {
+      "VSC Token": "editor.findMatchHighlightBackground",
+      "VS Token": [
+      ]
+    },
+    {
+      "VSC Token": "editor.findRangeHighlightBackground",
+      "VS Token": [
+      ]
+    },
+    {
+      "VSC Token": "editor.focusedStackFrameHighlightBackground",
+      "VS Token": [
+      ]
+    },
+    {
+      "VSC Token": "editor.foldBackground",
+      "VS Token": [
+      ]
+    },
+    {
+      "VSC Token": "editor.hoverHighlightBackground",
+      "VS Token": [
+      ]
+    },
+    {
+      "VSC Token": "editor.inactiveSelectionBackground",
+      "VS Token": [
+        "Output Window&Inactive Selected Text&Background"
+      ]
+    },
+    {
+      "VSC Token": "editor.inlineValuesBackground",
+      "VS Token": [
+      ]
+    },
+    {
+      "VSC Token": "editor.inlineValuesForeground",
+      "VS Token": [
+      ]
+    },
+    {
+      "VSC Token": "editor.lineHighlightBorder",
+      "VS Token": [
+      ]
+    },
+    {
+      "VSC Token": "editor.linkedEditingBackground",
+      "VS Token": [
+      ]
+    },
+    {
+      "VSC Token": "editor.rangeHighlightBackground",
+      "VS Token": [
+      ]
+    },
+    {
+      "VSC Token": "editor.selectionBackground",
+      "VS Token": [
+      ]
+    },
+    {
+      "VSC Token": "editor.selectionHighlightBackground",
+      "VS Token": [
+        "Text Editor Text Manager Items&Selected Text&Background",
+        "Text Editor MEF Items&Selected Text&Background",
+        "Text Editor Text Manager Items&Inactive Selected Text&Background"
+      ]
+    },
+    {
+      "VSC Token": "editor.snippetFinalTabstopHighlightBorder",
+      "VS Token": [
+      ]
+    },
+    {
+      "VSC Token": "editor.snippetTabstopHighlightBackground",
+      "VS Token": [
+      ]
+    },
+    {
+      "VSC Token": "editor.stackFrameHighlightBackground",
+      "VS Token": [
+      ]
+    },
+    {
+      "VSC Token": "editor.symbolHighlightBackground",
+      "VS Token": [
+      ]
+    },
+    {
+      "VSC Token": "editor.wordHighlightBackground",
+      "VS Token": [
+      ]
+    },
+    {
+      "VSC Token": "editor.wordHighlightStrongBackground",
+      "VS Token": [
+      ]
+    },
+    {
+      "VSC Token": "editorActiveLineNumber.foreground",
+      "VS Token": [
+      ]
+    },
+    {
+      "VSC Token": "editorCodeLens.foreground",
+      "VS Token": [
+      ]
+    },
+    {
+      "VSC Token": "editorCursor.foreground",
+      "VS Token": [
+      ]
+    },
+    {
+      "VSC Token": "editorError.foreground",
+      "VS Token": [
+      ]
+    },
+    {
+      "VSC Token": "editorGhostText.foreground",
+      "VS Token": [
+      ]
+    },
+    {
+      "VSC Token": "editorGroup.border",
+      "VS Token": [
+      ]
+    },
+    {
+      "VSC Token": "editorGroup.dropBackground",
+      "VS Token": [
+      ]
+    },
+    {
+      "VSC Token": "editorGroupHeader.noTabsBackground",
+      "VS Token": [
+        "Environment&FileTabActiveGroupTitleBackground&Background",
+        "Environment&FileTabGroupTitleBackground&Background"
+      ]
+    },
+    {
+      "VSC Token": "editorGutter.addedBackground",
+      "VS Token": [
+      ]
+    },
+    {
+      "VSC Token": "editorGutter.background",
+      "VS Token": [
+        "Text Editor Text Manager Items&Indicator Margin&Background"
+      ]
+    },
+    {
+      "VSC Token": "editorGutter.commentRangeForeground",
+      "VS Token": [
+      ]
+    },
+    {
+      "VSC Token": "editorGutter.deletedBackground",
+      "VS Token": [
+      ]
+    },
+    {
+      "VSC Token": "editorGutter.foldingControlForeground",
+      "VS Token": [
+      ]
+    },
+    {
+      "VSC Token": "editorGutter.modifiedBackground",
+      "VS Token": [
+      ]
+    },
+    {
+      "VSC Token": "editorHint.foreground",
+      "VS Token": [
+      ]
+    },
+    {
+      "VSC Token": "editorHoverWidget.background",
+      "VS Token": [
+      ]
+    },
+    {
+      "VSC Token": "editorHoverWidget.border",
+      "VS Token": [
+      ]
+    },
+    {
+      "VSC Token": "editorHoverWidget.foreground",
+      "VS Token": [
+      ]
+    },
+    {
+      "VSC Token": "editorHoverWidget.statusBarBackground",
+      "VS Token": [
+      ]
+    },
+    {
+      "VSC Token": "editorIndentGuide.activeBackground",
+      "VS Token": [
+      ]
+    },
+    {
+      "VSC Token": "editorInfo.foreground",
+      "VS Token": [
+      ]
+    },
+    {
+      "VSC Token": "editorInlayHint.background",
+      "VS Token": [
+      ]
+    },
+    {
+      "VSC Token": "editorInlayHint.foreground",
+      "VS Token": [
+      ]
+    },
+    {
+      "VSC Token": "editorLightBulb.foreground",
+      "VS Token": [
+      ]
+    },
+    {
+      "VSC Token": "editorLightBulbAutoFix.foreground",
+      "VS Token": [
+      ]
+    },
+    {
+      "VSC Token": "editorLineNumber.activeForeground",
+      "VS Token": [
+      ]
+    },
+    {
+      "VSC Token": "editorLink.activeForeground",
+      "VS Token": [
+      ]
+    },
+    {
+      "VSC Token": "editorMarkerNavigation.background",
+      "VS Token": [
+      ]
+    },
+    {
+      "VSC Token": "editorMarkerNavigationError.background",
+      "VS Token": [
+      ]
+    },
+    {
+      "VSC Token": "editorMarkerNavigationInfo.background",
+      "VS Token": [
+      ]
+    },
+    {
+      "VSC Token": "editorMarkerNavigationWarning.background",
+      "VS Token": [
+      ]
+    },
+    {
+      "VSC Token": "editorOverviewRuler.addedForeground",
+      "VS Token": [
+      ]
+    },
+    {
+      "VSC Token": "editorOverviewRuler.border",
+      "VS Token": [
+      ]
+    },
+    {
+      "VSC Token": "editorOverviewRuler.bracketMatchForeground",
+      "VS Token": [
+      ]
+    },
+    {
+      "VSC Token": "editorOverviewRuler.commonContentForeground",
+      "VS Token": [
+      ]
+    },
+    {
+      "VSC Token": "editorOverviewRuler.currentContentForeground",
+      "VS Token": [
+      ]
+    },
+    {
+      "VSC Token": "editorOverviewRuler.deletedForeground",
+      "VS Token": [
+      ]
+    },
+    {
+      "VSC Token": "editorOverviewRuler.errorForeground",
+      "VS Token": [
+      ]
+    },
+    {
+      "VSC Token": "editorOverviewRuler.findMatchForeground",
+      "VS Token": [
+      ]
+    },
+    {
+      "VSC Token": "editorOverviewRuler.incomingContentForeground",
+      "VS Token": [
+      ]
+    },
+    {
+      "VSC Token": "editorOverviewRuler.infoForeground",
+      "VS Token": [
+      ]
+    },
+    {
+      "VSC Token": "editorOverviewRuler.modifiedForeground",
+      "VS Token": [
+      ]
+    },
+    {
+      "VSC Token": "editorOverviewRuler.rangeHighlightForeground",
+      "VS Token": [
+      ]
+    },
+    {
+      "VSC Token": "editorOverviewRuler.selectionHighlightForeground",
+      "VS Token": [
+      ]
+    },
+    {
+      "VSC Token": "editorOverviewRuler.warningForeground",
+      "VS Token": [
+      ]
+    },
+    {
+      "VSC Token": "editorOverviewRuler.wordHighlightForeground",
+      "VS Token": [
+      ]
+    },
+    {
+      "VSC Token": "editorOverviewRuler.wordHighlightStrongForeground",
+      "VS Token": [
+      ]
+    },
+    {
+      "VSC Token": "editorPane.background",
+      "VS Token": [
+      ]
+    },
+    {
+      "VSC Token": "editorRuler.foreground",
+      "VS Token": [
+      ]
+    },
+    {
+      "VSC Token": "editorSuggestWidget.background",
+      "VS Token": [
+      ]
+    },
+    {
+      "VSC Token": "editorSuggestWidget.border",
+      "VS Token": [
+      ]
+    },
+    {
+      "VSC Token": "editorSuggestWidget.focusHighlightForeground",
+      "VS Token": [
+      ]
+    },
+    {
+      "VSC Token": "editorSuggestWidget.foreground",
+      "VS Token": [
+      ]
+    },
+    {
+      "VSC Token": "editorSuggestWidget.highlightForeground",
+      "VS Token": [
+      ]
+    },
+    {
+      "VSC Token": "editorSuggestWidget.selectedBackground",
+      "VS Token": [
+      ]
+    },
+    {
+      "VSC Token": "editorSuggestWidget.selectedForeground",
+      "VS Token": [
+      ]
+    },
+    {
+      "VSC Token": "editorUnnecessaryCode.opacity",
+      "VS Token": [
+      ]
+    },
+    {
+      "VSC Token": "editorWarning.foreground",
+      "VS Token": [
+      ]
+    },
+    {
+      "VSC Token": "editorWhitespace.foreground",
+      "VS Token": [
+      ]
+    },
+    {
+      "VSC Token": "editorWidget.background",
+      "VS Token": [
+      ]
+    },
+    {
+      "VSC Token": "editorWidget.border",
+      "VS Token": [
+      ]
+    },
+    {
+      "VSC Token": "editorWidget.foreground",
+      "VS Token": [
+      ]
+    },
+    {
+      "VSC Token": "errorForeground",
+      "VS Token": [
+      ]
+    },
+    {
+      "VSC Token": "extensionBadge.remoteBackground",
+      "VS Token": [
+      ]
+    },
+    {
+      "VSC Token": "extensionBadge.remoteForeground",
+      "VS Token": [
+      ]
+    },
+    {
+      "VSC Token": "extensionButton.prominentBackground",
+      "VS Token": [
+      ]
+    },
+    {
+      "VSC Token": "extensionButton.prominentForeground",
+      "VS Token": [
+      ]
+    },
+    {
+      "VSC Token": "extensionButton.prominentHoverBackground",
+      "VS Token": [
+      ]
+    },
+    {
+      "VSC Token": "extensionIcon.starForeground",
+      "VS Token": [
+      ]
+    },
+    {
+      "VSC Token": "foreground",
+      "VS Token": [
+        "CodeSense&IndicatorText&Foreground",
+        "CodeSense&IndicatorTextDisabled&Foreground",
+        "CodeSense&IndicatorTextHovered&Foreground",
+        "CodeSenseControls&ItemSelectedText&Background",
+        "Command Window&Selected Text in High Contrast&Background",
+        "Command Window&Selected Text&Background",
+        "CommonDocument&InnerTabInactiveHoverText&Background",
+        "CommonDocument&InnerTabTextFocused&Background",
+        "CommonDocument&InnerTabTextHover&Background",
+        "CommonDocument&InnerTabTextPressed&Background",
+        "Environment&ControlLinkTextHover&Background",
+        "Environment&ControlLinkTextPressed&Background",
+        "Environment&DiagReportLinkText&Background",
+        "Environment&DiagReportLinkTextHover&Background",
+        "Environment&StartPageTextBodyUnselected&Background",
+        "Environment&StartPageTextControlLinkSelected&Background",
+        "Environment&StartPageTextHeading&Background",
+        "Environment&StartPageTextHeadingMouseOver&Background",
+        "Environment&StartPageTextSubHeading&Background",
+        "Environment&StartPageTextSubHeadingMouseOver&Background",
+        "Find Results&Selected Text in High Contrast&Background",
+        "Find Results&Selected Text&Background",
+        "Immediate Window&Selected Text in High Contrast&Background",
+        "Immediate Window&Selected Text&Background",
+        "NewProjectDialog&TextBoxSelection&Background",
+        "Package Manager Console&Selected Text in High Contrast&Background",
+        "Package Manager Console&Selected Text&Background",
+        "Performance Tips&Selected Text&Foreground",
+        "StartPage&ItemHeadingText&Foreground",
+        "StartPage&StartPageCheckBoxCheckMark&Foreground",
+        "StartPage&StartPageCheckBoxMouseOverCheckMark&Foreground",
+        "StartPage&StartPageCheckBoxMouseOverText&Foreground",
+        "StartPage&StartPageCheckBoxPressedCheckMark&Foreground",
+        "StartPage&StartPageCheckBoxPressedText&Foreground",
+        "StartPage&StartPageCheckBoxText&Foreground",
+        "StartPage&StartPageListItem&Foreground",
+        "StartPage&StartPageListItemGlyph&Background",
+        "StartPage&StartPageNewText&Background",
+        "StartPage&StartPageSupportText&Foreground",
+        "StartPage&StartPageSupportTextHover&Foreground",
+        "StartPage&VideoRSSItemDuration&Foreground",
+        "StartPage&VideoRSSItemDurationMouseOver&Foreground",
+        "StartPage&VideoRSSItemDurationPressed&Foreground",
+        "StartPage&VideoRSSItemTitle&Foreground",
+        "TaskRunnerExplorerControls&CheckBoxTextHover&Background",
+        "ThemedUtilityDialog&WindowPanel&Foreground",
+        "TreeView&Background&Foreground",
+        "Environment&MainWindowActiveCaption&Foreground"
+      ]
+    },
+    {
+      "VSC Token": "gitDecoration.addedResourceForeground",
+      "VS Token": [
+      ]
+    },
+    {
+      "VSC Token": "gitDecoration.conflictingResourceForeground",
+      "VS Token": [
+      ]
+    },
+    {
+      "VSC Token": "gitDecoration.deletedResourceForeground",
+      "VS Token": [
+      ]
+    },
+    {
+      "VSC Token": "gitDecoration.ignoredResourceForeground",
+      "VS Token": [
+      ]
+    },
+    {
+      "VSC Token": "gitDecoration.modifiedResourceForeground",
+      "VS Token": [
+      ]
+    },
+    {
+      "VSC Token": "gitDecoration.renamedResourceForeground",
+      "VS Token": [
+      ]
+    },
+    {
+      "VSC Token": "gitDecoration.stageDeletedResourceForeground",
+      "VS Token": [
+      ]
+    },
+    {
+      "VSC Token": "gitDecoration.stageModifiedResourceForeground",
+      "VS Token": [
+      ]
+    },
+    {
+      "VSC Token": "gitDecoration.submoduleResourceForeground",
+      "VS Token": [
+      ]
+    },
+    {
+      "VSC Token": "gitDecoration.untrackedResourceForeground",
+      "VS Token": [
+      ]
+    },
+    {
+      "VSC Token": "icon.foreground",
+      "VS Token": [
+        "Environment&CommandBarCheckBox&Background" //
+      ]
+    },
+    {
+      "VSC Token": "input.foreground",
+      "VS Token": [
+        "CommonControls&TextBoxText&Background", //
+        "CommonControls&TextBoxTextFocused&Background", //
+        "SearchControl&FocusedBackground&Foreground",
+        "SearchControl&MouseOverBackground&Foreground",
+        "SearchControl&SearchActiveBackground&Foreground",
+        "SearchControl&Unfocused&Foreground",
+        "TeamExplorer&TextBox&Foreground",
+        "SearchControl&MouseOverDropDownButtonGlyph&Background",
+        "SearchControl&MouseDownDropDownButtonGlyph&Background",
+        "SearchControl&MouseOverSearchGlyph&Background",
+        "SearchControl&ActionButtonMouseDownGlyph&Background",
+        "SearchControl&ActionButtonMouseOverGlyph&Background"
+      ]
+    },
+    {
+      "VSC Token": "input.placeholderForeground",
+      "VS Token": [
+      ]
+    },
+    {
+      "VSC Token": "inputOption.activeBackground",
+      "VS Token": [
+        "SearchControl&PopupControlMouseDownBackgroundGradientBegin&Background",
+        "SearchControl&PopupControlMouseDownBackgroundGradientEnd&Background",
+        "SearchControl&PopupControlMouseDownBackgroundGradientMiddle1&Background",
+        "SearchControl&PopupControlMouseDownBackgroundGradientMiddle2&Background"
+      ]
+    },
+    {
+      "VSC Token": "inputOption.activeForeground",
+      "VS Token": [
+      ]
+    },
+    {
+      "VSC Token": "inputValidation.errorBackground",
+      "VS Token": [
+      ]
+    },
+    {
+      "VSC Token": "inputValidation.errorBorder",
+      "VS Token": [
+      ]
+    },
+    {
+      "VSC Token": "inputValidation.infoBackground",
+      "VS Token": [
+      ]
+    },
+    {
+      "VSC Token": "inputValidation.infoBorder",
+      "VS Token": [
+      ]
+    },
+    {
+      "VSC Token": "inputValidation.warningBackground",
+      "VS Token": [
+      ]
+    },
+    {
+      "VSC Token": "inputValidation.warningBorder",
+      "VS Token": [
+      ]
+    },
+    {
+      "VSC Token": "keybindingLabel.background",
+      "VS Token": [
+      ]
+    },
+    {
+      "VSC Token": "keybindingLabel.border",
+      "VS Token": [
+      ]
+    },
+    {
+      "VSC Token": "keybindingLabel.bottomBorder",
+      "VS Token": [
+      ]
+    },
+    {
+      "VSC Token": "keybindingLabel.foreground",
+      "VS Token": [
+      ]
+    },
+    {
+      "VSC Token": "list.activeSelectionBackground",
+      "VS Token": [
+        "CommonDocument&ListItemBackgroundPressed&Background",
+        "CommonDocument&ListItemBackgroundSelected&Background",
+        "CommonDocument&ListItemBorderFocused&Background",
+        "CommonDocument&ListItemBorderPressed&Background",
+        "CommonDocument&ListItemBorderSelected&Background",
+        "CommonDocument&ListItemGlyphFocused&Background",
+        "CommonDocument&ListItemGlyphHover&Background",
+        "CommonDocument&ListItemGlyphPressed&Background",
+        "CommonDocument&TileViewBackgroundPressed&Background",
+        "CommonDocument&TileViewBackgroundSelected&Background",
+        "CommonDocument&TileViewBorderFocused&Background",
+        "CommonDocument&TileViewBorderHover&Background",
+        "CommonDocument&TileViewBorderPressed&Background",
+        "CommonDocument&TileViewBorderSelected&Background",
+        "Diagnostics&AdvancedListItemSelected&Background",
+        "NewProjectDialog&ContentSelected&Background",
+        "ThemedDialog&SelectedItemActive&Background",
+        "TreeView&HighlightedSpan&Background",
+        "Diagnostics&ControlSelectedItem&Background",
+        "TreeView&SelectedItemActive&Background",
+        "Environment&Highlight&Background",
+        "NewProjectDialog&WonderbarTreeSelected&Background" //
+      ]
+    },
+    {
+      "VSC Token": "list.activeSelectionForeground",
+      "VS Token": [
+        "Diagnostics&AdvancedListItemSelected&Foreground",
+        "NewProjectDialog&ContentSelected&Foreground",
+        "TreeView&HighlightedSpan&Foreground",
+        "TreeView&SelectedItemActive&Foreground",
+        "TreeView&SelectedItemActiveGlyph&Background",
+        "TreeView&SelectedItemActiveGlyphMouseOver&Background",
+        "Diagnostics&ControlSelectedItem&Foreground",
+        "ThemedDialog&SelectedItemActive&Foreground",
+        "Environment&HighlightText&Background",
+        "ThemedDialog&StartWindowDescriptionActive&Foreground",
+        "NewProjectDialog&WonderbarTreeSelected&Foreground" //
+      ]
+    },
+    {
+      "VSC Token": "list.deemphasizedForeground",
+      "VS Token": [
+      ]
+    },
+    {
+      "VSC Token": "list.dropBackground",
+      "VS Token": [
+        "TreeView&DragOverItem&Background"
+      ]
+    },
+    {
+      "VSC Token": "list.errorForeground",
+      "VS Token": [
+      ]
+    },
+    {
+      "VSC Token": "list.filterMatchBackground",
+      "VS Token": [
+      ]
+    },
+    {
+      "VSC Token": "list.focusHighlightForeground",
+      "VS Token": [
+      ]
+    },
+    {
+      "VSC Token": "list.focusOutline",
+      "VS Token": [
+        "TreeView&FocusVisualBorder&Background",
+        "NewProjectDialog&WonderbarSelectedBorder&Background" //
+      ]
+    },
+    {
+      "VSC Token": "list.highlightForeground",
+      "VS Token": [
+      ]
+    },
+    {
+      "VSC Token": "list.hoverBackground",
+      "VS Token": [
+        "Cider&ListItemMouseOver&Background",
+        "Cider&ListItemMouseOverBorder&Background",
+        "CommonControls&ComboBoxListItemBackgroundHover&Background",
+        "CommonControls&ComboBoxListItemBorderHover&Background",
+        "CommonControls&InnerTabInactiveHoverBackground&Background",
+        "CommonControls&InnerTabInactiveHoverBorder&Background",
+        "CommonDocument&ListItemBackgroundFocused&Background",
+        "CommonDocument&ListItemBackgroundHover&Background",
+        "CommonDocument&ListItemBorderHover&Background",
+        "CommonDocument&TileViewBackgroundFocused&Background",
+        "CommonDocument&TileViewBackgroundHover&Background",
+        "Diagnostics&AdvancedListItemHover&Background",
+        "NewProjectDialog&ContentMouseOver&Background",
+        "ProjectDesigner&MouseOverCategoryTab&Background",
+        "SearchControl&PopupControlMouseOverBackgroundGradientBegin&Background",
+        "SearchControl&PopupControlMouseOverBackgroundGradientEnd&Background",
+        "SearchControl&PopupControlMouseOverBackgroundGradientMiddle1&Background",
+        "SearchControl&PopupControlMouseOverBackgroundGradientMiddle2&Background",
+        "SearchControl&PopupControlMouseOverBorder&Background",
+        "StartPage&StartPageListItemHover&Background",
+        "ThemedDialog&ListItemMouseOver&Background",
+        "UserNotifications&NotificationMouseOverBackground&Background",
+        "UserNotifications&NotificationMouseOverBorder&Background",
+        "UserNotifications&NotificationSelectedBackground&Background",
+        "UserNotifications&NotificationSelectedBorder&Background",
+        "NewProjectDialog&WonderbarMouseOver&Background" //
+      ]
+    },
+    {
+      "VSC Token": "list.inactiveSelectionBackground",
+      "VS Token": [
+        "NewProjectDialog&ContentInactiveSelected&Background",
+        "ThemedDialog&SelectedItemInactive&Background",
+        "TreeView&SelectedItemInactive&Background",
+        "Environment&ButtonFace&Background",
+        "NewProjectDialog&WonderbarTreeInactiveSelected&Foreground" //
+
+      ]
+    },
+    {
+      "VSC Token": "list.invalidItemForeground",
+      "VS Token": [
+      ]
+    },
+    {
+      "VSC Token": "list.warningForeground",
+      "VS Token": [
+      ]
+    },
+    {
+      "VSC Token": "listFilterWidget.background",
+      "VS Token": [
+      ]
+    },
+    {
+      "VSC Token": "listFilterWidget.noMatchesOutline",
+      "VS Token": [
+      ]
+    },
+    {
+      "VSC Token": "listFilterWidget.outline",
+      "VS Token": [
+      ]
+    },
+    {
+      "VSC Token": "menu.background",
+      "VS Token": [
+        "Environment&CommandBarMenuBackgroundGradientBegin&Background",
+        "Environment&CommandBarMenuBackgroundGradientEnd&Background",
+        "Environment&CommandBarMenuIconBackground&Background"
+      ]
+    },
+    {
+      "VSC Token": "menu.foreground",
+      "VS Token": [
+      ]
+    },
+    {
+      "VSC Token": "menu.selectionForeground",
+      "VS Token": [
+        "Environment&CommandBarMenuItemMouseOver&Foreground",
+        "Environment&CommandBarMenuMouseDownGlyph&Background",
+        "Environment&CommandBarMenuMouseOverGlyph&Background",
+        "Environment&CommandBarMenuMouseOverSubmenuGlyph&Background",
+        "Environment&CommandBarMenuScrollGlyph&Background",
+        "Environment&CommandBarMenuSubmenuGlyph&Background",
+        "Environment&CommandBarMenuSubmenuGlyphHover&Background",
+      ]
+    },
+    {
+      "VSC Token": "menu.separatorBackground",
+      "VS Token": [
+        "Environment&CommandBarMenuSeparator&Background"
+      ]
+    },
+    {
+      "VSC Token": "menubar.selectionForeground",
+      "VS Token": [
+        "Environment&CommandBarCheckBoxMouseOver&Background" //
+      ]
+    },
+    {
+      "VSC Token": "merge.commonContentBackground",
+      "VS Token": [
+      ]
+    },
+    {
+      "VSC Token": "merge.commonHeaderBackground",
+      "VS Token": [
+      ]
+    },
+    {
+      "VSC Token": "merge.currentContentBackground",
+      "VS Token": [
+      ]
+    },
+    {
+      "VSC Token": "merge.currentHeaderBackground",
+      "VS Token": [
+      ]
+    },
+    {
+      "VSC Token": "merge.incomingContentBackground",
+      "VS Token": [
+      ]
+    },
+    {
+      "VSC Token": "merge.incomingHeaderBackground",
+      "VS Token": [
+      ]
+    },
+    {
+      "VSC Token": "minimap.errorHighlight",
+      "VS Token": [
+      ]
+    },
+    {
+      "VSC Token": "minimap.findMatchHighlight",
+      "VS Token": [
+      ]
+    },
+    {
+      "VSC Token": "minimap.selectionHighlight",
+      "VS Token": [
+        "Text Editor MEF Items&OverviewMarginCaret&Foreground"
+      ]
+    },
+    {
+      "VSC Token": "minimap.warningHighlight",
+      "VS Token": [
+      ]
+    },
+    {
+      "VSC Token": "minimapGutter.addedBackground",
+      "VS Token": [
+      ]
+    },
+    {
+      "VSC Token": "minimapGutter.deletedBackground",
+      "VS Token": [
+      ]
+    },
+    {
+      "VSC Token": "minimapGutter.modifiedBackground",
+      "VS Token": [
+      ]
+    },
+    {
+      "VSC Token": "minimapSlider.activeBackground",
+      "VS Token": [
+      ]
+    },
+    {
+      "VSC Token": "minimapSlider.background",
+      "VS Token": [
+      ]
+    },
+    {
+      "VSC Token": "minimapSlider.hoverBackground",
+      "VS Token": [
+      ]
+    },
+    {
+      "VSC Token": "notebook.cellBorderColor",
+      "VS Token": [
+      ]
+    },
+    {
+      "VSC Token": "notebook.cellInsertionIndicator",
+      "VS Token": [
+      ]
+    },
+    {
+      "VSC Token": "notebook.cellStatusBarItemHoverBackground",
+      "VS Token": [
+      ]
+    },
+    {
+      "VSC Token": "notebook.cellToolbarSeparator",
+      "VS Token": [
+      ]
+    },
+    {
+      "VSC Token": "notebook.focusedCellBorder",
+      "VS Token": [
+      ]
+    },
+    {
+      "VSC Token": "notebook.focusedEditorBorder",
+      "VS Token": [
+      ]
+    },
+    {
+      "VSC Token": "notebook.inactiveFocusedCellBorder",
+      "VS Token": [
+      ]
+    },
+    {
+      "VSC Token": "notebook.selectedCellBackground",
+      "VS Token": [
+      ]
+    },
+    {
+      "VSC Token": "notebook.selectedCellBorder",
+      "VS Token": [
+      ]
+    },
+    {
+      "VSC Token": "notebook.symbolHighlightBackground",
+      "VS Token": [
+      ]
+    },
+    {
+      "VSC Token": "notebookScrollbarSlider.activeBackground",
+      "VS Token": [
+      ]
+    },
+    {
+      "VSC Token": "notebookScrollbarSlider.background",
+      "VS Token": [
+      ]
+    },
+    {
+      "VSC Token": "notebookScrollbarSlider.hoverBackground",
+      "VS Token": [
+      ]
+    },
+    {
+      "VSC Token": "notebookStatusErrorIcon.foreground",
+      "VS Token": [
+      ]
+    },
+    {
+      "VSC Token": "notebookStatusRunningIcon.foreground",
+      "VS Token": [
+      ]
+    },
+    {
+      "VSC Token": "notebookStatusSuccessIcon.foreground",
+      "VS Token": [
+      ]
+    },
+    {
+      "VSC Token": "notificationCenterHeader.background",
+      "VS Token": [
+      ]
+    },
+    {
+      "VSC Token": "notificationLink.foreground",
+      "VS Token": [
+      ]
+    },
+    {
+      "VSC Token": "notifications.background",
+      "VS Token": [
+      ]
+    },
+    {
+      "VSC Token": "notifications.border",
+      "VS Token": [
+      ]
+    },
+    {
+      "VSC Token": "notifications.foreground",
+      "VS Token": [
+      ]
+    },
+    {
+      "VSC Token": "notificationsErrorIcon.foreground",
+      "VS Token": [
+      ]
+    },
+    {
+      "VSC Token": "notificationsInfoIcon.foreground",
+      "VS Token": [
+      ]
+    },
+    {
+      "VSC Token": "notificationsWarningIcon.foreground",
+      "VS Token": [
+      ]
+    },
+    {
+      "VSC Token": "panel.border",
+      "VS Token": [
+        "Diagnostics&TargetBorder&Background",
+        "Diagnostics&TargetBorderHover&Background",
+        "Diagnostics&TargetBorderPressed&Background",
+        "Diagnostics&ToolBorderHover&Background"
+      ]
+    },
+    {
+      "VSC Token": "panel.dropBorder",
+      "VS Token": [
+      ]
+    },
+    {
+      "VSC Token": "panelInput.border",
+      "VS Token": [
+      ]
+    },
+    {
+      "VSC Token": "panelSection.border",
+      "VS Token": [
+      ]
+    },
+    {
+      "VSC Token": "panelSection.dropBackground",
+      "VS Token": [
+      ]
+    },
+    {
+      "VSC Token": "panelSectionHeader.background",
+      "VS Token": [
+        "Environment&ToolWindowTabGradientBegin&Background",
+        "Environment&ToolWindowTabGradientEnd&Background",
+        "Environment&ToolWindowTabMouseOverBackgroundBegin&Background",
+        "Environment&ToolWindowTabMouseOverBackgroundEnd&Background" //
+      ]
+    },
+    {
+      "VSC Token": "panelTitle.activeBorder",
+      "VS Token": [
+      ]
+    },
+    {
+      "VSC Token": "panelTitle.activeForeground",
+      "VS Token": [
+        "Environment&TitleBarActiveText&Background",
+        "Environment&ToolWindowTabMouseOverText&Background",
+        "Environment&ToolWindowText&Background",
+        "Diagnostics&TargetHoverText&Background",
+        "Environment&CommandBarTextHover&Background", //
+        "Environment&CommandBarTextHoverOverSelected&Background", //
+        "Environment&CommandBarTextActive&Background" //
+      ]
+    },
+    {
+      "VSC Token": "panelTitle.inactiveForeground",
+      "VS Token": [
+        "Environment&ToolWindowTabText&Background",
+        "Environment&TitleBarInactiveText&Background"
+      ]
+    },
+    {
+      "VSC Token": "peekView.border",
+      "VS Token": [
+        "Environment&ToolTipBorder&Background"
+      ]
+    },
+    {
+      "VSC Token": "peekViewEditor.background",
+      "VS Token": [
+        "Environment&ToolTip&Background",
+        "Editor Tooltip&Plain Text&Background"
+      ]
+    },
+    {
+      "VSC Token": "peekViewEditor.matchHighlightBackground",
+      "VS Token": [
+      ]
+    },
+    {
+      "VSC Token": "peekViewEditorGutter.background",
+      "VS Token": [
+      ]
+    },
+    {
+      "VSC Token": "peekViewResult.background",
+      "VS Token": [
+      ]
+    },
+    {
+      "VSC Token": "peekViewResult.fileForeground",
+      "VS Token": [
+      ]
+    },
+    {
+      "VSC Token": "peekViewResult.lineForeground",
+      "VS Token": [
+      ]
+    },
+    {
+      "VSC Token": "peekViewResult.matchHighlightBackground",
+      "VS Token": [
+      ]
+    },
+    {
+      "VSC Token": "peekViewResult.selectionBackground",
+      "VS Token": [
+      ]
+    },
+    {
+      "VSC Token": "peekViewResult.selectionForeground",
+      "VS Token": [
+      ]
+    },
+    {
+      "VSC Token": "peekViewTitle.background",
+      "VS Token": [
+      ]
+    },
+    {
+      "VSC Token": "peekViewTitleDescription.foreground",
+      "VS Token": [
+        "Environment&ToolTip&Foreground",
+        "Environment&ToolTipHintText&Background",
+        "Editor Tooltip&Plain Text&Foreground"
+      ]
+    },
+    {
+      "VSC Token": "peekViewTitleLabel.foreground",
+      "VS Token": [
+      ]
+    },
+    {
+      "VSC Token": "pickerGroup.border",
+      "VS Token": [
+      ]
+    },
+    {
+      "VSC Token": "pickerGroup.foreground",
+      "VS Token": [
+      ]
+    },
+    {
+      "VSC Token": "ports.iconRunningProcessForeground",
+      "VS Token": [
+      ]
+    },
+    {
+      "VSC Token": "problemsErrorIcon.foreground",
+      "VS Token": [
+      ]
+    },
+    {
+      "VSC Token": "problemsInfoIcon.foreground",
+      "VS Token": [
+      ]
+    },
+    {
+      "VSC Token": "problemsWarningIcon.foreground",
+      "VS Token": [
+      ]
+    },
+    {
+      "VSC Token": "progressBar.background",
+      "VS Token": [
+        "ProgressBar&Background&Background"
+      ]
+    },
+    {
+      "VSC Token": "quickInput.background",
+      "VS Token": [
+      ]
+    },
+    {
+      "VSC Token": "quickInput.foreground",
+      "VS Token": [
+      ]
+    },
+    {
+      "VSC Token": "quickInputTitle.background",
+      "VS Token": [
+      ]
+    },
+    {
+      "VSC Token": "sash.hoverBorder",
+      "VS Token": [
+      ]
+    },
+    {
+      "VSC Token": "scm.providerBorder",
+      "VS Token": [
+      ]
+    },
+    {
+      "VSC Token": "scrollbarSlider.activeBackground",
+      "VS Token": [
+      ]
+    },
+    {
+      "VSC Token": "searchEditor.findMatchBackground",
+      "VS Token": [
+      ]
+    },
+    {
+      "VSC Token": "settings.checkboxBackground",
+      "VS Token": [
+      ]
+    },
+    {
+      "VSC Token": "settings.checkboxBorder",
+      "VS Token": [
+      ]
+    },
+    {
+      "VSC Token": "settings.dropdownBackground",
+      "VS Token": [
+        "Environment&ComboBoxMouseDownBorder&Background",
+        "Environment&ComboBoxMouseDownGlyph&Background",
+        "SearchControl&PopupSectionBackgroundGradientBegin&Background",
+        "SearchControl&PopupSectionBackgroundGradientEnd&Background"
+      ]
+    },
+    {
+      "VSC Token": "settings.dropdownBorder",
+      "VS Token": [
+      ]
+    },
+    {
+      "VSC Token": "settings.dropdownForeground",
+      "VS Token": [
+        "Cider&ComboBoxButtonPressed&Foreground",
+        "Cider&ComboBoxMouseOver&Foreground"
+      ]
+    },
+    {
+      "VSC Token": "settings.dropdownListBorder",
+      "VS Token": [
+      ]
+    },
+    {
+      "VSC Token": "settings.focusedRowBorder",
+      "VS Token": [
+      ]
+    },
+    {
+      "VSC Token": "settings.headerForeground",
+      "VS Token": [
+      ]
+    },
+    {
+      "VSC Token": "settings.modifiedItemIndicator",
+      "VS Token": [
+      ]
+    },
+    {
+      "VSC Token": "settings.numberInputBackground",
+      "VS Token": [
+      ]
+    },
+    {
+      "VSC Token": "settings.numberInputForeground",
+      "VS Token": [
+      ]
+    },
+    {
+      "VSC Token": "settings.textInputBackground",
+      "VS Token": [
+      ]
+    },
+    {
+      "VSC Token": "settings.textInputForeground",
+      "VS Token": [
+      ]
+    },
+    {
+      "VSC Token": "sideBar.dropBackground",
+      "VS Token": [
+      ]
+    },
+    {
+      "VSC Token": "statusBar.debuggingBorder",
+      "VS Token": [
+      ]
+    },
+    {
+      "VSC Token": "statusBar.noFolderBorder",
+      "VS Token": [
+      ]
+    },
+    {
+      "VSC Token": "statusBarItem.activeBackground",
+      "VS Token": [
+      ]
+    },
+    {
+      "VSC Token": "statusBarItem.errorBackground",
+      "VS Token": [
+      ]
+    },
+    {
+      "VSC Token": "statusBarItem.errorForeground",
+      "VS Token": [
+      ]
+    },
+    {
+      "VSC Token": "statusBarItem.hoverBackground",
+      "VS Token": [
+        "Environment&StatusBarHighlight&Background"
+      ]
+    },
+    {
+      "VSC Token": "statusBarItem.prominentBackground",
+      "VS Token": [
+      ]
+    },
+    {
+      "VSC Token": "statusBarItem.prominentForeground",
+      "VS Token": [
+      ]
+    },
+    {
+      "VSC Token": "statusBarItem.prominentHoverBackground",
+      "VS Token": [
+      ]
+    },
+    {
+      "VSC Token": "statusBarItem.remoteBackground",
+      "VS Token": [
+      ]
+    },
+    {
+      "VSC Token": "statusBarItem.remoteForeground",
+      "VS Token": [
+      ]
+    },
+    {
+      "VSC Token": "symbolIcon.arrayForeground",
+      "VS Token": [
+      ]
+    },
+    {
+      "VSC Token": "symbolIcon.booleanForeground",
+      "VS Token": [
+      ]
+    },
+    {
+      "VSC Token": "symbolIcon.classForeground",
+      "VS Token": [
+      ]
+    },
+    {
+      "VSC Token": "symbolIcon.colorForeground",
+      "VS Token": [
+      ]
+    },
+    {
+      "VSC Token": "symbolIcon.constantForeground",
+      "VS Token": [
+      ]
+    },
+    {
+      "VSC Token": "symbolIcon.constructorForeground",
+      "VS Token": [
+      ]
+    },
+    {
+      "VSC Token": "symbolIcon.enumeratorForeground",
+      "VS Token": [
+      ]
+    },
+    {
+      "VSC Token": "symbolIcon.enumeratorMemberForeground",
+      "VS Token": [
+      ]
+    },
+    {
+      "VSC Token": "symbolIcon.eventForeground",
+      "VS Token": [
+      ]
+    },
+    {
+      "VSC Token": "symbolIcon.fieldForeground",
+      "VS Token": [
+      ]
+    },
+    {
+      "VSC Token": "symbolIcon.fileForeground",
+      "VS Token": [
+      ]
+    },
+    {
+      "VSC Token": "symbolIcon.folderForeground",
+      "VS Token": [
+      ]
+    },
+    {
+      "VSC Token": "symbolIcon.functionForeground",
+      "VS Token": [
+      ]
+    },
+    {
+      "VSC Token": "symbolIcon.interfaceForeground",
+      "VS Token": [
+      ]
+    },
+    {
+      "VSC Token": "symbolIcon.keyForeground",
+      "VS Token": [
+      ]
+    },
+    {
+      "VSC Token": "symbolIcon.keywordForeground",
+      "VS Token": [
+      ]
+    },
+    {
+      "VSC Token": "symbolIcon.methodForeground",
+      "VS Token": [
+      ]
+    },
+    {
+      "VSC Token": "symbolIcon.moduleForeground",
+      "VS Token": [
+      ]
+    },
+    {
+      "VSC Token": "symbolIcon.namespaceForeground",
+      "VS Token": [
+      ]
+    },
+    {
+      "VSC Token": "symbolIcon.nullForeground",
+      "VS Token": [
+      ]
+    },
+    {
+      "VSC Token": "symbolIcon.numberForeground",
+      "VS Token": [
+      ]
+    },
+    {
+      "VSC Token": "symbolIcon.objectForeground",
+      "VS Token": [
+      ]
+    },
+    {
+      "VSC Token": "symbolIcon.operatorForeground",
+      "VS Token": [
+      ]
+    },
+    {
+      "VSC Token": "symbolIcon.packageForeground",
+      "VS Token": [
+      ]
+    },
+    {
+      "VSC Token": "symbolIcon.propertyForeground",
+      "VS Token": [
+      ]
+    },
+    {
+      "VSC Token": "symbolIcon.referenceForeground",
+      "VS Token": [
+      ]
+    },
+    {
+      "VSC Token": "symbolIcon.snippetForeground",
+      "VS Token": [
+      ]
+    },
+    {
+      "VSC Token": "symbolIcon.stringForeground",
+      "VS Token": [
+      ]
+    },
+    {
+      "VSC Token": "symbolIcon.structForeground",
+      "VS Token": [
+      ]
+    },
+    {
+      "VSC Token": "symbolIcon.textForeground",
+      "VS Token": [
+      ]
+    },
+    {
+      "VSC Token": "symbolIcon.typeParameterForeground",
+      "VS Token": [
+      ]
+    },
+    {
+      "VSC Token": "symbolIcon.unitForeground",
+      "VS Token": [
+      ]
+    },
+    {
+      "VSC Token": "symbolIcon.variableForeground",
+      "VS Token": [
+      ]
+    },
+    {
+      "VSC Token": "tab.activeModifiedBorder",
+      "VS Token": [
+      ]
+    },
+    {
+      "VSC Token": "tab.inactiveModifiedBorder",
+      "VS Token": [
+      ]
+    },
+    {
+      "VSC Token": "tab.lastPinnedBorder",
+      "VS Token": [
+      ]
+    },
+    {
+      "VSC Token": "tab.unfocusedActiveBackground",
+      "VS Token": [
+      ]
+    },
+    {
+      "VSC Token": "tab.unfocusedActiveBorder",
+      "VS Token": [
+      ]
+    },
+    {
+      "VSC Token": "tab.unfocusedActiveForeground",
+      "VS Token": [
+      ]
+    },
+    {
+      "VSC Token": "tab.unfocusedActiveModifiedBorder",
+      "VS Token": [
+      ]
+    },
+    {
+      "VSC Token": "tab.unfocusedInactiveBackground",
+      "VS Token": [
+      ]
+    },
+    {
+      "VSC Token": "tab.unfocusedInactiveForeground",
+      "VS Token": [
+      ]
+    },
+    {
+      "VSC Token": "tab.unfocusedInactiveModifiedBorder",
+      "VS Token": [
+      ]
+    },
+    {
+      "VSC Token": "terminal.ansiBlack",
+      "VS Token": [
+      ]
+    },
+    {
+      "VSC Token": "terminal.ansiBlue",
+      "VS Token": [
+      ]
+    },
+    {
+      "VSC Token": "terminal.ansiBrightBlack",
+      "VS Token": [
+      ]
+    },
+    {
+      "VSC Token": "terminal.ansiBrightBlue",
+      "VS Token": [
+      ]
+    },
+    {
+      "VSC Token": "terminal.ansiBrightCyan",
+      "VS Token": [
+      ]
+    },
+    {
+      "VSC Token": "terminal.ansiBrightGreen",
+      "VS Token": [
+      ]
+    },
+    {
+      "VSC Token": "terminal.ansiBrightMagenta",
+      "VS Token": [
+      ]
+    },
+    {
+      "VSC Token": "terminal.ansiBrightRed",
+      "VS Token": [
+      ]
+    },
+    {
+      "VSC Token": "terminal.ansiBrightWhite",
+      "VS Token": [
+      ]
+    },
+    {
+      "VSC Token": "terminal.ansiBrightYellow",
+      "VS Token": [
+      ]
+    },
+    {
+      "VSC Token": "terminal.ansiCyan",
+      "VS Token": [
+      ]
+    },
+    {
+      "VSC Token": "terminal.ansiGreen",
+      "VS Token": [
+      ]
+    },
+    {
+      "VSC Token": "terminal.ansiMagenta",
+      "VS Token": [
+      ]
+    },
+    {
+      "VSC Token": "terminal.ansiRed",
+      "VS Token": [
+      ]
+    },
+    {
+      "VSC Token": "terminal.ansiWhite",
+      "VS Token": [
+      ]
+    },
+    {
+      "VSC Token": "terminal.ansiYellow",
+      "VS Token": [
+      ]
+    },
+    {
+      "VSC Token": "terminal.border",
+      "VS Token": [
+      ]
+    },
+    {
+      "VSC Token": "terminal.dropBackground",
+      "VS Token": [
+      ]
+    },
+    {
+      "VSC Token": "terminal.foreground",
+      "VS Token": [
+      ]
+    },
+    {
+      "VSC Token": "terminal.selectionBackground",
+      "VS Token": [
+      ]
+    },
+    {
+      "VSC Token": "testing.iconErrored",
+      "VS Token": [
+      ]
+    },
+    {
+      "VSC Token": "testing.iconFailed",
+      "VS Token": [
+      ]
+    },
+    {
+      "VSC Token": "testing.iconPassed",
+      "VS Token": [
+      ]
+    },
+    {
+      "VSC Token": "testing.iconQueued",
+      "VS Token": [
+      ]
+    },
+    {
+      "VSC Token": "testing.iconSkipped",
+      "VS Token": [
+      ]
+    },
+    {
+      "VSC Token": "testing.iconUnset",
+      "VS Token": [
+      ]
+    },
+    {
+      "VSC Token": "testing.message.error.decorationForeground",
+      "VS Token": [
+      ]
+    },
+    {
+      "VSC Token": "testing.message.error.lineBackground",
+      "VS Token": [
+      ]
+    },
+    {
+      "VSC Token": "testing.message.hint.decorationForeground",
+      "VS Token": [
+      ]
+    },
+    {
+      "VSC Token": "testing.message.info.decorationForeground",
+      "VS Token": [
+      ]
+    },
+    {
+      "VSC Token": "testing.message.info.lineBackground",
+      "VS Token": [
+      ]
+    },
+    {
+      "VSC Token": "testing.message.warning.decorationForeground",
+      "VS Token": [
+      ]
+    },
+    {
+      "VSC Token": "testing.message.warning.lineBackground",
+      "VS Token": [
+      ]
+    },
+    {
+      "VSC Token": "testing.peekBorder",
+      "VS Token": [
+      ]
+    },
+    {
+      "VSC Token": "testing.runAction",
+      "VS Token": [
+      ]
+    },
+    {
+      "VSC Token": "textBlockQuote.background",
+      "VS Token": [
+      ]
+    },
+    {
+      "VSC Token": "textBlockQuote.border",
+      "VS Token": [
+      ]
+    },
+    {
+      "VSC Token": "textCodeBlock.background",
+      "VS Token": [
+      ]
+    },
+    {
+      "VSC Token": "textLink.activeForeground",
+      "VS Token": [
+        "NewProjectDialog&HyperlinkHover&Background",
+        "DiagnosticsHub&HyperlinkHover&Background"
+      ]
+    },
+    {
+      "VSC Token": "textPreformat.foreground",
+      "VS Token": [
+      ]
+    },
+    {
+      "VSC Token": "textSeparator.foreground",
+      "VS Token": [
+      ]
+    },
+    {
+      "VSC Token": "titleBar.inactiveBackground",
+      "VS Token": [
+        "Environment&MainWindowInactiveCaption&Background"
+      ]
+    },
+    {
+      "VSC Token": "titleBar.inactiveForeground",
+      "VS Token": [
+        "Environment&MainWindowInactiveCaption&Foreground"
+      ]
+    },
+    {
+      "VSC Token": "toolbar.activeBackground",
+      "VS Token": [
+      ]
+    },
+    {
+      "VSC Token": "toolbar.hoverBackground",
+      "VS Token": [
+      ]
+    },
+    {
+      "VSC Token": "tree.indentGuidesStroke",
+      "VS Token": [
+      ]
+    },
+    {
+      "VSC Token": "tree.tableColumnsBorder",
+      "VS Token": [
+      ]
+    },
+    {
+      "VSC Token": "welcomePage.progress.background",
+      "VS Token": [
+      ]
+    },
+    {
+      "VSC Token": "welcomePage.progress.foreground",
+      "VS Token": [
+        "ProgressBar&IndicatorFill&Background"
+      ]
+    },
+    {
+      "VSC Token": "welcomePage.tileBackground",
+      "VS Token": [
+      ]
+    },
+    {
+      "VSC Token": "welcomePage.tileHoverBackground",
+      "VS Token": [
+      ]
+    },
+    {
+      "VSC Token": "welcomePage.tileShadow.",
+      "VS Token": [
+      ]
+    },
+    {
+      "VSC Token": "widget.shadow",
+      "VS Token": [
+      ]
+    },
+    {
+      "VSC Token": "activityBar.activeBackground",
+      "VS Token": [
+      ]
+    },
+    {
+      "VSC Token": "activityBar.activeFocusBorder",
+      "VS Token": [
+      ]
+    },
+    {
+      "VSC Token": "activityBar.border",
+      "VS Token": [
+      ]
+    },
+    {
+      "VSC Token": "button.border",
+      "VS Token": [
+        "Cider&ComboBoxButtonPressedBorder&Background",
+        "CommonControls&ButtonBorderDefault&Background",        
+        "CommonControls&ButtonBorderFocused&Background",
+        "CommonControls&ButtonBorderPressed&Background",
+        "Environment&DocWellOverflowButtonMouseDownBorder&Background",
+        "Environment&FileTabButtonDownSelectedActiveBorder&Background",
+        "Environment&FileTabButtonProvisionalDownSelectedActiveBorder&Background",
+        "Environment&QuickCustomizeButtonBorder&Background",
+        "Environment&ToolWindowButtonDownBorder&Background",
+        "GraphDocumentColors&ExpandoButtonBorder&Background",
+        "InfoBar&ButtonMouseDownBorder&Background",
+        "NewProjectDialog&PageButtonBorder&Background",
+        "NotificationBubble&NotificationBubbleWindowButtonBorder&Background",
+        "NotificationBubble&NotificationBubbleWindowButtonDownBorder&Background",
+        "Promotion&LightboxDialogButtonBorderFocused&Background",
+        "Promotion&LightboxDialogButtonBorderPressed&Background",
+        "StartPage&StartPageButtonMouseDownBorder&Foreground",
+        "TeamExplorer&ButtonPressedBorder&Background",
+        "TeamExplorer&CallToActionButtonPressedBorder&Background",
+        "ThemedDialog&WindowButtonBorder&Background",
+        "ThemedDialog&WindowButtonDownBorder&Background",
+        "WelcomeExperience&WelcomeExperienceButtonBorder&Background",
+        "WelcomeExperience&WelcomeExperienceButtonMousedownBorder&Foreground",
+        "WelcomeExperience&WelcomeExperienceDistinctButtonBorder&Foreground"
+      ]
+    },
+    {
+      "VSC Token": "checkbox.foreground",
+      "VS Token": [
+        "CommonControls&CheckBoxGlyph&Background",
+        "CommonControls&CheckBoxGlyphDisabled&Background",
+        "CommonControls&CheckBoxGlyphFocused&Background",
+        "CommonControls&CheckBoxGlyphHover&Background",
+        "CommonControls&CheckBoxGlyphPressed&Background",
+        "CommonControls&CheckBoxText&Background",
+        "CommonControls&CheckBoxTextDisabled&Background",
+        "CommonControls&CheckBoxTextFocused&Background",
+        "CommonControls&CheckBoxTextHover&Background",
+        "CommonControls&CheckBoxTextPressed&Background"
+      ]
+    },
+    {
+      "VSC Token": "contrastActiveBorder",
+      "VS Token": [
+        "Environment&MainWindowActiveDefaultBorder&Background"
+      ]
+    },
+    {
+      "VSC Token": "contrastBorder",
+      "VS Token": [
+      ]
+    },
+    {
+      "VSC Token": "debugToolBar.border",
+      "VS Token": [
+      ]
+    },
+    {
+      "VSC Token": "diffEditor.border",
+      "VS Token": [
+      ]
+    },
+    {
+      "VSC Token": "diffEditor.insertedTextBorder",
+      "VS Token": [
+      ]
+    },
+    {
+      "VSC Token": "diffEditor.removedTextBorder",
+      "VS Token": [
+      ]
+    },
+    {
+      "VSC Token": "dropdown.foreground",
+      "VS Token": [
+        "CommonControls&ComboBoxGlyph&Background",
+        "CommonControls&ComboBoxGlyphDisabled&Background",
+        "CommonControls&ComboBoxGlyphFocused&Background",
+        "CommonControls&ComboBoxGlyphHover&Background",
+        "CommonControls&ComboBoxGlyphPressed&Background",
+        "CommonControls&ComboBoxListItemText&Background",
+        "CommonControls&ComboBoxListItemTextHover&Background",
+        "CommonControls&ComboBoxText&Background",
+        "CommonControls&ComboBoxTextDisabled&Background",
+        "CommonControls&ComboBoxTextFocused&Background",
+        "CommonControls&ComboBoxTextHover&Background",
+        "CommonControls&ComboBoxTextPressed&Background",
+        "Environment&ComboBoxFocusedGlyph&Background",
+        "Environment&ComboBoxMouseOverGlyph&Background",
+        "Environment&DropDownMouseOverGlyph&Background",
+        "Environment&DropDownMouseOverText&Background",
+        "Environment&DropDownText&Background",
+        "Output Window&Current List Location&Foreground",
+        "Environment&ComboBoxItemMouseOverText&Background" //
+      ]
+    },
+    {
+      "VSC Token": "dropdown.listBackground",
+      "VS Token": [
+      ]
+    },
+    {
+      "VSC Token": "editor.findMatchBorder",
+      "VS Token": [
+      ]
+    },
+    {
+      "VSC Token": "editor.findMatchHighlightBorder",
+      "VS Token": [
+      ]
+    },
+    {
+      "VSC Token": "editor.findRangeHighlightBorder",
+      "VS Token": [
+      ]
+    },
+    {
+      "VSC Token": "editor.rangeHighlightBorder",
+      "VS Token": [
+      ]
+    },
+    {
+      "VSC Token": "editor.selectionForeground",
+      "VS Token": [
+      ]
+    },
+    {
+      "VSC Token": "editor.selectionHighlightBorder",
+      "VS Token": [
+      ]
+    },
+    {
+      "VSC Token": "editor.snippetFinalTabstopHighlightBackground",
+      "VS Token": [
+      ]
+    },
+    {
+      "VSC Token": "editor.snippetTabstopHighlightBorder",
+      "VS Token": [
+      ]
+    },
+    {
+      "VSC Token": "editor.symbolHighlightBorder",
+      "VS Token": [
+      ]
+    },
+    {
+      "VSC Token": "editor.wordHighlightBorder",
+      "VS Token": [
+      ]
+    },
+    {
+      "VSC Token": "editor.wordHighlightStrongBorder",
+      "VS Token": [
+      ]
+    },
+    {
+      "VSC Token": "editorCursor.background",
+      "VS Token": [
+      ]
+    },
+    {
+      "VSC Token": "editorError.background",
+      "VS Token": [
+      ]
+    },
+    {
+      "VSC Token": "editorError.border",
+      "VS Token": [
+      ]
+    },
+    {
+      "VSC Token": "editorGhostText.border",
+      "VS Token": [
+      ]
+    },
+    {
+      "VSC Token": "editorGroup.background",
+      "VS Token": [
+      ]
+    },
+    {
+      "VSC Token": "editorGroup.emptyBackground",
+      "VS Token": [
+      ]
+    },
+    {
+      "VSC Token": "editorGroup.focusedEmptyBorder",
+      "VS Token": [
+      ]
+    },
+    {
+      "VSC Token": "editorGroupHeader.border",
+      "VS Token": [
+      ]
+    },
+    {
+      "VSC Token": "editorHint.border",
+      "VS Token": [
+      ]
+    },
+    {
+      "VSC Token": "editorInfo.background",
+      "VS Token": [
+      ]
+    },
+    {
+      "VSC Token": "editorInfo.border",
+      "VS Token": [
+      ]
+    },
+    {
+      "VSC Token": "editorOverviewRuler.background",
+      "VS Token": [
+      ]
+    },
+    {
+      "VSC Token": "editorSuggestWidget.selectedIconForeground",
+      "VS Token": [
+      ]
+    },
+    {
+      "VSC Token": "editorUnnecessaryCode.border",
+      "VS Token": [
+      ]
+    },
+    {
+      "VSC Token": "editorWarning.background",
+      "VS Token": [
+      ]
+    },
+    {
+      "VSC Token": "editorWarning.border",
+      "VS Token": [
+      ]
+    },
+    {
+      "VSC Token": "editorWidget.resizeBorder",
+      "VS Token": [
+      ]
+    },
+    {
+      "VSC Token": "inputValidation.errorForeground",
+      "VS Token": [
+      ]
+    },
+    {
+      "VSC Token": "inputValidation.infoForeground",
+      "VS Token": [
+      ]
+    },
+    {
+      "VSC Token": "inputValidation.warningForeground",
+      "VS Token": [
+      ]
+    },
+    {
+      "VSC Token": "list.activeSelectionIconForeground",
+      "VS Token": [
+      ]
+    },
+    {
+      "VSC Token": "list.filterMatchBorder",
+      "VS Token": [
+      ]
+    },
+    {
+      "VSC Token": "list.focusBackground",
+      "VS Token": [
+      ]
+    },
+    {
+      "VSC Token": "list.focusForeground",
+      "VS Token": [
+      ]
+    },
+    {
+      "VSC Token": "list.hoverForeground",
+      "VS Token": [
+        "Cider&ListHeader&Foreground",
+        "Cider&ListItem&Foreground",
+        "Cider&ListItemTier1&Foreground",
+        "Cider&ListItemTier2&Foreground",
+        "Cider&ListItemTier3&Foreground",
+        "CommonDocument&ListItemText&Background",
+        "CommonDocument&ListItemTextFocused&Background",
+        "CommonDocument&ListItemTextHover&Background",
+        "CommonDocument&ListItemTextPressed&Background",
+        "CommonDocument&ListItemTextSelected&Background",
+        "CommonDocument&ListItemTextUnfocused&Background",
+        "Diagnostics&AdvancedListItemHover&Foreground",
+        "StartPage&StartPageListItemHover&Foreground",
+        "ThemedDialog&ActionButtonTextActive&Background",
+        "ThemedDialog&ListItemMouseOver&Foreground",
+        "ThemedDialog&StartWindowDescriptionHover&Foreground",
+        "ThemedUtilityDialog&ActiveCaption&Foreground",
+        "VSSearch&ListItemSupportTextHover&Background",
+        "VSSearch&ListItemBorderHover&Background",
+        "NewProjectDialog&WonderbarMouseOver&Foreground" //
+      ]
+    },
+    {
+      "VSC Token": "list.inactiveFocusBackground",
+      "VS Token": [
+      ]
+    },
+    {
+      "VSC Token": "list.inactiveFocusOutline",
+      "VS Token": [
+      ]
+    },
+    {
+      "VSC Token": "list.inactiveSelectionForeground",
+      "VS Token": [
+        "Diagnostics&AdvancedListItem&Foreground",
+        "NewProjectDialog&ContentInactiveSelected&Foreground",
+        "ThemedDialog&SelectedItemInactive&Foreground",
+        "TreeView&SelectedItemInactive&Foreground",
+        "TreeView&SelectedItemInactiveGlyph&Background",
+        "TreeView&SelectedItemInactiveGlyphMouseOver&Background",
+        "Environment&ButtonText&Background",
+        "NewProjectDialog&WonderbarTreeInactiveSelected&Foreground" //
+      ]
+    },
+    {
+      "VSC Token": "list.inactiveSelectionIconForeground",
+      "VS Token": [
+      ]
+    },
+    {
+      "VSC Token": "menu.border",
+      "VS Token": [
+        "Environment&CommandBarMenuBorder&Background"
+      ]
+    },
+    {
+      "VSC Token": "menu.selectionBorder",
+      "VS Token": [
+        // TODO: These don't work for menu item border
+        "Environment&CommandBarMenuItemMouseOverBorder&Background",
+        "Environment&CommandBarFrameControlHover&Background",
+        "Environment&CommandBarBorder&Background" //
+      ]
+    },
+    {
+      "VSC Token": "menubar.selectionBorder",
+      "VS Token": [
+      ]
+    },
+    {
+      "VSC Token": "merge.border",
+      "VS Token": [
+      ]
+    },
+    {
+      "VSC Token": "minimap.background",
+      "VS Token": [
+      ]
+    },
+    {
+      "VSC Token": "notebook.cellEditorBackground",
+      "VS Token": [
+      ]
+    },
+    {
+      "VSC Token": "notebook.cellHoverBackground",
+      "VS Token": [
+      ]
+    },
+    {
+      "VSC Token": "notebook.focusedCellBackground",
+      "VS Token": [
+      ]
+    },
+    {
+      "VSC Token": "notebook.inactiveSelectedCellBorder",
+      "VS Token": [
+      ]
+    },
+    {
+      "VSC Token": "notebook.outputContainerBackgroundColor",
+      "VS Token": [
+      ]
+    },
+    {
+      "VSC Token": "notificationCenter.border",
+      "VS Token": [
+      ]
+    },
+    {
+      "VSC Token": "notificationCenterHeader.foreground",
+      "VS Token": [
+      ]
+    },
+    {
+      "VSC Token": "notificationToast.border",
+      "VS Token": [
+      ]
+    },
+    {
+      "VSC Token": "panelSectionHeader.border",
+      "VS Token": [
+      ]
+    },
+    {
+      "VSC Token": "panelSectionHeader.foreground",
+      "VS Token": [
+      ]
+    },
+    {
+      "VSC Token": "peekViewEditor.matchHighlightBorder",
+      "VS Token": [
+      ]
+    },
+    {
+      "VSC Token": "quickInput.list.focusBackground",
+      "VS Token": [
+      ]
+    },
+    {
+      "VSC Token": "quickInputList.focusIconForeground",
+      "VS Token": [
+      ]
+    },
+    {
+      "VSC Token": "searchEditor.findMatchBorder",
+      "VS Token": [
+      ]
+    },
+    {
+      "VSC Token": "searchEditor.textInputBorder",
+      "VS Token": [
+      ]
+    },
+    {
+      "VSC Token": "selection.background",
+      "VS Token": [
+        "Environment&CommandBarSelectedIcon&Background", //
+        "Output Window&Selected Text&Background",
+        "Output Window&Selected Text in High Contrast&Background",
+        "CommonControls&ComboBoxTextInputSelection&Background" //
+      ]
+    },
+    {
+      "VSC Token": "settings.checkboxForeground",
+      "VS Token": [
+      ]
+    },
+    {
+      "VSC Token": "settings.focusedRowBackground",
+      "VS Token": [
+      ]
+    },
+    {
+      "VSC Token": "settings.numberInputBorder",
+      "VS Token": [
+      ]
+    },
+    {
+      "VSC Token": "settings.rowHoverBackground",
+      "VS Token": [
+      ]
+    },
+    {
+      "VSC Token": "settings.textInputBorder",
+      "VS Token": [
+      ]
+    },
+    {
+      "VSC Token": "sideBarSectionHeader.border",
+      "VS Token": [
+      ]
+    },
+    {
+      "VSC Token": "tab.activeBorderTop",
+      "VS Token": [
+      ]
+    },
+    {
+      "VSC Token": "tab.hoverBackground",
+      "VS Token": [
+      ]
+    },
+    {
+      "VSC Token": "tab.hoverBorder",
+      "VS Token": [
+        "Environment&FileTabHotBorder&Background"
+      ]
+    },
+    {
+      "VSC Token": "tab.hoverForeground",
+      "VS Token": [
+        "Environment&FileTabHotText&Background",
+        "Environment&AutoHideTabMouseOverText&Background"
+      ]
+    },
+    {
+      "VSC Token": "tab.unfocusedActiveBorderTop",
+      "VS Token": [
+      ]
+    },
+    {
+      "VSC Token": "tab.unfocusedHoverBorder",
+      "VS Token": [
+      ]
+    },
+    {
+      "VSC Token": "tab.unfocusedHoverForeground",
+      "VS Token": [
+      ]
+    },
+    {
+      "VSC Token": "terminal.background",
+      "VS Token": [
+      ]
+    },
+    {
+      "VSC Token": "terminalCursor.background",
+      "VS Token": [
+      ]
+    },
+    {
+      "VSC Token": "terminalCursor.foreground",
+      "VS Token": [
+      ]
+    },
+    {
+      "VSC Token": "testing.message.hint.lineBackground",
+      "VS Token": [
+      ]
+    },
+    {
+      "VSC Token": "toolbar.hoverOutline",
+      "VS Token": [
+      ]
+    },
+    {
+      "VSC Token": "walkThrough.embeddedEditorBackground",
+      "VS Token": [
+      ]
+    },
+    {
+      "VSC Token": "welcomePage.buttonBackground",
+      "VS Token": [
+      ]
+    },
+    {
+      "VSC Token": "welcomePage.buttonHoverBackground",
+      "VS Token": [
+      ]
+    },
+    {
+      "VSC Token": "window.activeBorder",
+      "VS Token": [
+      ]
+    },
+    {
+      "VSC Token": "window.inactiveBorder",
+      "VS Token": [
+      ]
+    }
+  ]
+}
