@@ -1,14 +1,16 @@
-# Project
+# VSThemeConverter 
+ This is a CLI tool that takes in a VS Code theme’s json file and converts it into a VS theme. 
 
-> This repo has been populated by an initial template to help get you started. Please
-> make sure to update the content to build a great experience for community-building.
+ ## Using the tool 
 
-As the maintainer of this project, please make a few updates:
-
-- Improving this README.MD file to provide a great experience
-- Updating SUPPORT.MD with content about this project's support experience
-- Understanding the security reporting process in SECURITY.MD
-- Remove this section from the README
+1. Clone the repo and build the solution. 
+2. Open command line in Admin mode. 
+3. Go to the `vs-theme-converter\VSCodeThemeImporter\VSCodeThemeImporter\bin\Debug\netcoreapp3.1`. 
+4. Run VSCodeThemeImporter.exe <theme_json_file_path> <vs_install_dir> 
+5. For example, my command would be:  
+`./VSCodeThemeImporter.exe "C:\Users\foo\Documents\Nord.json" "C:\Program Files\Microsoft Visual Studio\2022\Preview" `
+6. This command will launch a patched VS. You can select your new theme from the Tools -> Options -> General page. 
+7. Play around with your theme and let us know what you think! 
 
 ## Contributing
 
