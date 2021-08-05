@@ -1,16 +1,20 @@
 # VSThemeConverter 
  This is a CLI tool that takes in a VS Code theme’s json file and converts it into a VS theme. 
+ 
+ ## Prerequisite:
+ 1. VS Code
+ 2. VS 2022 Preview 3 or later
+
 
  ## Using the tool 
-
 1. Clone the repo and build the solution. 
 2. Open command line in Admin mode. 
 3. Go to the `vs-theme-converter\VSCodeThemeImporter\VSCodeThemeImporter\bin\Debug\netcoreapp3.1`. 
-4. Run VSCodeThemeImporter.exe <theme_json_file_path> <vs_install_dir> 
-5. For example, my command would be:  
+4. Get the theme file with steps described in section `Getting a theme's json file`
+5. Run VSCodeThemeImporter.exe <theme_json_file_path> <vs_install_dir> 
+6. For example, my command would be:  
 `./VSCodeThemeImporter.exe "C:\Users\foo\Documents\Nord.json" "C:\Program Files\Microsoft Visual Studio\2022\Preview" `
 6. This command will launch a patched VS. You can select your new theme from the Tools -> Options -> General page. 
-7. Play around with your theme and let us know what you think! 
 
 ### Getting a theme's json file
 1. Open VS Code. 
@@ -18,6 +22,21 @@
 3. “Ctrl + Shift + P” and run “Developer: Generate Color Theme from current settings.” 
 4. In the generated JSON, uncomment all code. When you uncomment, please be careful about missing commas! Make sure the JSON is valid. 
 5. Save this as a “JSON” file for the conversion, using the theme's name as the file name. Please ensure that the file’s extension is .json. (The file shouldn’t be saved as a JSONC file.) 
+
+### Creating a VSIX for the new theme
+This section describes how you can create a VSIX with the converted theme for publishing and sharing.
+1. In VS 2022, create a new "Empty VSIX Project"
+2. Right-click on project node, select Add > Existing Item
+3. Set filter to All Files (*.*) and select the .pkgdef file that the converter created.
+4. Select the new pkgdef file in the solution explorer and press F4 for the properties window
+5. Set `Copy to Output Directory` to `Copy always`
+6. Set `Include in VSIX` to `true`
+7. Open the `source.extension.vsixmanifest` file, select Assets, click New.
+8. Select `Microsoft.VisualStudio.VsPackage` for Type, and `File on filesystem` for Source.
+9. Click Browse and select the .pkgdef you added. Click OK.
+10. Edit other fields in the vsixmanifest as desired (author, version, company, etc)
+11. Build solution and you now have a vsix in the output folder.
+
 
 ## Contributing
 
