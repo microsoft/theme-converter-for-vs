@@ -12,6 +12,13 @@
 6. This command will launch a patched VS. You can select your new theme from the Tools -> Options -> General page. 
 7. Play around with your theme and let us know what you think! 
 
+### Getting a theme's json file
+1. Open VS Code. 
+2. Install the desired color theme and switch to this theme in VS Code. Please note that this tool will not convert icon themes. 
+3. “Ctrl + Shift + P” and run “Developer: Generate Color Theme from current settings.” 
+4. In the generated JSON, uncomment all code. When you uncomment, please be careful about missing commas! Make sure the JSON is valid. 
+5. Save this as a “JSON” file for the conversion, using the theme's name as the file name. Please ensure that the file’s extension is .json. (The file shouldn’t be saved as a JSONC file.) 
+
 ## Contributing
 
 This project welcomes contributions and suggestions.  Most contributions require you to agree to a
