@@ -1,4 +1,4 @@
-# VSThemeConverter 
+# Theme Converter 
  This is a CLI tool that takes in a VS Code theme’s json file and converts it into a VS theme. 
  
  ## Prerequisite:
