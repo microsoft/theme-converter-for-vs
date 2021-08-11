@@ -1,4 +1,4 @@
-﻿namespace VSCodeThemeImporter
+﻿namespace ThemeConverter
 {
     using System.Collections.Generic;
     using System.Runtime.Serialization;

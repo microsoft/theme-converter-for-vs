@@ -22,11 +22,11 @@
   </ItemGroup>
 
   <ItemGroup>
-    <EditorConfigFiles Remove="E:\source\VSThemeConversion\VSCodeThemeImporter\ThemeTests\.editorconfig" />
+    <EditorConfigFiles Remove="E:\source\VSThemeConversion\ThemeConverter\ThemeTests\.editorconfig" />
   </ItemGroup>
 
   <ItemGroup>
-    <None Include="E:\source\VSThemeConversion\VSCodeThemeImporter\ThemeTests\.editorconfig" />
+    <None Include="E:\source\VSThemeConversion\ThemeConverter\ThemeTests\.editorconfig" />
   </ItemGroup>
 
   <ItemGroup>

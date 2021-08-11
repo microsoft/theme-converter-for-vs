@@ -1,4 +1,4 @@
-﻿namespace VSCodeThemeImporter
+﻿namespace ThemeConverter
 {
     using System;
     using System.Collections.Generic;
@@ -28,16 +28,16 @@
         {
             try
             {
-                Console.WriteLine("VSCodeThemeImporter v0.0.2");
+                Console.WriteLine("ThemeConverter v0.0.2");
                 Console.WriteLine("A utility that converts VSCode theme json file(s) to VS pkgdef file(s).");
                 Console.WriteLine("For Microsoft internal usage only.");
                 Console.WriteLine();
 
                 if (args.Length < 1)
                 {
-                    Console.WriteLine("Usage: VSCodeThemeImporter.exe <theme_json_file_path> <vs_install_dir>");
+                    Console.WriteLine("Usage: ThemeConverter.exe <theme_json_file_path> <vs_install_dir>");
                     Console.WriteLine("       or");
-                    Console.WriteLine("       VSCodeThemeImporter.exe <theme_json_folder_path> <pkgdef_out_dir>");
+                    Console.WriteLine("       ThemeConverter.exe <theme_json_folder_path> <pkgdef_out_dir>");
                     Console.WriteLine();
                     return -1;
                 }
