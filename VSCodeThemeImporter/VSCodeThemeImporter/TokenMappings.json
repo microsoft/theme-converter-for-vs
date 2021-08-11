@@ -786,6 +786,7 @@
         "TeamExplorer&CallToActionButtonMouseOver&Foreground",
         "TeamExplorer&CallToActionButtonPressed&Foreground",
         "ThemedDialog&CloseWindowButtonHover&Foreground",
+        "ThemedDialog&WindowButtonGlyph&Background",
         "ThemedDialog&WindowButtonHoverGlyph&Background",
         "NotificationBubble&NotificationBubbleWindowButtonHoverGlyph&Background",
         "UserNotifications&BadgeButtonCountActive&Foreground",
@@ -1319,6 +1320,7 @@
         "TeamExplorer&CallToActionButtonMouseOver&Background",
         "TeamExplorer&CallToActionButtonMouseOverBorder&Background",
         "ThemedDialog&WindowButtonHover&Background",
+        "ThemedDialog&CloseWindowButtonHover&Background",
         "ThemedDialog&WindowButtonHoverBorder&Background",
         "UserNotifications&BadgeButtonCountMouseOverActive&Background",
         "UserNotifications&BadgeButtonCountMouseOverInactive&Background",
@@ -2442,9 +2444,7 @@
         "NewProjectDialog&ContentInactiveSelected&Background",
         "ThemedDialog&SelectedItemInactive&Background",
         "TreeView&SelectedItemInactive&Background",
-        "Environment&ButtonFace&Background",
-        "NewProjectDialog&WonderbarTreeInactiveSelected&Foreground" //
-
+        "Environment&ButtonFace&Background"
       ]
     },
     {

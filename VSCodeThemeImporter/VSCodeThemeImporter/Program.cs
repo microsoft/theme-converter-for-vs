@@ -149,7 +149,7 @@
                 throw new ApplicationException("Fatal error running devenv.exe /updateconfiguration");
 
             // Launch Visual Studio to the themes page.
-            Process.Start(vsPath, @"C:\Work\VSThemeConversion\VSCodeThemeImporter\VSCodeThemeImporter\Program.cs");
+            Process.Start(vsPath);
         }
 
         private static string GetVsInstallPath()
