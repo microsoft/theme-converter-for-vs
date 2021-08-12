@@ -9,11 +9,11 @@
  ## Using the tool 
 1. Clone the repo and build the solution. 
 2. Open command line in Admin mode. 
-3. Go to the `vs-theme-converter\VSCodeThemeImporter\VSCodeThemeImporter\bin\Debug\netcoreapp3.1`. 
+3. Go to the `vs-theme-converter\ThemeConverter\ThemeConverter\bin\Debug\netcoreapp3.1`. 
 4. Get the theme file with steps described in section `Getting a theme's json file`
-5. Run VSCodeThemeImporter.exe <theme_json_file_path> <vs_install_dir> 
+5. Run ThemeConverter.exe <theme_json_file_path> <vs_install_dir> 
 6. For example, my command would be:  
-`./VSCodeThemeImporter.exe "C:\Users\foo\Documents\Nord.json" "C:\Program Files\Microsoft Visual Studio\2022\Preview" `
+`./ThemeConverter.exe "C:\Users\foo\Documents\Nord.json" "C:\Program Files\Microsoft Visual Studio\2022\Preview" `
 6. This command will launch a patched VS. You can select your new theme from the Tools -> Options -> General page. 
 
 ### Getting a theme's json file
