@@ -2483,6 +2483,8 @@
     {
       "VSC Token": "menu.foreground",
       "VS Token": [
+        "Environment&CommandBarMenuScrollGlyph&Background",
+        "Environment&CommandBarMenuSubmenuGlyph&Background"
       ]
     },
     {
@@ -2492,9 +2494,7 @@
         "Environment&CommandBarMenuMouseDownGlyph&Background",
         "Environment&CommandBarMenuMouseOverGlyph&Background",
         "Environment&CommandBarMenuMouseOverSubmenuGlyph&Background",
-        "Environment&CommandBarMenuScrollGlyph&Background",
-        "Environment&CommandBarMenuSubmenuGlyph&Background",
-        "Environment&CommandBarMenuSubmenuGlyphHover&Background",
+        "Environment&CommandBarMenuSubmenuGlyphHover&Background"
       ]
     },
     {
