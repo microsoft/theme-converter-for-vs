@@ -8,9 +8,9 @@
 
  ## Using the tool 
 1. Clone the repo
-2. Go to `vs-theme-converter\ThemeConverter\ThemeConverter` and build the converter project with `dotnet build ThemeConverter.csproj`. 
+2. Go to `%YourClonePath%\vs-theme-converter\ThemeConverter\ThemeConverter` and build the converter project with `dotnet build ThemeConverter.csproj`. 
 3. Open command line in Admin mode. 
-4. Go to the `vs-theme-converter\ThemeConverter\ThemeConverter\bin\Debug\netcoreapp3.1`. 
+4. Go to the `%YourClonePath%\vs-theme-converter\ThemeConverter\ThemeConverter\bin\Debug\netcoreapp3.1`. 
 5. Get the theme file with steps described in section `Getting a theme's json file`
 6. Run ThemeConverter.exe <theme_json_file_path> <vs_install_dir> 
 7. For example, my command would be:  
