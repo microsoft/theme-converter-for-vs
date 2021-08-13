@@ -7,12 +7,13 @@
 
 
  ## Using the tool 
-1. Clone the repo and build the solution. 
-2. Open command line in Admin mode. 
-3. Go to the `vs-theme-converter\ThemeConverter\ThemeConverter\bin\Debug\netcoreapp3.1`. 
-4. Get the theme file with steps described in section `Getting a theme's json file`
-5. Run ThemeConverter.exe <theme_json_file_path> <vs_install_dir> 
-6. For example, my command would be:  
+1. Clone the repo
+2. Go to `vs-theme-converter\ThemeConverter\ThemeConverter` and build the converter project with `dotnet build ThemeConverter.csproj`. 
+3. Open command line in Admin mode. 
+4. Go to the `vs-theme-converter\ThemeConverter\ThemeConverter\bin\Debug\netcoreapp3.1`. 
+5. Get the theme file with steps described in section `Getting a theme's json file`
+6. Run ThemeConverter.exe <theme_json_file_path> <vs_install_dir> 
+7. For example, my command would be:  
 `./ThemeConverter.exe "C:\Users\foo\Documents\Nord.json" "C:\Program Files\Microsoft Visual Studio\2022\Preview" `
 6. This command will launch a patched VS. You can select your new theme from the Tools -> Options -> General page. 
 
