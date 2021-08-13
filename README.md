@@ -3,7 +3,7 @@
  
  ## Prerequisite:
  1. VS Code
- 2. VS 2022 Preview 3 or later
+ 2. VS 2022 Preview 3 or later for the best result
 
 
  ## Using the tool 
