@@ -8,9 +8,9 @@
 
  ## Using the tool 
 1. Clone the repo
-2. Go to `%YourClonePath%\vs-theme-converter\ThemeConverter\ThemeConverter` and build the converter project with `dotnet build ThemeConverter.csproj`. 
+2. Go to `<your_clone_path>\vs-theme-converter\ThemeConverter\ThemeConverter` and build the converter project with `dotnet build ThemeConverter.csproj`. 
 3. Open command line in Admin mode. 
-4. Go to the `%YourClonePath%\vs-theme-converter\ThemeConverter\ThemeConverter\bin\Debug\netcoreapp3.1`. 
+4. Go to the `<your_clone_path>\vs-theme-converter\ThemeConverter\ThemeConverter\bin\Debug\netcoreapp3.1`. 
 5. Get the theme file with steps described in section `Getting a theme's json file`
 6. Run ThemeConverter.exe <theme_json_file_path> <vs_install_dir> 
 7. For example, my command would be:  
@@ -28,15 +28,15 @@
 This section describes how you can create a VSIX with the converted theme for publishing and sharing.
 1. In VS 2022, create a new "Empty VSIX Project"
 2. Right-click on project node, select Add > Existing Item
-3. Set filter to All Files (*.*) and select the .pkgdef file that the converter created.
-4. Select the new pkgdef file in the solution explorer and press F4 for the properties window
-5. Set `Copy to Output Directory` to `Copy always`
-6. Set `Include in VSIX` to `true`
-7. Open the `source.extension.vsixmanifest` file, select Assets, click New.
-8. Select `Microsoft.VisualStudio.VsPackage` for Type, and `File on filesystem` for Source.
-9. Click Browse and select the .pkgdef you added. Click OK.
-10. Edit other fields in the vsixmanifest as desired (author, version, company, etc)
-11. Build solution and you now have a vsix in the output folder.
+3. Set filter to All Files (*.*) and select the .pkgdef file(s) that the converter created under "<vs_install_dir>\Common7\IDE\CommonExtensions\Platform". (e.g: "C:\Program Files\Microsoft Visual Studio\2022\Preview\Common7\IDE\CommonExtensions\Platform")
+5. Select the new pkgdef file in the solution explorer and press F4 for the properties window
+6. Set `Copy to Output Directory` to `Copy always`
+7. Set `Include in VSIX` to `true`
+8. Open the `source.extension.vsixmanifest` file, select Assets, click New.
+9. Select `Microsoft.VisualStudio.VsPackage` for Type, and `File on filesystem` for Source.
+10. Click Browse and select the .pkgdef you added. Click OK.
+11. Edit other fields in the vsixmanifest as desired (author, version, company, etc)
+12. Build solution and you now have a vsix in the output folder.
 
 
 ## Contributing
