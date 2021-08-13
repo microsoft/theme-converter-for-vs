@@ -12,9 +12,8 @@
 3. Open command line in Admin mode. 
 4. Go to the `<your_clone_path>\vs-theme-converter\ThemeConverter\ThemeConverter\bin\Debug\netcoreapp3.1`. 
 5. Get the theme file with steps described in section `Getting a theme's json file`
-6. Run ThemeConverter.exe <theme_json_file_path> <vs_install_dir> 
-7. For example, my command would be:  
-`./ThemeConverter.exe "C:\Users\foo\Documents\Nord.json" "C:\Program Files\Microsoft Visual Studio\2022\Preview" `
+6. Run `ThemeConverter.exe <theme_json_file_path> <vs_install_dir>`
+ (e.g: `./ThemeConverter.exe "C:\Users\foo\Documents\Nord.json" "C:\Program Files\Microsoft Visual Studio\2022\Preview"`)
 6. This command will launch a patched VS. You can select your new theme from the Tools -> Options -> General page. 
 
 ### Getting a theme's json file
