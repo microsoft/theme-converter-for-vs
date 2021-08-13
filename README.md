@@ -28,7 +28,7 @@
 This section describes how you can create a VSIX with the converted theme for publishing and sharing.
 1. In VS 2022, create a new "Empty VSIX Project"
 2. Right-click on project node, select Add > Existing Item
-3. Set filter to All Files (*.*) and select the .pkgdef file(s) that the converter created under "<vs_install_dir>\Common7\IDE\CommonExtensions\Platform". (e.g: "C:\Program Files\Microsoft Visual Studio\2022\Preview\Common7\IDE\CommonExtensions\Platform")
+3. Set filter to All Files (*.*) and select the .pkgdef file(s) that the converter created under `<vs_install_dir>\Common7\IDE\CommonExtensions\Platform`. (e.g: `C:\Program Files\Microsoft Visual Studio\2022\Preview\Common7\IDE\CommonExtensions\Platform`)
 5. Select the new pkgdef file in the solution explorer and press F4 for the properties window
 6. Set `Copy to Output Directory` to `Copy always`
 7. Set `Include in VSIX` to `true`
