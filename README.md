@@ -1,15 +1,15 @@
-# Theme Converter 
+# Theme Converter Private Preview
  This is a CLI tool that takes in a VS Code theme’s json file and converts it into a VS theme. 
  
  ## Prerequisite:
  1. VS Code
- 2. VS 2022 Preview 3 or later for the best result
+ 2. VS 2022 Preview 3 or later for best results
 
 
  ## Using the tool 
 1. Open command line in Admin mode. 
 2. Clone the repo
-3. Go to `<your_clone_path>\vs-theme-converter\ThemeConverter\ThemeConverter` and build the converter project with `dotnet build ThemeConverter.csproj`. 
+3. Go to `<your_clone_path>\theme-converter\ThemeConverter\ThemeConverter` and build the converter project with `dotnet build ThemeConverter.csproj`. 
 4. Go to the `<your_clone_path>\vs-theme-converter\ThemeConverter\ThemeConverter\bin\Debug\netcoreapp3.1`. 
 5. Get the theme file with steps described in section [Getting a theme's json file](https://github.com/microsoft/theme-converter#getting-a-themes-json-file)
 6. Run `ThemeConverter.exe <theme_json_file_path> <vs_install_dir>`
