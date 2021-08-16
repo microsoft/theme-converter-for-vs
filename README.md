@@ -1,7 +1,7 @@
 # Theme Converter Private Preview
  This is a CLI tool that takes in a VS Code theme’s json file and converts it into a VS theme. 
  
- ## Prerequisite:
+ ## Prerequisites
  1. VS Code
  2. VS 2022 Preview 3 or later for best results
 
