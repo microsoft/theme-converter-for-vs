@@ -55,8 +55,10 @@ Scenarios marked with **VS Code compare** in the title should be compared with V
 
 ### VS Code instruction:
 
-1. The corresponding page is the File Explorer
-![image.png](/.attachments/image-973a21f6-e0cf-4e7b-8f70-3e94ccbb5fae.png)
+1. The corresponding page is the File Explorer 
+ 
+![image](https://user-images.githubusercontent.com/14095891/129639337-f78e5b53-bcce-4ee5-a885-fa15cb390f19.png)
+
 2. The search window will be invoked by 'Ctrl + T`
 
 ## Scenario 7: Version Control (VS Code Compare)
@@ -68,4 +70,5 @@ Scenarios marked with **VS Code compare** in the title should be compared with V
 ### VS Code instruction:
 
 1. Corresponding page is the Source Control window:
-![image.png](/.attachments/image-a70f4bb1-e1e8-4e00-821d-7db7b13090f2.png)
+
+![image](https://user-images.githubusercontent.com/14095891/129639468-eafe2687-1284-42cf-b3c7-0e4e0da52ec2.png)
