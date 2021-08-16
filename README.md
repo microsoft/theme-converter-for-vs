@@ -7,11 +7,11 @@
 
 
  ## Using the tool 
-1. Clone the repo
-2. Go to `<your_clone_path>\vs-theme-converter\ThemeConverter\ThemeConverter` and build the converter project with `dotnet build ThemeConverter.csproj`. 
-3. Open command line in Admin mode. 
+1. Open command line in Admin mode. 
+2. Clone the repo
+3. Go to `<your_clone_path>\vs-theme-converter\ThemeConverter\ThemeConverter` and build the converter project with `dotnet build ThemeConverter.csproj`. 
 4. Go to the `<your_clone_path>\vs-theme-converter\ThemeConverter\ThemeConverter\bin\Debug\netcoreapp3.1`. 
-5. Get the theme file with steps described in section `Getting a theme's json file`
+5. Get the theme file with steps described in section [Getting a theme's json file](https://github.com/microsoft/theme-converter#getting-a-themes-json-file)
 6. Run `ThemeConverter.exe <theme_json_file_path> <vs_install_dir>`
  (e.g: `./ThemeConverter.exe "C:\Users\foo\Documents\Nord.json" "C:\Program Files\Microsoft Visual Studio\2022\Preview"`)
 6. This command will launch a patched VS. You can select your new theme from the Tools -> Options -> General page. 
@@ -26,14 +26,14 @@
 ### Creating a VSIX for the new theme
 This section describes how you can create a VSIX with the converted theme for publishing and sharing.
 1. In VS 2022, create a new "Empty VSIX Project"
-2. Right-click on project node, select Add > Existing Item
-3. Set filter to All Files (*.*) and select the .pkgdef file(s) that the converter created under `<vs_install_dir>\Common7\IDE\CommonExtensions\Platform`. (e.g: `C:\Program Files\Microsoft Visual Studio\2022\Preview\Common7\IDE\CommonExtensions\Platform`)
-5. Select the new pkgdef file in the solution explorer and press F4 for the properties window
+2. Select the project node and open the "Add existing Item" window: Use "Shift + Alt + A"; right-click on project node, select Add > Existing Item; or navigate to Project -> Add Existing Item...
+3. Set filter to All Files (*.*) and select the .pkgdef file(s) that the converter created under `<vs_install_dir>\Common7\IDE\CommonExtensions\Platform`. (e.g: `C:\Program Files\Microsoft Visual Studio\2022\Preview\Common7\IDE\CommonExtensions\Platform\Nord.pkgdef`)
+5. Select the newly added pkgdef file in the solution explorer and open the properties window
 6. Set `Copy to Output Directory` to `Copy always`
 7. Set `Include in VSIX` to `true`
-8. Open the `source.extension.vsixmanifest` file, select Assets, click New.
-9. Select `Microsoft.VisualStudio.VsPackage` for Type, and `File on filesystem` for Source.
-10. Click Browse and select the .pkgdef you added. Click OK.
+8. Open the `source.extension.vsixmanifest` file, select Assets, select New.
+9. Set `Type` to `Microsoft.VisualStudio.VsPackage`, and `Source` to `File on filesystem`.
+10. Select Browse and select the .pkgdef you added. Select OK.
 11. Edit other fields in the vsixmanifest as desired (author, version, company, etc)
 12. Build solution and you now have a vsix in the output folder.
 
