@@ -10,8 +10,8 @@
  ### Using the tool
 1. Open command line in Admin mode. 
 2. Clone the repo
-3. Go to `<your_clone_path>\theme-converter\ThemeConverter\ThemeConverter` and build the converter project with `dotnet build ThemeConverter.csproj`. 
-4. Go to the `<your_clone_path>\vs-theme-converter\ThemeConverter\ThemeConverter\bin\Debug\netcoreapp3.1`. 
+3. Go to `<your_clone_path>\ThemeConverter\ThemeConverter` and build the converter project with `dotnet build ThemeConverter.csproj`. 
+4. Go to the `<your_clone_path>\ThemeConverter\ThemeConverter\bin\Debug\netcoreapp3.1`. 
 5. Get the theme file with steps described in section [Getting a theme's json file](https://github.com/microsoft/theme-converter#getting-a-themes-json-file)
 6. Run `ThemeConverter.exe <theme_json_file_path> <vs_install_dir>`
  (e.g: `./ThemeConverter.exe "C:\Users\foo\Documents\Nord.json" "C:\Program Files\Microsoft Visual Studio\2022\Preview"`)
