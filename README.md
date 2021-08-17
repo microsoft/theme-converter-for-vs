@@ -36,7 +36,7 @@ This section describes how you can create a VSIX with the converted theme for pu
 9. Set `Type` to `Microsoft.VisualStudio.VsPackage`, and `Source` to `File on filesystem`.
 10. Select Browse and select the .pkgdef you added. Select OK.
 11. Edit other fields in the vsixmanifest as desired (author, version, company, etc)
-12. Build solution and you now have a vsix in the output folder.
+12. Build solution and you now have a vsix in the output folder! Your new theme is most compatible with Visual Studio 2022 Preview 3 and up.
 
 # Support
 
