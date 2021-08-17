@@ -39,7 +39,7 @@ This section describes how you can create a VSIX with the converted theme for pu
 12. Build solution and you now have a vsix in the output folder.
 
 ## Let us know what you think
-What do you think about the converted theme? What do you think about the tool? Is there anything you would change? Please let us know!
+What do you think about the converted theme? What do you think about the tool? Is there anything you would change? Please feel free to let us know how we can improve the theme. Thank you for trying the Theme Converter!
 
 
 ## Contributing
