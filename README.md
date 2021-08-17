@@ -6,7 +6,8 @@
  2. VS 2022 Preview 3 or later for best results
 
 
- ## Using the tool 
+ ## Instructions
+ ### Using the tool
 1. Open command line in Admin mode. 
 2. Clone the repo
 3. Go to `<your_clone_path>\theme-converter\ThemeConverter\ThemeConverter` and build the converter project with `dotnet build ThemeConverter.csproj`. 
@@ -36,6 +37,9 @@ This section describes how you can create a VSIX with the converted theme for pu
 10. Select Browse and select the .pkgdef you added. Select OK.
 11. Edit other fields in the vsixmanifest as desired (author, version, company, etc)
 12. Build solution and you now have a vsix in the output folder.
+
+## Let us know what you think
+What do you think about the converted theme? What do you think about the tool? Is there anything you would change? Please let us know!
 
 
 ## Contributing
