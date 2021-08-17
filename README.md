@@ -38,8 +38,13 @@ This section describes how you can create a VSIX with the converted theme for pu
 11. Edit other fields in the vsixmanifest as desired (author, version, company, etc)
 12. Build solution and you now have a vsix in the output folder.
 
-## Let us know what you think
-What do you think about the converted theme? What do you think about the tool? Is there anything you would change? Please feel free to let us know how we can improve the theme. Thank you for trying the Theme Converter!
+# Support
+
+## How to file issues and get help  
+This project uses GitHub Issues to track bugs and feature requests. Please search the existing issues before filing new issues to avoid duplicates. For new issues, file your bug or feature request as a new Issue.
+
+## Microsoft Support Policy  
+Support for this project is limited to the resources listed above.
 
 
 ## Contributing
