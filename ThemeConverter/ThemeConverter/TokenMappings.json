@@ -1164,6 +1164,7 @@
     {
       "VSC Token": "statusBar.foreground",
       "VS Token": [
+        "Environment&StatusBarBuilding&Foreground",
         "Environment&StatusBarDefault&Foreground",
         "Environment&StatusBarNoSolution&Foreground",
         "Environment&StatusBarText&Background"
