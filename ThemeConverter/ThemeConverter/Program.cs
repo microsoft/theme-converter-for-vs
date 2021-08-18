@@ -247,18 +247,12 @@
 
         private static Guid GetThemeGuid()
         {
-            if (ThemeNameGuids.Value.TryGetValue(ThemeName, out string knownGuid))
-            {
-                return Guid.Parse(knownGuid);
-            }
-            else
-            {
-                Guid newThemeGuid = Guid.NewGuid();
-                string guidString = newThemeGuid.ToString("B");
-                string newGuidString = "{ffffffff" + guidString.Substring(guidString.IndexOf('-'));
+            // if (ThemeNameGuids.Value.TryGetValue(ThemeName, out string knownGuid))
+            // {
+            //     return Guid.Parse(knownGuid);
+            // }
 
-                return Guid.Parse(newGuidString);
-            }
+            return Guid.NewGuid();
         }
 
         /// <summary>
