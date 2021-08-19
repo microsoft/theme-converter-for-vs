@@ -11,10 +11,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <None Remove="before.vscodetheme" />
-  </ItemGroup>
-
-  <ItemGroup>
     <None Include="TestSourceFile.cs">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
@@ -36,9 +32,6 @@
     </None>
     <None Update="CategoryGuid.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Update="Microsoft.VisualStudio.Pkgdef.dll">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
     <None Update="TokenMappings.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
