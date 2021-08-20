@@ -932,7 +932,6 @@
         "GraphicsDesigners&SelectedBackgroundColor&Background",
         "GraphicsDesigners&TabHover&Background",
         "Header&Default&Background", //
-        "Header&MouseDown&Background", 
         "Header&MouseOver&Background",
         "IntelliTrace&IntelliTraceTImelineBreakpointBorder&Background",
         "IntelliTrace&IntelliTraceTimelineBreakpointFill&Background",
@@ -3821,11 +3820,13 @@
     {
       "VSC Token": "list.focusBackground",
       "VS Token": [
+        "Header&MouseDown&Background" //
       ]
     },
     {
       "VSC Token": "list.focusForeground",
       "VS Token": [
+        "Header&MouseDown&Foreground" //
       ]
     },
     {
