@@ -933,7 +933,6 @@
         "GraphicsDesigners&SelectedBackgroundColor&Background",
         "GraphicsDesigners&TabHover&Background",
         "Header&Default&Background", //
-        "Header&MouseDown&Background", 
         "Header&MouseOver&Background",
         "IntelliTrace&IntelliTraceTImelineBreakpointBorder&Background",
         "IntelliTrace&IntelliTraceTimelineBreakpointFill&Background",
@@ -1343,7 +1342,7 @@
         "TeamExplorer&ButtonDisabled&Background",
         "TeamExplorer&CallToActionButtonDisabled&Background",
         "UserNotifications&ToastActionButtonDisabled&Background",
-        "Diagnostics&ButtonBackgroundDisabled&Background"
+        "Diagnostics&ButtonBackgroundDisabled&Background",
       ]
     },
     {
@@ -1353,7 +1352,7 @@
         "Promotion&LightboxDialogButtonDisabled&Foreground",
         "TeamExplorer&ButtonDisabled&Foreground",
         "TeamExplorer&CallToActionButtonDisabled&Foreground",
-        "UserNotifications&ToastActionButtonDisabled&Foreground"
+        "UserNotifications&ToastActionButtonDisabled&Foreground",
       ]
     },
     {
@@ -3820,11 +3819,13 @@
     {
       "VSC Token": "list.focusBackground",
       "VS Token": [
+        "Header&MouseDown&Background" //
       ]
     },
     {
       "VSC Token": "list.focusForeground",
       "VS Token": [
+        "Header&MouseDown&Foreground" //
       ]
     },
     {
