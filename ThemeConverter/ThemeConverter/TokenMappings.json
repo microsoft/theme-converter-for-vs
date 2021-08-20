@@ -1342,7 +1342,7 @@
         "TeamExplorer&ButtonDisabled&Background",
         "TeamExplorer&CallToActionButtonDisabled&Background",
         "UserNotifications&ToastActionButtonDisabled&Background",
-        "Diagnostics&ButtonBackgroundDisabled&Background",
+        "Diagnostics&ButtonBackgroundDisabled&Background"
       ]
     },
     {
@@ -1352,7 +1352,7 @@
         "Promotion&LightboxDialogButtonDisabled&Foreground",
         "TeamExplorer&ButtonDisabled&Foreground",
         "TeamExplorer&CallToActionButtonDisabled&Foreground",
-        "UserNotifications&ToastActionButtonDisabled&Foreground",
+        "UserNotifications&ToastActionButtonDisabled&Foreground"
       ]
     },
     {
