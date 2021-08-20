@@ -1030,7 +1030,6 @@
         "SearchControl&SearchActiveBackground&Background",
         "SearchControl&Unfocused&Background",
         "SearchControl&UnfocusedDropDownButton&Background", // 
-        "SearchControl&Selection&Background", //
         "SearchControl&MouseOverDropDownButton&Background", //
         "SearchControl&MouseDownDropDownButton&Background", //
         "SearchControl&ActionButtonMouseDown&Background",
@@ -2256,7 +2255,8 @@
         "SearchControl&MouseDownDropDownButtonGlyph&Background",
         "SearchControl&MouseOverSearchGlyph&Background",
         "SearchControl&ActionButtonMouseDownGlyph&Background",
-        "SearchControl&ActionButtonMouseOverGlyph&Background"
+        "SearchControl&ActionButtonMouseOverGlyph&Background",
+        "SearchControl&Selection&Foreground" //
       ]
     },
     {
@@ -3991,7 +3991,8 @@
         "Environment&CommandBarSelectedIcon&Background", //
         "Output Window&Selected Text&Background",
         "Output Window&Selected Text in High Contrast&Background",
-        "CommonControls&ComboBoxTextInputSelection&Background" //
+        "CommonControls&ComboBoxTextInputSelection&Background", //
+        "SearchControl&Selection&Background" //
       ]
     },
     {
