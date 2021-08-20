@@ -536,9 +536,7 @@
       "VSC Token": "scrollbar.shadow",
       "VS Token": [
         "Environment&ScrollBarThumbBorder&Background",
-        "Environment&ScrollBarArrowBackground&Background",
-        "Environment&ScrollBar&Background", //
-        "Environment&ScrollBarBackground&Background" //
+        "Environment&ScrollBarArrowBackground&Background"
       ]
     },
     {
@@ -1087,7 +1085,9 @@
         "Diagnostics&ControlHeader&Background",
         "Environment&GridHeadingBackground&Background",
         "CommonDocument&GridHeadingBackground&Background",
-        "ThemedDialog&GridHeadingBackground&Background"
+        "ThemedDialog&GridHeadingBackground&Background",
+        "Environment&ScrollBar&Background", //
+        "Environment&ScrollBarBackground&Background" //
       ]
     },
     {
