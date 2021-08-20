@@ -287,7 +287,6 @@
         "NewProjectDialog&TextBoxBackground&Foreground",
         "NewProjectDialog&TreeArrow&Foreground",
         "NotificationBubble&NotificationBubbleForeground&Foreground",
-        "NotificationBubble&NotificationBubbleWindowPanel&Foreground",
         "ProjectDesigner&CategoryTab&Foreground",
         "ProjectDesigner&MouseOverCategoryTab&Foreground",
         "ProjectDesigner&SelectedCategoryTab&Foreground",
@@ -2685,6 +2684,7 @@
     {
       "VSC Token": "notifications.background",
       "VS Token": [
+        "NotificationBubble&NotificationBubbleWindowPanel&Background" //
       ]
     },
     {
@@ -2695,6 +2695,7 @@
     {
       "VSC Token": "notifications.foreground",
       "VS Token": [
+        "NotificationBubble&NotificationBubbleWindowPanel&Foreground" //
       ]
     },
     {
