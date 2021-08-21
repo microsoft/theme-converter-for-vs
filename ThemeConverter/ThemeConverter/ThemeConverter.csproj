@@ -5,8 +5,25 @@
     <TargetFramework>netcoreapp3.1</TargetFramework>
     <LangVersion>latest</LangVersion>
   </PropertyGroup>
-
-  <ItemGroup>
+  
+	<ItemGroup>
+	<Reference Include="PresentationCore" />
+	<Reference Include="PresentationFramework" />
+	<Reference Include="System" />
+	<Reference Include="System.IO" />
+	<Reference Include="System.Core" />
+	<Reference Include="System.Data" />
+	<Reference Include="System.Drawing" />
+	<Reference Include="System.Xaml" />
+	<Reference Include="System.Xml" />
+	<Reference Include="System.Windows" />
+	<Reference Include="System.Windows.Media" />
+	<Reference Include="System.Collections.ObjectModel" />
+	<Reference Include="WindowsBase" />
+	<Reference Include="Microsoft.VisualStudio.Shell.Interop" />
+  </ItemGroup>
+  
+	<ItemGroup>
     <Compile Remove="TestSourceFile.cs" />
   </ItemGroup>
 
