@@ -3,7 +3,8 @@
  
  ## Prerequisites
  1. VS Code
- 2. VS 2022 Preview 3 or later for best results
+ 2. [VS 2022 Preview 3 or later](https://visualstudio.microsoft.com/vs/preview/) for best results
+ 3. [.NET 5](https://dotnet.microsoft.com/download/dotnet)
 
 
  ## Instructions
