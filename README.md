@@ -4,8 +4,9 @@
  ## Prerequisites
  1. VS Code
  2. [VS 2022 Preview 3 or later](https://visualstudio.microsoft.com/vs/preview/) for best results
- 3. [.NET 5](https://dotnet.microsoft.com/download/dotnet)
+ 3. The following individual components can be installed via the Visual Studio installer: .NET Core 3.1 Runtime, .NET Desktop development workload, and Visual Studio extension development workload.
 
+![image](https://user-images.githubusercontent.com/12738587/130517823-6703dcd0-2c53-49c4-a9e0-a79c9b539468.png)
 
  ## Instructions
  ### Using the tool
