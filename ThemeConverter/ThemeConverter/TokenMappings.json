@@ -33,6 +33,36 @@
       ]
     },
     {
+      "VSC Token": "entity.name.tag.html",
+      "VS Token": [
+        "Text Editor MEF Items&HTML Element Name"
+      ]
+    },
+    {
+      "VSC Token": "entity.other.attribute-name.html",
+      "VS Token": [
+        "Text Editor MEF Items&HTML Attribute Name"
+      ]
+    },
+    {
+      "VSC Token": "punctuation.definition.tag.end.html",
+      "VS Token": [
+        "Text Editor MEF Items&HTML Tag Delimiter"
+      ]
+    },
+    {
+      "VSC Token": "comment.block.html",
+      "VS Token": [
+        "Text Editor MEF Items&HTML Comment"
+      ]
+    },
+    {
+      "VSC Token": "punctuation.separator.key-value.html",
+      "VS Token": [
+        "Text Editor MEF Items&HTML Operator"
+      ]
+    },
+    {
       "VSC Token": "keyword.operator",
       "VS Token": [
         "Text Editor MEF Items&Operator"
@@ -97,7 +127,8 @@
       "VSC Token": "string.quoted.double.cs",
       "VS Token": [
         "Roslyn Text Editor MEF Items&string - verbatim",
-        "Roslyn Text Editor MEF Items&xml doc comment - attribute value"
+        "Roslyn Text Editor MEF Items&xml doc comment - attribute value",
+        "Text Editor MEF Items&HTML Attribute Value"
       ]
     },
     {
