@@ -1,3 +1,6 @@
+# build number format
+name: $(date:yy)$(DayOfYear)$(rev:.r)
+
 trigger:
   branches:
     include:
@@ -23,10 +26,12 @@ variables:
     value: Any CPU
   - name: BuildConfiguration
     value: Release
+  - name: ProductBinariesFolder
+    value: '$(System.DefaultWorkingDirectory)/ThemeConverter/ThemeConverter/bin/$(BuildConfiguration)/net5.0'
     
 jobs:
-- job: BuildingProduct
-  displayName: Building product
+- job: Build_And_Compliance
+  displayName: Build and Compliance
 
   steps:
 
@@ -35,13 +40,14 @@ jobs:
     clean: true
 
   - task: NuGetCommand@2
+    displayName: Restore NuGet Packages
     inputs:
       command: 'restore'
       restoreSolution: $(SolutionFile)
     
   # Build the product
   - task: MSBuild@1
-    displayName: 'Build product'
+    displayName: Build Product
     inputs:
       solution: $(SolutionFile)
       platform: $(Platform)
@@ -89,11 +95,12 @@ jobs:
     continueOnError: True
     
   - task: ArchiveFiles@2
+    displayName: Archive Binaries
     inputs:
-      rootFolderOrFile: '$(System.DefaultWorkingDirectory)/ThemeConverter/ThemeConverter/bin/Release/net5.0'
+      rootFolderOrFile: '$(ProductBinariesFolder)'
       includeRootFolder: true
       archiveType: 'zip'
-      archiveFile: '$(Build.ArtifactStagingDirectory)/$(Build.BuildId).zip' 
+      archiveFile: '$(Build.StagingDirectory)/ThemeConverter-$(Build.BuildNumber).zip' 
       replaceExistingArchive: true
 
   # Publish staging artifacts
