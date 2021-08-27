@@ -16,6 +16,12 @@ pool:
   - msbuild
   - VisualStudio_16.0
 
+variables:
+  - name: Platform
+    value: Any CPU
+  - name: BuildConfiguration
+    value: Release
+    
 jobs:
 - job: BuildingProduct
   displayName: Building product
@@ -31,7 +37,6 @@ jobs:
     displayName: 'Build product'
     inputs:
       solution: ThemeConverter/ThemeConverter.sln
-      msbuildVersion: $(MSBuildVersion)
       platform: $(Platform)
       configuration: $(BuildConfiguration)
     continueOnError: true    
