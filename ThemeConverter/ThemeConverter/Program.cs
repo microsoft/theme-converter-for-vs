@@ -38,6 +38,8 @@
                 {
                     Console.WriteLine("Usage: ThemeConverter.exe <theme_json_file_path> <vs_install_dir>");
                     Console.WriteLine("       or");
+                    Console.WriteLine("       ThemeConverter.exe <theme_json_file_path>");
+                    Console.WriteLine("       or");
                     Console.WriteLine("       ThemeConverter.exe <theme_json_folder_path> <pkgdef_out_dir>");
                     Console.WriteLine();
                     return -1;
@@ -63,11 +65,18 @@
                 {
                     string filePath = args[0];
 
-                    string deployInstall = args.Length > 1 ? args[1] : GetVsInstallPath();
-                    if (!Directory.Exists(deployInstall))
-                        throw new ApplicationException($"VS install dir does not exist: {deployInstall}");
+                    if (args.Length > 1)
+                    {
+                        string deployInstall = args[1];
+                        if (!Directory.Exists(deployInstall))
+                            throw new ApplicationException($"VS install dir does not exist: {deployInstall}");
 
-                    Convert(filePath, null, deployInstall);
+                        Convert(filePath, null, deployInstall);
+                    }
+                    else
+                    {
+                        Convert(filePath, Path.GetDirectoryName(filePath), null);
+                    }
                 }
                 else
                 {

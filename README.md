@@ -18,6 +18,8 @@
 6. Run `ThemeConverter.exe <theme_json_file_path> <vs_install_dir>`
  (e.g: `./ThemeConverter.exe "C:\Users\foo\Documents\Nord.json" "C:\Program Files\Microsoft Visual Studio\2022\Preview"`)
 6. This command will launch a patched VS. You can select your new theme from the Tools -> Options -> General page. 
+7. **Note**: If you don't want to patch the new theme to VS or don't have access to VS, you can still use the converter by running `ThemeConverter.exe <theme_json_file_path>`. This will create a converted pkgdef under the same directory of the json file.
+
 
 ### Getting a theme's json file
 1. Open VS Code. 
