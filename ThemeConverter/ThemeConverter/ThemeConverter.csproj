@@ -2,11 +2,11 @@
 
   <PropertyGroup>
     <OutputType>Exe</OutputType>
-    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <TargetFramework>net5.0</TargetFramework>
     <LangVersion>latest</LangVersion>
-  </PropertyGroup>
-  
-	<ItemGroup>
+  </PropertyGroup>  
+	
+  <ItemGroup>
 	<Reference Include="System" />
 	<Reference Include="System.Collections.ObjectModel" />
 	<Reference Include="System.Core" />
@@ -23,21 +23,9 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Compile Update="ColorCompiler\Resources.Designer.cs">
-      <DesignTime>True</DesignTime>
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-    </Compile>
     <Compile Update="ParseMapping.cs">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Compile>
-  </ItemGroup>
-
-  <ItemGroup>
-    <EmbeddedResource Update="ColorCompiler\Resources.resx">
-      <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
-    </EmbeddedResource>
   </ItemGroup>
 
   <ItemGroup>
