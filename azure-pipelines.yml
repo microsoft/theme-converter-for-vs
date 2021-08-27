@@ -47,3 +47,34 @@ jobs:
       platform: $(Platform)
       configuration: $(BuildConfiguration)
     continueOnError: false    
+
+  # Run component governance detection
+  # See http://aka.ms/cgdocs for more info
+  - task: ComponentGovernanceComponentDetection@0
+    displayName: Run Component Detection
+    inputs:
+      scanType: 'Register'
+      verbosity: 'Verbose'
+      alertWarningLevel: 'High'
+    condition: succeededOrFailed()
+    continueOnError: True
+
+  # Analyze source and build output text files for credentials
+  # See https://www.1eswiki.com/wiki/CredScan_Azure_DevOps_Build_Task for more info
+  - task: CredScan@2
+    displayName: Run CredScan
+    inputs:
+      toolMajorVersion: V2
+    condition: succeededOrFailed()
+    continueOnError: True
+    
+  # Scan text elements including code, code comments, and content/web pages, for sensitive terms based on legal, cultural, or geopolitical reasons
+  # See https://www.1eswiki.com/wiki/PoliCheck_Build_Task for more info
+  - task: PoliCheck@1
+    displayName: Run PoliCheck
+    inputs:
+      importEx: 0
+      optionsFC: 1
+    condition: succeededOrFailed()
+    continueOnError: True
+    
