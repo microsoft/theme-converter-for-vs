@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace ThemeConverter.ColorCompiler
 {
@@ -14,5 +12,21 @@ namespace ThemeConverter.ColorCompiler
 
         public Guid Category { get; private set; }
         public Guid ThemeId { get; private set; }
+
+        public override bool Equals(object obj)
+        {
+            CategoryThemeKey other = obj as CategoryThemeKey;
+            if (other == null)
+            {
+                return false;
+            }
+
+            return Category == other.Category && ThemeId == other.ThemeId;
+        }
+
+        public override int GetHashCode()
+        {
+            return Category.GetHashCode() ^ ThemeId.GetHashCode();
+        }
     }
 }

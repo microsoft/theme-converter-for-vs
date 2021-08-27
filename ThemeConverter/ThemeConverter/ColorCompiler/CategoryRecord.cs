@@ -12,6 +12,7 @@ namespace ThemeConverter.ColorCompiler
     /// </summary>
     sealed class CategoryRecord
     {
+        Guid _category;
         List<ColorRecord> _colors;
 
         public IList<ColorRecord> Colors

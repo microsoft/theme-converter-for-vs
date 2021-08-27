@@ -1,6 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
+using System.Globalization;
+using System.IO;
+using System.Xml;
 
 namespace ThemeConverter.ColorCompiler
 {
@@ -15,18 +16,14 @@ namespace ThemeConverter.ColorCompiler
         private ColorName _currentColor = null;
         private ColorEntry _currentEntry = null;
         private XmlReader _reader;
-        private readonly XmlFileValidator _validator;
         private ColorManager _colorManager;
         protected string _fileName;
 
-        public XmlFileReader(string fileName, XmlFileValidator validator)
+        public XmlFileReader(string fileName)
         {
             _fileName = fileName;
-
-            Validate.IsNotNull(validator, "validator");
-
-            _validator = validator;
         }
+
         public ColorManager ColorManager
         {
             get
@@ -34,7 +31,7 @@ namespace ThemeConverter.ColorCompiler
                 if (_colorManager == null)
                 {
                     _colorManager = new ColorManager();
-                    if (!FileIsEmptyOrNonExistent)
+                    if (!FileIsEmptyOrNonExistent())
                     {
                         LoadColorManagerFromFile();
                     }
@@ -45,8 +42,6 @@ namespace ThemeConverter.ColorCompiler
 
         protected void LoadColorManagerFromFile()
         {
-            ThrowIfFileIsInvalid();
-
             XmlReaderSettings settings = new XmlReaderSettings()
             {
                 DtdProcessing = DtdProcessing.Prohibit,
@@ -82,15 +77,6 @@ namespace ThemeConverter.ColorCompiler
             }
 
             _reader.Close();
-        }
-
-        private void ThrowIfFileIsInvalid()
-        {
-            XmlValidationResult result = _validator.ValidateFile(_fileName);
-            if (!result.IsValid)
-            {
-                throw new ArgumentException(string.Format(CultureInfo.CurrentUICulture, "Error occurred when reading xml file '{0}': {1}", _fileName, result.ErrorMessage));
-            }
         }
 
         private bool FileIsEmptyOrNonExistent()

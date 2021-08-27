@@ -31,8 +31,6 @@ namespace ThemeConverter.ColorCompiler
         /// <param name="callback">The delegate that will write the body of the stream</param>
         public void WriteVersioned(int version, WriteCallback callback)
         {
-            Validate.IsNotNull(callback, "callback");
-
             // remember the starting stream seek position
             Stream stream = BaseStream;
             long startingPosition = stream.Position;

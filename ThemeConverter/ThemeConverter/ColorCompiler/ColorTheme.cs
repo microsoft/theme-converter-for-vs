@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Text;
 
@@ -26,33 +27,11 @@ namespace ThemeConverter.ColorCompiler
             set;
         }
 
-        public static readonly DependencyProperty NameProperty = DependencyProperty.Register("Name", typeof(string), typeof(ColorTheme));
+        public string Name { get; set; }
 
-        public string Name
-        {
-            get
-            {
-                return (string)GetValue(NameProperty);
-            }
-            set
-            {
-                SetValue(NameProperty, value);
-            }
-        }
+        public Guid FallbackId { get; set; }
 
-        public static readonly DependencyProperty FallbackIdProperty = DependencyProperty.Register("FallbackId", typeof(Guid), typeof(ColorTheme));
-
-        public Guid FallbackId
-        {
-            get
-            {
-                return (Guid)GetValue(FallbackIdProperty);
-            }
-            set
-            {
-                SetValue(FallbackIdProperty, value);
-            }
-        }
+        public ColorManager Manager { get; set; }
 
         public IList<ColorEntry> Colors
         {
@@ -70,13 +49,30 @@ namespace ThemeConverter.ColorCompiler
             }
         }
 
-        class ColorEntryCollection : ObservableCollection<ColorEntry>
+        class ColorEntryCollection : OwnershipCollection<ColorEntry>
         {
             private ColorTheme _theme;
 
             public ColorEntryCollection(ColorTheme theme)
             {
                 this._theme = theme;
+            }
+
+            protected override void TakeOwnership(ColorEntry item)
+            {
+                if (item.Theme != null)
+                {
+                    throw new InvalidOperationException("Color entry can only belong to one theme");
+                }
+
+                item.Theme = _theme;
+                _theme.Index[item.Name] = item;
+            }
+
+            protected override void LoseOwnership(ColorEntry item)
+            {
+                _theme.Index.Remove(item.Name);
+                item.Theme = null;
             }
         }
     }

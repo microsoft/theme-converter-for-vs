@@ -5,6 +5,7 @@
     using System.Diagnostics;
     using System.IO;
     using Newtonsoft.Json.Linq;
+    using ThemeConverter.ColorCompiler;
 
 #pragma warning disable IDE0051 // Remove unused private members
     internal sealed class Program
@@ -124,14 +125,24 @@
         #region Compile VS Theme
         private static string CompileTheme(string deployInstall)
         {
-            // Compile theme.
-            var compilerPath = Path.Combine(deployInstall, @"VSSDK\VisualStudioIntegration\Tools\Bin\VsixColorCompiler.exe");
-            var colorCompilerProcess = Process.Start(compilerPath, $"/registerTheme after.vstheme");
-            colorCompilerProcess.WaitForExit();
-            if (colorCompilerProcess.ExitCode != 0)
-                throw new ApplicationException("Fatal error running VsixColorCompiler.exe");
+            ColorManager manager = OpenXML("after.vstheme");
+
+            FileWriter.SaveColorManagerToFile(manager, "after.pkgdef", true);
+
+            //// Compile theme.
+            //var compilerPath = Path.Combine(deployInstall, @"VSSDK\VisualStudioIntegration\Tools\Bin\VsixColorCompiler.exe");
+            //var colorCompilerProcess = Process.Start(compilerPath, $"/registerTheme after.vstheme");
+            //colorCompilerProcess.WaitForExit();
+            //if (colorCompilerProcess.ExitCode != 0)
+            //    throw new ApplicationException("Fatal error running VsixColorCompiler.exe");
 
             return "after.pkgdef";
+        }
+
+        static ColorManager OpenXML(string fileName)
+        {
+            XmlFileReader reader = new XmlFileReader(fileName);
+            return reader.ColorManager;
         }
 
         private static void InstallThemeAndLaunch(string pkgdefFilePath, string deployInstall)

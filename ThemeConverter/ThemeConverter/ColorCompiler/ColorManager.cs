@@ -20,7 +20,6 @@ namespace ThemeConverter.ColorCompiler
         private Dictionary<Guid, ColorCategory> _categoryIndex;
         private Dictionary<ColorName, ColorRow> _colorIndex;
         private ColorRowCollection _colors;
-        private ICollectionView _sortedCategories;
 
         public ColorManager()
         {
@@ -159,19 +158,45 @@ namespace ThemeConverter.ColorCompiler
             public string Name { get; private set; }
         }
 
-        private class ColorThemeCollection : ObservableCollection<ColorTheme>
+        private class ColorThemeCollection : OwnershipCollection<ColorTheme>
         {
+            private readonly ColorManager _manager;
+
             public ColorThemeCollection(ColorManager manager)
             {
                 _manager = manager;
             }
+
+            protected override void TakeOwnership(ColorTheme item)
+            {
+                _manager.ThemeIndex[item.ThemeId] = item;
+                item.Manager = _manager;
+            }
+
+            protected override void LoseOwnership(ColorTheme item)
+            {
+                _manager.ThemeIndex.Remove(item.ThemeId);
+                item.Manager = null;
+            }
         }
 
-        private class ColorRowCollection : ObservableCollection<ColorRow>
+        private class ColorRowCollection : OwnershipCollection<ColorRow>
         {
+            private readonly ColorManager _manager;
+
             public ColorRowCollection(ColorManager manager)
             {
                 _manager = manager;
+            }
+
+            protected override void TakeOwnership(ColorRow item)
+            {
+                _manager.ColorIndex[item.Name] = item;
+            }
+
+            protected override void LoseOwnership(ColorRow item)
+            {
+                _manager.ColorIndex.Remove(item.Name);
             }
         }
     }

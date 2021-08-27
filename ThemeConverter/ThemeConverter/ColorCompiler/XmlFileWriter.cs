@@ -1,5 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Globalization;
+using System.IO;
+using System.Linq;
 using System.Text;
 using System.Xml;
 
@@ -8,7 +11,7 @@ namespace ThemeConverter.ColorCompiler
     /// <summary>
     /// Writes a color manager out to an xml file.
     /// </summary>
-    public class XmlFileWriter
+    public class XmlFileWriter : FileWriter
     {
         private const string EmptyThemesXml = "<Themes />";
 
@@ -22,7 +25,7 @@ namespace ThemeConverter.ColorCompiler
         /// <summary>
         /// Writes the data for the XmlFileWriter to an xml file.
         /// </summary>
-        public void SaveToFile(string fileName)
+        public override void SaveToFile(string fileName)
         {
             _document = new XmlDocument() { XmlResolver = null };
             WriteThemes(_document);
