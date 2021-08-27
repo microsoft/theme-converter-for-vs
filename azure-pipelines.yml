@@ -17,6 +17,8 @@ pool:
   - VisualStudio_16.0
 
 variables:
+  - name: SolutionFile
+    value: ThemeConverter/ThemeConverter.sln
   - name: Platform
     value: Any CPU
   - name: BuildConfiguration
@@ -32,11 +34,16 @@ jobs:
   - checkout: self
     clean: true
 
+  - task: NuGetCommand@2
+    inputs:
+      command: 'restore'
+      restoreSolution: $(SolutionFile)
+    
   # Build the product
   - task: MSBuild@1
     displayName: 'Build product'
     inputs:
-      solution: ThemeConverter/ThemeConverter.sln
+      solution: $(SolutionFile)
       platform: $(Platform)
       configuration: $(BuildConfiguration)
-    continueOnError: true    
+    continueOnError: false    
