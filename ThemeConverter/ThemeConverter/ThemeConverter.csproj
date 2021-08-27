@@ -5,15 +5,17 @@
     <TargetFramework>netcoreapp3.1</TargetFramework>
     <LangVersion>latest</LangVersion>
   </PropertyGroup>
-
-  <ItemGroup>
-    <Compile Remove="TestSourceFile.cs" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <None Include="TestSourceFile.cs">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
+  
+	<ItemGroup>
+	<Reference Include="System" />
+	<Reference Include="System.Collections.ObjectModel" />
+	<Reference Include="System.Core" />
+	<Reference Include="System.Data" />
+	<Reference Include="System.Drawing" />
+	<Reference Include="System.IO" />
+	<Reference Include="System.Windows" />
+	<Reference Include="System.Windows.Media" />
+	<Reference Include="System.Xml" />
   </ItemGroup>
 
   <ItemGroup>
@@ -21,9 +23,21 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Compile Update="ColorCompiler\Resources.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Update="ParseMapping.cs">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="ColorCompiler\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
   </ItemGroup>
 
   <ItemGroup>

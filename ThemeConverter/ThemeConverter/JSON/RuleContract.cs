@@ -5,7 +5,7 @@
     using Newtonsoft.Json.Linq;
 
     [DataContract]
-    public class RuleContract
+    internal class RuleContract
     {
         [DataMember(Name = "name", IsRequired = false)]
         public string Name { get; set; }

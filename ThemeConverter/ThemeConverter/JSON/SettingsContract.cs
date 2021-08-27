@@ -3,7 +3,7 @@
     using System.Runtime.Serialization;
 
     [DataContract]
-    public class SettingsContract
+    internal class SettingsContract
     {
         [DataMember(Name = "foreground", IsRequired = false)]
         public string Foreground { get; set; }
