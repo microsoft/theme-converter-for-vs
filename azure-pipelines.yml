@@ -88,13 +88,21 @@ jobs:
     condition: succeededOrFailed()
     continueOnError: True
     
+  - task: ArchiveFiles@2
+    inputs:
+      rootFolderOrFile: '$(System.DefaultWorkingDirectory)/ThemeConverter/ThemeConverter/bin/Release/net5.0'
+      includeRootFolder: true
+      archiveType: 'zip'
+      archiveFile: '$(Build.ArtifactStagingDirectory)/$(Build.BuildId).zip' 
+      replaceExistingArchive: true 
+    
+  - task: PublishPipelineArtifact@1
+    inputs:
+      TargetPath: '$(Build.ArtifactStagingDirectory)/$(Build.BuildId).zip'
+    
   # Publish staging artifacts
   - task: PublishBuildArtifacts@1
     displayName: Publish Staging Directory
     inputs:
       PathtoPublish: $(Build.StagingDirectory)
-      
-  - task: MicroBuildCleanup@1
-    condition: succeededOrFailed()
-    displayName: MicroBuild Cleanup
   
