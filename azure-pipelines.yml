@@ -88,3 +88,13 @@ jobs:
     condition: succeededOrFailed()
     continueOnError: True
     
+  # Publish staging artifacts
+  - task: PublishBuildArtifacts@1
+    displayName: Publish Staging Directory
+    inputs:
+      PathtoPublish: $(Build.StagingDirectory)
+      
+  - task: MicroBuildCleanup@1
+    condition: succeededOrFailed()
+    displayName: MicroBuild Cleanup
+  
