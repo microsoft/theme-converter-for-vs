@@ -94,12 +94,8 @@ jobs:
       includeRootFolder: true
       archiveType: 'zip'
       archiveFile: '$(Build.ArtifactStagingDirectory)/$(Build.BuildId).zip' 
-      replaceExistingArchive: true 
-    
-  - task: PublishPipelineArtifact@1
-    inputs:
-      TargetPath: '$(Build.ArtifactStagingDirectory)/$(Build.BuildId).zip'
-    
+      replaceExistingArchive: true
+
   # Publish staging artifacts
   - task: PublishBuildArtifacts@1
     displayName: Publish Staging Directory
