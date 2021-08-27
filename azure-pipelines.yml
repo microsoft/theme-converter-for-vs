@@ -59,6 +59,16 @@ jobs:
     condition: succeededOrFailed()
     continueOnError: True
 
+  # Analyze managed C#/VB code (.NET framework and .NET Core) for security vulnerabilities
+  # See https://www.1eswiki.com/wiki/Roslyn_Analyzers_Build_Task for more info
+  - task: RoslynAnalyzers@2
+    displayName: Run Roslyn Analyzers. {Required and Recommended}
+    inputs:
+      internalAnalyzersVersion: 2.6.2
+      microsoftAnalyzersVersion: 2.9.4
+    condition: succeededOrFailed()
+    continueOnError: True
+
   # Analyze source and build output text files for credentials
   # See https://www.1eswiki.com/wiki/CredScan_Azure_DevOps_Build_Task for more info
   - task: CredScan@2
