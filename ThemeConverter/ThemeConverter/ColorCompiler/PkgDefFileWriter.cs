@@ -1,11 +1,10 @@
 ﻿using System;
 using System.IO;
-using System.Collections.Generic;
 using System.Text;
 
 namespace ThemeConverter.ColorCompiler
 {
-    class PkgDefFileWriter : IDisposable
+    internal class PkgDefFileWriter : IDisposable
     {
         private StreamWriter file;
         private bool isOpen;

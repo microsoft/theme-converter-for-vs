@@ -1,10 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace ThemeConverter.ColorCompiler
 {
-    public class ColorCategory
+    internal class ColorCategory
     {
         private const int HashCombiningMultiplier = 1566083941;
 

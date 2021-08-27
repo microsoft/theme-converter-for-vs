@@ -9,7 +9,7 @@ namespace ThemeConverter.ColorCompiler
     /// This class reads Visual Studio XML theme files. It does no verification, so the
     /// file should be verified before being passed to this class.
     /// </summary>
-    public class XmlFileReader
+    internal class XmlFileReader
     {
         private ColorTheme _currentTheme = null;
         private ColorCategory _currentCategory = null;

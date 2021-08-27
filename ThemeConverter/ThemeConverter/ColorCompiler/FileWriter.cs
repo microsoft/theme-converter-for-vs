@@ -4,7 +4,7 @@ using System.IO;
 
 namespace ThemeConverter.ColorCompiler
 {
-    public abstract class FileWriter
+    internal abstract class FileWriter
     {
         private readonly ColorManager _colorManager;
         protected FileWriter(ColorManager manager)

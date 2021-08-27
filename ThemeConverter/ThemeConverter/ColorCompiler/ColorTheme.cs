@@ -1,11 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Collections.ObjectModel;
-using System.Text;
 
 namespace ThemeConverter.ColorCompiler
 {
-    public class ColorTheme
+    internal class ColorTheme
     {
         private ColorEntryCollection _colors;
         private Dictionary<ColorName, ColorEntry> _index;

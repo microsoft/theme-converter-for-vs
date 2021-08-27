@@ -1,9 +1,7 @@
 ﻿using System;
-using System.IO;
 using System.Collections.Generic;
-using System.Text;
-using System.Text.RegularExpressions;
 using System.Globalization;
+using System.IO;
 using System.Linq;
 
 namespace ThemeConverter.ColorCompiler
@@ -11,7 +9,7 @@ namespace ThemeConverter.ColorCompiler
     /// <summary>
     /// Writes a ColorManager out to a pkgdef file.
     /// </summary>
-    public class PkgDefWriter
+    internal class PkgDefWriter
     {
         private readonly ColorManager _colorManager;
 

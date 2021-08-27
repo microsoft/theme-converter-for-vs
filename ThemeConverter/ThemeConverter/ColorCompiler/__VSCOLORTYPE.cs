@@ -1,6 +1,6 @@
 ﻿namespace ThemeConverter.ColorCompiler
 {
-    public enum __VSCOLORTYPE
+    internal enum __VSCOLORTYPE
     {
         CT_INVALID,
         CT_RAW,

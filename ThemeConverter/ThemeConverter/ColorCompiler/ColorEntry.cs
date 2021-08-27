@@ -1,12 +1,8 @@
-﻿using System;
-using System.ComponentModel;
-using System.Collections.Generic;
-using System.Text;
-using Color = System.Drawing.Color;
+﻿using System.Drawing;
 
 namespace ThemeConverter.ColorCompiler
 {
-    public class ColorEntry
+    internal class ColorEntry
     {
         public ColorEntry(ColorName name)
         {

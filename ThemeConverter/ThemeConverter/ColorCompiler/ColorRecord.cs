@@ -1,6 +1,4 @@
-﻿using System;
-using System.IO;
-using System.Collections.Generic;
+﻿using System.IO;
 using System.Text;
 
 namespace ThemeConverter.ColorCompiler
@@ -11,7 +9,7 @@ namespace ThemeConverter.ColorCompiler
     /// values.  The ColorRecord must be scoped within a CategoryRecord to fully-identify
     /// the color's name.
     /// </summary>
-    sealed class ColorRecord
+    internal sealed class ColorRecord
     {
         string _name;
 

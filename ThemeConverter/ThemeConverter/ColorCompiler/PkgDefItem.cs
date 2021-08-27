@@ -1,13 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using System.Text;
 
 namespace ThemeConverter.ColorCompiler
 {
     /// <summary>
     /// Represents an item in a pkgdef file.
     /// </summary>
-    public struct PkgDefItem
+    internal struct PkgDefItem
     {
         public string SectionName { get; set; }
 

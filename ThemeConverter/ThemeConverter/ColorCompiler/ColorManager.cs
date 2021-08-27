@@ -1,12 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
-using System.ComponentModel;
-using System.Text;
 
 namespace ThemeConverter.ColorCompiler
 {
-    public class ColorManager
+    internal class ColorManager
     {
         private static readonly Guid HighContrastThemeId = new Guid("a5c004b4-2d4b-494e-bf01-45fc492522c7");
         private static readonly Guid LightThemeId = new Guid("de3dbbcd-f642-433c-8353-8f1df4370aba");

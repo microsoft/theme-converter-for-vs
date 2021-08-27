@@ -10,7 +10,7 @@ namespace ThemeConverter.ColorCompiler
     /// category record contains the GUID identifier for the category
     /// and the sequence of color names and values contained in the category.
     /// </summary>
-    sealed class CategoryRecord
+    internal sealed class CategoryRecord
     {
         Guid _category;
         List<ColorRecord> _colors;

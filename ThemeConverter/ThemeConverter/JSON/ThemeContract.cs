@@ -4,7 +4,7 @@
     using System.Runtime.Serialization;
 
     [DataContract]
-    public class ThemeFileContract
+    internal class ThemeFileContract
     {
         [DataMember(Name = "type")]
         public string Type { get; set; }

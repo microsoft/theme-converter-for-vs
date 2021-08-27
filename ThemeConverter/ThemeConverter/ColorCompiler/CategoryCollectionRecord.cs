@@ -13,7 +13,7 @@ namespace ThemeConverter.ColorCompiler
     /// CategoryCollectionRecords are merged together by a ColorTheme to
     /// form the full theme.
     /// </summary>
-    sealed class CategoryCollectionRecord
+    internal sealed class CategoryCollectionRecord
     {
         List<CategoryRecord> _categories;
 

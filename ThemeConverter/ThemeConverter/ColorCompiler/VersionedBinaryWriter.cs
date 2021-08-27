@@ -1,14 +1,12 @@
 ﻿using System;
 using System.IO;
-using System.Collections.Generic;
-using System.Text;
 
 namespace ThemeConverter.ColorCompiler
 {
     /// <summary>
     /// Specialization of BinaryWriter that writes a versioned byte stream.
     /// </summary>
-    public class VersionedBinaryWriter : BinaryWriter
+    internal class VersionedBinaryWriter : BinaryWriter
     {
         public VersionedBinaryWriter(Stream stream)
             : base(stream)

@@ -2,7 +2,7 @@
 
 namespace ThemeConverter.ColorCompiler
 {
-    public static class PkgDefConstants
+    internal static class PkgDefConstants
     {
         public const int MaxBinaryBlobSize = 1000000;
         public const string DataValueName = "Data";

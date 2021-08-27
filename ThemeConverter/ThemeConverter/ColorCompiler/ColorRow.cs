@@ -1,12 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Xml;
-
-namespace ThemeConverter.ColorCompiler
+﻿namespace ThemeConverter.ColorCompiler
 {
-    public class ColorRow
+    internal class ColorRow
     {
         public ColorRow(ColorManager manager, ColorName name)
         {

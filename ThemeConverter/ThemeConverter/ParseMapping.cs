@@ -6,7 +6,7 @@ using System.Collections.Generic;
 
 namespace ThemeConverter
 {
-    class ParseMapping
+    internal class ParseMapping
     {
         private static Dictionary<string, ColorKey[]> ScopeMappings = new Dictionary<string, ColorKey[]>();
         private static Dictionary<string, string> CategoryGuids = new Dictionary<string, string>();

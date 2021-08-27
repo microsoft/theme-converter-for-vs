@@ -3,7 +3,7 @@
     /// <summary>
     /// Pkgdef value type.
     /// </summary>
-    public enum PkgDefValueType
+    internal enum PkgDefValueType
     {
         PKGDEF_VALUE_STRING,
         PKGDEF_VALUE_EXPAND_SZ,

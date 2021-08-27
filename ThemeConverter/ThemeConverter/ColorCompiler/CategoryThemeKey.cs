@@ -2,7 +2,7 @@
 
 namespace ThemeConverter.ColorCompiler
 {
-    class CategoryThemeKey
+    internal class CategoryThemeKey
     {
         public CategoryThemeKey(Guid category, Guid theme)
         {

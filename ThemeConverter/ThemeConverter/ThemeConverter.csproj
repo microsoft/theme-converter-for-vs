@@ -17,16 +17,6 @@
 	<Reference Include="System.Windows.Media" />
 	<Reference Include="System.Xml" />
   </ItemGroup>
-  
-	<ItemGroup>
-    <Compile Remove="TestSourceFile.cs" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <None Include="TestSourceFile.cs">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-  </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />

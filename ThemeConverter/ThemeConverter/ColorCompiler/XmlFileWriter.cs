@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Globalization;
 using System.IO;
 using System.Linq;
@@ -11,7 +10,7 @@ namespace ThemeConverter.ColorCompiler
     /// <summary>
     /// Writes a color manager out to an xml file.
     /// </summary>
-    public class XmlFileWriter : FileWriter
+    internal class XmlFileWriter : FileWriter
     {
         private const string EmptyThemesXml = "<Themes />";
 

@@ -1,10 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace ThemeConverter.ColorCompiler
 {
-    public class ColorName
+    internal class ColorName
     {
         readonly ColorCategory _category;
         readonly string _name;
