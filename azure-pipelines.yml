@@ -17,7 +17,7 @@ pool:
   - VisualStudio_16.0
 
 jobs:
-- job: Building product
+- job: BuildingProduct
   displayName: Building product
 
   steps:
