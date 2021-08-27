@@ -1,1 +1,37 @@
+trigger:
+  branches:
+    include:
+      - main
 
+pr:
+  branches:
+    include:
+      - main
+  drafts: false
+
+# The agent pool the build will run on
+pool:
+  name: VSEngSS-MicroBuild2019
+  demands: 
+  - msbuild
+  - VisualStudio_16.0
+
+jobs:
+- job: Building product
+  displayName: Building product
+
+  steps:
+
+  # Check out code clean from source control
+  - checkout: self
+    clean: true
+
+  # Build the product
+  - task: MSBuild@1
+    displayName: 'Build product'
+    inputs:
+      solution: ThemeConverter/ThemeConverter.sln
+      msbuildVersion: $(MSBuildVersion)
+      platform: $(Platform)
+      configuration: $(BuildConfiguration)
+    continueOnError: true    
