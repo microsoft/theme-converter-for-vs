@@ -4,7 +4,7 @@
  ## Prerequisites
  1. VS Code
  2. [VS 2022 Preview 3 or later](https://visualstudio.microsoft.com/vs/preview/) for best results
- 3. The following individual components can be installed via the Visual Studio installer: .NET Core 3.1 Runtime, .NET Desktop development workload, and Visual Studio extension development workload.
+ 3. The following individual components can be installed via the Visual Studio installer: .NET 5.0 Runtime, .NET Desktop development workload, and Visual Studio extension development workload.
 
 ![image](https://user-images.githubusercontent.com/12738587/130517823-6703dcd0-2c53-49c4-a9e0-a79c9b539468.png)
 
@@ -13,7 +13,7 @@
 1. Open command line in Admin mode. 
 2. Clone the repo
 3. Go to `<your_clone_path>\ThemeConverter\ThemeConverter` and build the converter project with `dotnet build ThemeConverter.csproj`. 
-4. Go to the `<your_clone_path>\ThemeConverter\ThemeConverter\bin\Debug\netcoreapp3.1`. 
+4. Go to the `<your_clone_path>\ThemeConverter\ThemeConverter\bin\Debug\net5.0`. 
 5. Get the theme file with steps described in section [Getting a theme's json file](https://github.com/microsoft/theme-converter#getting-a-themes-json-file)
 6. Run `ThemeConverter.exe <theme_json_file_path> <vs_install_dir>`
  (e.g: `./ThemeConverter.exe "C:\Users\foo\Documents\Nord.json" "C:\Program Files\Microsoft Visual Studio\2022\Preview"`)
