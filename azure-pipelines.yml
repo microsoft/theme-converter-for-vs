@@ -1,0 +1,111 @@
+# build number format
+name: $(date:yy)$(DayOfYear)$(rev:.r)
+
+trigger:
+  branches:
+    include:
+      - main
+
+pr:
+  branches:
+    include:
+      - main
+  drafts: false
+
+# The agent pool the build will run on
+pool:
+  name: VSEngSS-MicroBuild2019
+  demands: 
+  - msbuild
+  - VisualStudio_16.0
+
+variables:
+  - name: SolutionFile
+    value: ThemeConverter/ThemeConverter.sln
+  - name: Platform
+    value: Any CPU
+  - name: BuildConfiguration
+    value: Release
+  - name: ProductBinariesFolder
+    value: '$(System.DefaultWorkingDirectory)/ThemeConverter/ThemeConverter/bin/$(BuildConfiguration)/net5.0'
+    
+jobs:
+- job: Build_And_Compliance
+  displayName: Build and Compliance
+
+  steps:
+
+  # Check out code clean from source control
+  - checkout: self
+    clean: true
+
+  - task: NuGetCommand@2
+    displayName: Restore NuGet Packages
+    inputs:
+      command: 'restore'
+      restoreSolution: $(SolutionFile)
+    
+  # Build the product
+  - task: MSBuild@1
+    displayName: Build Product
+    inputs:
+      solution: $(SolutionFile)
+      platform: $(Platform)
+      configuration: $(BuildConfiguration)
+    continueOnError: false    
+
+  # Run component governance detection
+  # See http://aka.ms/cgdocs for more info
+  - task: ComponentGovernanceComponentDetection@0
+    displayName: Run Component Detection
+    inputs:
+      scanType: 'Register'
+      verbosity: 'Verbose'
+      alertWarningLevel: 'High'
+    condition: succeededOrFailed()
+    continueOnError: True
+
+  # Analyze managed C#/VB code (.NET framework and .NET Core) for security vulnerabilities
+  # See https://www.1eswiki.com/wiki/Roslyn_Analyzers_Build_Task for more info
+  - task: RoslynAnalyzers@2
+    displayName: Run Roslyn Analyzers. {Required and Recommended}
+    inputs:
+      internalAnalyzersVersion: 2.6.2
+      microsoftAnalyzersVersion: 2.9.4
+    condition: succeededOrFailed()
+    continueOnError: True
+
+  # Analyze source and build output text files for credentials
+  # See https://www.1eswiki.com/wiki/CredScan_Azure_DevOps_Build_Task for more info
+  - task: CredScan@2
+    displayName: Run CredScan
+    inputs:
+      toolMajorVersion: V2
+    condition: succeededOrFailed()
+    continueOnError: True
+    
+  # Scan text elements including code, code comments, and content/web pages, for sensitive terms based on legal, cultural, or geopolitical reasons
+  # See https://www.1eswiki.com/wiki/PoliCheck_Build_Task for more info
+  - task: PoliCheck@1
+    displayName: Run PoliCheck
+    inputs:
+      importEx: 0
+      optionsFC: 1
+    condition: succeededOrFailed()
+    continueOnError: True
+    
+  - task: ArchiveFiles@2
+    displayName: Archive Binaries
+    inputs:
+      rootFolderOrFile: '$(ProductBinariesFolder)'
+      includeRootFolder: true
+      archiveType: 'zip'
+      archiveFile: '$(Build.StagingDirectory)/ThemeConverter-$(Build.BuildNumber).zip' 
+      replaceExistingArchive: true
+
+  # Publish staging artifacts
+  - task: PublishBuildArtifacts@1
+    displayName: Publish Staging Directory
+    inputs:
+      PathtoPublish: $(Build.StagingDirectory)
+  
