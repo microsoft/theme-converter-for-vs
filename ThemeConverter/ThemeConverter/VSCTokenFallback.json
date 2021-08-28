@@ -4,5 +4,6 @@
   "inputOption.activeBorder": "input.border",
   "input.border": "inputOption.activeBorder",
   "inputOption.activeBackground": "input.background",
-  "inputOption.activeForeground": "input.foreground"
+  "inputOption.activeForeground": "input.foreground",
+  "tab.activeBorder":  "tab.activeBorderTop"
 }
