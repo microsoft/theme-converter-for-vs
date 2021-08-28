@@ -341,11 +341,6 @@
         "ThemedDialog&TagText&Background",
         "TreeView&DragOverItem&Foreground",
         "TreeView&Glyph&Background",
-        "UserInformation&ErrorText&Background",
-        "UserInformation&IDCardMinimalModeInactiveWindowText&Background",
-        "UserInformation&IDCardMinimalModeText&Background",
-        "UserInformation&IDCardSeparator&Foreground",
-        "UserInformation&IDCardText&Background",
         "UserNotifications&Content&Foreground",
         "UserNotifications&TitleMouseOverText&Background",
         "UserNotifications&TitleSelectedText&Background",
@@ -536,9 +531,7 @@
       "VSC Token": "scrollbar.shadow",
       "VS Token": [
         "Environment&ScrollBarThumbBorder&Background",
-        "Environment&ScrollBarArrowBackground&Background",
-        "Environment&ScrollBar&Background", //
-        "Environment&ScrollBarBackground&Background" //
+        "Environment&ScrollBarArrowBackground&Background"
       ]
     },
     {
@@ -1087,7 +1080,9 @@
         "Diagnostics&ControlHeader&Background",
         "Environment&GridHeadingBackground&Background",
         "CommonDocument&GridHeadingBackground&Background",
-        "ThemedDialog&GridHeadingBackground&Background"
+        "ThemedDialog&GridHeadingBackground&Background",
+        "Environment&ScrollBar&Background", //
+        "Environment&ScrollBarBackground&Background" //
       ]
     },
     {
@@ -2508,14 +2503,20 @@
       "VS Token": [
         "Environment&CommandBarMenuBackgroundGradientBegin&Background",
         "Environment&CommandBarMenuBackgroundGradientEnd&Background",
-        "Environment&CommandBarMenuIconBackground&Background"
+        "Environment&CommandBarMenuIconBackground&Background",
+        "UserInformation&IDCardBackground&Background"
       ]
     },
     {
       "VSC Token": "menu.foreground",
       "VS Token": [
         "Environment&CommandBarMenuScrollGlyph&Background",
-        "Environment&CommandBarMenuSubmenuGlyph&Background"
+        "Environment&CommandBarMenuSubmenuGlyph&Background",
+        "UserInformation&ErrorText&Background",
+        "UserInformation&IDCardInactiveText&Background",
+        "UserInformation&IDCardMinimalModeInactiveWindowText&Background",
+        "UserInformation&IDCardMinimalModeText&Background",
+        "UserInformation&IDCardText&Background"
       ]
     },
     {
@@ -2531,7 +2532,9 @@
     {
       "VSC Token": "menu.separatorBackground",
       "VS Token": [
-        "Environment&CommandBarMenuSeparator&Background"
+        "Environment&CommandBarMenuSeparator&Background",
+        "UserInformation&IDCardBorder&Background",
+        "UserInformation&IDCardSeparator&Background"
       ]
     },
     {
