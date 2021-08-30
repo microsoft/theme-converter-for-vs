@@ -42,7 +42,7 @@ This section describes how you can create a VSIX with the converted theme for pu
 11. Edit other fields in the vsixmanifest as desired (author, version, company, etc)
 12. Build solution and you now have a vsix in the output folder! Your new theme is most compatible with Visual Studio 2022 Preview 3 and up.
 
-### Remove a converted theme from VS
+### Removing a converted theme from VS
 1. Open target VS and switch to some theme that will not be deleted (like Blue theme).
 2. Go to `<vs_install_dir>\Common7\IDE\CommonExtensions\Platform`. e.g: `C:\Program Files\Microsoft Visual Studio\2022\Preview\Common7\IDE\CommonExtensions\Platform`
 and delete the pkgdef of the theme that the you want to remove (The name of the pkgdef will match the name of the theme.)
