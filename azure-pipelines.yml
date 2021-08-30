@@ -77,16 +77,16 @@ jobs:
 
   # Anti-Malware Scan of build sources and/or artifacts
   # See https://www.1eswiki.com/wiki/AntiMalware_Scan_Build_Task for more info
-  - task: AntiMalware@3
-    displayName: 'Run Antivirus on Source'
+  - task: AntiMalware@4
+    displayName: Run Anti-Malware Scan
     inputs:
-      FileDirPath: $(Build.SourcesDirectory)
-    condition: succeededOrFailed()
-    continueOnError: True
-  - task: AntiMalware@3
-    displayName: Run Antivirus on Binaries
-    inputs:
-      FileDirPath: $(Build.BinariesDirectory)
+      InputType: 'Basic'
+      ScanType: 'CustomScan'
+      FileDirPath: '$(Build.StagingDirectory)'
+      EnableServices: true
+      TreatSignatureUpdateFailureAs: 'Warning'
+      SignatureFreshness: 'UpToDate'
+      TreatStaleSignatureAs: 'Error'
     condition: succeededOrFailed()
     continueOnError: True
     
