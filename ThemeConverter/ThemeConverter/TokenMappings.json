@@ -1768,14 +1768,14 @@
     {
       "VSC Token": "editor.selectionBackground",
       "VS Token": [
+        "Text Editor Text Manager Items&Selected Text&Background",
+        "Text Editor MEF Items&Selected Text&Background",
+        "Text Editor Text Manager Items&Inactive Selected Text&Background"
       ]
     },
     {
       "VSC Token": "editor.selectionHighlightBackground",
       "VS Token": [
-        "Text Editor Text Manager Items&Selected Text&Background",
-        "Text Editor MEF Items&Selected Text&Background",
-        "Text Editor Text Manager Items&Inactive Selected Text&Background"
       ]
     },
     {
