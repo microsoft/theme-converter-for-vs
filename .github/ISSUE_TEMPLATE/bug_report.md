@@ -28,5 +28,8 @@ Please describe what you expected this to look like.
  - VS version: [e.g. 16.10.2, 17.0.0 Preview 3]
  - Theme used: [e.g. [Panda](https://marketplace.visualstudio.com/items?itemName=tinkertrain.theme-panda)]
 
+**Impact**
+Please describe how this bug impacts your theme. Is this bug blocking you from releasing the theme, or is this a mild annoyance?
+
 **Additional context**
 Add any other context about the problem here.
