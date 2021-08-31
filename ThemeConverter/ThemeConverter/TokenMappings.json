@@ -96,7 +96,6 @@
     {
       "VSC Token": "string",
       "VS Token": [
-        "Text Editor Language Service Items&String"
       ]
     },
     {
@@ -127,6 +126,7 @@
     {
       "VSC Token": "string.quoted.double.cs",
       "VS Token": [
+        "Text Editor Language Service Items&String",
         "Roslyn Text Editor MEF Items&string - verbatim",
         "Roslyn Text Editor MEF Items&xml doc comment - attribute value",
         "Text Editor MEF Items&HTML Attribute Value"
