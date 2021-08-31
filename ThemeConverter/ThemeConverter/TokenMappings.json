@@ -89,6 +89,7 @@
     {
       "VSC Token": "constant.numeric",
       "VS Token": [
+        "Text Editor Language Service Items&Number",
         "Text Editor MEF Items&Number"
       ]
     },
