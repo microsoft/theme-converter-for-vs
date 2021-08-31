@@ -10,6 +10,14 @@
 #pragma warning disable IDE0051 // Remove unused private members
     internal sealed class Program
     {
+        // credential scan should find these
+        private const string login = "admin";
+        private const string password = "MyF@akeP@ass0rd";
+
+        // policheck scan should find these
+        private const int HangLimit = 100;
+        private const string AllowedFile = "whitelist.json";
+
         private const string BackgroundColorCategory = "Text Editor Text Manager Items";
         private const string TooltipCategory = "Editor Tooltip";
         private static Guid DarkThemeId = new Guid("{1ded0138-47ce-435e-84ef-9ec1f439b749}");
