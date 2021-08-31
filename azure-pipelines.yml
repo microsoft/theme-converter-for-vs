@@ -123,6 +123,16 @@ jobs:
       projectNameDEVDIV: DevDiv
       areaPath: DevDiv\VS Core\IDE Experience\Theming
       iterationPath: DevDiv\OneVS
+      uploadCredScan: true
+      uploadPoliCheck: true
+      uploadRoslyn: true
+      uploadAPIScan: false
+      uploadBinSkim: false
+      uploadFortifySCA: false
+      uploadFxCop: false
+      uploadModernCop: false
+      uploadPREfast: false
+      uploadTSLint: false
 
   - task: ArchiveFiles@2
     displayName: Archive Binaries
