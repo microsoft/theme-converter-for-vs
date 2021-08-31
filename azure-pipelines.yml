@@ -75,6 +75,21 @@ jobs:
     condition: succeededOrFailed()
     continueOnError: True
 
+  # Anti-Malware Scan of build sources and/or artifacts
+  # See https://www.1eswiki.com/wiki/AntiMalware_Scan_Build_Task for more info
+  - task: AntiMalware@4
+    displayName: Run Anti-Malware Scan
+    inputs:
+      InputType: 'Basic'
+      ScanType: 'CustomScan'
+      FileDirPath: '$(Build.StagingDirectory)'
+      EnableServices: true
+      TreatSignatureUpdateFailureAs: 'Warning'
+      SignatureFreshness: 'UpToDate'
+      TreatStaleSignatureAs: 'Error'
+    condition: succeededOrFailed()
+    continueOnError: True
+    
   # Analyze source and build output text files for credentials
   # See https://www.1eswiki.com/wiki/CredScan_Azure_DevOps_Build_Task for more info
   - task: CredScan@2
