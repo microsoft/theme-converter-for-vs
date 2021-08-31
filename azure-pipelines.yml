@@ -108,7 +108,22 @@ jobs:
       optionsFC: 1
     condition: succeededOrFailed()
     continueOnError: True
-    
+
+  # Upload results to TSA
+  # See https://www.1eswiki.com/wiki/TSAUpload_VSTS_Build_Task for more info
+  - task: TSAUpload@1
+    displayName: TSA Upload
+    inputs:
+      tsaVersion: TsaV2
+      codebase: NewOrUpdate
+      codeBaseName: Theme Converter for VS
+      notificationAlias: vspersonalization@microsoft.com
+      codeBaseAdmins: redmond\ketyang;redmond\huvalo;redmond\jekelly;redmond\naesteve
+      instanceUrlForTsaV2: DEVDIV
+      projectNameDEVDIV: DevDiv
+      areaPath: DevDiv\VS Core\IDE Experience\Theming
+      iterationPath: DevDiv\OneVS
+
   - task: ArchiveFiles@2
     displayName: Archive Binaries
     inputs:
