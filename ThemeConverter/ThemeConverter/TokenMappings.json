@@ -920,7 +920,6 @@
         "Environment&StartPageTabMouseOverBackgroundEnd&Background",
         "Environment&StartPageUnselectedItemBackgroundBegin&Background",
         "Find Results&Current List Location&Background",
-        "Find&DropDownMenuMouseDown&Foreground",
         "GraphDocumentColors&GlassHighlightEndColor&Background",
         "GraphDocumentColors&GlassHighlightStartColor&Background",
         "GraphDocumentColors&NoShapeSelectionBorder&Background",
@@ -1658,11 +1657,6 @@
         "Environment&ComboBoxMouseDownBackground&Background",
         "CommonControls&ComboBoxListBackground&Background",
         "Output Window&Current List Location&Background",
-        "Environment&DropDownMouseOverBackgroundBegin&Background",
-        "Environment&DropDownMouseOverBackgroundEnd&Background",
-        "Environment&DropDownMouseOverBackgroundMiddle1&Background",
-        "Environment&DropDownMouseOverBackgroundMiddle2&Background",
-        "Environment&DropDownButtonMouseOverBackground&Background",
         "CommonControls&ComboBoxBackground&Background",
         "CommonControls&ComboBoxBackgroundDisabled&Background",
         "CommonControls&ComboBoxBackgroundFocused&Background",
@@ -1671,7 +1665,10 @@
         "CommonControls&ComboBoxGlyphBackgroundDisabled&Background",
         "CommonControls&ComboBoxGlyphBackground&Background",
         "CommonControls&ComboBoxGlyphBackgroundFocused&Background",
-        "CommonControls&ComboBoxGlyphBackgroundPressed&Background"
+        "CommonControls&ComboBoxGlyphBackgroundPressed&Background",
+        "Environment&DropDownPopupBackgroundBegin&Background",
+        "Environment&DropDownPopupBackgroundEnd&Background",
+        "Find&UnfocusedDropdown&Background"
       ]
     },
     {
@@ -2378,7 +2375,13 @@
         "Diagnostics&ControlSelectedItem&Background",
         "TreeView&SelectedItemActive&Background",
         "Environment&Highlight&Background",
-        "NewProjectDialog&WonderbarTreeSelected&Background" //
+        "NewProjectDialog&WonderbarTreeSelected&Background", //
+        "Find&DropDownMenuMouseDown&Background",
+        "Environment&DropDownMouseOverBackgroundBegin&Background",
+        "Environment&DropDownMouseOverBackgroundEnd&Background",
+        "Environment&DropDownMouseOverBackgroundMiddle1&Background",
+        "Environment&DropDownMouseOverBackgroundMiddle2&Background",
+        "Environment&DropDownButtonMouseOverBackground&Background"
       ]
     },
     {
@@ -2394,7 +2397,8 @@
         "ThemedDialog&SelectedItemActive&Foreground",
         "Environment&HighlightText&Background",
         "ThemedDialog&StartWindowDescriptionActive&Foreground",
-        "NewProjectDialog&WonderbarTreeSelected&Foreground" //
+        "NewProjectDialog&WonderbarTreeSelected&Foreground", //
+        "Find&DropDownMenuMouseDown&Foreground"
       ]
     },
     {
@@ -3680,7 +3684,8 @@
         "Environment&DropDownMouseOverText&Background",
         "Environment&DropDownText&Background",
         "Output Window&Current List Location&Foreground",
-        "Environment&ComboBoxItemMouseOverText&Background" //
+        "Environment&ComboBoxItemMouseOverText&Background", //
+        "Find&UnfocusedDropdown&Foreground"
       ]
     },
     {
