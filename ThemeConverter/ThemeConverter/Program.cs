@@ -287,9 +287,11 @@
             // category -> colorKeyName -> assigned by VSC token
             var assignBy = new Dictionary<string, Dictionary<string, string>>();
 
-            int totalToken = theme.TokenColors.Length;
-            int usedVSCToken = 0;
-            int scopeUsed = 0;
+            Dictionary<string, bool> keyUsed = new Dictionary<string, bool>();
+            foreach (string key in ScopeMappings.Value.Keys)
+            {
+                keyUsed.Add(key, false);
+            }
 
             // Add the editor colors
             foreach (var ruleContract in theme.TokenColors)
@@ -302,44 +304,54 @@
                         var scope = scopeRaw.Trim();
                         foreach (string key in ScopeMappings.Value.Keys)
                         {
-                            if (key.StartsWith(scope) && scope != "")
+                            if ((key.StartsWith(scope) && scope != ""))
                             {
                                 if (ScopeMappings.Value.TryGetValue(key, out var colorKeys))
                                 {
-                                    scopeUsed = 1;
-                                    foreach (var colorKey in colorKeys)
+                                    keyUsed[key] = true;
+                                    AssignEditorColors(colorKeys, scope, ruleContract, ref colorCategories, ref assignBy);
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            // for keys that were not used during hierarchical assigning, check if there's any fallback that we can use...
+            foreach (string key in keyUsed.Keys)
+            {
+                if (!keyUsed[key])
+                {
+                    if (VSCTokenFallback.Value.TryGetValue(key, out var fallbackToken))
+                    {
+                        // if the fallback is foreground, assign it like a shell color
+                        if (fallbackToken == "foreground")
+                        {
+                            if (ScopeMappings.Value.TryGetValue(key, out var colorKeys))
+                            {
+                                AssignShellColors(theme.Colors["foreground"], colorKeys, ref colorCategories);
+                            }
+                        }
+
+                        foreach (var ruleContract in theme.TokenColors)
+                        {
+                            foreach (var scopeName in ruleContract.ScopeNames)
+                            {
+                                string[] scopes = scopeName.Split(',');
+                                foreach (var scopeRaw in scopes)
+                                {
+                                    var scope = scopeRaw.Trim();
+
+                                    if ((fallbackToken.StartsWith(scope) && scope != ""))
                                     {
-                                        if (!colorCategories.TryGetValue(colorKey.CategoryName, out var rulesList))
+                                        if (ScopeMappings.Value.TryGetValue(key, out var colorKeys))
                                         {
-                                            rulesList = new Dictionary<string, SettingsContract>();
-                                            colorCategories[colorKey.CategoryName] = rulesList;
-                                        }
-
-                                        if (!assignBy.TryGetValue(colorKey.CategoryName, out var assignList))
-                                        {
-                                            assignList = new Dictionary<string, string>();
-                                            assignBy[colorKey.CategoryName] = assignList;
-                                        }
-
-                                        if (rulesList.ContainsKey(colorKey.KeyName))
-                                        {
-                                            if (scope.StartsWith(assignList[colorKey.KeyName]) && ruleContract.Settings.Foreground != null)
-                                            {
-                                                rulesList[colorKey.KeyName] = ruleContract.Settings;
-                                                assignList[colorKey.KeyName] = scope;
-                                            }
-                                        }
-                                        else
-                                        {
-                                            rulesList.Add(colorKey.KeyName, ruleContract.Settings);
-                                            assignList.Add(colorKey.KeyName, scope);
+                                            AssignEditorColors(colorKeys, scope, ruleContract, ref colorCategories, ref assignBy);
                                         }
                                     }
                                 }
                             }
                         }
-
-                        usedVSCToken += scopeUsed;
                     }
                 }
             }
@@ -366,44 +378,81 @@
                         }
                     }
 
-
-                    foreach (var colorKey in colorKeyList)
-                    {
-                        SettingsContract colorSetting;
-
-                        if (!colorCategories.TryGetValue(colorKey.CategoryName, out var rulesList))
-                        {
-                            // token name to colors
-                            rulesList = new Dictionary<string, SettingsContract>();
-                            colorCategories[colorKey.CategoryName] = rulesList;
-                        }
-
-                        if (!rulesList.TryGetValue(colorKey.KeyName, out var existingSetting))
-                        {
-                            colorSetting = new SettingsContract();
-                            rulesList.Add(colorKey.KeyName, colorSetting);
-                        }
-                        else
-                        {
-                            colorSetting = existingSetting;
-                        }
-
-                        if (colorKey.isBackground)
-                        {
-                            colorSetting.Background = colorValue;
-                        }
-                        else
-                        {
-                            colorSetting.Foreground = colorValue;
-                        }
-                    }
+                    AssignShellColors(colorValue, colorKeyList, ref colorCategories);
                 }
             }
 
-            //double transferRate = (double)usedVSCToken / (double)totalToken;
-            //Console.WriteLine(transferRate);
-
             return colorCategories;
+        }
+
+        private static void AssignEditorColors(ColorKey[] colorKeys,
+                                        string scope,
+                                        RuleContract ruleContract,
+                                        ref Dictionary<string, Dictionary<string, SettingsContract>> colorCategories,
+                                        ref Dictionary<string, Dictionary<string, string>> assignBy)
+        {
+            foreach (var colorKey in colorKeys)
+            {
+                if (!colorCategories.TryGetValue(colorKey.CategoryName, out var rulesList))
+                {
+                    rulesList = new Dictionary<string, SettingsContract>();
+                    colorCategories[colorKey.CategoryName] = rulesList;
+                }
+
+                if (!assignBy.TryGetValue(colorKey.CategoryName, out var assignList))
+                {
+                    assignList = new Dictionary<string, string>();
+                    assignBy[colorKey.CategoryName] = assignList;
+                }
+
+                if (rulesList.ContainsKey(colorKey.KeyName))
+                {
+                    if (scope.StartsWith(assignList[colorKey.KeyName]) && ruleContract.Settings.Foreground != null)
+                    {
+                        rulesList[colorKey.KeyName] = ruleContract.Settings;
+                        assignList[colorKey.KeyName] = scope;
+                    }
+                }
+                else
+                {
+                    rulesList.Add(colorKey.KeyName, ruleContract.Settings);
+                    assignList.Add(colorKey.KeyName, scope);
+                }
+            }
+        }
+
+        private static void AssignShellColors(string colorValue, ColorKey[] colorKeys, ref Dictionary<string, Dictionary<string, SettingsContract>> colorCategories)
+        {
+            foreach (var colorKey in colorKeys)
+            {
+                SettingsContract colorSetting;
+
+                if (!colorCategories.TryGetValue(colorKey.CategoryName, out var rulesList))
+                {
+                    // token name to colors
+                    rulesList = new Dictionary<string, SettingsContract>();
+                    colorCategories[colorKey.CategoryName] = rulesList;
+                }
+
+                if (!rulesList.TryGetValue(colorKey.KeyName, out var existingSetting))
+                {
+                    colorSetting = new SettingsContract();
+                    rulesList.Add(colorKey.KeyName, colorSetting);
+                }
+                else
+                {
+                    colorSetting = existingSetting;
+                }
+
+                if (colorKey.isBackground)
+                {
+                    colorSetting.Background = colorValue;
+                }
+                else
+                {
+                    colorSetting.Foreground = colorValue;
+                }
+            }
         }
 
         #endregion Translate VS Theme
