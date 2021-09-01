@@ -304,7 +304,7 @@
                         var scope = scopeRaw.Trim();
                         foreach (string key in ScopeMappings.Value.Keys)
                         {
-                            if ((key.StartsWith(scope) && scope != ""))
+                            if (key.StartsWith(scope) && scope != "")
                             {
                                 if (ScopeMappings.Value.TryGetValue(key, out var colorKeys))
                                 {
@@ -368,7 +368,7 @@
                         if (VSCTokenFallback.Value.TryGetValue(color.Key, out var fallbackToken)
                             && fallbackToken != null
                             && theme.Colors.TryGetValue(fallbackToken, out var fallbackColor)
-                            && fallbackToken != null)
+                            && fallbackColor != null)
                         {
                             colorValue = fallbackColor;
                         }
@@ -434,14 +434,10 @@
                     colorCategories[colorKey.CategoryName] = rulesList;
                 }
 
-                if (!rulesList.TryGetValue(colorKey.KeyName, out var existingSetting))
+                if (!rulesList.TryGetValue(colorKey.KeyName, out colorSetting))
                 {
                     colorSetting = new SettingsContract();
                     rulesList.Add(colorKey.KeyName, colorSetting);
-                }
-                else
-                {
-                    colorSetting = existingSetting;
                 }
 
                 if (colorKey.isBackground)

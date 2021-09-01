@@ -563,10 +563,7 @@
     {
       "VSC Token": "tab.activeBorder",
       "VS Token": [
-        "Environment&FileTabDocumentBorderBackground&Background",
-        "Environment&FileTabProvisionalSelectedActiveBorder&Background",
-        "Environment&FileTabSelectedBorder&Background",
-        "NavigateTo&ResultListAccentBorder&Background"
+        "Environment&FileTabDocumentBorderBackground&Background" //
       ]
     },
     {
@@ -4072,6 +4069,9 @@
     {
       "VSC Token": "tab.activeBorderTop",
       "VS Token": [
+        "Environment&FileTabProvisionalSelectedActiveBorder&Background",
+        "Environment&FileTabSelectedBorder&Background", //
+        "NavigateTo&ResultListAccentBorder&Background"
       ]
     },
     {
