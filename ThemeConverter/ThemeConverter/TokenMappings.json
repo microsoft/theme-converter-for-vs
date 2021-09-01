@@ -81,6 +81,12 @@
       ]
     },
     {
+      "VSC Token": "variable.other.object.property.cs",
+      "VS Token": [
+        "Roslyn Text Editor MEF Items&property name"
+      ]
+    },
+    {
       "VSC Token": "constant",
       "VS Token": [
         "Text Editor MEF Items&Literal"
@@ -89,13 +95,13 @@
     {
       "VSC Token": "constant.numeric",
       "VS Token": [
+        "Text Editor Language Service Items&Number",
         "Text Editor MEF Items&Number"
       ]
     },
     {
       "VSC Token": "string",
       "VS Token": [
-        "Text Editor Language Service Items&String"
       ]
     },
     {
@@ -126,6 +132,7 @@
     {
       "VSC Token": "string.quoted.double.cs",
       "VS Token": [
+        "Text Editor Language Service Items&String",
         "Roslyn Text Editor MEF Items&string - verbatim",
         "Roslyn Text Editor MEF Items&xml doc comment - attribute value",
         "Text Editor MEF Items&HTML Attribute Value"
@@ -187,12 +194,6 @@
       ]
     },
     {
-      "VSC Token": "entity.name.variable.property.cs",
-      "VS Token": [
-        "Roslyn Text Editor MEF Items&property name"
-      ]
-    },
-    {
       "VSC Token": "entity.name.label.cs",
       "VS Token": [
         "Roslyn Text Editor MEF Items&label name"
@@ -232,7 +233,11 @@
         "NewProjectDialog&BackgroundLowerRegion&Background",
         "CommonDocument&Page&Background",
         "Environment&BrandedUIBackground&Background",
-        "NewProjectDialog&Wonderbar&Background" //
+        "NewProjectDialog&Wonderbar&Background", //
+        "Environment&TitleBarActiveGradientBegin&Background",
+        "Environment&TitleBarActiveGradientEnd&Background",
+        "Environment&TitleBarActiveGradientMiddle1&Background",
+        "Environment&TitleBarActiveGradientMiddle2&Background"
       ]
     },
     {
@@ -297,8 +302,6 @@
         "Environment&StartPageTextDate&Background",
         "Environment&ToolboxContent&Foreground",
         "Environment&ToolboxContentMouseOver&Foreground",
-        "Environment&ToolWindowTabSelectedActiveText&Background",
-        "Environment&ToolWindowTabSelectedText&Background",
         "Header&Default&Foreground",
         "Header&MouseOver&Foreground",
         "Header&MouseOverGlyph&Background",
@@ -428,7 +431,6 @@
         "Environment&CommandBarGradientBegin&Background",
         "Environment&CommandBarGradientEnd&Background",
         "Environment&CommandBarGradientMiddle&Background",
-        "Environment&CommandBarHoverOverSelectedIconBorder&Background",
         "Environment&CommandBarMouseOverUnfocused&Background",
         "Environment&CommandBarOptionsBackground&Background",
         "Environment&CommandBarOptionsMouseDownBackgroundBegin&Background",
@@ -474,7 +476,6 @@
         "Environment&ProjectDesignerTabBackgroundGradientEnd&Background",
         "Environment&ProjectDesignerTabSepBottomGradientBegin&Background",
         "Environment&ProjectDesignerTabSepTopGradientEnd&Background",
-        "Environment&TitleBarActiveBorder&Background",
         "Environment&TitleBarDragHandleActive&Background",
         "Environment&TitleBarInactiveGradientBegin&Background",
         "Environment&TitleBarInactiveGradientEnd&Background",
@@ -498,11 +499,7 @@
         "ThemedDialog&WizardFooter&Background",
         "ThemedUtilityDialog&ActiveCaption&Background",
         "VSSearch&WindowPanelBorder&Background",
-        "VSSearch&WindowPanelTabDivider&Background",
-        "Environment&TitleBarActiveGradientBegin&Background",
-        "Environment&TitleBarActiveGradientEnd&Background",
-        "Environment&TitleBarActiveGradientMiddle1&Background",
-        "Environment&TitleBarActiveGradientMiddle2&Background"
+        "VSSearch&WindowPanelTabDivider&Background"
       ]
     },
     {
@@ -566,10 +563,7 @@
     {
       "VSC Token": "tab.activeBorder",
       "VS Token": [
-        "Environment&FileTabDocumentBorderBackground&Background",
-        "Environment&FileTabProvisionalSelectedActiveBorder&Background",
-        "Environment&FileTabSelectedBorder&Background",
-        "NavigateTo&ResultListAccentBorder&Background"
+        "Environment&FileTabDocumentBorderBackground&Background" //
       ]
     },
     {
@@ -632,8 +626,6 @@
     {
       "VSC Token": "tab.unfocusedHoverBackground",
       "VS Token": [
-        "Environment&CommandBarSelectedIconBorder&Background",
-        "Environment&CommandBarSelectedIconDisabledBorder&Background",
         "Environment&CommandBarShadow&Background",
         "Environment&DocWellOverflowButtonGlyph&Background",
         "Environment&FileTabHotGradientBottom&Background",
@@ -656,6 +648,7 @@
         "Environment&CommandBarHover&Background",
         "Environment&CommandBarHoverOverSelected&Background",
         "Environment&CommandBarHoverOverSelectedIcon&Background", //
+        "Environment&CommandBarHoverOverSelectedIconBorder&Background", //
         "Environment&CommandBarMenuItemMouseOver&Background",
         "Environment&CommandBarMouseDownBackgroundBegin&Background",
         "Environment&CommandBarMouseDownBackgroundEnd&Background",
@@ -717,7 +710,6 @@
         "Environment&QuickCustomizeButton&Background",
         "Environment&StartPageButtonPinDown&Background",
         "Environment&StartPageButtonUnpinned&Background",
-        "Environment&ToolWindowButtonActiveGlyph&Background",
         "Environment&ToolWindowButtonDown&Background",
         "Environment&ToolWindowButtonDownActiveGlyph&Background",
         "Environment&ToolWindowButtonDownInactiveGlyph&Background",
@@ -919,7 +911,6 @@
         "Environment&StartPageTabMouseOverBackgroundEnd&Background",
         "Environment&StartPageUnselectedItemBackgroundBegin&Background",
         "Find Results&Current List Location&Background",
-        "Find&DropDownMenuMouseDown&Foreground",
         "GraphDocumentColors&GlassHighlightEndColor&Background",
         "GraphDocumentColors&GlassHighlightStartColor&Background",
         "GraphDocumentColors&NoShapeSelectionBorder&Background",
@@ -1128,6 +1119,7 @@
     {
       "VSC Token": "focusBorder",
       "VS Token": [
+        "Environment&TitleBarActiveBorder&Background"
       ]
     },
     {
@@ -1166,6 +1158,10 @@
     {
       "VSC Token": "sideBarTitle.foreground",
       "VS Token": [
+        "Environment&TitleBarActiveText&Background",
+        "Environment&TitleBarInactiveText&Background",
+        "Environment&ToolWindowButtonActiveGlyph&Background",
+        "Environment&ToolWindowButtonInActiveGlyph&Background"
       ]
     },
     {
@@ -1657,11 +1653,6 @@
         "Environment&ComboBoxMouseDownBackground&Background",
         "CommonControls&ComboBoxListBackground&Background",
         "Output Window&Current List Location&Background",
-        "Environment&DropDownMouseOverBackgroundBegin&Background",
-        "Environment&DropDownMouseOverBackgroundEnd&Background",
-        "Environment&DropDownMouseOverBackgroundMiddle1&Background",
-        "Environment&DropDownMouseOverBackgroundMiddle2&Background",
-        "Environment&DropDownButtonMouseOverBackground&Background",
         "CommonControls&ComboBoxBackground&Background",
         "CommonControls&ComboBoxBackgroundDisabled&Background",
         "CommonControls&ComboBoxBackgroundFocused&Background",
@@ -1670,7 +1661,10 @@
         "CommonControls&ComboBoxGlyphBackgroundDisabled&Background",
         "CommonControls&ComboBoxGlyphBackground&Background",
         "CommonControls&ComboBoxGlyphBackgroundFocused&Background",
-        "CommonControls&ComboBoxGlyphBackgroundPressed&Background"
+        "CommonControls&ComboBoxGlyphBackgroundPressed&Background",
+        "Environment&DropDownPopupBackgroundBegin&Background",
+        "Environment&DropDownPopupBackgroundEnd&Background",
+        "Find&UnfocusedDropdown&Background"
       ]
     },
     {
@@ -2377,7 +2371,13 @@
         "Diagnostics&ControlSelectedItem&Background",
         "TreeView&SelectedItemActive&Background",
         "Environment&Highlight&Background",
-        "NewProjectDialog&WonderbarTreeSelected&Background" //
+        "NewProjectDialog&WonderbarTreeSelected&Background", //
+        "Find&DropDownMenuMouseDown&Background",
+        "Environment&DropDownMouseOverBackgroundBegin&Background",
+        "Environment&DropDownMouseOverBackgroundEnd&Background",
+        "Environment&DropDownMouseOverBackgroundMiddle1&Background",
+        "Environment&DropDownMouseOverBackgroundMiddle2&Background",
+        "Environment&DropDownButtonMouseOverBackground&Background"
       ]
     },
     {
@@ -2393,7 +2393,8 @@
         "ThemedDialog&SelectedItemActive&Foreground",
         "Environment&HighlightText&Background",
         "ThemedDialog&StartWindowDescriptionActive&Foreground",
-        "NewProjectDialog&WonderbarTreeSelected&Foreground" //
+        "NewProjectDialog&WonderbarTreeSelected&Foreground", //
+        "Find&DropDownMenuMouseDown&Foreground"
       ]
     },
     {
@@ -2505,7 +2506,10 @@
         "Environment&CommandBarMenuBackgroundGradientBegin&Background",
         "Environment&CommandBarMenuBackgroundGradientEnd&Background",
         "Environment&CommandBarMenuIconBackground&Background",
-        "UserInformation&IDCardBackground&Background"
+        "UserInformation&IDCardBackground&Background",
+        "Environment&CommandBarSelectedIconBorder&Background",
+        "Environment&CommandBarSelectedIconDisabledBorder&Background",
+        "Environment&CommandBarSelectedIcon&Background" //
       ]
     },
     {
@@ -2793,8 +2797,9 @@
     {
       "VSC Token": "panelTitle.activeForeground",
       "VS Token": [
-        "Environment&TitleBarActiveText&Background",
         "Environment&ToolWindowTabMouseOverText&Background",
+        "Environment&ToolWindowTabSelectedActiveText&Background", //
+        "Environment&ToolWindowTabSelectedText&Background", //
         "Environment&ToolWindowText&Background",
         "Diagnostics&TargetHoverText&Background",
         "Environment&CommandBarTextHover&Background", //
@@ -2805,8 +2810,7 @@
     {
       "VSC Token": "panelTitle.inactiveForeground",
       "VS Token": [
-        "Environment&ToolWindowTabText&Background",
-        "Environment&TitleBarInactiveText&Background"
+        "Environment&ToolWindowTabText&Background" //
       ]
     },
     {
@@ -3587,7 +3591,7 @@
       "VSC Token": "button.border",
       "VS Token": [
         "Cider&ComboBoxButtonPressedBorder&Background",
-        "CommonControls&ButtonBorderDefault&Background",        
+        "CommonControls&ButtonBorderDefault&Background",
         "CommonControls&ButtonBorderFocused&Background",
         "CommonControls&ButtonBorderPressed&Background",
         "Environment&DocWellOverflowButtonMouseDownBorder&Background",
@@ -3679,7 +3683,8 @@
         "Environment&DropDownMouseOverText&Background",
         "Environment&DropDownText&Background",
         "Output Window&Current List Location&Foreground",
-        "Environment&ComboBoxItemMouseOverText&Background" //
+        "Environment&ComboBoxItemMouseOverText&Background", //
+        "Find&UnfocusedDropdown&Foreground"
       ]
     },
     {
@@ -4025,7 +4030,6 @@
     {
       "VSC Token": "selection.background",
       "VS Token": [
-        "Environment&CommandBarSelectedIcon&Background", //
         "Output Window&Selected Text&Background",
         "Output Window&Selected Text in High Contrast&Background",
         "CommonControls&ComboBoxTextInputSelection&Background", //
@@ -4065,6 +4069,9 @@
     {
       "VSC Token": "tab.activeBorderTop",
       "VS Token": [
+        "Environment&FileTabProvisionalSelectedActiveBorder&Background",
+        "Environment&FileTabSelectedBorder&Background", //
+        "NavigateTo&ResultListAccentBorder&Background"
       ]
     },
     {

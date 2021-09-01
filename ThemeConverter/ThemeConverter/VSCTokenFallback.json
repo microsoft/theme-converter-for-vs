@@ -5,5 +5,10 @@
   "input.border": "inputOption.activeBorder",
   "inputOption.activeBackground": "input.background",
   "inputOption.activeForeground": "input.foreground",
-  "tab.activeBorder":  "tab.activeBorderTop"
+  "tab.activeBorder": "tab.activeBorderTop",
+  "keyword.type": "storage.modifier.cs",
+  "entity.name.variable.field.cs": "editor.foreground",
+  "entity.name.type.class.cs": "storage.type.cs",
+  "variable.other.object.property.cs": "entity.name.variable.property.cs",
+  "entity.name.variable.enum-member.cs": "variable.other.object.property.cs"
 }
