@@ -81,6 +81,12 @@
       ]
     },
     {
+      "VSC Token": "variable.other.object.property.cs",
+      "VS Token": [
+        "Roslyn Text Editor MEF Items&property name"
+      ]
+    },
+    {
       "VSC Token": "constant",
       "VS Token": [
         "Text Editor MEF Items&Literal"
@@ -185,12 +191,6 @@
       "VSC Token": "entity.name.variable.parameter.cs",
       "VS Token": [
         "Roslyn Text Editor MEF Items&parameter name"
-      ]
-    },
-    {
-      "VSC Token": "entity.name.variable.property.cs",
-      "VS Token": [
-        "Roslyn Text Editor MEF Items&property name"
       ]
     },
     {
@@ -3588,7 +3588,7 @@
       "VSC Token": "button.border",
       "VS Token": [
         "Cider&ComboBoxButtonPressedBorder&Background",
-        "CommonControls&ButtonBorderDefault&Background",        
+        "CommonControls&ButtonBorderDefault&Background",
         "CommonControls&ButtonBorderFocused&Background",
         "CommonControls&ButtonBorderPressed&Background",
         "Environment&DocWellOverflowButtonMouseDownBorder&Background",
