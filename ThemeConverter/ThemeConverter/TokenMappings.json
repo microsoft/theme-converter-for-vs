@@ -1081,23 +1081,27 @@
       "VS Token": [
         "Environment&WindowText&Background",
         "Output Window&Plain Text&Foreground",
-        "Text Editor MEF Items&brace matching&Background",
         "Roslyn Text Editor MEF Items&punctuation&Foreground"
       ]
     },
     {
       "VSC Token": "editor.lineHighlightBackground",
       "VS Token": [
+        "Text Editor MEF Items&CurrentLineActiveFormat&Background"
       ]
     },
     {
       "VSC Token": "editorBracketMatch.background",
       "VS Token": [
+        "Text Editor MEF Items&brace matching&Background",
+        "Roslyn Text Editor MEF Items&brace matching&Background"
       ]
     },
     {
       "VSC Token": "editorBracketMatch.border",
       "VS Token": [
+        "Text Editor MEF Items&brace matching&Foreground",
+        "Roslyn Text Editor MEF Items&brace matching&Foreground"
       ]
     },
     {
@@ -1748,6 +1752,7 @@
     {
       "VSC Token": "editor.lineHighlightBorder",
       "VS Token": [
+        "Text Editor MEF Items&CurrentLineActiveFormat&Foreground"
       ]
     },
     {
