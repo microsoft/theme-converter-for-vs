@@ -425,8 +425,6 @@
         {
             foreach (var colorKey in colorKeys)
             {
-                SettingsContract colorSetting;
-
                 if (!colorCategories.TryGetValue(colorKey.CategoryName, out var rulesList))
                 {
                     // token name to colors
@@ -434,7 +432,7 @@
                     colorCategories[colorKey.CategoryName] = rulesList;
                 }
 
-                if (!rulesList.TryGetValue(colorKey.KeyName, out colorSetting))
+                if (!rulesList.TryGetValue(colorKey.KeyName, out var colorSetting))
                 {
                     colorSetting = new SettingsContract();
                     rulesList.Add(colorKey.KeyName, colorSetting);
