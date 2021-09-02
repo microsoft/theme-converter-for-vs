@@ -27,7 +27,7 @@
 3. “Ctrl + Shift + P” and run “Developer: Generate Color Theme from current settings.” 
 4. In the generated JSON, uncomment all code. When you uncomment, please be careful about missing commas! Make sure the JSON is valid. 
 5. Save this as a “JSON” file for the conversion, using the theme's name as the file name. Please ensure that the file’s extension is .json. (The file shouldn’t be saved as a JSONC file.) 
-6. **Note**: Because some part of VS UI does not support customized alpha channle, we recommend reducing the usage of not fully opaque colors for better conversion result.
+6. **Note**: Because some part of VS UI does not support customized alpha channel, we recommend reducing the usage of not fully opaque colors for better conversion result.
 
 ### Creating a VSIX for the new theme
 This section describes how you can create a VSIX with the converted theme for publishing and sharing.
