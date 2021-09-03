@@ -324,15 +324,6 @@
         "ProjectDesigner&CategoryTab&Foreground",
         "ProjectDesigner&MouseOverCategoryTab&Foreground",
         "ProjectDesigner&SelectedCategoryTab&Foreground",
-        "SearchControl&FocusedDropDownButtonGlyph&Background",
-        "SearchControl&MouseOverWatermarkText&Background",
-        "SearchControl&PopupButtonMouseDownText&Background",
-        "SearchControl&PopupCheckboxCheckmark&Background",
-        "SearchControl&PopupCheckboxMouseDownText&Background",
-        "SearchControl&PopupCheckboxMouseOverText&Background",
-        "SearchControl&PopupCheckboxText&Background",
-        "SearchControl&PopupItemText&Background",
-        "SearchControl&PopupMouseOverItemText&Background",
         "SharePointTools&DesignerDefaultTab&Foreground",
         "SharePointTools&DesignerMouseOverTab&Foreground",
         "ThemedDialog&GridHeadingHoverText&Background",
@@ -2270,17 +2261,27 @@
       "VS Token": [
         "CommonControls&TextBoxText&Background", //
         "CommonControls&TextBoxTextFocused&Background", //
-        "SearchControl&FocusedBackground&Foreground",
-        "SearchControl&MouseOverBackground&Foreground",
-        "SearchControl&SearchActiveBackground&Foreground",
-        "SearchControl&Unfocused&Foreground",
-        "TeamExplorer&TextBox&Foreground",
-        "SearchControl&MouseOverDropDownButtonGlyph&Background",
-        "SearchControl&MouseDownDropDownButtonGlyph&Background",
-        "SearchControl&MouseOverSearchGlyph&Background",
         "SearchControl&ActionButtonMouseDownGlyph&Background",
         "SearchControl&ActionButtonMouseOverGlyph&Background",
-        "SearchControl&Selection&Foreground" //
+        "SearchControl&FocusedBackground&Foreground",
+        "SearchControl&FocusedDropDownButtonGlyph&Background",
+        "SearchControl&MouseDownDropDownButtonGlyph&Background",
+        "SearchControl&MouseOverBackground&Foreground",
+        "SearchControl&MouseOverDropDownButtonGlyph&Background",
+        "SearchControl&MouseOverSearchGlyph&Background",
+        "SearchControl&MouseOverWatermarkText&Background",
+        "SearchControl&PopupButtonMouseDownText&Background",
+        "SearchControl&PopupCheckboxCheckmark&Background",
+        "SearchControl&PopupCheckboxMouseDownText&Background",
+        "SearchControl&PopupCheckboxMouseOverText&Background",
+        "SearchControl&PopupCheckboxText&Background",
+        "SearchControl&PopupItemText&Background",
+        "SearchControl&PopupMouseOverItemText&Background",
+        "SearchControl&SearchActiveBackground&Foreground",
+        "SearchControl&Selection&Foreground", //
+        "SearchControl&Unfocused&Foreground",
+        "SearchControl&UnfocusedWatermarkText&Background",
+        "TeamExplorer&TextBox&Foreground"
       ]
     },
     {
@@ -2526,7 +2527,8 @@
         "UserInformation&IDCardInactiveText&Background",
         "UserInformation&IDCardMinimalModeInactiveWindowText&Background",
         "UserInformation&IDCardMinimalModeText&Background",
-        "UserInformation&IDCardText&Background"
+        "UserInformation&IDCardText&Background",
+        "Environment&CommandBarTextActive&Background" //
       ]
     },
     {
@@ -2536,7 +2538,9 @@
         "Environment&CommandBarMenuMouseDownGlyph&Background",
         "Environment&CommandBarMenuMouseOverGlyph&Background",
         "Environment&CommandBarMenuMouseOverSubmenuGlyph&Background",
-        "Environment&CommandBarMenuSubmenuGlyphHover&Background"
+        "Environment&CommandBarMenuSubmenuGlyphHover&Background",
+        "Environment&CommandBarTextHover&Background", //
+        "Environment&CommandBarTextHoverOverSelected&Background", //
       ]
     },
     {
@@ -2806,10 +2810,7 @@
         "Environment&ToolWindowTabSelectedActiveText&Background", //
         "Environment&ToolWindowTabSelectedText&Background", //
         "Environment&ToolWindowText&Background",
-        "Diagnostics&TargetHoverText&Background",
-        "Environment&CommandBarTextHover&Background", //
-        "Environment&CommandBarTextHoverOverSelected&Background", //
-        "Environment&CommandBarTextActive&Background" //
+        "Diagnostics&TargetHoverText&Background"
       ]
     },
     {

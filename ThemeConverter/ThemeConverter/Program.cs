@@ -56,7 +56,7 @@
                     string pkgdefOutputPath = args[1];
                     Directory.CreateDirectory(pkgdefOutputPath);
 
-                    foreach (var vscodeThemePath in Directory.EnumerateFiles("ImportedThemes", "*.json"))
+                    foreach (var vscodeThemePath in Directory.EnumerateFiles(args[0], "*.json"))
                     {
                         Convert(vscodeThemePath, pkgdefOutputPath, null);
                     }
