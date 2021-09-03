@@ -11,5 +11,7 @@
   "entity.name.variable.field.cs": "editor.foreground",
   "entity.name.type.class.cs": "storage.type.cs",
   "variable.other.object.property.cs": "entity.name.variable.property.cs",
-  "entity.name.variable.enum-member.cs": "variable.other.object.property.cs"
+  "entity.name.variable.enum-member.cs": "variable.other.object.property.cs",
+  "editor.lineHighlightBackground": "editor.background",
+  "editorBracketMatch.background": "editor.background"
 }

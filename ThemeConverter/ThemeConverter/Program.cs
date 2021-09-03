@@ -325,7 +325,7 @@
                     if (VSCTokenFallback.Value.TryGetValue(key, out var fallbackToken))
                     {
                         // if the fallback is foreground, assign it like a shell color
-                        if (fallbackToken == "foreground")
+                        if (fallbackToken == "foreground" && theme.Colors.ContainsKey("foreground"))
                         {
                             if (ScopeMappings.Value.TryGetValue(key, out var colorKeys))
                             {
@@ -356,6 +356,11 @@
                 }
             }
 
+            List<string> editorOverlayTokens = new List<string> { "editor.lineHighlightBorder",
+                                                                  "editor.lineHighlightBackground",
+                                                                  "editorBracketMatch.border",
+                                                                  "editorBracketMatch.background"};
+
             // Add the shell colors
             foreach (var color in theme.Colors)
             {
@@ -378,11 +383,59 @@
                         }
                     }
 
+                    // calculate the actual border color for editor overlay colors
+                    if (editorOverlayTokens.Contains(color.Key) && theme.Colors.TryGetValue("editor.background", out string editorBackground))
+                    {
+                        if (color.Key.Equals("editor.lineHighlightBackground", StringComparison.OrdinalIgnoreCase))
+                        {
+                            colorValue = GetCompoundColor(colorValue, editorBackground, 0.25f);
+                        }
+                        else
+                        {
+                            colorValue = GetCompoundColor(colorValue, editorBackground);
+                        }
+                    }
+
                     AssignShellColors(colorValue, colorKeyList, ref colorCategories);
                 }
             }
 
             return colorCategories;
+        }
+
+        /// <summary>
+        /// Compute what is the compound color of 2 overlayed colors with transparency
+        /// </summary>
+        /// <param name="VSOpacity">What is the opacity that VS will use when displaying this color</param>
+        /// <returns></returns>
+        private static string GetCompoundColor(string overlayColor, string baseColor, float VSOpacity = 1)
+        {
+            overlayColor = ReviseColor(overlayColor);
+            baseColor = ReviseColor(baseColor);
+            float overlayA = (float)System.Convert.ToInt32(overlayColor.Substring(0, 2), 16) / 255;
+            float overlayR = System.Convert.ToInt32(overlayColor.Substring(2, 2), 16);
+            float overlayG = System.Convert.ToInt32(overlayColor.Substring(4, 2), 16);
+            float overlayB = System.Convert.ToInt32(overlayColor.Substring(6, 2), 16);
+
+            float baseA = (float)System.Convert.ToInt32(baseColor.Substring(0, 2), 16) / 255;
+            float baseR = System.Convert.ToInt32(baseColor.Substring(2, 2), 16);
+            float baseG = System.Convert.ToInt32(baseColor.Substring(4, 2), 16);
+            float baseB = System.Convert.ToInt32(baseColor.Substring(6, 2), 16);
+
+            float R = (overlayA / VSOpacity) * overlayR + (1 - overlayA / VSOpacity) * baseA * baseR;
+            float G = (overlayA / VSOpacity) * overlayG + (1 - overlayA / VSOpacity) * baseA * baseG;
+            float B = (overlayA / VSOpacity) * overlayB + (1 - overlayA / VSOpacity) * baseA * baseB;
+
+            // limit the value to 0 - 255
+            R = R > 255 ? 255 : (R < 0 ? 0 : R);
+            G = G > 255 ? 255 : (G < 0 ? 0 : G);
+            B = B > 255 ? 255 : (B < 0 ? 0 : B);
+
+            string newR = ((int)R).ToString("X2");
+            string newG = ((int)G).ToString("X2");
+            string newB = ((int)B).ToString("X2");
+
+            return newR + newG + newB + "FF";
         }
 
         private static void AssignEditorColors(ColorKey[] colorKeys,
