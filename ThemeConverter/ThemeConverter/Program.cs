@@ -426,10 +426,9 @@
             float G = (overlayA / VSOpacity) * overlayG + (1 - overlayA / VSOpacity) * baseA * baseG;
             float B = (overlayA / VSOpacity) * overlayB + (1 - overlayA / VSOpacity) * baseA * baseB;
 
-            // limit the value to 0 - 255
-            R = R > 255 ? 255 : (R < 0 ? 0 : R);
-            G = G > 255 ? 255 : (G < 0 ? 0 : G);
-            B = B > 255 ? 255 : (B < 0 ? 0 : B);
+            R = Math.Clamp(R, 0, 255);
+            G = Math.Clamp(G, 0, 255);
+            B = Math.Clamp(B, 0, 255);
 
             string newR = ((int)R).ToString("X2");
             string newG = ((int)G).ToString("X2");
