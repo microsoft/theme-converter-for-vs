@@ -29,58 +29,36 @@
         {
             try
             {
-                Console.WriteLine("ThemeConverter v0.0.2");
-                Console.WriteLine("A utility that converts VSCode theme json file(s) to VS pkgdef file(s).");
-                Console.WriteLine("For Microsoft internal usage only.");
-                Console.WriteLine();
-
                 if (args.Length < 1)
                 {
-                    Console.WriteLine("Usage: ThemeConverter.exe <theme_json_file_path> <vs_install_dir>");
-                    Console.WriteLine("       or");
-                    Console.WriteLine("       ThemeConverter.exe <theme_json_file_path>");
-                    Console.WriteLine("       or");
-                    Console.WriteLine("       ThemeConverter.exe <theme_json_folder_path> <pkgdef_out_dir>");
-                    Console.WriteLine();
+                    ShowHelpText();
                     return -1;
                 }
 
                 // Check for duplicate mappings
                 ParseMapping.CheckDuplicateMapping();
 
-                if (Directory.Exists(args[0]))
+                switch (args[0])
                 {
-                    if (args.Length < 2)
-                        throw new ApplicationException($"Specify pkgdef output folder.");
+                    case "-patch":
+                        if (args.Length != 3)
+                        {
+                            throw new ApplicationException("Invalid input, use '-help' to see sample usage.");
+                        }
 
-                    string pkgdefOutputPath = args[1];
-                    Directory.CreateDirectory(pkgdefOutputPath);
+                        PatchTheme(args[1], args[2]);
+                        break;
+                    case "-convert":
+                        if (args.Length < 2 || args.Length > 3)
+                        {
+                            throw new ApplicationException("Invalid input, use '-help' to see sample usage.");
+                        }
 
-                    foreach (var vscodeThemePath in Directory.EnumerateFiles(args[0], "*.json"))
-                    {
-                        Convert(vscodeThemePath, pkgdefOutputPath, null);
-                    }
-                }
-                else if (File.Exists(args[0]))
-                {
-                    string filePath = args[0];
-
-                    if (args.Length > 1)
-                    {
-                        string deployInstall = args[1];
-                        if (!Directory.Exists(deployInstall))
-                            throw new ApplicationException($"VS install dir does not exist: {deployInstall}");
-
-                        Convert(filePath, null, deployInstall);
-                    }
-                    else
-                    {
-                        Convert(filePath, Path.GetDirectoryName(filePath), null);
-                    }
-                }
-                else
-                {
-                    throw new ApplicationException($"Specify a theme json file or a folder containing theme json files.");
+                        ConvertTheme(args[1], args.Length == 3 ? args[2] : Path.GetDirectoryName(args[1]));
+                        break;
+                    default:
+                        ShowHelpText();
+                        break;
                 }
 
                 return 0;
@@ -90,6 +68,65 @@
                 Console.WriteLine();
                 Console.WriteLine(ex);
                 return -1;
+            }
+        }
+
+        private static void ShowHelpText()
+        {
+            try
+            {
+                StreamReader sr = new StreamReader("Usage.txt");
+                Console.WriteLine(sr.ReadToEnd());
+                sr.Close();
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex);
+            }
+        }
+
+        private static void PatchTheme(string sourcePath, string deployInstall)
+        {
+            if (!Directory.Exists(deployInstall))
+            {
+                throw new ApplicationException($"VS install dir does not exist: {deployInstall}");
+            }
+
+            if (Directory.Exists(sourcePath))
+            {
+                foreach (var vscodeThemePath in Directory.EnumerateFiles(sourcePath, "*.json"))
+                {
+                    Convert(vscodeThemePath, null, deployInstall);
+                }
+            }
+            else if (File.Exists(sourcePath))
+            {
+                Convert(sourcePath, null, deployInstall);
+            }
+            else
+            {
+                throw new ApplicationException($"Specify a theme json file or a folder containing theme json files.");
+            }
+        }
+
+        private static void ConvertTheme(string sourcePath, string targetPath)
+        {
+            Directory.CreateDirectory(targetPath);
+
+            if (Directory.Exists(sourcePath))
+            {
+                foreach (var vscodeThemePath in Directory.EnumerateFiles(sourcePath, "*.json"))
+                {
+                    Convert(vscodeThemePath, targetPath, null);
+                }
+            }
+            else if (File.Exists(sourcePath))
+            {
+                Convert(sourcePath, targetPath, null);
+            }
+            else
+            {
+                throw new ApplicationException($"Specify a theme json file or a folder containing theme json files.");
             }
         }
 
@@ -164,11 +201,14 @@
 
             string vsPath = Path.Combine(deployInstall, @"Common7\IDE\devenv.exe");
             var updateConfigProcess = Process.Start(vsPath, "/updateconfiguration");
+            Console.WriteLine("Running UpdateConfiguration.");
+            Console.WriteLine();
             updateConfigProcess.WaitForExit();
             if (updateConfigProcess.ExitCode != 0)
                 throw new ApplicationException("Fatal error running devenv.exe /updateconfiguration");
 
             // Launch Visual Studio to the themes page.
+            Console.WriteLine("Launching Visual Studio.");
             Process.Start(vsPath);
         }
 

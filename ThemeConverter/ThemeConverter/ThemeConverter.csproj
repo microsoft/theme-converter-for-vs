@@ -20,6 +20,9 @@
     <None Update="TokenMappings.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
+    <None Update="Usage.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Update="VSCTokenFallback.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>

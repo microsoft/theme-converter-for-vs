@@ -16,9 +16,6 @@ namespace ThemeConverter
 
         public static void CheckDuplicateMapping()
         {
-            Console.WriteLine("Checking for duplicateMappings...");
-            Console.WriteLine();
-
             var contents = System.IO.File.ReadAllText("TokenMappings.json");
             var file = JObject.Parse(contents);
             var colors = file["tokenColors"];
