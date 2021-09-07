@@ -645,11 +645,6 @@
         "Environment&CommandBarMouseDownBackgroundEnd&Background",
         "Environment&CommandBarMouseDownBackgroundMiddle&Background",
         "Environment&CommandBarMouseDownBorder&Background",
-        "Environment&CommandBarMouseOverBackgroundBegin&Background",
-        "Environment&CommandBarMouseOverBackgroundEnd&Background",
-        "Environment&CommandBarMouseOverBackgroundGradient&Background", //
-        "Environment&CommandBarMouseOverBackgroundMiddle1&Background",
-        "Environment&CommandBarMouseOverBackgroundMiddle2&Background",
         "Environment&CommandBarSelected&Background",
         "Environment&DebuggerDataTipActiveHighlight&Background",
         "Environment&ToolboxContentMouseOver&Background",
@@ -667,7 +662,12 @@
     {
       "VSC Token": "menubar.selectionBackground",
       "VS Token": [
-        "Environment&StartPageTextControlLinkSelectedHover&Background"
+        "Environment&StartPageTextControlLinkSelectedHover&Background",
+        "Environment&CommandBarMouseOverBackgroundBegin&Background",
+        "Environment&CommandBarMouseOverBackgroundEnd&Background",
+        "Environment&CommandBarMouseOverBackgroundGradient&Background", //
+        "Environment&CommandBarMouseOverBackgroundMiddle1&Background",
+        "Environment&CommandBarMouseOverBackgroundMiddle2&Background"
       ]
     },
     {
@@ -2539,8 +2539,6 @@
         "Environment&CommandBarMenuMouseOverGlyph&Background",
         "Environment&CommandBarMenuMouseOverSubmenuGlyph&Background",
         "Environment&CommandBarMenuSubmenuGlyphHover&Background",
-        "Environment&CommandBarTextHover&Background", //
-        "Environment&CommandBarTextHoverOverSelected&Background", //
       ]
     },
     {
@@ -2554,7 +2552,9 @@
     {
       "VSC Token": "menubar.selectionForeground",
       "VS Token": [
-        "Environment&CommandBarCheckBoxMouseOver&Background" //
+        "Environment&CommandBarCheckBoxMouseOver&Background", //
+        "Environment&CommandBarTextHover&Background", //
+        "Environment&CommandBarTextHoverOverSelected&Background" //
       ]
     },
     {
