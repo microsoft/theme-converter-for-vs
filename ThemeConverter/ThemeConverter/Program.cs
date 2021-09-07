@@ -54,7 +54,17 @@
                             throw new ApplicationException("Invalid input, use '-help' to see sample usage.");
                         }
 
-                        ConvertTheme(args[1], args.Length == 3 ? args[2] : Path.GetDirectoryName(args[1]));
+                        string targetPath;
+                        if (args.Length == 2)
+                        {
+                            targetPath = Directory.Exists(args[1]) ? args[1] : Path.GetDirectoryName(args[1]);
+                        }
+                        else
+                        {
+                            targetPath = args[2];
+                        }
+
+                        ConvertTheme(args[1], targetPath);
                         break;
                     default:
                         ShowHelpText();
@@ -75,9 +85,7 @@
         {
             try
             {
-                StreamReader sr = new StreamReader("Usage.txt");
-                Console.WriteLine(sr.ReadToEnd());
-                sr.Close();
+                Console.WriteLine(Resources.HelpText);
             }
             catch (Exception ex)
             {
@@ -396,10 +404,10 @@
                 }
             }
 
-            List<string> editorOverlayTokens = new List<string> { "editor.lineHighlightBorder",
-                                                                  "editor.lineHighlightBackground",
-                                                                  "editorBracketMatch.border",
-                                                                  "editorBracketMatch.background"};
+            Dictionary<string, float> editorOverlayTokens = new Dictionary<string, float>{{"editor.lineHighlightBorder", 1.0f },
+                                                                                          {"editor.lineHighlightBackground", 0.25f },
+                                                                                          {"editorBracketMatch.border", 1.0f},
+                                                                                          {"editorBracketMatch.background", 1.0f } };
 
             // Add the shell colors
             foreach (var color in theme.Colors)
@@ -424,16 +432,9 @@
                     }
 
                     // calculate the actual border color for editor overlay colors
-                    if (editorOverlayTokens.Contains(color.Key) && theme.Colors.TryGetValue("editor.background", out string editorBackground))
+                    if (editorOverlayTokens.ContainsKey(color.Key) && theme.Colors.TryGetValue("editor.background", out string editorBackground))
                     {
-                        if (color.Key.Equals("editor.lineHighlightBackground", StringComparison.OrdinalIgnoreCase))
-                        {
-                            colorValue = GetCompoundColor(colorValue, editorBackground, 0.25f);
-                        }
-                        else
-                        {
-                            colorValue = GetCompoundColor(colorValue, editorBackground);
-                        }
+                        colorValue = GetCompoundColor(colorValue, editorBackground, editorOverlayTokens[color.Key]);
                     }
 
                     AssignShellColors(colorValue, colorKeyList, ref colorCategories);
@@ -470,11 +471,7 @@
             G = Math.Clamp(G, 0, 255);
             B = Math.Clamp(B, 0, 255);
 
-            string newR = ((int)R).ToString("X2");
-            string newG = ((int)G).ToString("X2");
-            string newB = ((int)B).ToString("X2");
-
-            return newR + newG + newB + "FF";
+            return $"{(int)R:X2}{(int)G:X2}{(int)B:X2}FF";
         }
 
         private static void AssignEditorColors(ColorKey[] colorKeys,
