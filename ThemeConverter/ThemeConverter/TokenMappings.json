@@ -2630,16 +2630,21 @@
     {
       "VSC Token": "minimapSlider.activeBackground",
       "VS Token": [
+        "Text Editor MEF Items&OverviewMarginScrollButtonsMouseDown&Foreground"
       ]
     },
     {
       "VSC Token": "minimapSlider.background",
       "VS Token": [
+        "Text Editor MEF Items&OverviewMarginVisible&Background",
+        "Text Editor MEF Items&OverviewMarginVisible&Foreground",
+        "Text Editor MEF Items&OverviewMarginScrollButtons&Foreground"
       ]
     },
     {
       "VSC Token": "minimapSlider.hoverBackground",
       "VS Token": [
+        "Text Editor MEF Items&OverviewMarginScrollButtonsMouseOver&Foreground"
       ]
     },
     {
@@ -3960,6 +3965,10 @@
     {
       "VSC Token": "minimap.background",
       "VS Token": [
+        "Text Editor MEF Items&OverviewMarginBackground&Background",
+        "Text Editor MEF Items&OverviewMarginScrollButtons&Background",
+        "Text Editor MEF Items&OverviewMarginScrollButtonsMouseOver&Background",
+        "Text Editor MEF Items&OverviewMarginScrollButtonsMouseDown&Background"
       ]
     },
     {
