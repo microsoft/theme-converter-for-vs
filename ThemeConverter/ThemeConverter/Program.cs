@@ -1,23 +1,22 @@
 ﻿namespace ThemeConverter
 {
     using System;
+    using System.CodeDom.Compiler;
     using System.Collections.Generic;
     using System.Diagnostics;
     using System.IO;
+    using Mono.Options;
     using Newtonsoft.Json.Linq;
     using ThemeConverter.ColorCompiler;
 
 #pragma warning disable IDE0051 // Remove unused private members
     internal sealed class Program
     {
-        private const string BackgroundColorCategory = "Text Editor Text Manager Items";
-        private const string TooltipCategory = "Editor Tooltip";
         private static Guid DarkThemeId = new Guid("{1ded0138-47ce-435e-84ef-9ec1f439b749}");
 
         private static string ThemeName = string.Empty;
         private static Lazy<Dictionary<string, ColorKey[]>> ScopeMappings = new Lazy<Dictionary<string, ColorKey[]>>(ParseMapping.CreateScopeMapping());
         private static Lazy<Dictionary<string, string>> CategoryGuids = new Lazy<Dictionary<string, string>>(ParseMapping.CreateCategoryGuids());
-        private static Lazy<Dictionary<string, string>> ThemeNameGuids = new Lazy<Dictionary<string, string>>(ParseMapping.CreateThemeNameGuids());
         private static Lazy<Dictionary<string, string>> VSCTokenFallback = new Lazy<Dictionary<string, string>>(ParseMapping.CreateVSCTokenFallback());
 
         /// <summary>
@@ -29,47 +28,46 @@
         {
             try
             {
-                if (args.Length < 1)
+                string inputPath = null, outputPath = null, targetVS = null;
+                bool showHelp = false;
+
+                var options = new OptionSet()
                 {
-                    ShowHelpText();
-                    return -1;
+                    {"i|input=", Resources.Input, i => inputPath = i },
+                    {"o|output=", Resources.Output, o => outputPath = o },
+                    {"t|targetVS=", Resources.TargetVS, t => targetVS = t },
+                    {"h|help",  Resources.Help, h => showHelp = h != null},
+                };
+
+                options.Parse(args);
+
+                if (showHelp)
+                {
+                    Console.WriteLine(Resources.HelpHeader);
+                    options.WriteOptionDescriptions(Console.Out);
+                    return 0;
                 }
 
                 // Check for duplicate mappings
                 ParseMapping.CheckDuplicateMapping();
 
-                switch (args[0])
+                if (inputPath == null || !IsValidPath(inputPath))
                 {
-                    case "-patch":
-                        if (args.Length != 3)
-                        {
-                            throw new ApplicationException("Invalid input, use '-help' to see sample usage.");
-                        }
-
-                        PatchTheme(args[1], args[2]);
-                        break;
-                    case "-convert":
-                        if (args.Length < 2 || args.Length > 3)
-                        {
-                            throw new ApplicationException("Invalid input, use '-help' to see sample usage.");
-                        }
-
-                        string targetPath;
-                        if (args.Length == 2)
-                        {
-                            targetPath = Directory.Exists(args[1]) ? args[1] : Path.GetDirectoryName(args[1]);
-                        }
-                        else
-                        {
-                            targetPath = args[2];
-                        }
-
-                        ConvertTheme(args[1], targetPath);
-                        break;
-                    default:
-                        ShowHelpText();
-                        break;
+                    throw new ApplicationException(Resources.InputNotExistException);
                 }
+
+                if (outputPath == null)
+                {
+                    outputPath = GetDirName(inputPath);
+                }
+
+                if (targetVS != null && !Directory.Exists(targetVS))
+                {
+                    throw new ApplicationException(Resources.TargetVSNotExistException);
+                }
+
+
+                Convert(inputPath, outputPath, targetVS);
 
                 return 0;
             }
@@ -81,11 +79,21 @@
             }
         }
 
+        private static string GetDirName(string path)
+        {
+            return Directory.Exists(path) ? path : Path.GetDirectoryName(path);
+        }
+
+        private static bool IsValidPath(string path)
+        {
+            return Directory.Exists(path) || File.Exists(path);
+        }
+
         private static void ShowHelpText()
         {
             try
             {
-                Console.WriteLine(Resources.HelpText);
+                Console.WriteLine(Resources.HelpHeader);
             }
             catch (Exception ex)
             {
@@ -93,52 +101,40 @@
             }
         }
 
-        private static void PatchTheme(string sourcePath, string deployInstall)
+        private static void Convert(string sourcePath, string pkgdefOutputPath, string deployInstall)
         {
-            if (!Directory.Exists(deployInstall))
-            {
-                throw new ApplicationException($"VS install dir does not exist: {deployInstall}");
-            }
-
             if (Directory.Exists(sourcePath))
             {
-                foreach (var vscodeThemePath in Directory.EnumerateFiles(sourcePath, "*.json"))
+                bool converted = false;
+                foreach (var sourceFile in Directory.EnumerateFiles(sourcePath, "*.json"))
                 {
-                    Convert(vscodeThemePath, null, deployInstall);
+                    ConvertFile(sourceFile, pkgdefOutputPath, deployInstall);
+                    converted = true;
                 }
-            }
-            else if (File.Exists(sourcePath))
-            {
-                Convert(sourcePath, null, deployInstall);
+
+                if (!converted)
+                {
+                    throw new ApplicationException(Resources.NoJSONFoundException);
+                }
             }
             else
             {
-                throw new ApplicationException($"Specify a theme json file or a folder containing theme json files.");
+                ConvertFile(sourcePath, pkgdefOutputPath, deployInstall);
+            }
+
+            if (!string.IsNullOrEmpty(deployInstall))
+            {
+                LaunchVS(deployInstall);
             }
         }
 
-        private static void ConvertTheme(string sourcePath, string targetPath)
-        {
-            Directory.CreateDirectory(targetPath);
-
-            if (Directory.Exists(sourcePath))
-            {
-                foreach (var vscodeThemePath in Directory.EnumerateFiles(sourcePath, "*.json"))
-                {
-                    Convert(vscodeThemePath, targetPath, null);
-                }
-            }
-            else if (File.Exists(sourcePath))
-            {
-                Convert(sourcePath, targetPath, null);
-            }
-            else
-            {
-                throw new ApplicationException($"Specify a theme json file or a folder containing theme json files.");
-            }
-        }
-
-        private static void Convert(string filePath, string pkgdefOutputPath, string deployInstall)
+        /// <summary>
+        /// Convert the theme file and patch the pkgdef to the target VS if specified.
+        /// </summary>
+        /// <param name="filePath">Theme file path</param>
+        /// <param name="pkgdefOutputPath">Output path</param>
+        /// <param name="deployInstall">Installation path to the taget VS</param>
+        private static void ConvertFile(string filePath, string pkgdefOutputPath, string deployInstall)
         {
             Console.WriteLine($"Converting {filePath}");
             Console.WriteLine();
@@ -155,58 +151,86 @@
             // Group colors by category.
             var colorCategories = GroupColorsByCategory(theme);
 
-            // Write VS theme.
-            TranslateVsTheme(theme, colorCategories);
-
             // Compile VS theme.
-            var pkgdefFilePath = CompileTheme(deployInstall);
+            string pkgdefFilePath = CompileVsTheme(theme, colorCategories);
 
             // Deploy pkgdef to specified folder
             if (!string.IsNullOrEmpty(pkgdefOutputPath))
             {
+                Directory.CreateDirectory(pkgdefOutputPath);
                 File.Copy(pkgdefFilePath, Path.Combine(pkgdefOutputPath, $"{ThemeName}.pkgdef"), overwrite: true);
             }
 
-            // Deploy pkgdef to specified VS install dir
             if (!string.IsNullOrEmpty(deployInstall))
             {
-                InstallThemeAndLaunch(pkgdefFilePath, deployInstall);
+                File.Copy(pkgdefFilePath, Path.Combine(deployInstall, $@"Common7\IDE\CommonExtensions\Platform\{ThemeName}.pkgdef"), overwrite: true);
             }
-
-            Console.WriteLine();
         }
 
         #region Compile VS Theme
-        private static string CompileTheme(string deployInstall)
+
+        /// <summary>
+        /// Generate the pkgdef from the theme.
+        /// </summary>
+        /// <param name="theme">The theme object from the json file</param>
+        /// <param name="colorCategories">Colors grouped by category</param>
+        /// <returns>Path to the generated pkgdef</returns>
+        private static string CompileVsTheme(
+           ThemeFileContract theme,
+           Dictionary<string, Dictionary<string, SettingsContract>> colorCategories)
         {
-            ColorManager manager = OpenXML("after.vstheme");
+            using (TempFileCollection tempFileCollection = new TempFileCollection())
+            {
+                string tempThemeFile = tempFileCollection.AddExtension("vstheme");
 
-            FileWriter.SaveColorManagerToFile(manager, "after.pkgdef", true);
+                using (var writer = new StreamWriter(tempThemeFile))
+                {
+                    writer.WriteLine($"<Themes>");
 
-            //// Compile theme.
-            //var compilerPath = Path.Combine(deployInstall, @"VSSDK\VisualStudioIntegration\Tools\Bin\VsixColorCompiler.exe");
-            //var colorCompilerProcess = Process.Start(compilerPath, $"/registerTheme after.vstheme");
-            //colorCompilerProcess.WaitForExit();
-            //if (colorCompilerProcess.ExitCode != 0)
-            //    throw new ApplicationException("Fatal error running VsixColorCompiler.exe");
+                    Guid themeGuid = Guid.NewGuid();
 
-            return "after.pkgdef";
+                    if (theme.Type == "dark")
+                    {
+                        writer.WriteLine($"    <Theme Name=\"{ThemeName}\" GUID=\"{themeGuid:B}\" FallbackId=\"{DarkThemeId:B}\">");
+                    }
+                    else // light theme will fallback to VS light theme by default
+                    {
+                        writer.WriteLine($"    <Theme Name=\"{ThemeName}\" GUID=\"{themeGuid:B}\">");
+                    }
+
+                    foreach (var category in colorCategories)
+                    {
+                        writer.WriteLine($"        <Category Name=\"{category.Key}\" GUID=\"{CategoryGuids.Value[category.Key]}\">");
+
+                        foreach (var color in category.Value)
+                        {
+                            if (color.Value.Foreground is not null || color.Value.Background is not null)
+                            {
+                                WriteColor(writer, color.Key, color.Value.Foreground, color.Value.Background);
+                            }
+                        }
+
+                        writer.WriteLine($"        </Category>");
+                    }
+
+                    writer.WriteLine($"    </Theme>");
+                    writer.WriteLine($"</Themes>");
+
+                }
+
+                // Compile the pkgdef
+                XmlFileReader reader = new XmlFileReader(tempThemeFile);
+                ColorManager manager = reader.ColorManager;
+
+                string tempPkgdef = tempFileCollection.AddExtension("pkgdef", keepFile: true);
+                FileWriter.SaveColorManagerToFile(manager, tempPkgdef, true);
+
+                return tempPkgdef;
+            }
         }
 
-        static ColorManager OpenXML(string fileName)
+        private static void LaunchVS(string deployInstall)
         {
-            XmlFileReader reader = new XmlFileReader(fileName);
-            return reader.ColorManager;
-        }
-
-        private static void InstallThemeAndLaunch(string pkgdefFilePath, string deployInstall)
-        {
-            // NOTE: this wasn't working with the experimental instance so this is a version that works with the
-            // install directory, so long as you run as ADMIN.
-
-            // Deploy to Visual Studio.
-            File.Copy(pkgdefFilePath, Path.Combine(deployInstall, $@"Common7\IDE\CommonExtensions\Platform\{ThemeName}.pkgdef"), overwrite: true);
-
             string vsPath = Path.Combine(deployInstall, @"Common7\IDE\devenv.exe");
             var updateConfigProcess = Process.Start(vsPath, "/updateconfiguration");
             Console.WriteLine("Running UpdateConfiguration.");
@@ -219,109 +243,9 @@
             Console.WriteLine("Launching Visual Studio.");
             Process.Start(vsPath);
         }
-
-        private static string GetVsInstallPath()
-        {
-            JToken token = GetVSWhereOutput();
-
-            if (!token.HasValues)
-                throw new ApplicationException("Unable to detect VS install dir, you should pass it in.");
-
-            var installationPath = token[0]["installationPath"].ToString();
-            return installationPath;
-        }
-
-        private static JToken GetVSWhereOutput()
-        {
-            var process = new Process();
-            process.StartInfo.UseShellExecute = false;
-            process.StartInfo.FileName = @"C:\Program Files (x86)\Microsoft Visual Studio\Installer\vswhere.exe";
-            process.StartInfo.Arguments = "-format json";
-            process.StartInfo.RedirectStandardOutput = true;
-            process.Start();
-            var output = process.StandardOutput.ReadToEnd();
-
-            var token = JToken.Parse(output);
-            return token;
-        }
-
         #endregion Compile VS Theme
 
         #region Translate VS Theme
-
-        private static void TranslateVsTheme(
-            ThemeFileContract theme,
-            Dictionary<string, Dictionary<string, SettingsContract>> colorCategories)
-        {
-            using var writer = new StreamWriter(File.Create("after.vstheme"));
-
-            writer.WriteLine($"<Themes>");
-
-            Guid themeGuid = GetThemeGuid();
-
-            if (theme.Type == "dark")
-            {
-                writer.WriteLine($"    <Theme Name=\"{ThemeName}\" GUID=\"{themeGuid:B}\" FallbackId=\"{DarkThemeId:B}\">");
-            }
-            else // light theme will fallback to VS light theme by default
-            {
-                writer.WriteLine($"    <Theme Name=\"{ThemeName}\" GUID=\"{themeGuid:B}\">");
-            }
-
-            bool wroteMainEditorColors = false;
-            int totalVSToken = 0;
-
-            foreach (var category in colorCategories)
-            {
-                writer.WriteLine($"        <Category Name=\"{category.Key}\" GUID=\"{CategoryGuids.Value[category.Key]}\">");
-
-                foreach (var color in category.Value)
-                {
-                    totalVSToken++;
-                    if (color.Value.Foreground is not null || color.Value.Background is not null)
-                    {
-                        WriteColor(writer, color.Key, color.Value.Foreground, color.Value.Background);
-                    }
-                }
-
-                // Write the editor background color.
-                if (category.Key == BackgroundColorCategory)
-                {
-                    theme.Colors.TryGetValue("editor.foreground", out var foregroundColor);
-                    theme.Colors.TryGetValue("editor.background", out var backgroundColor);
-
-                    WriteColor(writer, "Plain Text", foregroundColor, backgroundColor);
-                    wroteMainEditorColors = true;
-                }
-
-                writer.WriteLine($"        </Category>");
-            }
-
-            // We didn't encounter the background category, so write it now.
-            if (!wroteMainEditorColors)
-            {
-                theme.Colors.TryGetValue("editor.background", out var backgroundColor2);
-                theme.Colors.TryGetValue("editor.foreground", out var foregroundColor2);
-                writer.WriteLine($"        <Category Name=\"{BackgroundColorCategory}\" GUID=\"{CategoryGuids.Value[BackgroundColorCategory]}\">");
-                WriteColor(writer, "Plain Text", foregroundColor2, backgroundColor2);
-                writer.WriteLine($"        </Category>");
-                totalVSToken++;
-            }
-
-            //Console.WriteLine("VS: ", totalVSToken);
-            writer.WriteLine($"    </Theme>");
-            writer.WriteLine($"</Themes>");
-        }
-
-        private static Guid GetThemeGuid()
-        {
-            // if (ThemeNameGuids.Value.TryGetValue(ThemeName, out string knownGuid))
-            // {
-            //     return Guid.Parse(knownGuid);
-            // }
-
-            return Guid.NewGuid();
-        }
 
         /// <summary>
         /// Method description.

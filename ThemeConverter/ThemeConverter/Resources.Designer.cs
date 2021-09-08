@@ -61,22 +61,78 @@ namespace ThemeConverter {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Show help text..
+        /// </summary>
+        internal static string Help {
+            get {
+                return ResourceManager.GetString("Help", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to ThemeConverter v0.0.2
         ///A utility that converts VSCode theme json file(s) to VS pkgdef file(s).
         ///For Microsoft internal usage only.
         ///
-        ///Args:
-        ///	-patch &lt;source_file/folder_path&gt; &lt;vs_install_dir&gt;
-        ///			Convert the theme json(s) in the source path and patch
-        ///			the generated pkgdef(s) to the target VS, run /updateConfiguration
-        ///			and launch the target VS.
-        ///	-convert &lt;source_file/folder_path&gt; optional:&lt;output_path&gt;
-        ///			Convert the theme json(s) in the source path and output 
-        ///			the converted pkgdef(s) to the targ [rest of string was truncated]&quot;;.
+        ///Arguments:.
         /// </summary>
-        internal static string HelpText {
+        internal static string HelpHeader {
             get {
-                return ResourceManager.GetString("HelpText", resourceCulture);
+                return ResourceManager.GetString("HelpHeader", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The source path to the theme json file or the folder that contains the theme files..
+        /// </summary>
+        internal static string Input {
+            get {
+                return ResourceManager.GetString("Input", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The input file or folder does not exist..
+        /// </summary>
+        internal static string InputNotExistException {
+            get {
+                return ResourceManager.GetString("InputNotExistException", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to No JSON file was found under the given directory..
+        /// </summary>
+        internal static string NoJSONFoundException {
+            get {
+                return ResourceManager.GetString("NoJSONFoundException", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The output path of the converted pkgdef(s). When specified, the converter will save the converted pkgdef(s) to this path. If not specified, the output will be saved under the same directory of the input file/folder. OPTIONAL.
+        /// </summary>
+        internal static string Output {
+            get {
+                return ResourceManager.GetString("Output", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The installation path to the target VS. When specified, the converter will patch the converted pkgdef(s) to the target VS, run &quot;updateConfiguration&quot; and launch this VS. (e.g.: &quot;C:\Program Files\Microsoft Visual Studio\2022\Preview&quot;) OPTIONAL.
+        /// </summary>
+        internal static string TargetVS {
+            get {
+                return ResourceManager.GetString("TargetVS", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The target VS installation directory does not exist..
+        /// </summary>
+        internal static string TargetVSNotExistException {
+            get {
+                return ResourceManager.GetString("TargetVSNotExistException", resourceCulture);
             }
         }
     }
