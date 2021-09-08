@@ -645,11 +645,6 @@
         "Environment&CommandBarMouseDownBackgroundEnd&Background",
         "Environment&CommandBarMouseDownBackgroundMiddle&Background",
         "Environment&CommandBarMouseDownBorder&Background",
-        "Environment&CommandBarMouseOverBackgroundBegin&Background",
-        "Environment&CommandBarMouseOverBackgroundEnd&Background",
-        "Environment&CommandBarMouseOverBackgroundGradient&Background", //
-        "Environment&CommandBarMouseOverBackgroundMiddle1&Background",
-        "Environment&CommandBarMouseOverBackgroundMiddle2&Background",
         "Environment&CommandBarSelected&Background",
         "Environment&DebuggerDataTipActiveHighlight&Background",
         "Environment&ToolboxContentMouseOver&Background",
@@ -667,7 +662,12 @@
     {
       "VSC Token": "menubar.selectionBackground",
       "VS Token": [
-        "Environment&StartPageTextControlLinkSelectedHover&Background"
+        "Environment&StartPageTextControlLinkSelectedHover&Background",
+        "Environment&CommandBarMouseOverBackgroundBegin&Background",
+        "Environment&CommandBarMouseOverBackgroundEnd&Background",
+        "Environment&CommandBarMouseOverBackgroundGradient&Background", //
+        "Environment&CommandBarMouseOverBackgroundMiddle1&Background",
+        "Environment&CommandBarMouseOverBackgroundMiddle2&Background"
       ]
     },
     {
@@ -1064,7 +1064,9 @@
         "CommonDocument&GridHeadingBackground&Background",
         "ThemedDialog&GridHeadingBackground&Background",
         "Environment&ScrollBar&Background", //
-        "Environment&ScrollBarBackground&Background" //
+        "Environment&ScrollBarBackground&Background", //
+        "Text Editor Text Manager Items&Plain Text&Background", //
+        "PackageManifestEditor&EditorContent&Background"
       ]
     },
     {
@@ -1072,7 +1074,9 @@
       "VS Token": [
         "Environment&WindowText&Background",
         "Output Window&Plain Text&Foreground",
-        "Roslyn Text Editor MEF Items&punctuation&Foreground"
+        "Roslyn Text Editor MEF Items&punctuation&Foreground",
+        "Text Editor Text Manager Items&Plain Text&Foreground",
+        "PackageManifestEditor&EditorContent&Foreground"
       ]
     },
     {
@@ -2539,8 +2543,6 @@
         "Environment&CommandBarMenuMouseOverGlyph&Background",
         "Environment&CommandBarMenuMouseOverSubmenuGlyph&Background",
         "Environment&CommandBarMenuSubmenuGlyphHover&Background",
-        "Environment&CommandBarTextHover&Background", //
-        "Environment&CommandBarTextHoverOverSelected&Background", //
       ]
     },
     {
@@ -2554,7 +2556,9 @@
     {
       "VSC Token": "menubar.selectionForeground",
       "VS Token": [
-        "Environment&CommandBarCheckBoxMouseOver&Background" //
+        "Environment&CommandBarCheckBoxMouseOver&Background", //
+        "Environment&CommandBarTextHover&Background", //
+        "Environment&CommandBarTextHoverOverSelected&Background" //
       ]
     },
     {
