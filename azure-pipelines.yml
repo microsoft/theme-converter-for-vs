@@ -14,10 +14,10 @@ pr:
 
 # The agent pool the build will run on
 pool:
-  name: VSEngSS-MicroBuild2022-1ES
+  name: VSEngSS-MicroBuild2019-1ES
   demands: 
   - msbuild
-  - VisualStudio_17.0
+  - VisualStudio_16.0
 
 variables:
   - name: SolutionFile
