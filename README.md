@@ -13,13 +13,9 @@
 1. Open command line in Admin mode. 
 2. Clone the repo
 3. Go to `<your_clone_path>\ThemeConverter\ThemeConverter` and build the converter project with `dotnet build ThemeConverter.csproj`. 
-4. Go to the `<your_clone_path>\ThemeConverter\ThemeConverter\bin\Debug\net5.0`. 
+4. Go to `<your_clone_path>\ThemeConverter\ThemeConverter\bin\Debug\net5.0`. 
 5. Get the theme file with steps described in section [Getting a theme's json file](https://github.com/microsoft/theme-converter#getting-a-themes-json-file)
-6. Run `ThemeConverter.exe <theme_json_file_path> <vs_install_dir>`
- (e.g: `./ThemeConverter.exe "C:\Users\foo\Documents\Nord.json" "C:\Program Files\Microsoft Visual Studio\2022\Preview"`)
-6. This command will launch a patched VS. You can select your new theme from the Tools -> Options -> General page. 
-7. **Note**: If you don't want to patch the new theme to VS or don't have access to VS, you can still use the converter by running `ThemeConverter.exe <theme_json_file_path>`. This will create a converted pkgdef under the same directory of the json file.
-
+6. Run `ThemeConverter.exe -h` to see the usage of the tool and use the tool according to your needs.
 
 ### Getting a theme's json file
 1. Open VS Code. 
@@ -33,7 +29,7 @@
 This section describes how you can create a VSIX with the converted theme for publishing and sharing.
 1. In VS 2022, create a new "Empty VSIX Project"
 2. Select the project node and open the "Add existing Item" window: Use "Shift + Alt + A"; right-click on project node, select Add > Existing Item; or navigate to Project -> Add Existing Item...
-3. Set filter to All Files (*.*) and select the .pkgdef file(s) that the converter created under `<vs_install_dir>\Common7\IDE\CommonExtensions\Platform`. (e.g: `C:\Program Files\Microsoft Visual Studio\2022\Preview\Common7\IDE\CommonExtensions\Platform\Nord.pkgdef`)
+3. Set filter to All Files (*.*) and select the converted .pkgdef file(s) that you want to include in this VSIX.
 5. Select the newly added pkgdef file in the solution explorer and open the properties window
 6. Set `Copy to Output Directory` to `Copy always`
 7. Set `Include in VSIX` to `true`
