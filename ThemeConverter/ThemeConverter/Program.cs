@@ -331,7 +331,8 @@
             Dictionary<string, float> editorOverlayTokens = new Dictionary<string, float>{{"editor.lineHighlightBorder", 1.0f },
                                                                                           {"editor.lineHighlightBackground", 0.25f },
                                                                                           {"editorBracketMatch.border", 1.0f},
-                                                                                          {"editorBracketMatch.background", 1.0f } };
+                                                                                          {"editorBracketMatch.background", 1.0f },
+                                                                                          {"minimapSlider.background", 1.0f } };
 
             // Add the shell colors
             foreach (var color in theme.Colors)
@@ -342,14 +343,7 @@
 
                     if (color.Value == null)
                     {
-                        if (VSCTokenFallback.Value.TryGetValue(color.Key, out var fallbackToken)
-                            && fallbackToken != null
-                            && theme.Colors.TryGetValue(fallbackToken, out var fallbackColor)
-                            && fallbackColor != null)
-                        {
-                            colorValue = fallbackColor;
-                        }
-                        else
+                        if (!TryGetFallbackColor(theme, color.Key, out colorValue))
                         {
                             continue;
                         }
@@ -366,6 +360,27 @@
             }
 
             return colorCategories;
+        }
+
+        private static bool TryGetFallbackColor(ThemeFileContract theme, string token, out string fallbackColor)
+        {
+            fallbackColor = null;
+            string key = token;
+
+            while (fallbackColor == null)
+            {
+                if (VSCTokenFallback.Value.TryGetValue(key, out var fallbackToken))
+                {
+                    key = fallbackToken;
+                    theme.Colors.TryGetValue(key, out fallbackColor);
+                }
+                else
+                {
+                    break;
+                }
+            }
+
+            return fallbackColor != null;
         }
 
         /// <summary>
