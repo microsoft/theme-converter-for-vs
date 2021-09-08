@@ -328,31 +328,27 @@
                 }
             }
 
-            Dictionary<string, float> editorOverlayTokens = new Dictionary<string, float>{{"editor.lineHighlightBorder", 1.0f },
-                                                                                          {"editor.lineHighlightBackground", 0.25f },
-                                                                                          {"editorBracketMatch.border", 1.0f},
-                                                                                          {"editorBracketMatch.background", 1.0f },
-                                                                                          {"minimapSlider.background", 1.0f } };
+            // token => VS Opacity, background token
+            Dictionary<string, (float, string)> editorOverlayTokens = new Dictionary<string, (float, string)>{{"editor.lineHighlightBorder",     (1.0f,  "editor.background") },
+                                                                                                              {"editor.lineHighlightBackground", (0.25f, "editor.background") },
+                                                                                                              {"editorBracketMatch.border",      (1.0f,  "editor.background")},
+                                                                                                              {"editorBracketMatch.background",  (1.0f,  "editor.background") },
+                                                                                                              {"minimapSlider.background",       (1.0f,  "minimap.background") } };
 
             // Add the shell colors
             foreach (var color in theme.Colors)
             {
                 if (ScopeMappings.Value.TryGetValue(color.Key.Trim(), out var colorKeyList))
                 {
-                    string colorValue = color.Value;
-
-                    if (color.Value == null)
+                    if (!TryGetColorValue(theme, color.Key, out string colorValue))
                     {
-                        if (!TryGetFallbackColor(theme, color.Key, out colorValue))
-                        {
-                            continue;
-                        }
+                        continue;
                     }
 
                     // calculate the actual border color for editor overlay colors
-                    if (editorOverlayTokens.ContainsKey(color.Key) && theme.Colors.TryGetValue("editor.background", out string editorBackground))
+                    if (editorOverlayTokens.ContainsKey(color.Key) && TryGetColorValue(theme, editorOverlayTokens[color.Key].Item2, out string backgroundColor))
                     {
-                        colorValue = GetCompoundColor(colorValue, editorBackground, editorOverlayTokens[color.Key]);
+                        colorValue = GetCompoundColor(colorValue, backgroundColor, editorOverlayTokens[color.Key].Item1);
                     }
 
                     AssignShellColors(colorValue, colorKeyList, ref colorCategories);
@@ -362,17 +358,18 @@
             return colorCategories;
         }
 
-        private static bool TryGetFallbackColor(ThemeFileContract theme, string token, out string fallbackColor)
+        private static bool TryGetColorValue(ThemeFileContract theme, string token, out string colorValue)
         {
-            fallbackColor = null;
+            theme.Colors.TryGetValue(token, out colorValue);
+
             string key = token;
 
-            while (fallbackColor == null)
+            while (colorValue == null)
             {
                 if (VSCTokenFallback.Value.TryGetValue(key, out var fallbackToken))
                 {
                     key = fallbackToken;
-                    theme.Colors.TryGetValue(key, out fallbackColor);
+                    theme.Colors.TryGetValue(key, out colorValue);
                 }
                 else
                 {
@@ -380,7 +377,7 @@
                 }
             }
 
-            return fallbackColor != null;
+            return colorValue != null;
         }
 
         /// <summary>
