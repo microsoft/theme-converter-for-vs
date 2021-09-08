@@ -1065,7 +1065,8 @@
         "ThemedDialog&GridHeadingBackground&Background",
         "Environment&ScrollBar&Background", //
         "Environment&ScrollBarBackground&Background", //
-        "Text Editor Text Manager Items&Plain Text&Background" //
+        "Text Editor Text Manager Items&Plain Text&Background", //
+        "PackageManifestEditor&EditorContent&Background"
       ]
     },
     {
@@ -1074,7 +1075,8 @@
         "Environment&WindowText&Background",
         "Output Window&Plain Text&Foreground",
         "Roslyn Text Editor MEF Items&punctuation&Foreground",
-        "Text Editor Text Manager Items&Plain Text&Foreground"
+        "Text Editor Text Manager Items&Plain Text&Foreground",
+        "PackageManifestEditor&EditorContent&Foreground"
       ]
     },
     {
