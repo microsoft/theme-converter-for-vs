@@ -83,7 +83,7 @@ namespace ThemeConverter {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to The source path to the theme json file or the folder that contains the theme files..
+        ///   Looks up a localized string similar to The source path of the theme json file or the folder that contains the theme files..
         /// </summary>
         internal static string Input {
             get {
@@ -110,7 +110,7 @@ namespace ThemeConverter {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to The output path of the converted pkgdef(s). When specified, the converter will save the converted pkgdef(s) to this path. If not specified, the output will be saved under the same directory of the input file/folder. OPTIONAL.
+        ///   Looks up a localized string similar to The output folder path of the converted pkgdef(s). When specified, the converter will save the converted pkgdef(s) to this path. If not specified, the output will be saved under the same directory of the input file/folder. OPTIONAL.
         /// </summary>
         internal static string Output {
             get {
@@ -119,7 +119,7 @@ namespace ThemeConverter {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to The installation path to the target VS. When specified, the converter will patch the converted pkgdef(s) to the target VS, run &quot;updateConfiguration&quot; and launch this VS. (e.g.: &quot;C:\Program Files\Microsoft Visual Studio\2022\Preview&quot;) OPTIONAL.
+        ///   Looks up a localized string similar to The installation path of the target VS. When specified, the converter will patch the converted pkgdef(s) to the target VS, run &quot;updateConfiguration&quot; and launch this VS. (e.g.: &quot;C:\Program Files\Microsoft Visual Studio\2022\Preview&quot;) OPTIONAL.
         /// </summary>
         internal static string TargetVS {
             get {
