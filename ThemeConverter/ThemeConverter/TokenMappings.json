@@ -2404,6 +2404,7 @@
         "Environment&HighlightText&Background",
         "ThemedDialog&StartWindowDescriptionActive&Foreground",
         "NewProjectDialog&WonderbarTreeSelected&Foreground", //
+        "NewProjectDialog&WonderbarTreeInactiveSelected&Foreground", //active and inactive share the background
         "Find&DropDownMenuMouseDown&Foreground"
       ]
     },
@@ -3928,8 +3929,7 @@
         "TreeView&SelectedItemInactive&Foreground",
         "TreeView&SelectedItemInactiveGlyph&Background",
         "TreeView&SelectedItemInactiveGlyphMouseOver&Background",
-        "Environment&ButtonText&Background",
-        "NewProjectDialog&WonderbarTreeInactiveSelected&Foreground" //
+        "Environment&ButtonText&Background"
       ]
     },
     {
