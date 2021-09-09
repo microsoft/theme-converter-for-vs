@@ -444,9 +444,6 @@
         "Environment&DebuggerDataTipInactiveBackground&Background",
         "Environment&DropDownDisabledBackground&Background",
         "Environment&EditorAdditionalContentBorder&Background",
-        "Environment&FileTabProvisionalInactiveForeground&Background",
-        "Environment&FileTabProvisionalSelectedInactive&Background",
-        "Environment&FileTabProvisionalSelectedInactiveBorder&Background",
         "Environment&FileTabScrollBarArrowGlyphHover&Background",
         "Environment&FileTabScrollBarThumbHover&Background",
         "Environment&Halo&Background",
@@ -562,7 +559,11 @@
         "Environment&FileTabBackground&Background",
         "Environment&FileTabInactiveDocumentBorderBackground&Background",
         "Environment&FileTabInactiveGradientBottom&Background",
-        "Environment&FileTabInactiveGradientTop&Background"
+        "Environment&FileTabInactiveGradientTop&Background",
+        "Environment&FileTabProvisionalSelectedInactive&Background",
+        "Environment&FileTabProvisionalSelectedInactiveBorder&Background",
+        "Environment&FileTabProvisionalInactive&Background",
+        "Environment&FileTabProvisionalInactiveBorder&Background"
       ]
     },
     {
@@ -571,7 +572,9 @@
         "Environment&FileTabText&Background",
         "Environment&FileTabInactiveText&Background",
         "Environment&FileTabLastActiveText&Background",
-        "Environment&AutoHideTabText&Background"
+        "Environment&AutoHideTabText&Background",
+        "Environment&FileTabProvisionalInactiveForeground&Background",
+        "Environment&FileTabProvisionalSelectedInactiveForeground&Background"
       ]
     },
     {
@@ -1318,6 +1321,8 @@
         "Environment&FileTabButtonProvisionalHoverSelectedActiveBorder&Background",
         "Environment&FileTabButtonProvisionalHoverSelectedInactive&Background",
         "Environment&FileTabButtonProvisionalHoverSelectedInactiveBorder&Background",
+        "Environment&FileTabButtonProvisionalHoverInactive&Background",
+        "Environment&FileTabButtonProvisionalHoverInactiveBorder&Background",
         "Environment&StartPageButtonMouseOverBackgroundBegin&Background",
         "Environment&StartPageButtonMouseOverBackgroundEnd&Background",
         "Environment&StartPageButtonMouseOverBackgroundMiddle1&Background",
