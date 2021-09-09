@@ -2,7 +2,6 @@
   "list.inactiveSelectionForeground": "foreground",
   "sideBar.foreground": "foreground",
   "inputOption.activeBorder": "input.border",
-  "input.border": "focusBorder",
   "inputOption.activeBackground": "input.background",
   "inputOption.activeForeground": "input.foreground",
   "tab.activeBorder": "tab.activeBackground",
