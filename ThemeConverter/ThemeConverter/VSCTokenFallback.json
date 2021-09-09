@@ -14,5 +14,7 @@
   "entity.name.variable.enum-member.cs": "variable.other.object.property.cs",
   "editor.lineHighlightBackground": "editor.background",
   "editorBracketMatch.background": "editor.background",
-  "tab.border": "tab.inactiveBackground"
+  "tab.border": "tab.inactiveBackground",
+  "minimap.background": "editor.background",
+  "sideBarTitle.foreground": "sideBar.foreground"
 }
