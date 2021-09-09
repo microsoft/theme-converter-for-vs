@@ -428,8 +428,6 @@
         "Environment&CommandBarOptionsMouseOverBackgroundEnd&Background",
         "Environment&CommandBarOptionsMouseOverBackgroundMiddle1&Background",
         "Environment&CommandBarOptionsMouseOverBackgroundMiddle2&Background",
-        "Environment&CommandBarSplitButtonMouseDownGlyph&Background",
-        "Environment&CommandBarSplitButtonMouseOverGlyph&Background",
         "Environment&CommandBarToolBarBorder&Background",
         "Environment&CommandShelfBackgroundGradientBegin&Background",
         "Environment&CommandShelfBackgroundGradientEnd&Background",
@@ -630,6 +628,11 @@
         "Environment&CommandBarMouseDownBackgroundEnd&Background",
         "Environment&CommandBarMouseDownBackgroundMiddle&Background",
         "Environment&CommandBarMouseDownBorder&Background",
+        "Environment&CommandBarMouseOverBackgroundBegin&Background",
+        "Environment&CommandBarMouseOverBackgroundEnd&Background",
+        "Environment&CommandBarMouseOverBackgroundGradient&Background", //
+        "Environment&CommandBarMouseOverBackgroundMiddle1&Background",
+        "Environment&CommandBarMouseOverBackgroundMiddle2&Background",
         "Environment&CommandBarSelected&Background",
         "Environment&DebuggerDataTipActiveHighlight&Background",
         "Environment&ToolboxContentMouseOver&Background",
@@ -645,14 +648,9 @@
       ]
     },
     {
-      "VSC Token": "menubar.selectionBackground",
+      "VSC Token": "menubar.selectionBackground", // avoid using, fallback to not opaque color
       "VS Token": [
-        "Environment&StartPageTextControlLinkSelectedHover&Background",
-        "Environment&CommandBarMouseOverBackgroundBegin&Background",
-        "Environment&CommandBarMouseOverBackgroundEnd&Background",
-        "Environment&CommandBarMouseOverBackgroundGradient&Background", //
-        "Environment&CommandBarMouseOverBackgroundMiddle1&Background",
-        "Environment&CommandBarMouseOverBackgroundMiddle2&Background"
+        "Environment&StartPageTextControlLinkSelectedHover&Background"
       ]
     },
     {
@@ -2541,6 +2539,7 @@
         "UserInformation&IDCardMinimalModeInactiveWindowText&Background",
         "UserInformation&IDCardMinimalModeText&Background",
         "UserInformation&IDCardText&Background",
+        "Environment&CommandBarSplitButtonGlyph&Background",
         "Environment&CommandBarTextActive&Background" //
       ]
     },
@@ -2552,6 +2551,8 @@
         "Environment&CommandBarMenuMouseOverGlyph&Background",
         "Environment&CommandBarMenuMouseOverSubmenuGlyph&Background",
         "Environment&CommandBarMenuSubmenuGlyphHover&Background",
+        "Environment&CommandBarSplitButtonMouseDownGlyph&Background",
+        "Environment&CommandBarSplitButtonMouseOverGlyph&Background",
         "Environment&CommandBarTextSelected&Background", //
         "Environment&CommandBarTextHoverOverSelected&Background" //
       ]
