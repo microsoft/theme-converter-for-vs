@@ -1,0 +1,30 @@
+{
+  "editor.lineHighlightBorder": {
+    "Item1": 1.0,
+    "Item2": "editor.background"
+  },
+  "editor.lineHighlightBackground": {
+    "Item1": 0.25,
+    "Item2": "editor.background"
+  },
+  "editorBracketMatch.border": {
+    "Item1": 1.0,
+    "Item2": "editor.background"
+  },
+  "editorBracketMatch.background": {
+    "Item1": 1.0,
+    "Item2": "editor.background"
+  },
+  "minimapSlider.background": {
+    "Item1": 1.0,
+    "Item2": "minimap.background"
+  },
+  "menu.selectionBackground": {
+    "Item1": 1.0,
+    "Item2": "menu.background"
+  },
+  "menubar.selectionBackground": {
+    "Item1": 1.0,
+    "Item2": "titleBar.activeBackground"
+  }
+}

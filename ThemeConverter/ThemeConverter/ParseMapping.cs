@@ -12,6 +12,7 @@ namespace ThemeConverter
         private static Dictionary<string, string> CategoryGuids = new Dictionary<string, string>();
         private static Dictionary<string, string> ThemeNameGuids = new Dictionary<string, string>();
         private static Dictionary<string, string> VSCTokenFallback = new Dictionary<string, string>();
+        private static Dictionary<string, (float, string)> OverlayMapping = new Dictionary<string, (float, string)>();
         private static List<string> MappedVSTokens = new List<string>();
 
         public static void CheckDuplicateMapping()
@@ -81,7 +82,7 @@ namespace ThemeConverter
             }
 
             CheckForMissingVSTokens();
-           
+
             return ScopeMappings;
         }
 
@@ -145,6 +146,13 @@ namespace ThemeConverter
             }
 
             return VSCTokenFallback;
+        }
+
+        public static Dictionary<string, (float, string)> CreateOverlayMapping()
+        {
+            var contents = System.IO.File.ReadAllText("OverlayMapping.json");
+            OverlayMapping = JsonConvert.DeserializeObject<Dictionary<string, (float, string)>>(contents);
+            return OverlayMapping;
         }
     }
 }

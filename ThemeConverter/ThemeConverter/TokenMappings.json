@@ -619,21 +619,7 @@
         "Cider&CommandMouseOver&Background",
         "Cider&ToggleSelected&Background",
         "Environment&AutoHideTabMouseOverBorder&Background",
-        "Environment&CommandBarHover&Background",
-        "Environment&CommandBarHoverOverSelected&Background",
-        "Environment&CommandBarHoverOverSelectedIcon&Background", //
-        "Environment&CommandBarHoverOverSelectedIconBorder&Background", //
         "Environment&CommandBarMenuItemMouseOver&Background",
-        "Environment&CommandBarMouseDownBackgroundBegin&Background",
-        "Environment&CommandBarMouseDownBackgroundEnd&Background",
-        "Environment&CommandBarMouseDownBackgroundMiddle&Background",
-        "Environment&CommandBarMouseDownBorder&Background",
-        "Environment&CommandBarMouseOverBackgroundBegin&Background",
-        "Environment&CommandBarMouseOverBackgroundEnd&Background",
-        "Environment&CommandBarMouseOverBackgroundGradient&Background", //
-        "Environment&CommandBarMouseOverBackgroundMiddle1&Background",
-        "Environment&CommandBarMouseOverBackgroundMiddle2&Background",
-        "Environment&CommandBarSelected&Background",
         "Environment&DebuggerDataTipActiveHighlight&Background",
         "Environment&ToolboxContentMouseOver&Background",
         "Environment&ToolboxDisabledContentMouseOver&Background",
@@ -648,8 +634,22 @@
       ]
     },
     {
-      "VSC Token": "menubar.selectionBackground", // avoid using, fallback to not opaque color
+      "VSC Token": "menubar.selectionBackground",
       "VS Token": [
+        "Environment&CommandBarHover&Background",
+        "Environment&CommandBarHoverOverSelected&Background",
+        "Environment&CommandBarHoverOverSelectedIcon&Background", //
+        "Environment&CommandBarHoverOverSelectedIconBorder&Background", //
+        "Environment&CommandBarMouseDownBackgroundBegin&Background",
+        "Environment&CommandBarMouseDownBackgroundEnd&Background",
+        "Environment&CommandBarMouseDownBackgroundMiddle&Background",
+        "Environment&CommandBarMouseDownBorder&Background",
+        "Environment&CommandBarMouseOverBackgroundBegin&Background",
+        "Environment&CommandBarMouseOverBackgroundEnd&Background",
+        "Environment&CommandBarMouseOverBackgroundGradient&Background", //
+        "Environment&CommandBarMouseOverBackgroundMiddle1&Background",
+        "Environment&CommandBarMouseOverBackgroundMiddle2&Background",
+        "Environment&CommandBarSelected&Background",
         "Environment&StartPageTextControlLinkSelectedHover&Background"
       ]
     },

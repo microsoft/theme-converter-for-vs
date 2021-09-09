@@ -18,6 +18,7 @@
         private static Lazy<Dictionary<string, ColorKey[]>> ScopeMappings = new Lazy<Dictionary<string, ColorKey[]>>(ParseMapping.CreateScopeMapping());
         private static Lazy<Dictionary<string, string>> CategoryGuids = new Lazy<Dictionary<string, string>>(ParseMapping.CreateCategoryGuids());
         private static Lazy<Dictionary<string, string>> VSCTokenFallback = new Lazy<Dictionary<string, string>>(ParseMapping.CreateVSCTokenFallback());
+        private static Lazy<Dictionary<string, (float, string)>> OverlayMappings = new Lazy<Dictionary<string, (float, string)>>(ParseMapping.CreateOverlayMapping());
 
         /// <summary>
         /// args[0]: path to the json
@@ -328,13 +329,6 @@
                 }
             }
 
-            // token => VS Opacity, background token
-            Dictionary<string, (float, string)> editorOverlayTokens = new Dictionary<string, (float, string)>{{"editor.lineHighlightBorder",     (1.0f,  "editor.background") },
-                                                                                                              {"editor.lineHighlightBackground", (0.25f, "editor.background") },
-                                                                                                              {"editorBracketMatch.border",      (1.0f,  "editor.background") },
-                                                                                                              {"editorBracketMatch.background",  (1.0f,  "editor.background") },
-                                                                                                              {"minimapSlider.background",       (1.0f,  "minimap.background") } };
-
             // Add the shell colors
             foreach (var color in theme.Colors)
             {
@@ -346,9 +340,9 @@
                     }
 
                     // calculate the actual border color for editor overlay colors
-                    if (editorOverlayTokens.ContainsKey(color.Key) && TryGetColorValue(theme, editorOverlayTokens[color.Key].Item2, out string backgroundColor))
+                    if (OverlayMappings.Value.ContainsKey(color.Key) && TryGetColorValue(theme, OverlayMappings.Value[color.Key].Item2, out string backgroundColor))
                     {
-                        colorValue = GetCompoundColor(colorValue, backgroundColor, editorOverlayTokens[color.Key].Item1);
+                        colorValue = GetCompoundColor(colorValue, backgroundColor, OverlayMappings.Value[color.Key].Item1);
                     }
 
                     AssignShellColors(colorValue, colorKeyList, ref colorCategories);
