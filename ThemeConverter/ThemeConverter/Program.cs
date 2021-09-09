@@ -331,7 +331,7 @@
             // token => VS Opacity, background token
             Dictionary<string, (float, string)> editorOverlayTokens = new Dictionary<string, (float, string)>{{"editor.lineHighlightBorder",     (1.0f,  "editor.background") },
                                                                                                               {"editor.lineHighlightBackground", (0.25f, "editor.background") },
-                                                                                                              {"editorBracketMatch.border",      (1.0f,  "editor.background")},
+                                                                                                              {"editorBracketMatch.border",      (1.0f,  "editor.background") },
                                                                                                               {"editorBracketMatch.background",  (1.0f,  "editor.background") },
                                                                                                               {"minimapSlider.background",       (1.0f,  "minimap.background") } };
 
