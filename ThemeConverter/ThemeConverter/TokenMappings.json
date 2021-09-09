@@ -291,9 +291,6 @@
         "CommonDocument&TileViewTextUnfocused&Background",
         "Diagnostics&ControlContent&Foreground",
         "Diagnostics&ControlHeader&Foreground",
-        "Environment&DropDownGlyph&Background",
-        "Environment&DropDownMouseDownGlyph&Background",
-        "Environment&DropDownMouseDownText&Background",
         "Environment&LightCaption&Background",
         "Environment&MainWindowCloudEnvironmentActive&Foreground",
         "Environment&MainWindowCloudEnvironmentInactive&Foreground",
@@ -442,7 +439,6 @@
         "Environment&CommandShelfHighlightGradientMiddle&Background",
         "Environment&CompletionBorder&Background",
         "Environment&DebuggerDataTipInactiveBackground&Background",
-        "Environment&DropDownDisabledBackground&Background",
         "Environment&EditorAdditionalContentBorder&Background",
         "Environment&FileTabScrollBarArrowGlyphHover&Background",
         "Environment&FileTabScrollBarThumbHover&Background",
@@ -679,7 +675,6 @@
         "Environment&DockTargetButtonBackgroundBegin&Background",
         "Environment&DockTargetButtonBackgroundEnd&Background",
         "Environment&DocWellOverflowButtonMouseDownBackground&Background",
-        "Environment&DropDownButtonMouseDownBackground&Background",
         "Environment&FileTabButtonDownInactive&Background",
         "Environment&FileTabButtonDownSelectedActive&Background",
         "Environment&FileTabButtonDownSelectedInactive&Background",
@@ -884,8 +879,6 @@
         "Environment&Dialog&Background",
         "Environment&DockTargetGlyphBackgroundBegin&Background",
         "Environment&DockTargetGlyphBackgroundEnd&Background",
-        "Environment&DropDownMouseDownBackground&Background",
-        "Environment&DropDownMouseDownBorder&Background",
         "Environment&EditorExpansionFill&Background",
         "Environment&NewProjectItemSelected&Background",
         "Environment&NewProjectItemSelectedBorder&Background",
@@ -1121,6 +1114,10 @@
     {
       "VSC Token": "focusBorder",
       "VS Token": [
+        "Environment&DropDownButtonMouseDownSeparator&Background", //
+        "Environment&DropDownButtonMouseOverSeparator&Background", //        
+        "Environment&DropDownMouseDownBorder&Background",
+        "Environment&DropDownMouseOverBorder&Background", //
         "Environment&TitleBarActiveBorder&Background",
         "SearchControl&FocusedBorder&Background",
         "SearchControl&FocusedDropDownButtonBorder&Background", //
@@ -1670,8 +1667,16 @@
         "CommonControls&ComboBoxGlyphBackground&Background",
         "CommonControls&ComboBoxGlyphBackgroundFocused&Background",
         "CommonControls&ComboBoxGlyphBackgroundPressed&Background",
+        "Environment&DropDownMouseDownBackground&Background",
         "Environment&DropDownPopupBackgroundBegin&Background",
         "Environment&DropDownPopupBackgroundEnd&Background",
+        "Environment&DropDownMouseOverBackgroundBegin&Background",
+        "Environment&DropDownMouseOverBackgroundEnd&Background",
+        "Environment&DropDownMouseOverBackgroundMiddle1&Background",
+        "Environment&DropDownMouseOverBackgroundMiddle2&Background",
+        "Environment&DropDownButtonMouseDownBackground&Background",
+        "Environment&DropDownButtonMouseOverBackground&Background",
+        "Environment&DropDownDisabledBackground&Background",
         "Find&UnfocusedDropdown&Background"
       ]
     },
@@ -1698,9 +1703,8 @@
         "Environment&ComboBoxMouseOverBorder&Background",
         "Environment&CommandBarSplitButtonSeparator&Background",
         "Environment&DropDownBorder&Background",
-        "Environment&DropDownButtonMouseDownSeparator&Background",
-        "Environment&DropDownButtonMouseOverSeparator&Background",
-        "Environment&DropDownMouseOverBorder&Background",
+        "Environment&DropDownPopupBorder&Background",
+        "Environment&DropDownDisabledBorder&Background",
         "CommonControls&ComboBoxGlyphBorder&Background",
         "CommonControls&ComboBoxGlyphBorderDisabled&Background",
         "CommonControls&ComboBoxGlyphBorderFocused&Background",
@@ -2391,12 +2395,7 @@
         "TreeView&SelectedItemActive&Background",
         "Environment&Highlight&Background",
         "NewProjectDialog&WonderbarTreeSelected&Background", //
-        "Find&DropDownMenuMouseDown&Background",
-        "Environment&DropDownMouseOverBackgroundBegin&Background",
-        "Environment&DropDownMouseOverBackgroundEnd&Background",
-        "Environment&DropDownMouseOverBackgroundMiddle1&Background",
-        "Environment&DropDownMouseOverBackgroundMiddle2&Background",
-        "Environment&DropDownButtonMouseOverBackground&Background"
+        "Find&DropDownMenuMouseDown&Background"
       ]
     },
     {
@@ -2552,7 +2551,9 @@
         "Environment&CommandBarMenuMouseDownGlyph&Background",
         "Environment&CommandBarMenuMouseOverGlyph&Background",
         "Environment&CommandBarMenuMouseOverSubmenuGlyph&Background",
-        "Environment&CommandBarMenuSubmenuGlyphHover&Background"
+        "Environment&CommandBarMenuSubmenuGlyphHover&Background",
+        "Environment&CommandBarTextSelected&Background", //
+        "Environment&CommandBarTextHoverOverSelected&Background" //
       ]
     },
     {
@@ -2568,7 +2569,6 @@
       "VS Token": [
         "Environment&CommandBarCheckBoxMouseOver&Background", //
         "Environment&CommandBarTextHover&Background", //
-        "Environment&CommandBarTextHoverOverSelected&Background" //
       ]
     },
     {
@@ -3703,13 +3703,16 @@
         "CommonControls&ComboBoxTextHover&Background",
         "CommonControls&ComboBoxTextPressed&Background",
         "Environment&ComboBoxFocusedGlyph&Background",
+        "Environment&ComboBoxItemMouseOverText&Background", //
         "Environment&ComboBoxMouseOverGlyph&Background",
+        "Environment&DropDownGlyph&Background",
+        "Environment&DropDownMouseDownGlyph&Background",
+        "Environment&DropDownMouseDownText&Background",
         "Environment&DropDownMouseOverGlyph&Background",
         "Environment&DropDownMouseOverText&Background",
         "Environment&DropDownText&Background",
-        "Output Window&Current List Location&Foreground",
-        "Environment&ComboBoxItemMouseOverText&Background", //
-        "Find&UnfocusedDropdown&Foreground"
+        "Find&UnfocusedDropdown&Foreground",
+        "Output Window&Current List Location&Foreground"
       ]
     },
     {
