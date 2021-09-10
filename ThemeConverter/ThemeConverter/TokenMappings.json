@@ -751,6 +751,7 @@
         "CodeSenseControls&PopupPinButtonMouseDown&Foreground",
         "CommonControls&Button&Foreground",
         "CommonControls&ButtonFocused&Foreground",
+        "CommonControls&ButtonDefault&Foreground",
         "CommonControls&ButtonHover&Foreground",
         "CommonControls&ButtonPressed&Foreground",
         "Environment&DocWellOverflowButtonMouseDownGlyph&Background",
