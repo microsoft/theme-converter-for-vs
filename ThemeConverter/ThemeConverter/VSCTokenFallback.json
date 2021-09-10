@@ -16,5 +16,7 @@
   "tab.border": "tab.inactiveBackground",
   "minimap.background": "editor.background",
   "sideBarTitle.foreground": "sideBar.foreground",
-  "tab.hoverBackground": "tab.inactiveBackground"
+  "tab.hoverBackground": "tab.inactiveBackground",
+  "tab.hoverForeground": "tab.inactiveForeground",
+  "tab.hoverBorder": "tab.Border"
 }

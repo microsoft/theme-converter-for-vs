@@ -561,7 +561,8 @@
       "VSC Token": "tab.activeForeground",
       "VS Token": [
         "Environment&FileTabIndicatorTextSelectedActive&Background",
-        "Environment&FileTabSelectedText&Background"
+        "Environment&FileTabSelectedText&Background",
+        "Environment&FileTabProvisionalSelectedActiveForeground&Background"
       ]
     },
     {
@@ -758,6 +759,7 @@
         "Environment&FileTabButtonDownSelectedActiveGlyph&Background",
         "Environment&FileTabButtonDownSelectedInactiveGlyph&Background",
         "Environment&FileTabButtonHoverInactiveGlyph&Background",
+        "Environment&FileTabButtonHoverSelectedActiveGlyph&Background",
         "Environment&FileTabButtonHoverSelectedInactiveGlyph&Background",
         "Environment&FileTabButtonProvisionalDownInactiveGlyph&Background",
         "Environment&FileTabButtonProvisionalDownSelectedInactiveGlyph&Background",
@@ -4146,7 +4148,9 @@
       "VSC Token": "tab.hoverForeground",
       "VS Token": [
         "Environment&FileTabHotText&Background",
-        "Environment&AutoHideTabMouseOverText&Background"
+        "Environment&FileTabHotGlyph&Background",
+        "Environment&AutoHideTabMouseOverText&Background",
+        "Environment&FileTabProvisionalHoverForeground&Background"
       ]
     },
     {
