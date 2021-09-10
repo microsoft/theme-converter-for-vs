@@ -1,4 +1,7 @@
-﻿using System.Text.RegularExpressions;
+﻿// Copyright (c) Microsoft Corporation.
+// Licensed under the MIT License.
+
+using System.Text.RegularExpressions;
 
 namespace ThemeConverter.ColorCompiler
 {

@@ -1,4 +1,7 @@
-﻿namespace ThemeConverter
+﻿// Copyright (c) Microsoft Corporation.
+// Licensed under the MIT License.
+
+namespace ThemeConverter
 {
     using System;
     using System.CodeDom.Compiler;

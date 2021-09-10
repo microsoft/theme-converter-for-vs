@@ -1,8 +1,11 @@
-﻿using Newtonsoft.Json;
-using Newtonsoft.Json.Linq;
+﻿// Copyright (c) Microsoft Corporation.
+// Licensed under the MIT License.
+
 using System;
-using System.IO;
 using System.Collections.Generic;
+using System.IO;
+using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
 
 namespace ThemeConverter
 {
