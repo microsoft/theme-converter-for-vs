@@ -2,7 +2,6 @@
   "list.inactiveSelectionForeground": "foreground",
   "sideBar.foreground": "foreground",
   "inputOption.activeBorder": "input.border",
-  "input.border": "inputOption.activeBorder",
   "inputOption.activeBackground": "input.background",
   "inputOption.activeForeground": "input.foreground",
   "tab.activeBorder": "tab.activeBackground",
@@ -16,5 +15,8 @@
   "editorBracketMatch.background": "editor.background",
   "tab.border": "tab.inactiveBackground",
   "minimap.background": "editor.background",
-  "sideBarTitle.foreground": "sideBar.foreground"
+  "sideBarTitle.foreground": "sideBar.foreground",
+  "tab.hoverBackground": "tab.inactiveBackground",
+  "tab.hoverForeground": "tab.inactiveForeground",
+  "tab.hoverBorder": "tab.Border"
 }

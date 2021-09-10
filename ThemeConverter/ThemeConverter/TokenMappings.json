@@ -63,6 +63,30 @@
       ]
     },
     {
+      "VSC Token": "entity.other.attribute-name.class.css",
+      "VS Token": [
+        "Text Editor MEF Items&CSS Property Name"
+      ]
+    },
+    {
+      "VSC Token": "support.constant.property-value.css",
+      "VS Token": [
+        "Text Editor MEF Items&CSS Property Value"
+      ]
+    },
+    {
+      "VSC Token": "entity.name.tag.css",
+      "VS Token": [
+        "Text Editor MEF Items&CSS Selector"
+      ]
+    },
+    {
+      "VSC Token": "string.unquoted.preprocessor.message.cs",
+      "VS Token": [
+        "Text Editor MEF Items&preprocessor text"
+      ]
+    },
+    {
       "VSC Token": "keyword.operator",
       "VS Token": [
         "Text Editor MEF Items&Operator"
@@ -141,7 +165,6 @@
     {
       "VSC Token": "keyword.preprocessor",
       "VS Token": [
-        "Roslyn Text Editor MEF Items&preprocessor text",
         "Text Editor MEF Items&Preprocessor Keyword"
       ]
     },
@@ -291,9 +314,6 @@
         "CommonDocument&TileViewTextUnfocused&Background",
         "Diagnostics&ControlContent&Foreground",
         "Diagnostics&ControlHeader&Foreground",
-        "Environment&DropDownGlyph&Background",
-        "Environment&DropDownMouseDownGlyph&Background",
-        "Environment&DropDownMouseDownText&Background",
         "Environment&LightCaption&Background",
         "Environment&MainWindowCloudEnvironmentActive&Foreground",
         "Environment&MainWindowCloudEnvironmentInactive&Foreground",
@@ -431,8 +451,6 @@
         "Environment&CommandBarOptionsMouseOverBackgroundEnd&Background",
         "Environment&CommandBarOptionsMouseOverBackgroundMiddle1&Background",
         "Environment&CommandBarOptionsMouseOverBackgroundMiddle2&Background",
-        "Environment&CommandBarSplitButtonMouseDownGlyph&Background",
-        "Environment&CommandBarSplitButtonMouseOverGlyph&Background",
         "Environment&CommandBarToolBarBorder&Background",
         "Environment&CommandShelfBackgroundGradientBegin&Background",
         "Environment&CommandShelfBackgroundGradientEnd&Background",
@@ -442,11 +460,7 @@
         "Environment&CommandShelfHighlightGradientMiddle&Background",
         "Environment&CompletionBorder&Background",
         "Environment&DebuggerDataTipInactiveBackground&Background",
-        "Environment&DropDownDisabledBackground&Background",
         "Environment&EditorAdditionalContentBorder&Background",
-        "Environment&FileTabProvisionalInactiveForeground&Background",
-        "Environment&FileTabProvisionalSelectedInactive&Background",
-        "Environment&FileTabProvisionalSelectedInactiveBorder&Background",
         "Environment&FileTabScrollBarArrowGlyphHover&Background",
         "Environment&FileTabScrollBarThumbHover&Background",
         "Environment&Halo&Background",
@@ -535,7 +549,6 @@
     {
       "VSC Token": "tab.activeBackground",
       "VS Token": [
-        "Environment&FileTabButtonDownSelectedActiveGlyph&Background",
         "Environment&FileTabProvisionalSelectedActive&Background",
         "Environment&FileTabSelectedBackground&Background",
         "Environment&FileTabSelectedGradientBottom&Background",
@@ -548,7 +561,8 @@
       "VSC Token": "tab.activeForeground",
       "VS Token": [
         "Environment&FileTabIndicatorTextSelectedActive&Background",
-        "Environment&FileTabSelectedText&Background"
+        "Environment&FileTabSelectedText&Background",
+        "Environment&FileTabProvisionalSelectedActiveForeground&Background"
       ]
     },
     {
@@ -561,12 +575,13 @@
       "VSC Token": "tab.inactiveBackground",
       "VS Token": [
         "Environment&FileTabBackground&Background",
-        "Environment&FileTabButtonDownInactiveGlyph&Background",
-        "Environment&FileTabButtonDownSelectedInactive&Background",
-        "Environment&FileTabButtonDownSelectedInactiveBorder&Background",
         "Environment&FileTabInactiveDocumentBorderBackground&Background",
         "Environment&FileTabInactiveGradientBottom&Background",
-        "Environment&FileTabInactiveGradientTop&Background"
+        "Environment&FileTabInactiveGradientTop&Background",
+        "Environment&FileTabProvisionalSelectedInactive&Background",
+        "Environment&FileTabProvisionalSelectedInactiveBorder&Background",
+        "Environment&FileTabProvisionalInactive&Background",
+        "Environment&FileTabProvisionalInactiveBorder&Background"
       ]
     },
     {
@@ -575,10 +590,9 @@
         "Environment&FileTabText&Background",
         "Environment&FileTabInactiveText&Background",
         "Environment&FileTabLastActiveText&Background",
-        "Environment&FileTabButtonProvisionalDownSelectedInactiveGlyph&Background",
-        "Environment&FileTabButtonDownSelectedInactiveGlyph&Background",
-        "Environment&FileTabButtonProvisionalHoverInactiveGlyph&Background",
-        "Environment&AutoHideTabText&Background"
+        "Environment&AutoHideTabText&Background",
+        "Environment&FileTabProvisionalInactiveForeground&Background",
+        "Environment&FileTabProvisionalSelectedInactiveForeground&Background"
       ]
     },
     {
@@ -600,13 +614,6 @@
         "SearchControl&ActionButtonMouseDownBorder&Background",
         "SearchControl&ActionButtonMouseOverBorder&Background", //
         "SearchControl&DropDownSeparator&Background",
-        "SearchControl&FocusedBorder&Background",
-        "SearchControl&FocusedDropDownButtonBorder&Background", //
-        "SearchControl&FocusedDropDownSeparator&Background",
-        "SearchControl&MouseDownDropDownButtonBorder&Background",
-        "SearchControl&MouseOverBorder&Background", //
-        "SearchControl&MouseOverDropDownButtonBorder&Background", //
-        "SearchControl&MouseOverDropDownSeparator&Background", //
         "SearchControl&UnfocusedBorder&Background", //
         "SearchControl&UnfocusedDropDownButtonBorder&Background", // 
         "TaskRunnerExplorerControls&ComboBoxBorder&Background",
@@ -619,14 +626,10 @@
       "VS Token": [
         "Environment&CommandBarShadow&Background",
         "Environment&DocWellOverflowButtonGlyph&Background",
-        "Environment&FileTabHotGradientBottom&Background",
-        "Environment&FileTabHotGradientTop&Background",
         "Environment&FileTabLastActiveGradientBottom&Background",
         "Environment&FileTabLastActiveGradientMiddle1&Background",
         "Environment&FileTabLastActiveGradientMiddle2&Background",
-        "Environment&FileTabLastActiveGradientTop&Background",
-        "Environment&FileTabProvisionalHover&Background",
-        "Environment&FileTabProvisionalHoverBorder&Background"
+        "Environment&FileTabLastActiveGradientTop&Background"
       ]
     },
     {
@@ -636,16 +639,7 @@
         "Cider&CommandMouseOver&Background",
         "Cider&ToggleSelected&Background",
         "Environment&AutoHideTabMouseOverBorder&Background",
-        "Environment&CommandBarHover&Background",
-        "Environment&CommandBarHoverOverSelected&Background",
-        "Environment&CommandBarHoverOverSelectedIcon&Background", //
-        "Environment&CommandBarHoverOverSelectedIconBorder&Background", //
         "Environment&CommandBarMenuItemMouseOver&Background",
-        "Environment&CommandBarMouseDownBackgroundBegin&Background",
-        "Environment&CommandBarMouseDownBackgroundEnd&Background",
-        "Environment&CommandBarMouseDownBackgroundMiddle&Background",
-        "Environment&CommandBarMouseDownBorder&Background",
-        "Environment&CommandBarSelected&Background",
         "Environment&DebuggerDataTipActiveHighlight&Background",
         "Environment&ToolboxContentMouseOver&Background",
         "Environment&ToolboxDisabledContentMouseOver&Background",
@@ -662,12 +656,21 @@
     {
       "VSC Token": "menubar.selectionBackground",
       "VS Token": [
-        "Environment&StartPageTextControlLinkSelectedHover&Background",
+        "Environment&CommandBarHover&Background",
+        "Environment&CommandBarHoverOverSelected&Background",
+        "Environment&CommandBarHoverOverSelectedIcon&Background", //
+        "Environment&CommandBarHoverOverSelectedIconBorder&Background", //
+        "Environment&CommandBarMouseDownBackgroundBegin&Background",
+        "Environment&CommandBarMouseDownBackgroundEnd&Background",
+        "Environment&CommandBarMouseDownBackgroundMiddle&Background",
+        "Environment&CommandBarMouseDownBorder&Background",
         "Environment&CommandBarMouseOverBackgroundBegin&Background",
         "Environment&CommandBarMouseOverBackgroundEnd&Background",
         "Environment&CommandBarMouseOverBackgroundGradient&Background", //
         "Environment&CommandBarMouseOverBackgroundMiddle1&Background",
-        "Environment&CommandBarMouseOverBackgroundMiddle2&Background"
+        "Environment&CommandBarMouseOverBackgroundMiddle2&Background",
+        "Environment&CommandBarSelected&Background",
+        "Environment&StartPageTextControlLinkSelectedHover&Background"
       ]
     },
     {
@@ -690,20 +693,15 @@
         "Environment&DockTargetButtonBackgroundBegin&Background",
         "Environment&DockTargetButtonBackgroundEnd&Background",
         "Environment&DocWellOverflowButtonMouseDownBackground&Background",
-        "Environment&DocWellOverflowButtonMouseDownGlyph&Background",
-        "Environment&DropDownButtonMouseDownBackground&Background",
         "Environment&FileTabButtonDownInactive&Background",
         "Environment&FileTabButtonDownSelectedActive&Background",
-        "Environment&FileTabButtonProvisionalDownInactiveGlyph&Background",
+        "Environment&FileTabButtonDownSelectedInactive&Background",
+        "Environment&FileTabButtonDownSelectedInactiveBorder&Background",
         "Environment&FileTabButtonProvisionalDownSelectedActive&Background",
-        "Environment&FileTabButtonProvisionalSelectedActiveGlyph&Background",
-        "Environment&FileTabButtonSelectedActiveGlyph&Background",
         "Environment&QuickCustomizeButton&Background",
         "Environment&StartPageButtonPinDown&Background",
         "Environment&StartPageButtonUnpinned&Background",
         "Environment&ToolWindowButtonDown&Background",
-        "Environment&ToolWindowButtonDownActiveGlyph&Background",
-        "Environment&ToolWindowButtonDownInactiveGlyph&Background",
         "GraphDocumentColors&ExpandoButtonBackground&Background",
         "GraphDocumentColors&LinkNavigatorButtonFillEndColor&Background",
         "GraphDocumentColors&LinkNavigatorButtonFillStartColor&Background",
@@ -715,10 +713,8 @@
         "GraphicsDesigners&SnapshotButtonActive&Background",
         "InfoBar&Button&Background",
         "InfoBar&ButtonMouseDown&Background",
-        "InfoBar&CloseButtonDownGlyph&Background",
         "InformationBadge&Background&Background",
         "NotificationBubble&NotificationBubbleWindowButton&Background",
-        "NotificationBubble&NotificationBubbleWindowButtonDownGlyph&Background",
         "Promotion&LightboxDialogButton&Background",
         "Promotion&LightboxDialogButtonFocused&Background",
         "Promotion&LightboxDialogButtonPressed&Background",
@@ -729,14 +725,10 @@
         "TeamExplorer&CallToActionButton&Background",
         "TeamExplorer&CallToActionButtonPressed&Background",
         "ThemedDialog&WindowButton&Background",
-        "ThemedDialog&WindowButtonDown&Background",
-        "ThemedDialog&WindowButtonDownGlyph&Background",
         "ThemedUtilityDialog&WindowButton&Background",
         "UserNotifications&BadgeButtonCountActive&Background",
         "UserNotifications&BadgeButtonCountInactive&Background",
         "UserNotifications&BadgeButtonCountMouseDown&Background",
-        "UserNotifications&BadgeButtonCriticalActiveGlyph&Background",
-        "UserNotifications&BadgeButtonCriticalInactiveGlyph&Background",
         "UserNotifications&ToastActionButton&Background",
         "WelcomeExperience&WelcomeExperienceBackground&Background",
         "WelcomeExperience&WelcomeExperienceButtonBackground&Background",
@@ -759,20 +751,44 @@
         "CodeSenseControls&PopupPinButtonMouseDown&Foreground",
         "CommonControls&Button&Foreground",
         "CommonControls&ButtonFocused&Foreground",
+        "CommonControls&ButtonDefault&Foreground",
         "CommonControls&ButtonHover&Foreground",
         "CommonControls&ButtonPressed&Foreground",
+        "Environment&DocWellOverflowButtonMouseDownGlyph&Background",
+        "Environment&DocWellOverflowButtonMouseOverGlyph&Background",
+        "Environment&FileTabButtonDownInactiveGlyph&Background",
+        "Environment&FileTabButtonDownSelectedActiveGlyph&Background",
+        "Environment&FileTabButtonDownSelectedInactiveGlyph&Background",
+        "Environment&FileTabButtonHoverInactiveGlyph&Background",
+        "Environment&FileTabButtonHoverSelectedActiveGlyph&Background",
+        "Environment&FileTabButtonHoverSelectedInactiveGlyph&Background",
+        "Environment&FileTabButtonProvisionalDownInactiveGlyph&Background",
+        "Environment&FileTabButtonProvisionalDownSelectedInactiveGlyph&Background",
+        "Environment&FileTabButtonProvisionalHoverGlyph&Background",
+        "Environment&FileTabButtonProvisionalHoverInactiveGlyph&Background",
+        "Environment&FileTabButtonProvisionalHoverSelectedInactiveGlyph&Background",
+        "Environment&FileTabButtonProvisionalHoverSelectedActiveGlyph&Background",
+        "Environment&FileTabButtonProvisionalSelectedActiveGlyph&Background",
+        "Environment&FileTabButtonSelectedActiveGlyph&Background",
+        "Environment&QuickCustomizeButtonGlyphHover&Background",
         "Environment&QuickCustomizeButtonTextHover&Background",
         "Environment&StartPageButtonTextHover&Background",
+        "Environment&ToolWindowButtonDownActiveGlyph&Background",
+        "Environment&ToolWindowButtonDownInactiveGlyph&Background",
         "Environment&ToolWindowButtonHoverActiveGlyph&Background",
         "Environment&ToolWindowButtonHoverInactiveGlyph&Background",
         "GraphicsDesigners&SnapshotButtonActive&Foreground",
         "GraphicsDesigners&SnapshotButtonHover&Foreground",
         "InfoBar&ButtonMouseDown&Foreground",
+        "InfoBar&CloseButtonDownGlyph&Background",
+        "InfoBar&CloseButtonHoverGlyph&Background",
         "InformationBadge&Text&Background",
         "InformationBadge&TextHover&Background",
         "NotificationBubble&NotificationBubbleCloseButtonGlyph&Foreground",
         "NotificationBubble&NotificationBubbleCloseButtonHoverGlyph&Foreground",
         "NotificationBubble&NotificationBubbleCloseButtonPressedGlyph&Foreground",
+        "NotificationBubble&NotificationBubbleWindowButtonDownGlyph&Background",
+        "NotificationBubble&NotificationBubbleWindowButtonHoverGlyph&Background",
         "Promotion&LightboxDialogButtonFocused&Foreground",
         "Promotion&LightboxDialogButtonHover&Foreground",
         "Promotion&LightboxDialogButtonPressed&Foreground",
@@ -792,14 +808,16 @@
         "TeamExplorer&CallToActionButtonMouseOver&Foreground",
         "TeamExplorer&CallToActionButtonPressed&Foreground",
         "ThemedDialog&CloseWindowButtonHover&Foreground",
+        "ThemedDialog&WindowButtonDownGlyph&Background",
         "ThemedDialog&WindowButtonGlyph&Background",
         "ThemedDialog&WindowButtonHoverGlyph&Background",
-        "NotificationBubble&NotificationBubbleWindowButtonHoverGlyph&Background",
         "UserNotifications&BadgeButtonCountActive&Foreground",
         "UserNotifications&BadgeButtonCountInactive&Foreground",
         "UserNotifications&BadgeButtonCountMouseDown&Foreground",
         "UserNotifications&BadgeButtonCountMouseOverActive&Foreground",
         "UserNotifications&BadgeButtonCountMouseOverInactive&Foreground",
+        "UserNotifications&BadgeButtonCriticalActiveGlyph&Background",
+        "UserNotifications&BadgeButtonCriticalInactiveGlyph&Background",
         "UserNotifications&ToastActionButtonTextHover&Background",
         "UserNotifications&ToastActionButtonTextPressed&Background",
         "WelcomeExperience&WelcomeExperienceButtonMousedownForeground&Foreground",
@@ -881,8 +899,6 @@
         "Environment&Dialog&Background",
         "Environment&DockTargetGlyphBackgroundBegin&Background",
         "Environment&DockTargetGlyphBackgroundEnd&Background",
-        "Environment&DropDownMouseDownBackground&Background",
-        "Environment&DropDownMouseDownBorder&Background",
         "Environment&EditorExpansionFill&Background",
         "Environment&NewProjectItemSelected&Background",
         "Environment&NewProjectItemSelectedBorder&Background",
@@ -1118,7 +1134,18 @@
     {
       "VSC Token": "focusBorder",
       "VS Token": [
-        "Environment&TitleBarActiveBorder&Background"
+        "Environment&DropDownButtonMouseDownSeparator&Background", //
+        "Environment&DropDownButtonMouseOverSeparator&Background", //        
+        "Environment&DropDownMouseDownBorder&Background",
+        "Environment&DropDownMouseOverBorder&Background", //
+        "Environment&TitleBarActiveBorder&Background",
+        "SearchControl&FocusedBorder&Background",
+        "SearchControl&FocusedDropDownButtonBorder&Background", //
+        "SearchControl&FocusedDropDownSeparator&Background",
+        "SearchControl&MouseDownDropDownButtonBorder&Background",
+        "SearchControl&MouseOverBorder&Background", //
+        "SearchControl&MouseOverDropDownButtonBorder&Background", //
+        "SearchControl&MouseOverDropDownSeparator&Background" //
       ]
     },
     {
@@ -1151,7 +1178,6 @@
     {
       "VSC Token": "sideBarSectionHeader.foreground",
       "VS Token": [
-        "Environment&FileTabParentText&Background"
       ]
     },
     {
@@ -1305,15 +1331,14 @@
         "CommonControls&ButtonHover&Background",
         "Environment&DocWellOverflowButtonMouseOverBackground&Background",
         "Environment&DocWellOverflowButtonMouseOverBorder&Background",
-        "Environment&DocWellOverflowButtonMouseOverGlyph&Background",
         "Environment&FileTabButtonHoverInactive&Background",
         "Environment&FileTabButtonHoverInactiveBorder&Background",
-        "Environment&FileTabButtonHoverSelectedInactiveGlyph&Background",
-        "Environment&FileTabButtonProvisionalHoverGlyph&Background",
         "Environment&FileTabButtonProvisionalHoverSelectedActive&Background",
         "Environment&FileTabButtonProvisionalHoverSelectedActiveBorder&Background",
-        "Environment&FileTabButtonProvisionalHoverSelectedInactiveGlyph&Background",
-        "Environment&QuickCustomizeButtonGlyphHover&Background",
+        "Environment&FileTabButtonProvisionalHoverSelectedInactive&Background",
+        "Environment&FileTabButtonProvisionalHoverSelectedInactiveBorder&Background",
+        "Environment&FileTabButtonProvisionalHoverInactive&Background",
+        "Environment&FileTabButtonProvisionalHoverInactiveBorder&Background",
         "Environment&StartPageButtonMouseOverBackgroundBegin&Background",
         "Environment&StartPageButtonMouseOverBackgroundEnd&Background",
         "Environment&StartPageButtonMouseOverBackgroundMiddle1&Background",
@@ -1329,7 +1354,6 @@
         "GraphicsDesigners&DropDownButtonHover&Background",
         "GraphicsDesigners&SnapshotButtonHover&Background",
         "InfoBar&ButtonMouseOver&Background",
-        "InfoBar&CloseButtonHoverGlyph&Background",
         "InformationBadge&BackgroundFocused&Background",
         "InformationBadge&BackgroundHover&Background",
         "InformationBadge&BackgroundPressed&Background",
@@ -1340,6 +1364,7 @@
         "TeamExplorer&ButtonMouseOverBorder&Background",
         "TeamExplorer&CallToActionButtonMouseOver&Background",
         "TeamExplorer&CallToActionButtonMouseOverBorder&Background",
+        "ThemedDialog&WindowButtonDown&Background",
         "ThemedDialog&WindowButtonHover&Background",
         "ThemedDialog&CloseWindowButtonHover&Background",
         "ThemedDialog&WindowButtonHoverBorder&Background",
@@ -1651,7 +1676,7 @@
         "Environment&ComboBoxPopupBackgroundEnd&Background",
         "Environment&ComboBoxMouseDownBackground&Background",
         "CommonControls&ComboBoxListBackground&Background",
-        "Output Window&Current List Location&Background",
+        "Output Window&Current List Location&Background", 
         "CommonControls&ComboBoxBackground&Background",
         "CommonControls&ComboBoxBackgroundDisabled&Background",
         "CommonControls&ComboBoxBackgroundFocused&Background",
@@ -1660,9 +1685,18 @@
         "CommonControls&ComboBoxGlyphBackgroundDisabled&Background",
         "CommonControls&ComboBoxGlyphBackground&Background",
         "CommonControls&ComboBoxGlyphBackgroundFocused&Background",
+        "CommonControls&ComboBoxGlyphBackgroundHover&Background",
         "CommonControls&ComboBoxGlyphBackgroundPressed&Background",
+        "Environment&DropDownMouseDownBackground&Background",
         "Environment&DropDownPopupBackgroundBegin&Background",
         "Environment&DropDownPopupBackgroundEnd&Background",
+        "Environment&DropDownMouseOverBackgroundBegin&Background",
+        "Environment&DropDownMouseOverBackgroundEnd&Background",
+        "Environment&DropDownMouseOverBackgroundMiddle1&Background",
+        "Environment&DropDownMouseOverBackgroundMiddle2&Background",
+        "Environment&DropDownButtonMouseDownBackground&Background",
+        "Environment&DropDownButtonMouseOverBackground&Background", //watch refresh button hover background
+        "Environment&DropDownDisabledBackground&Background",
         "Find&UnfocusedDropdown&Background"
       ]
     },
@@ -1689,9 +1723,8 @@
         "Environment&ComboBoxMouseOverBorder&Background",
         "Environment&CommandBarSplitButtonSeparator&Background",
         "Environment&DropDownBorder&Background",
-        "Environment&DropDownButtonMouseDownSeparator&Background",
-        "Environment&DropDownButtonMouseOverSeparator&Background",
-        "Environment&DropDownMouseOverBorder&Background",
+        "Environment&DropDownPopupBorder&Background",
+        "Environment&DropDownDisabledBorder&Background",
         "CommonControls&ComboBoxGlyphBorder&Background",
         "CommonControls&ComboBoxGlyphBorderDisabled&Background",
         "CommonControls&ComboBoxGlyphBorderFocused&Background",
@@ -2382,12 +2415,7 @@
         "TreeView&SelectedItemActive&Background",
         "Environment&Highlight&Background",
         "NewProjectDialog&WonderbarTreeSelected&Background", //
-        "Find&DropDownMenuMouseDown&Background",
-        "Environment&DropDownMouseOverBackgroundBegin&Background",
-        "Environment&DropDownMouseOverBackgroundEnd&Background",
-        "Environment&DropDownMouseOverBackgroundMiddle1&Background",
-        "Environment&DropDownMouseOverBackgroundMiddle2&Background",
-        "Environment&DropDownButtonMouseOverBackground&Background"
+        "Find&DropDownMenuMouseDown&Background"
       ]
     },
     {
@@ -2404,6 +2432,7 @@
         "Environment&HighlightText&Background",
         "ThemedDialog&StartWindowDescriptionActive&Foreground",
         "NewProjectDialog&WonderbarTreeSelected&Foreground", //
+        "NewProjectDialog&WonderbarTreeInactiveSelected&Foreground", //active and inactive share the background
         "Find&DropDownMenuMouseDown&Foreground"
       ]
     },
@@ -2532,6 +2561,7 @@
         "UserInformation&IDCardMinimalModeInactiveWindowText&Background",
         "UserInformation&IDCardMinimalModeText&Background",
         "UserInformation&IDCardText&Background",
+        "Environment&CommandBarSplitButtonGlyph&Background",
         "Environment&CommandBarTextActive&Background" //
       ]
     },
@@ -2542,7 +2572,11 @@
         "Environment&CommandBarMenuMouseDownGlyph&Background",
         "Environment&CommandBarMenuMouseOverGlyph&Background",
         "Environment&CommandBarMenuMouseOverSubmenuGlyph&Background",
-        "Environment&CommandBarMenuSubmenuGlyphHover&Background"
+        "Environment&CommandBarMenuSubmenuGlyphHover&Background",
+        "Environment&CommandBarSplitButtonMouseDownGlyph&Background",
+        "Environment&CommandBarSplitButtonMouseOverGlyph&Background",
+        "Environment&CommandBarTextSelected&Background", //
+        "Environment&CommandBarTextHoverOverSelected&Background" //
       ]
     },
     {
@@ -2558,7 +2592,6 @@
       "VS Token": [
         "Environment&CommandBarCheckBoxMouseOver&Background", //
         "Environment&CommandBarTextHover&Background", //
-        "Environment&CommandBarTextHoverOverSelected&Background" //
       ]
     },
     {
@@ -3310,6 +3343,7 @@
     {
       "VSC Token": "tab.unfocusedInactiveForeground",
       "VS Token": [
+        "Environment&FileTabParentText&Background"
       ]
     },
     {
@@ -3693,13 +3727,17 @@
         "CommonControls&ComboBoxTextHover&Background",
         "CommonControls&ComboBoxTextPressed&Background",
         "Environment&ComboBoxFocusedGlyph&Background",
+        "Environment&ComboBoxItemMouseOverText&Background", //
         "Environment&ComboBoxMouseOverGlyph&Background",
+        "Environment&DropDownGlyph&Background",
+        "Environment&DropDownMouseDownGlyph&Background",
+        "Environment&DropDownMouseDownText&Background",
         "Environment&DropDownMouseOverGlyph&Background",
         "Environment&DropDownMouseOverText&Background",
+        "Environment&CommandBarOptionsGlyph&Background",
         "Environment&DropDownText&Background",
-        "Output Window&Current List Location&Foreground",
-        "Environment&ComboBoxItemMouseOverText&Background", //
-        "Find&UnfocusedDropdown&Foreground"
+        "Find&UnfocusedDropdown&Foreground",
+        "Output Window&Current List Location&Foreground"
       ]
     },
     {
@@ -3928,8 +3966,7 @@
         "TreeView&SelectedItemInactive&Foreground",
         "TreeView&SelectedItemInactiveGlyph&Background",
         "TreeView&SelectedItemInactiveGlyphMouseOver&Background",
-        "Environment&ButtonText&Background",
-        "NewProjectDialog&WonderbarTreeInactiveSelected&Foreground" //
+        "Environment&ButtonText&Background"
       ]
     },
     {
@@ -4096,6 +4133,10 @@
     {
       "VSC Token": "tab.hoverBackground",
       "VS Token": [
+        "Environment&FileTabProvisionalHover&Background",
+        "Environment&FileTabProvisionalHoverBorder&Background",
+        "Environment&FileTabHotGradientBottom&Background",
+        "Environment&FileTabHotGradientTop&Background",
       ]
     },
     {
@@ -4108,7 +4149,9 @@
       "VSC Token": "tab.hoverForeground",
       "VS Token": [
         "Environment&FileTabHotText&Background",
-        "Environment&AutoHideTabMouseOverText&Background"
+        "Environment&FileTabHotGlyph&Background",
+        "Environment&AutoHideTabMouseOverText&Background",
+        "Environment&FileTabProvisionalHoverForeground&Background"
       ]
     },
     {
