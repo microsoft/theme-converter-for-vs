@@ -602,14 +602,10 @@
       "VS Token": [
         "Environment&CommandBarShadow&Background",
         "Environment&DocWellOverflowButtonGlyph&Background",
-        "Environment&FileTabHotGradientBottom&Background",
-        "Environment&FileTabHotGradientTop&Background",
         "Environment&FileTabLastActiveGradientBottom&Background",
         "Environment&FileTabLastActiveGradientMiddle1&Background",
         "Environment&FileTabLastActiveGradientMiddle2&Background",
-        "Environment&FileTabLastActiveGradientTop&Background",
-        "Environment&FileTabProvisionalHover&Background",
-        "Environment&FileTabProvisionalHoverBorder&Background"
+        "Environment&FileTabLastActiveGradientTop&Background"
       ]
     },
     {
@@ -4111,6 +4107,10 @@
     {
       "VSC Token": "tab.hoverBackground",
       "VS Token": [
+        "Environment&FileTabProvisionalHover&Background",
+        "Environment&FileTabProvisionalHoverBorder&Background",
+        "Environment&FileTabHotGradientBottom&Background",
+        "Environment&FileTabHotGradientTop&Background",
       ]
     },
     {

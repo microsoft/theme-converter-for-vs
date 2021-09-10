@@ -15,5 +15,6 @@
   "editorBracketMatch.background": "editor.background",
   "tab.border": "tab.inactiveBackground",
   "minimap.background": "editor.background",
-  "sideBarTitle.foreground": "sideBar.foreground"
+  "sideBarTitle.foreground": "sideBar.foreground",
+  "tab.hoverBackground": "tab.inactiveBackground"
 }
