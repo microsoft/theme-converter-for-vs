@@ -1156,7 +1156,6 @@
     {
       "VSC Token": "sideBarSectionHeader.foreground",
       "VS Token": [
-        "Environment&FileTabParentText&Background"
       ]
     },
     {
@@ -3321,6 +3320,7 @@
     {
       "VSC Token": "tab.unfocusedInactiveForeground",
       "VS Token": [
+        "Environment&FileTabParentText&Background"
       ]
     },
     {
