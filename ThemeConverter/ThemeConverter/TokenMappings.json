@@ -1654,7 +1654,7 @@
         "Environment&ComboBoxPopupBackgroundEnd&Background",
         "Environment&ComboBoxMouseDownBackground&Background",
         "CommonControls&ComboBoxListBackground&Background",
-        "Output Window&Current List Location&Background",
+        "Output Window&Current List Location&Background", 
         "CommonControls&ComboBoxBackground&Background",
         "CommonControls&ComboBoxBackgroundDisabled&Background",
         "CommonControls&ComboBoxBackgroundFocused&Background",
@@ -1663,6 +1663,7 @@
         "CommonControls&ComboBoxGlyphBackgroundDisabled&Background",
         "CommonControls&ComboBoxGlyphBackground&Background",
         "CommonControls&ComboBoxGlyphBackgroundFocused&Background",
+        "CommonControls&ComboBoxGlyphBackgroundHover&Background",
         "CommonControls&ComboBoxGlyphBackgroundPressed&Background",
         "Environment&DropDownMouseDownBackground&Background",
         "Environment&DropDownPopupBackgroundBegin&Background",
@@ -1672,7 +1673,7 @@
         "Environment&DropDownMouseOverBackgroundMiddle1&Background",
         "Environment&DropDownMouseOverBackgroundMiddle2&Background",
         "Environment&DropDownButtonMouseDownBackground&Background",
-        "Environment&DropDownButtonMouseOverBackground&Background",
+        "Environment&DropDownButtonMouseOverBackground&Background", //watch refresh button hover background
         "Environment&DropDownDisabledBackground&Background",
         "Find&UnfocusedDropdown&Background"
       ]
@@ -3711,6 +3712,7 @@
         "Environment&DropDownMouseDownText&Background",
         "Environment&DropDownMouseOverGlyph&Background",
         "Environment&DropDownMouseOverText&Background",
+        "Environment&CommandBarOptionsGlyph&Background",
         "Environment&DropDownText&Background",
         "Find&UnfocusedDropdown&Foreground",
         "Output Window&Current List Location&Foreground"
