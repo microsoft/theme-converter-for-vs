@@ -63,6 +63,30 @@
       ]
     },
     {
+      "VSC Token": "entity.other.attribute-name.class.css",
+      "VS Token": [
+        "Text Editor MEF Items&CSS Property Name"
+      ]
+    },
+    {
+      "VSC Token": "support.constant.property-value.css",
+      "VS Token": [
+        "Text Editor MEF Items&CSS Property Value"
+      ]
+    },
+    {
+      "VSC Token": "entity.name.tag.css",
+      "VS Token": [
+        "Text Editor MEF Items&CSS Selector"
+      ]
+    },
+    {
+      "VSC Token": "string.unquoted.preprocessor.message.cs",
+      "VS Token": [
+        "Text Editor MEF Items&preprocessor text"
+      ]
+    },
+    {
       "VSC Token": "keyword.operator",
       "VS Token": [
         "Text Editor MEF Items&Operator"
@@ -141,7 +165,6 @@
     {
       "VSC Token": "keyword.preprocessor",
       "VS Token": [
-        "Roslyn Text Editor MEF Items&preprocessor text",
         "Text Editor MEF Items&Preprocessor Keyword"
       ]
     },
