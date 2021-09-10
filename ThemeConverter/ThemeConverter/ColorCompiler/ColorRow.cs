@@ -1,4 +1,7 @@
-﻿namespace ThemeConverter.ColorCompiler
+﻿// Copyright (c) Microsoft Corporation.
+// Licensed under the MIT License.
+
+namespace ThemeConverter.ColorCompiler
 {
     internal class ColorRow
     {

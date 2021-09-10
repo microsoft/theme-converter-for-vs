@@ -1,4 +1,7 @@
-﻿using System.Drawing;
+﻿// Copyright (c) Microsoft Corporation.
+// Licensed under the MIT License.
+
+using System.Drawing;
 
 namespace ThemeConverter.ColorCompiler
 {

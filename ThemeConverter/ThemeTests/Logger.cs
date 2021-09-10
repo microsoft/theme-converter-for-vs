@@ -1,4 +1,7 @@
-﻿namespace ThemeTests
+﻿// Copyright (c) Microsoft Corporation.
+// Licensed under the MIT License.
+
+namespace ThemeTests
 {
     using FlaUI.Core.AutomationElements;
     using FlaUI.Core.Capturing;

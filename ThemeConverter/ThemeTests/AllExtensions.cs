@@ -1,4 +1,7 @@
-﻿namespace ThemeTests
+﻿// Copyright (c) Microsoft Corporation.
+// Licensed under the MIT License.
+
+namespace ThemeTests
 {
     using System;
     using System.Diagnostics;
