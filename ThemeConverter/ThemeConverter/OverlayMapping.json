@@ -34,5 +34,9 @@
   "list.activeSelectionBackground": {
     "Item1": 1.0,
     "Item2": "sideBar.background"
+  },
+  "list.hoverBackground": {
+    "Item1": 1.0,
+    "Item2": "sideBar.background"
   }
 }
