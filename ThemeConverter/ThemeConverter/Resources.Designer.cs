@@ -101,6 +101,15 @@ namespace ThemeConverter {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Launching Visual Studio..
+        /// </summary>
+        internal static string LaunchingVS {
+            get {
+                return ResourceManager.GetString("LaunchingVS", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to No JSON file was found under the given directory..
         /// </summary>
         internal static string NoJSONFoundException {
@@ -119,6 +128,24 @@ namespace ThemeConverter {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Running UpdateConfiguration..
+        /// </summary>
+        internal static string RunningUpdateConfiguration {
+            get {
+                return ResourceManager.GetString("RunningUpdateConfiguration", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The devenv.exe file was not found at &quot;{0}&quot;..
+        /// </summary>
+        internal static string TargetDevEnvNotExistException {
+            get {
+                return ResourceManager.GetString("TargetDevEnvNotExistException", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to The installation path of the target VS. When specified, the converter will patch the converted pkgdef(s) to the target VS, run &quot;updateConfiguration&quot; and launch this VS. (e.g.: &quot;C:\Program Files\Microsoft Visual Studio\2022\Preview&quot;) OPTIONAL.
         /// </summary>
         internal static string TargetVS {
@@ -133,6 +160,15 @@ namespace ThemeConverter {
         internal static string TargetVSNotExistException {
             get {
                 return ResourceManager.GetString("TargetVSNotExistException", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Fatal error running &quot;devenv.exe /updateconfiguration&quot;..
+        /// </summary>
+        internal static string UpdateConfigurationException {
+            get {
+                return ResourceManager.GetString("UpdateConfigurationException", resourceCulture);
             }
         }
     }

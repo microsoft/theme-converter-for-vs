@@ -1,0 +1,19 @@
+{
+	"$schema": "vscode://schemas/color-theme",
+	"type": "light",
+	"colors": {
+		"activityBar.border": "#219fd544",
+		"activityBar.foreground": "#99d0f7"
+	},
+	"tokenColors": [
+		{
+			"scope": [
+				"meta.paragraph.markdown",
+				"string.other.link.description.title.markdown"
+			],
+			"settings": {
+				"foreground": "#110000"
+			}
+		}
+	]
+}

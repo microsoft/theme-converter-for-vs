@@ -133,16 +133,28 @@ Arguments:</value>
   <data name="InputNotExistException" xml:space="preserve">
     <value>The input file or folder does not exist.</value>
   </data>
+  <data name="LaunchingVS" xml:space="preserve">
+    <value>Launching Visual Studio.</value>
+  </data>
   <data name="NoJSONFoundException" xml:space="preserve">
     <value>No JSON file was found under the given directory.</value>
   </data>
   <data name="Output" xml:space="preserve">
     <value>The output folder path of the converted pkgdef(s). When specified, the converter will save the converted pkgdef(s) to this path. If not specified, the output will be saved under the same directory of the input file/folder. OPTIONAL</value>
   </data>
+  <data name="RunningUpdateConfiguration" xml:space="preserve">
+    <value>Running UpdateConfiguration.</value>
+  </data>
+  <data name="TargetDevEnvNotExistException" xml:space="preserve">
+    <value>The devenv.exe file was not found at "{0}".</value>
+  </data>
   <data name="TargetVS" xml:space="preserve">
     <value>The installation path of the target VS. When specified, the converter will patch the converted pkgdef(s) to the target VS, run "updateConfiguration" and launch this VS. (e.g.: "C:\Program Files\Microsoft Visual Studio\2022\Preview") OPTIONAL</value>
   </data>
   <data name="TargetVSNotExistException" xml:space="preserve">
     <value>The target VS installation directory does not exist.</value>
+  </data>
+  <data name="UpdateConfigurationException" xml:space="preserve">
+    <value>Fatal error running "devenv.exe /updateconfiguration".</value>
   </data>
 </root>
