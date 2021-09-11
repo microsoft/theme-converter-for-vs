@@ -18,7 +18,7 @@ namespace ThemeConverter
         private static Dictionary<string, (float, string)> OverlayMapping = new Dictionary<string, (float, string)>();
         private static List<string> MappedVSTokens = new List<string>();
 
-        public static void CheckDuplicateMapping()
+        public static void CheckDuplicateMapping(Action<string> reportFunc)
         {
             var contents = System.IO.File.ReadAllText("TokenMappings.json");
             var file = JObject.Parse(contents);
@@ -37,7 +37,7 @@ namespace ThemeConverter
                 {
                     if (addedMappings.Contains(VSToken.ToString()))
                     {
-                        Console.WriteLine(key + ": " + VSToken.ToString());
+                        reportFunc(key + ": " + VSToken.ToString());
                     }
                     else
                     {
@@ -45,8 +45,6 @@ namespace ThemeConverter
                     }
                 }
             }
-
-            Console.WriteLine();
         }
 
         public static Dictionary<string, ColorKey[]> CreateScopeMapping()

@@ -7,6 +7,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ThemeConverter", "ThemeConv
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ThemeTests", "ThemeTests\ThemeTests.csproj", "{DBB1FE41-4D7A-46DD-8CC2-03FC634340EB}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ThemeConverterTests", "ThemeConverterTests\ThemeConverterTests.csproj", "{7B2AFD3A-CB0E-49C1-9302-3016529DF1E9}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -31,6 +33,14 @@ Global
 		{DBB1FE41-4D7A-46DD-8CC2-03FC634340EB}.Release|Any CPU.Build.0 = Release|Any CPU
 		{DBB1FE41-4D7A-46DD-8CC2-03FC634340EB}.Release|x86.ActiveCfg = Release|Any CPU
 		{DBB1FE41-4D7A-46DD-8CC2-03FC634340EB}.Release|x86.Build.0 = Release|Any CPU
+		{7B2AFD3A-CB0E-49C1-9302-3016529DF1E9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7B2AFD3A-CB0E-49C1-9302-3016529DF1E9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7B2AFD3A-CB0E-49C1-9302-3016529DF1E9}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{7B2AFD3A-CB0E-49C1-9302-3016529DF1E9}.Debug|x86.Build.0 = Debug|Any CPU
+		{7B2AFD3A-CB0E-49C1-9302-3016529DF1E9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7B2AFD3A-CB0E-49C1-9302-3016529DF1E9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7B2AFD3A-CB0E-49C1-9302-3016529DF1E9}.Release|x86.ActiveCfg = Release|Any CPU
+		{7B2AFD3A-CB0E-49C1-9302-3016529DF1E9}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
