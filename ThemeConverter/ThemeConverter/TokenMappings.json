@@ -589,6 +589,8 @@
       "VS Token": [
         "Environment&FileTabText&Background",
         "Environment&FileTabInactiveText&Background",
+        "Environment&FileTabInactiveGlyph&Background",
+        "Environment&FileTabButtonProvisionalInactiveGlyph&Background",
         "Environment&FileTabLastActiveText&Background",
         "Environment&AutoHideTabText&Background",
         "Environment&FileTabProvisionalInactiveForeground&Background",
@@ -764,7 +766,6 @@
         "Environment&FileTabButtonHoverSelectedInactiveGlyph&Background",
         "Environment&FileTabButtonProvisionalDownInactiveGlyph&Background",
         "Environment&FileTabButtonProvisionalDownSelectedInactiveGlyph&Background",
-        "Environment&FileTabButtonProvisionalHoverGlyph&Background",
         "Environment&FileTabButtonProvisionalHoverInactiveGlyph&Background",
         "Environment&FileTabButtonProvisionalHoverSelectedInactiveGlyph&Background",
         "Environment&FileTabButtonProvisionalHoverSelectedActiveGlyph&Background",
@@ -1333,6 +1334,10 @@
         "Environment&DocWellOverflowButtonMouseOverBorder&Background",
         "Environment&FileTabButtonHoverInactive&Background",
         "Environment&FileTabButtonHoverInactiveBorder&Background",
+        "Environment&FileTabButtonHoverSelectedActive&Background",
+        "Environment&FileTabButtonHoverSelectedActiveBorder&Background",
+        "Environment&FileTabButtonHoverSelectedInactive&Background",
+        "Environment&FileTabButtonHoverSelectedInactiveBorder&Background",
         "Environment&FileTabButtonProvisionalHoverSelectedActive&Background",
         "Environment&FileTabButtonProvisionalHoverSelectedActiveBorder&Background",
         "Environment&FileTabButtonProvisionalHoverSelectedInactive&Background",
@@ -4149,9 +4154,10 @@
       "VSC Token": "tab.hoverForeground",
       "VS Token": [
         "Environment&FileTabHotText&Background",
-        "Environment&FileTabHotGlyph&Background",
+        "Environment&FileTabHotGlyph&Background", //hover not select
         "Environment&AutoHideTabMouseOverText&Background",
-        "Environment&FileTabProvisionalHoverForeground&Background"
+        "Environment&FileTabProvisionalHoverForeground&Background", //when hover a non selected glyph and tab text should be same
+        "Environment&FileTabButtonProvisionalHoverGlyph&Background"
       ]
     },
     {
