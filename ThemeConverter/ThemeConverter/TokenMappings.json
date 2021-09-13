@@ -413,7 +413,6 @@
         "Environment&EnvironmentBackgroundGradientMiddle2&Background",
         "Environment&EnvironmentBackgroundTexture1&Background",
         "Environment&EnvironmentBackgroundTexture2&Background",
-        "Environment&ToolWindowBorder&Background",
         "Environment&ToolWindowTabBorder&Background",
         "Environment&ToolWindowTabMouseOverBorder&Background",
         "Environment&ToolWindowTabSeparator&Background",
@@ -561,8 +560,10 @@
       "VSC Token": "tab.activeForeground",
       "VS Token": [
         "Environment&FileTabIndicatorTextSelectedActive&Background",
+        "Environment&FileTabButtonSelectedActiveGlyph&Background", //hover selected
         "Environment&FileTabSelectedText&Background",
-        "Environment&FileTabProvisionalSelectedActiveForeground&Background"
+        "Environment&FileTabProvisionalSelectedActiveForeground&Background",
+        "Environment&FileTabButtonProvisionalSelectedActiveGlyph&Background" //provisional selected
       ]
     },
     {
@@ -769,8 +770,6 @@
         "Environment&FileTabButtonProvisionalHoverInactiveGlyph&Background",
         "Environment&FileTabButtonProvisionalHoverSelectedInactiveGlyph&Background",
         "Environment&FileTabButtonProvisionalHoverSelectedActiveGlyph&Background",
-        "Environment&FileTabButtonProvisionalSelectedActiveGlyph&Background",
-        "Environment&FileTabButtonSelectedActiveGlyph&Background",
         "Environment&QuickCustomizeButtonGlyphHover&Background",
         "Environment&QuickCustomizeButtonTextHover&Background",
         "Environment&StartPageButtonTextHover&Background",
@@ -1169,6 +1168,7 @@
     {
       "VSC Token": "sideBar.border",
       "VS Token": [
+        "Environment&ToolWindowBorder&Background"
       ]
     },
     {
@@ -4153,11 +4153,11 @@
     {
       "VSC Token": "tab.hoverForeground",
       "VS Token": [
-        "Environment&FileTabHotText&Background",
-        "Environment&FileTabHotGlyph&Background", //hover not select
         "Environment&AutoHideTabMouseOverText&Background",
-        "Environment&FileTabProvisionalHoverForeground&Background", //when hover a non selected glyph and tab text should be same
-        "Environment&FileTabButtonProvisionalHoverGlyph&Background"
+        "Environment&FileTabButtonProvisionalHoverGlyph&Background",
+        "Environment&FileTabHotGlyph&Background", //hover not select
+        "Environment&FileTabHotText&Background",
+        "Environment&FileTabProvisionalHoverForeground&Background" //when hover a non selected glyph and tab text should be same
       ]
     },
     {
