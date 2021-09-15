@@ -242,6 +242,7 @@
         "NewProjectDialog&Content&Background",
         "ThemedDialog&ListBox&Background",
         "ThemedDialog&WindowPanel&Background",
+        "ThemedDialog&WindowButton&Background",
         "ThemedUtilityDialog&WindowPanel&Background",
         "TreeView&Background&Background",
         "UserNotifications&NotificationGlyph&Background",
@@ -352,6 +353,7 @@
         "ThemedDialog&ActionButtonText&Background",
         "ThemedDialog&StartWindowDescription&Foreground",
         "ThemedDialog&PromotionBoxText&Background",
+        "ThemedDialog&WindowButtonGlyph&Background",
         "ThemedDialog&TagText&Background",
         "TreeView&DragOverItem&Foreground",
         "TreeView&Glyph&Background",
@@ -511,7 +513,8 @@
       "VS Token": [
         "Environment&FileTabIndicatorTextSelectedInactive&Background",
         "Environment&CommandBarTextMouseDown&Background",
-        "Environment&TitleBarActive&Background"
+        "Environment&TitleBarActive&Background",
+        "Environment&MainWindowButtonActiveGlyph&Background"
       ]
     },
     {
@@ -662,7 +665,6 @@
         "Environment&CommandBarHover&Background",
         "Environment&CommandBarHoverOverSelected&Background",
         "Environment&CommandBarHoverOverSelectedIcon&Background", //
-        "Environment&CommandBarHoverOverSelectedIconBorder&Background", //
         "Environment&CommandBarMouseDownBackgroundBegin&Background",
         "Environment&CommandBarMouseDownBackgroundEnd&Background",
         "Environment&CommandBarMouseDownBackgroundMiddle&Background",
@@ -716,6 +718,7 @@
         "GraphicsDesigners&SnapshotButtonActive&Background",
         "InfoBar&Button&Background",
         "InfoBar&ButtonMouseDown&Background",
+        "InfoBar&CloseButton&Background",
         "InformationBadge&Background&Background",
         "NotificationBubble&NotificationBubbleWindowButton&Background",
         "Promotion&LightboxDialogButton&Background",
@@ -727,7 +730,6 @@
         "TeamExplorer&ButtonPressed&Background",
         "TeamExplorer&CallToActionButton&Background",
         "TeamExplorer&CallToActionButtonPressed&Background",
-        "ThemedDialog&WindowButton&Background",
         "ThemedUtilityDialog&WindowButton&Background",
         "UserNotifications&BadgeButtonCountActive&Background",
         "UserNotifications&BadgeButtonCountInactive&Background",
@@ -757,6 +759,8 @@
         "CommonControls&ButtonDefault&Foreground",
         "CommonControls&ButtonHover&Foreground",
         "CommonControls&ButtonPressed&Foreground",
+        "Environment&MainWindowButtonHoverActiveGlyph&Background",
+        "Environment&MainWindowButtonDownGlyph&Background",
         "Environment&DocWellOverflowButtonMouseDownGlyph&Background",
         "Environment&DocWellOverflowButtonMouseOverGlyph&Background",
         "Environment&FileTabButtonDownInactiveGlyph&Background",
@@ -809,7 +813,6 @@
         "TeamExplorer&CallToActionButtonPressed&Foreground",
         "ThemedDialog&CloseWindowButtonHover&Foreground",
         "ThemedDialog&WindowButtonDownGlyph&Background",
-        "ThemedDialog&WindowButtonGlyph&Background",
         "ThemedDialog&WindowButtonHoverGlyph&Background",
         "UserNotifications&BadgeButtonCountActive&Foreground",
         "UserNotifications&BadgeButtonCountInactive&Foreground",
@@ -1330,6 +1333,10 @@
         "CodeSenseControls&PopupPinButtonHover&Foreground",
         "CommonControls&ButtonBorderHover&Background",
         "CommonControls&ButtonHover&Background",
+        "InfoBar&CloseButtonHover&Background",
+        "InfoBar&CloseButtonHoverBorder&Background",
+        "Environment&MainWindowButtonDown&Background",
+        "Environment&MainWindowButtonHoverActive&Background",
         "Environment&DocWellOverflowButtonMouseOverBackground&Background",
         "Environment&DocWellOverflowButtonMouseOverBorder&Background",
         "Environment&FileTabButtonHoverInactive&Background",
@@ -1372,7 +1379,6 @@
         "ThemedDialog&WindowButtonDown&Background",
         "ThemedDialog&WindowButtonHover&Background",
         "ThemedDialog&CloseWindowButtonHover&Background",
-        "ThemedDialog&WindowButtonHoverBorder&Background",
         "UserNotifications&BadgeButtonCountMouseOverActive&Background",
         "UserNotifications&BadgeButtonCountMouseOverInactive&Background",
         "UserNotifications&ToastActionButtonBorderHover&Background",
@@ -1403,12 +1409,14 @@
         "Promotion&LightboxDialogButtonDisabled&Foreground",
         "TeamExplorer&ButtonDisabled&Foreground",
         "TeamExplorer&CallToActionButtonDisabled&Foreground",
-        "UserNotifications&ToastActionButtonDisabled&Foreground"
+        "UserNotifications&ToastActionButtonDisabled&Foreground",
+        "Environment&MainWindowButtonHoverInactiveGlyph&Background"
       ]
     },
     {
       "VSC Token": "button.secondaryHoverBackground",
       "VS Token": [
+        "Environment&MainWindowButtonHoverInactive&Background"
       ]
     },
     {
@@ -2579,9 +2587,7 @@
         "Environment&CommandBarMenuMouseOverSubmenuGlyph&Background",
         "Environment&CommandBarMenuSubmenuGlyphHover&Background",
         "Environment&CommandBarSplitButtonMouseDownGlyph&Background",
-        "Environment&CommandBarSplitButtonMouseOverGlyph&Background",
-        "Environment&CommandBarTextSelected&Background", //
-        "Environment&CommandBarTextHoverOverSelected&Background" //
+        "Environment&CommandBarSplitButtonMouseOverGlyph&Background"
       ]
     },
     {
@@ -2597,6 +2603,8 @@
       "VS Token": [
         "Environment&CommandBarCheckBoxMouseOver&Background", //
         "Environment&CommandBarTextHover&Background", //
+        "Environment&CommandBarTextHoverOverSelected&Background", //
+        "Environment&CommandBarTextSelected&Background" //
       ]
     },
     {
@@ -3572,7 +3580,8 @@
     {
       "VSC Token": "titleBar.inactiveForeground",
       "VS Token": [
-        "Environment&MainWindowInactiveCaption&Foreground"
+        "Environment&MainWindowInactiveCaption&Foreground",
+        "Environment&MainWindowButtonInactiveGlyph&Background"
       ]
     },
     {
@@ -3649,6 +3658,7 @@
         "CommonControls&ButtonBorderFocused&Background",
         "CommonControls&ButtonBorderPressed&Background",
         "Environment&DocWellOverflowButtonMouseDownBorder&Background",
+        "Environment&MainWindowButtonHoverActiveBorder&Background",
         "Environment&FileTabButtonDownSelectedActiveBorder&Background",
         "Environment&FileTabButtonProvisionalDownSelectedActiveBorder&Background",
         "Environment&QuickCustomizeButtonBorder&Background",
@@ -3664,6 +3674,7 @@
         "TeamExplorer&ButtonPressedBorder&Background",
         "TeamExplorer&CallToActionButtonPressedBorder&Background",
         "ThemedDialog&WindowButtonBorder&Background",
+        "ThemedDialog&WindowButtonHoverBorder&Background",
         "ThemedDialog&WindowButtonDownBorder&Background",
         "WelcomeExperience&WelcomeExperienceButtonBorder&Background",
         "WelcomeExperience&WelcomeExperienceButtonMousedownBorder&Foreground",
@@ -3990,13 +4001,15 @@
       "VS Token": [
         // TODO: These don't work for menu item border
         "Environment&CommandBarMenuItemMouseOverBorder&Background",
-        "Environment&CommandBarFrameControlHover&Background",
-        "Environment&CommandBarBorder&Background" //
+        "Environment&CommandBarFrameControlHover&Background"
       ]
     },
     {
       "VSC Token": "menubar.selectionBorder",
       "VS Token": [
+        "Environment&CommandBarBorder&Background", //
+        "Environment&CommandBarHoverOverSelectedIconBorder&Background", //
+        "Environment&CommandBarSelectedBorder&Background" //
       ]
     },
     {

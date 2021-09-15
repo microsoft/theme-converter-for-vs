@@ -70,7 +70,7 @@ namespace ThemeConverter {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to ThemeConverter v0.0.2
+        ///   Looks up a localized string similar to Theme Converter for Visual Studio v0.0.2
         ///A utility that converts VSCode theme json file(s) to VS pkgdef file(s).
         ///For Microsoft internal usage only.
         ///

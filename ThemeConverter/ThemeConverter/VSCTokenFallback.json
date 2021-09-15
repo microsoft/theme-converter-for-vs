@@ -18,5 +18,7 @@
   "sideBarTitle.foreground": "sideBar.foreground",
   "tab.hoverBackground": "tab.inactiveBackground",
   "tab.hoverForeground": "tab.inactiveForeground",
-  "tab.hoverBorder": "tab.Border"
+  "tab.hoverBorder": "tab.Border",
+  "menu.selectionBorder": "menu.selectionBackground",
+  "menubar.selectionBorder": "menubar.selectionBackground"
 }

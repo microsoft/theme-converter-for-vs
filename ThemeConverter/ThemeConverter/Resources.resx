@@ -121,7 +121,7 @@
     <value>Show help text.</value>
   </data>
   <data name="HelpHeader" xml:space="preserve">
-    <value>ThemeConverter v0.0.2
+    <value>Theme Converter for Visual Studio v0.0.2
 A utility that converts VSCode theme json file(s) to VS pkgdef file(s).
 For Microsoft internal usage only.
 
