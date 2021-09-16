@@ -41,7 +41,7 @@ namespace ThemeConverter
                 {
                     lines[i] = lines[i].Remove(lines[i].IndexOf("//"), 2);
 
-                    if (!lines[i - 1].EndsWith(','))
+                    if (!lines[i - 1].EndsWith(',') && !lines[i - 1].EndsWith('{'))
                     {
                         lines[i - 1] = lines[i - 1] + ",";
                     }
