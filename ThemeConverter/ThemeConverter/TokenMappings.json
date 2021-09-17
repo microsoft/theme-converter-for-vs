@@ -2032,16 +2032,22 @@
     {
       "VSC Token": "editorHoverWidget.background",
       "VS Token": [
+        "Environment&ToolTip&Background",
+        "Editor Tooltip&Plain Text&Background"
       ]
     },
     {
       "VSC Token": "editorHoverWidget.border",
       "VS Token": [
+        "Environment&ToolTipBorder&Background"
       ]
     },
     {
       "VSC Token": "editorHoverWidget.foreground",
       "VS Token": [
+        "Environment&ToolTip&Foreground",
+        "Environment&ToolTipHintText&Background",
+        "Editor Tooltip&Plain Text&Foreground"
       ]
     },
     {
@@ -3040,14 +3046,11 @@
     {
       "VSC Token": "peekView.border",
       "VS Token": [
-        "Environment&ToolTipBorder&Background"
       ]
     },
     {
       "VSC Token": "peekViewEditor.background",
       "VS Token": [
-        "Environment&ToolTip&Background",
-        "Editor Tooltip&Plain Text&Background"
       ]
     },
     {
@@ -3098,9 +3101,6 @@
     {
       "VSC Token": "peekViewTitleDescription.foreground",
       "VS Token": [
-        "Environment&ToolTip&Foreground",
-        "Environment&ToolTipHintText&Background",
-        "Editor Tooltip&Plain Text&Foreground"
       ]
     },
     {
