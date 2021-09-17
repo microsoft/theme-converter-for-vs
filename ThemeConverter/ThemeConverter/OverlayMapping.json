@@ -7,6 +7,18 @@
     "Item1": 0.25,
     "Item2": "editor.background"
   },
+  "editor.selectionBackground": {
+      "Item1": 0.4,
+      "Item2": "editor.background"
+  },
+  "editor.foldBackground": {
+    "Item1": 1.0,
+    "Item2": "editor.background"
+  },
+  "editor.inactiveSelectionBackground": {
+    "Item1": 0.4,
+    "Item2": "editor.background"
+  },
   "editorBracketMatch.border": {
     "Item1": 1.0,
     "Item2": "editor.background"
@@ -36,6 +48,10 @@
     "Item2": "sideBar.background"
   },
   "list.hoverBackground": {
+    "Item1": 1.0,
+    "Item2": "sideBar.background"
+  },
+  "sideBarSectionHeader.background": {
     "Item1": 1.0,
     "Item2": "sideBar.background"
   }

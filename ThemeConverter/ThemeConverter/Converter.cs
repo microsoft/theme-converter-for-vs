@@ -31,8 +31,29 @@ namespace ThemeConverter
         {
             string themeName = Path.GetFileNameWithoutExtension(themeJsonFilePath);
 
-            // Parse VS Code theme file.
-            var text = File.ReadAllText(themeJsonFilePath);
+            // Parse VS Code theme file and uncomment the code.
+
+            var lines = File.ReadAllLines(themeJsonFilePath);
+
+            for (int i = 0; i < lines.Length; i++)
+            {
+                if (lines[i].Trim().StartsWith("//"))
+                {
+                    lines[i] = lines[i].Remove(lines[i].IndexOf("//"), 2);
+
+                    if (!lines[i - 1].EndsWith(',') && !lines[i - 1].EndsWith('{'))
+                    {
+                        lines[i - 1] = lines[i - 1] + ",";
+                    }
+                }
+            }
+
+            string text = string.Empty;
+            foreach (string str in lines)
+            {
+                text += str;
+            }
+
             var jobject = JObject.Parse(text);
             var theme = jobject.ToObject<ThemeFileContract>();
 
