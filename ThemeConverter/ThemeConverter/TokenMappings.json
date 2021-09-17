@@ -6,9 +6,6 @@
         "Text Editor Language Service Items&Comment",
         "Roslyn Text Editor MEF Items&xml doc comment - delimiter",
         "Roslyn Text Editor MEF Items&xml doc comment - text",
-        "Text Editor MEF Items&outlining.verticalrule&Foreground",
-        "Text Editor MEF Items&outlining.verticalrule&Background",
-        "Text Editor MEF Items&outlining.square&Foreground",
         "Text Editor Language Service Items&Collapsible Text (Collapsed)"
       ]
     },
@@ -505,7 +502,6 @@
         "NewProjectDialog&CheckBox&Background",
         "NewProjectDialog&Details&Background",
         "NewProjectDialog&TextBoxDisabled&Background",
-        "SearchControl&Disabled&Background",
         "StartPage&StartPageNewsBackground&Background",
         "ThemedDialog&WizardFooter&Background",
         "ThemedUtilityDialog&ActiveCaption&Background",
@@ -1871,6 +1867,7 @@
     {
       "VSC Token": "editor.foldBackground",
       "VS Token": [
+        "Text Editor MEF Items&outlining.collapsehintadornment&Background"
       ]
     },
     {
@@ -1916,7 +1913,6 @@
       "VS Token": [
         "Text Editor Text Manager Items&Selected Text&Background",
         "Text Editor MEF Items&Selected Text&Background",
-        "Text Editor MEF Items&outlining.collapsehintadornment&Background"
       ]
     },
     {
@@ -2206,6 +2202,9 @@
     {
       "VSC Token": "editorRuler.foreground",
       "VS Token": [
+        "Text Editor MEF Items&outlining.verticalrule&Foreground",
+        "Text Editor MEF Items&outlining.verticalrule&Background",
+        "Text Editor MEF Items&outlining.square&Foreground"
       ]
     },
     {
