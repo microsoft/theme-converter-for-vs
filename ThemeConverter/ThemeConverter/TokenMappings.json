@@ -1883,6 +1883,7 @@
     {
       "VSC Token": "editor.inactiveSelectionBackground",
       "VS Token": [
+        "Text Editor Text Manager Items&Inactive Selected Text&Background",
         "Output Window&Inactive Selected Text&Background"
       ]
     },
@@ -1917,7 +1918,6 @@
       "VS Token": [
         "Text Editor Text Manager Items&Selected Text&Background",
         "Text Editor MEF Items&Selected Text&Background",
-        "Text Editor Text Manager Items&Inactive Selected Text&Background",
         "Text Editor MEF Items&outlining.collapsehintadornment&Background"
       ]
     },
