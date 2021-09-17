@@ -21,6 +21,7 @@
   "tab.activeBorderTop": "tab.activeBackground",
   "tab.border": "tab.inactiveBackground",
   "tab.hoverBackground": "tab.inactiveBackground",
+  "editor.selectionForeground": "editor.foreground",
   "tab.hoverBorder": "tab.Border",
   "tab.hoverForeground": "tab.inactiveForeground",
   "variable.other.object.property.cs": "entity.name.variable.property.cs"

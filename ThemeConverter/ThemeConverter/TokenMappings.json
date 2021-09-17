@@ -5,7 +5,11 @@
       "VS Token": [
         "Text Editor Language Service Items&Comment",
         "Roslyn Text Editor MEF Items&xml doc comment - delimiter",
-        "Roslyn Text Editor MEF Items&xml doc comment - text"
+        "Roslyn Text Editor MEF Items&xml doc comment - text",
+        "Text Editor MEF Items&outlining.verticalrule&Foreground",
+        "Text Editor MEF Items&outlining.verticalrule&Background",
+        "Text Editor MEF Items&outlining.square&Foreground",
+        "Text Editor Language Service Items&Collapsible Text (Collapsed)"
       ]
     },
     {
@@ -1151,6 +1155,7 @@
         "Environment&ScrollBar&Background", //
         "Environment&ScrollBarBackground&Background", //
         "PackageManifestEditor&EditorContent&Background",
+        "Text Editor MEF Items&outlining.square&Background",
         "Text Editor Text Manager Items&Plain Text&Background", //
         "ThemedDialog&GridHeadingBackground&Background"
       ]
@@ -1165,7 +1170,6 @@
         "Roslyn Text Editor MEF Items&punctuation&Foreground",
         "Text Editor Text Manager Items&Plain Text&Foreground",
         "WebClient Diagnostic Tools&Plain Text&Background"
-
       ]
     },
     {
@@ -1913,7 +1917,8 @@
       "VS Token": [
         "Text Editor Text Manager Items&Selected Text&Background",
         "Text Editor MEF Items&Selected Text&Background",
-        "Text Editor Text Manager Items&Inactive Selected Text&Background"
+        "Text Editor Text Manager Items&Inactive Selected Text&Background",
+        "Text Editor MEF Items&outlining.collapsehintadornment&Background"
       ]
     },
     {
@@ -3993,6 +3998,7 @@
     {
       "VSC Token": "editor.selectionForeground",
       "VS Token": [
+        "Text Editor MEF Items&outlining.collapsehintadornment&Foreground"
       ]
     },
     {

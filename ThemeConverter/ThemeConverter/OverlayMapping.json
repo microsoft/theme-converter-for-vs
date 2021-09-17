@@ -7,6 +7,10 @@
     "Item1": 0.25,
     "Item2": "editor.background"
   },
+    "editor.selectionBackground": {
+      "Item1": 1.0,
+      "Item2": "editor.background"
+  },
   "editorBracketMatch.border": {
     "Item1": 1.0,
     "Item2": "editor.background"
