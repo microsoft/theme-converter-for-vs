@@ -13,25 +13,28 @@ namespace ThemeConverter
     {
         private static Dictionary<string, ColorKey[]> ScopeMappings = new Dictionary<string, ColorKey[]>();
         private static Dictionary<string, string> CategoryGuids = new Dictionary<string, string>();
-        private static Dictionary<string, string> ThemeNameGuids = new Dictionary<string, string>();
         private static Dictionary<string, string> VSCTokenFallback = new Dictionary<string, string>();
         private static Dictionary<string, (float, string)> OverlayMapping = new Dictionary<string, (float, string)>();
         private static List<string> MappedVSTokens = new List<string>();
+        private const string TokenColorsName = "tokenColors";
+        private const string VSCTokenName = "VSC Token";
+        private const string VSTokenName = "VS Token";
+        private const string TokenMappingFileName = "TokenMappings.json";
 
         public static void CheckDuplicateMapping(Action<string> reportFunc)
         {
-            var contents = System.IO.File.ReadAllText("TokenMappings.json");
+            var contents = System.IO.File.ReadAllText(TokenMappingFileName);
             var file = JObject.Parse(contents);
-            var colors = file["tokenColors"];
+            var colors = file[TokenColorsName];
 
             var addedMappings = new List<string>();
 
             foreach (var color in colors)
             {
-                var VSCToken = color["VSC Token"];
+                var VSCToken = color[VSCTokenName];
                 string key = VSCToken.ToString();
 
-                var VSTokens = color["VS Token"];
+                var VSTokens = color[VSTokenName];
 
                 foreach (var VSToken in VSTokens)
                 {
@@ -49,18 +52,18 @@ namespace ThemeConverter
 
         public static Dictionary<string, ColorKey[]> CreateScopeMapping()
         {
-            var contents = System.IO.File.ReadAllText("TokenMappings.json");
+            var contents = System.IO.File.ReadAllText(TokenMappingFileName);
 
             // JObject.Parse will skip JSON comments by default
             var file = JObject.Parse(contents);
 
-            var colors = file["tokenColors"];
+            var colors = file[TokenColorsName];
             foreach (var color in colors)
             {
-                var VSCToken = color["VSC Token"];
+                var VSCToken = color[VSCTokenName];
                 string key = VSCToken.ToString();
 
-                var VSTokens = color["VS Token"];
+                var VSTokens = color[VSTokenName];
                 List<ColorKey> values = new List<ColorKey>();
                 foreach (var VSToken in VSTokens)
                 {
@@ -121,19 +124,6 @@ namespace ThemeConverter
             }
 
             return CategoryGuids;
-        }
-
-        public static Dictionary<string, string> CreateThemeNameGuids()
-        {
-            var contents = System.IO.File.ReadAllText("ThemeNameGuid.json");
-            var file = JsonConvert.DeserializeObject<JObject>(contents);
-
-            foreach (var item in file)
-            {
-                ThemeNameGuids.Add(item.Key, item.Value.ToString());
-            }
-
-            return ThemeNameGuids;
         }
 
         public static Dictionary<string, string> CreateVSCTokenFallback()

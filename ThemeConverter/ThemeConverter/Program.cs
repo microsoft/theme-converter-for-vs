@@ -12,6 +12,9 @@ namespace ThemeConverter
 
     internal sealed class Program
     {
+        private const string PathToVSThemeFolder = @"Common7\IDE\CommonExtensions\Platform";
+        private const string PathToVSExe = @"Common7\IDE\devenv.exe";
+
         static int Main(string[] args)
         {
             try
@@ -94,7 +97,7 @@ namespace ThemeConverter
                 string pkgdefFilePath = Converter.ConvertFile(sourceFile, pkgdefOutputPath);
                 if (!string.IsNullOrEmpty(deployInstall))
                 {
-                    string deployFilePath = Path.Combine(deployInstall, @"Common7\IDE\CommonExtensions\Platform", Path.GetFileName(pkgdefFilePath));
+                    string deployFilePath = Path.Combine(deployInstall, PathToVSThemeFolder, Path.GetFileName(pkgdefFilePath));
                     File.Copy(pkgdefFilePath, deployFilePath, overwrite: true);
                 }
             }
@@ -107,7 +110,7 @@ namespace ThemeConverter
 
         private static void LaunchVS(string deployInstall)
         {
-            string vsPath = Path.Combine(deployInstall, @"Common7\IDE\devenv.exe");
+            string vsPath = Path.Combine(deployInstall, PathToVSExe);
             if (!File.Exists(vsPath))
                 throw new ApplicationException(String.Format(CultureInfo.CurrentUICulture, Resources.TargetDevEnvNotExistException, vsPath));
 
