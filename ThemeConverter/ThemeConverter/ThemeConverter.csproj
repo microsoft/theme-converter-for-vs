@@ -31,9 +31,6 @@
     <None Update="OverlayMapping.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Update="ThemeNameGuid.json">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
     <None Update="CategoryGuid.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>

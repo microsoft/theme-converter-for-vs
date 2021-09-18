@@ -152,10 +152,10 @@ namespace ThemeConverter
         #region Translate VS Theme
 
         /// <summary>
-        /// Method description.
+        /// Group converted colors by category.
         /// </summary>
-        /// <param name="theme">Parameter description.</param>
-        /// <returns>Return description.</returns>
+        /// <param name="theme">the theme contract.</param>
+        /// <returns>Mapping from Category to Color Tokens</returns>
         private static Dictionary<string, Dictionary<string, SettingsContract>> GroupColorsByCategory(ThemeFileContract theme)
         {
             // category -> colorKeyName => color value 
@@ -170,22 +170,25 @@ namespace ThemeConverter
             }
 
             // Add the editor colors
-            foreach (var ruleContract in theme.TokenColors)
+            if (theme.TokenColors != null)
             {
-                foreach (var scopeName in ruleContract.ScopeNames)
+                foreach (var ruleContract in theme.TokenColors)
                 {
-                    string[] scopes = scopeName.Split(',');
-                    foreach (var scopeRaw in scopes)
+                    foreach (var scopeName in ruleContract.ScopeNames)
                     {
-                        var scope = scopeRaw.Trim();
-                        foreach (string key in ScopeMappings.Value.Keys)
+                        string[] scopes = scopeName.Split(',');
+                        foreach (var scopeRaw in scopes)
                         {
-                            if (key.StartsWith(scope) && scope != "")
+                            var scope = scopeRaw.Trim();
+                            foreach (string key in ScopeMappings.Value.Keys)
                             {
-                                if (ScopeMappings.Value.TryGetValue(key, out var colorKeys))
+                                if (key.StartsWith(scope) && scope != "")
                                 {
-                                    keyUsed[key] = true;
-                                    AssignEditorColors(colorKeys, scope, ruleContract, ref colorCategories, ref assignBy);
+                                    if (ScopeMappings.Value.TryGetValue(key, out var colorKeys))
+                                    {
+                                        keyUsed[key] = true;
+                                        AssignEditorColors(colorKeys, scope, ruleContract, ref colorCategories, ref assignBy);
+                                    }
                                 }
                             }
                         }
@@ -209,20 +212,23 @@ namespace ThemeConverter
                             }
                         }
 
-                        foreach (var ruleContract in theme.TokenColors)
+                        if (theme.TokenColors != null)
                         {
-                            foreach (var scopeName in ruleContract.ScopeNames)
+                            foreach (var ruleContract in theme.TokenColors)
                             {
-                                string[] scopes = scopeName.Split(',');
-                                foreach (var scopeRaw in scopes)
+                                foreach (var scopeName in ruleContract.ScopeNames)
                                 {
-                                    var scope = scopeRaw.Trim();
-
-                                    if ((fallbackToken.StartsWith(scope) && scope != ""))
+                                    string[] scopes = scopeName.Split(',');
+                                    foreach (var scopeRaw in scopes)
                                     {
-                                        if (ScopeMappings.Value.TryGetValue(key, out var colorKeys))
+                                        var scope = scopeRaw.Trim();
+
+                                        if ((fallbackToken.StartsWith(scope) && scope != ""))
                                         {
-                                            AssignEditorColors(colorKeys, scope, ruleContract, ref colorCategories, ref assignBy);
+                                            if (ScopeMappings.Value.TryGetValue(key, out var colorKeys))
+                                            {
+                                                AssignEditorColors(colorKeys, scope, ruleContract, ref colorCategories, ref assignBy);
+                                            }
                                         }
                                     }
                                 }
@@ -281,7 +287,7 @@ namespace ThemeConverter
         /// Compute what is the compound color of 2 overlayed colors with transparency
         /// </summary>
         /// <param name="VSOpacity">What is the opacity that VS will use when displaying this color</param>
-        /// <returns></returns>
+        /// <returns>Color value for VS</returns>
         private static string GetCompoundColor(string overlayColor, string baseColor, float VSOpacity = 1)
         {
             overlayColor = ReviseColor(overlayColor);
