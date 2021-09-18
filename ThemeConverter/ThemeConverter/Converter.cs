@@ -170,7 +170,7 @@ namespace ThemeConverter
             }
 
             // Add the editor colors
-            if(theme.TokenColors != null)
+            if (theme.TokenColors != null)
             {
                 foreach (var ruleContract in theme.TokenColors)
                 {
