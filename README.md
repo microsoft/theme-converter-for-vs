@@ -10,7 +10,7 @@
 
  ## Instructions
  ### Using the tool
-1. Open command line in Admin mode. 
+1. Open command line in **Admin** mode. 
 2. Clone the repo
 3. Go to `<your_clone_path>\ThemeConverter\ThemeConverter` and build the converter project with `dotnet build ThemeConverter.csproj`. 
 4. Go to `<your_clone_path>\ThemeConverter\ThemeConverter\bin\Debug\net5.0`. 
@@ -24,6 +24,7 @@
     - If you just want to convert a theme and get the generated pkgdef:
       - Run `ThemeConverter.exe -i <path_to_theme_json> -o <output_path(optional)>`
       - Example: `ThemeConverter.exe -i "C:\myTheme\TestTheme.json" -o "C:\myTheme\results"`. This command will convert the theme and the generated pkgdef will be  `C:\myTheme\results\TestTheme.pkgdef`.
+8. Now you can see the your converted theme under `Tools -> Themes`! Enjoy!
 
 ### Getting a theme's json file
 1. Open VS Code. 
