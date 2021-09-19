@@ -128,7 +128,7 @@ namespace ThemeConverter {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Running UpdateConfiguration..
+        ///   Looks up a localized string similar to Running UpdateConfiguration (this might take a while)..
         /// </summary>
         internal static string RunningUpdateConfiguration {
             get {

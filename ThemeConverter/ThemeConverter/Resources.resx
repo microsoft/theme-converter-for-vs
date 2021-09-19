@@ -143,7 +143,7 @@ Arguments:</value>
     <value>The output folder path of the converted pkgdef(s). When specified, the converter will save the converted pkgdef(s) to this path. If not specified, the output will be saved under the same directory of the input file/folder. OPTIONAL</value>
   </data>
   <data name="RunningUpdateConfiguration" xml:space="preserve">
-    <value>Running UpdateConfiguration.</value>
+    <value>Running UpdateConfiguration (this might take a while).</value>
   </data>
   <data name="TargetDevEnvNotExistException" xml:space="preserve">
     <value>The devenv.exe file was not found at "{0}".</value>
