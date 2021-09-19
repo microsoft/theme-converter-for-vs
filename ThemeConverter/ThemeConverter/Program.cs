@@ -43,7 +43,7 @@ namespace ThemeConverter
 
                 if (inputPath == null || !IsValidPath(inputPath))
                 {
-                    throw new ApplicationException(Resources.InputNotExistException);
+                    throw new ApplicationException(String.Format(CultureInfo.CurrentUICulture, Resources.InputNotExistException, inputPath));
                 }
 
                 if (outputPath == null)
@@ -53,7 +53,7 @@ namespace ThemeConverter
 
                 if (targetVS != null && !Directory.Exists(targetVS))
                 {
-                    throw new ApplicationException(Resources.TargetVSNotExistException);
+                    throw new ApplicationException(String.Format(CultureInfo.CurrentUICulture, Resources.TargetVSNotExistException, targetVS));
                 }
 
                 Convert(inputPath, outputPath, targetVS);

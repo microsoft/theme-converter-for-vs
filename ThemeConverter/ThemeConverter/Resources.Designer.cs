@@ -92,7 +92,7 @@ namespace ThemeConverter {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to The input file or folder does not exist..
+        ///   Looks up a localized string similar to Could not find input file or folder: &quot;{0}&quot;..
         /// </summary>
         internal static string InputNotExistException {
             get {
@@ -155,7 +155,7 @@ namespace ThemeConverter {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to The target VS installation directory does not exist..
+        ///   Looks up a localized string similar to The target VS installation directory &quot;{0}&quot; does not exist..
         /// </summary>
         internal static string TargetVSNotExistException {
             get {
