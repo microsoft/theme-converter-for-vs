@@ -8,12 +8,15 @@ namespace ThemeConverter
     using System.Globalization;
     using System.IO;
     using System.Linq;
+    using System.Reflection;
     using Mono.Options;
 
     internal sealed class Program
     {
         private const string PathToVSThemeFolder = @"Common7\IDE\CommonExtensions\Platform";
         private const string PathToVSExe = @"Common7\IDE\devenv.exe";
+
+        private static readonly string ProductVersion = Assembly.GetExecutingAssembly().GetName().Version.ToString();
 
         static int Main(string[] args)
         {
@@ -34,7 +37,7 @@ namespace ThemeConverter
 
                 if (showHelp)
                 {
-                    Console.WriteLine(Resources.HelpHeader);
+                    Console.WriteLine(string.Format(CultureInfo.CurrentUICulture, Resources.HelpHeader, ProductVersion));
                     options.WriteOptionDescriptions(Console.Out);
                     return 0;
                 }
