@@ -131,7 +131,7 @@ Arguments:</value>
     <value>The source path of the theme json file or the folder that contains the theme files.</value>
   </data>
   <data name="InputNotExistException" xml:space="preserve">
-    <value>The input file or folder does not exist.</value>
+    <value>Could not find input file or folder: "{0}".</value>
   </data>
   <data name="LaunchingVS" xml:space="preserve">
     <value>Launching Visual Studio.</value>
@@ -143,7 +143,7 @@ Arguments:</value>
     <value>The output folder path of the converted pkgdef(s). When specified, the converter will save the converted pkgdef(s) to this path. If not specified, the output will be saved under the same directory of the input file/folder. OPTIONAL</value>
   </data>
   <data name="RunningUpdateConfiguration" xml:space="preserve">
-    <value>Running UpdateConfiguration.</value>
+    <value>Running UpdateConfiguration (this might take a while).</value>
   </data>
   <data name="TargetDevEnvNotExistException" xml:space="preserve">
     <value>The devenv.exe file was not found at "{0}".</value>
@@ -152,7 +152,7 @@ Arguments:</value>
     <value>The installation path of the target VS. When specified, the converter will patch the converted pkgdef(s) to the target VS, run "updateConfiguration" and launch this VS. (e.g.: "C:\Program Files\Microsoft Visual Studio\2022\Preview") OPTIONAL</value>
   </data>
   <data name="TargetVSNotExistException" xml:space="preserve">
-    <value>The target VS installation directory does not exist.</value>
+    <value>The target VS installation directory "{0}" does not exist.</value>
   </data>
   <data name="UpdateConfigurationException" xml:space="preserve">
     <value>Fatal error running "devenv.exe /updateconfiguration".</value>

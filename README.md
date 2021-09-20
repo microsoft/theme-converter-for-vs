@@ -10,12 +10,21 @@
 
  ## Instructions
  ### Using the tool
-1. Open command line in Admin mode. 
+1. Open command line in **Admin** mode. 
 2. Clone the repo
 3. Go to `<your_clone_path>\ThemeConverter\ThemeConverter` and build the converter project with `dotnet build ThemeConverter.csproj`. 
 4. Go to `<your_clone_path>\ThemeConverter\ThemeConverter\bin\Debug\net5.0`. 
 5. Get the theme file with steps described in section [Getting a theme's json file](https://github.com/microsoft/theme-converter#getting-a-themes-json-file)
-6. Run `ThemeConverter.exe -h` to see the usage of the tool and use the tool according to your needs.
+7. Run `ThemeConverter.exe -h` to see the usage of the tool and use the tool according to your needs.
+    - If you want to convert a theme and patch it to a target VS:
+      - Run `ThemeConverter.exe -i <path_to_theme_json> -t <target_vs_installation_path>`
+      - Example: `ThemeConverter.exe -i "C:\myTheme\TestTheme.json" -t "C:\Program Files\Microsoft Visual Studio\2022\Preview"`. This command will convert the TestTheme, patch the generated json to the target VS and launch the VS with the converted theme.
+      - Note: the VS installation path can be found in your VS installer (the location field on the modify page).
+      - Now you can see the your converted theme under `Tools -> Themes`! Enjoy!
+
+    - If you just want to convert a theme and get the generated pkgdef:
+      - Run `ThemeConverter.exe -i <path_to_theme_json> -o <output_path>`
+      - Example: `ThemeConverter.exe -i "C:\myTheme\TestTheme.json" -o "C:\myTheme\results"`. This command will convert the theme and the generated pkgdef will be  `C:\myTheme\results\TestTheme.pkgdef`.
 
 ### Getting a theme's json file
 1. Open VS Code. 
