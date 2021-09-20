@@ -4,6 +4,7 @@
     <OutputType>Exe</OutputType>
     <TargetFramework>net5.0</TargetFramework>
     <LangVersion>latest</LangVersion>
+	<Version>0.1.0</Version>
   </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="Mono.Options" Version="6.12.0.148" />

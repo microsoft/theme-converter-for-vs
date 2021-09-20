@@ -8,6 +8,7 @@ namespace ThemeConverter
     using System.Globalization;
     using System.IO;
     using System.Linq;
+    using System.Reflection;
     using Mono.Options;
 
     internal sealed class Program
@@ -34,7 +35,7 @@ namespace ThemeConverter
 
                 if (showHelp)
                 {
-                    Console.WriteLine(Resources.HelpHeader);
+                    Console.WriteLine(string.Format(CultureInfo.CurrentUICulture, Resources.HelpHeader, ProductVersion));
                     options.WriteOptionDescriptions(Console.Out);
                     return 0;
                 }
@@ -67,6 +68,8 @@ namespace ThemeConverter
                 return -1;
             }
         }
+
+        private static string ProductVersion => Assembly.GetExecutingAssembly().GetName().Version.ToString();
 
         private static string GetDirName(string path)
         {
