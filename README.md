@@ -36,24 +36,26 @@
 
 ### Creating a VSIX for the new theme
 This section describes how you can create a VSIX with the converted theme for publishing and sharing.
-1. In VS 2022, create a new "Empty VSIX Project"
-2. Select the project node and open the "Add existing Item" window: Use "Shift + Alt + A"; right-click on project node, select Add > Existing Item; or navigate to Project -> Add Existing Item...
+1. In VS 2022, create a new "Empty VSIX Project."
+2. Select the project node and open the "Add existing Item" window: Use "Shift + Alt + A" or right-click on the project node, select Add > Existing Item.
 3. Set filter to All Files (*.*) and select the converted .pkgdef file(s) that you want to include in this VSIX.
-5. Select the newly added pkgdef file in the solution explorer and open the properties window
-6. Set `Copy to Output Directory` to `Copy always`
-7. Set `Include in VSIX` to `true`
-8. Open the `source.extension.vsixmanifest` file, select Assets, select New.
+5. Select the newly added pkgdef file in the Solution Explorer and open the Properties window. If the Properties window is not already open, navigate to the View menu at the top > Properties Window.
+<img width="220" alt="blueReadme_propertieswindow" src="https://user-images.githubusercontent.com/12738587/133951341-d8ae0748-14f4-4e31-9e83-2d646b0caab1.png">
+
+6. Set `Copy to Output Directory` to `Copy always`.
+7. Set `Include in VSIX` to `true`.
+8. Open the `source.extension.vsixmanifest` file, then select Assets, select New.
 9. Set `Type` to `Microsoft.VisualStudio.VsPackage`, and `Source` to `File on filesystem`.
 10. Select Browse and select the .pkgdef you added. Select OK.
-11. Edit other fields in the vsixmanifest as desired (author, version, company, etc)
+11. Edit other fields in the vsixmanifest as desired (author, version, company, etc).
 12. Build solution and you now have a vsix in the output folder! Your new theme is most compatible with Visual Studio 2022 Preview 3 and up.
 
 ### Removing a converted theme from VS
 1. Open target VS and switch to some theme that will not be deleted (like Blue theme).
 2. Go to `<vs_install_dir>\Common7\IDE\CommonExtensions\Platform`. e.g: `C:\Program Files\Microsoft Visual Studio\2022\Preview\Common7\IDE\CommonExtensions\Platform`
-and delete the pkgdef of the theme that the you want to remove (The name of the pkgdef will match the name of the theme.)
+and delete the pkgdef of the theme that the you want to remove (The name of the pkgdef will match the name of the theme).
 3. Open Developer Command Prompt of the target VS and run `devenv /updateConfiguration`.
-4. Launch VS again - the themes should now be removed.
+4. Launch VS again, and the themes should now be removed.
 
 # Support
 
