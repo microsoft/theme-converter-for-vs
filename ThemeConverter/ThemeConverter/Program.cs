@@ -16,6 +16,8 @@ namespace ThemeConverter
         private const string PathToVSThemeFolder = @"Common7\IDE\CommonExtensions\Platform";
         private const string PathToVSExe = @"Common7\IDE\devenv.exe";
 
+        private static readonly string ProductVersion = Assembly.GetExecutingAssembly().GetName().Version.ToString();
+
         static int Main(string[] args)
         {
             try
@@ -68,8 +70,6 @@ namespace ThemeConverter
                 return -1;
             }
         }
-
-        private static string ProductVersion => Assembly.GetExecutingAssembly().GetName().Version.ToString();
 
         private static string GetDirName(string path)
         {
