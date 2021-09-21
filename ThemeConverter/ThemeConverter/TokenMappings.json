@@ -471,6 +471,7 @@
         "Environment&InactiveCaption&Background",
         "Environment&MainWindowActiveCaption&Background",
         "Environment&MainWindowCloudEnvironmentInactive&Background",
+        "Environment&MainWindowInactiveCaption&Background",
         "Environment&PanelSeparator&Background",
         "Environment&PanelSubGroupSeparator&Background",
         "Environment&PanelTitleBar&Background",
@@ -485,6 +486,7 @@
         "Environment&ProjectDesignerTabSepBottomGradientBegin&Background",
         "Environment&ProjectDesignerTabSepTopGradientEnd&Background",
         "Environment&TitleBarDragHandleActive&Background",
+        "Environment&TitleBarInactive&Background",
         "Environment&TitleBarInactiveGradientBegin&Background",
         "Environment&TitleBarInactiveGradientEnd&Background",
         "Environment&ToolboxSelectedHeadingBegin&Background",
@@ -521,6 +523,8 @@
         "Environment&CommandBarTextMouseDown&Background",
         "Environment&FileTabIndicatorTextSelectedInactive&Background",
         "Environment&MainWindowButtonActiveGlyph&Background",
+        "Environment&MainWindowButtonInactiveGlyph&Background",
+        "Environment&MainWindowInactiveCaption&Foreground",
         "Environment&TitleBarActive&Background"
       ]
     },
@@ -3753,15 +3757,11 @@
     {
       "VSC Token": "titleBar.inactiveBackground",
       "VS Token": [
-        "Environment&MainWindowInactiveCaption&Background",
-        "Environment&TitleBarInactive&Background"
       ]
     },
     {
       "VSC Token": "titleBar.inactiveForeground",
       "VS Token": [
-        "Environment&MainWindowInactiveCaption&Foreground",
-        "Environment&MainWindowButtonInactiveGlyph&Background"
       ]
     },
     {
