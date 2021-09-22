@@ -1155,6 +1155,7 @@
         "Environment&ScrollBarBackground&Background", //
         "PackageManifestEditor&EditorContent&Background",
         "Text Editor MEF Items&outlining.square&Background",
+        "Text Editor Text Manager Items&Visible Whitespace&Background",
         "Text Editor Text Manager Items&Plain Text&Background", //
         "ThemedDialog&GridHeadingBackground&Background"
       ]
@@ -2259,6 +2260,7 @@
     {
       "VSC Token": "editorWhitespace.foreground",
       "VS Token": [
+        "Text Editor Text Manager Items&Visible Whitespace&Foreground"
       ]
     },
     {

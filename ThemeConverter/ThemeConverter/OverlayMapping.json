@@ -19,6 +19,10 @@
     "Item1": 0.4,
     "Item2": "editor.background"
   },
+  "editorWhitespace.foreground": {
+    "Item1": 1.0,
+    "Item2": "editor.background"
+  },
   "editorBracketMatch.border": {
     "Item1": 1.0,
     "Item2": "editor.background"
