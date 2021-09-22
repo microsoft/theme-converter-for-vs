@@ -55,14 +55,19 @@ jobs:
     continueOnError: false    
 
   # Run tests
-  - task: VSTest@2
+  #- task: VSTest@2
+  #  displayName: Run Tests
+  #  inputs:
+  #    testSelector: 'testAssemblies'
+  #    testAssemblyVer2: '**\ThemeConverterTests.dll'
+  #    searchFolder: '$(System.DefaultWorkingDirectory)'
+  #    vsTestVersion: '16.0'
+  - task: DotNetCoreCLI@2
     displayName: Run Tests
     inputs:
-      testSelector: 'testAssemblies'
-      testAssemblyVer2: '**\ThemeConverterTests.dll'
-      searchFolder: '$(System.DefaultWorkingDirectory)'
-      vsTestVersion: '16.0'
-
+      command: 'test'
+      projects: '**/ThemeConverterTests.csproj'
+      
   # Run component governance detection
   # See http://aka.ms/cgdocs for more info
   - task: ComponentGovernanceComponentDetection@0
