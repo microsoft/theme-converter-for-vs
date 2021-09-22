@@ -1948,11 +1948,14 @@
     {
       "VSC Token": "editor.wordHighlightBackground",
       "VS Token": [
+        "Text Editor MEF Items&MarkerFormatDefinition/HighlightedReference&Background"
       ]
     },
     {
       "VSC Token": "editor.wordHighlightStrongBackground",
       "VS Token": [
+        "Text Editor MEF Items&MarkerFormatDefinition/HighlightedDefinition&Background",
+        "Text Editor MEF Items&MarkerFormatDefinition/HighlightedWrittenReference&Background"
       ]
     },
     {
@@ -4025,11 +4028,14 @@
     {
       "VSC Token": "editor.wordHighlightBorder",
       "VS Token": [
+        "Text Editor MEF Items&MarkerFormatDefinition/HighlightedReference&Foreground"
       ]
     },
     {
       "VSC Token": "editor.wordHighlightStrongBorder",
       "VS Token": [
+        "Text Editor MEF Items&MarkerFormatDefinition/HighlightedDefinition&Foreground",
+        "Text Editor MEF Items&MarkerFormatDefinition/HighlightedWrittenReference&Foreground"
       ]
     },
     {
