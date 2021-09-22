@@ -22,6 +22,9 @@
   "tab.border": "tab.inactiveBackground",
   "tab.hoverBackground": "tab.inactiveBackground",
   "editor.selectionForeground": "editor.foreground",
+  "editor.selectionHighlightBorder": "editor.background",
+  "editor.wordHighlightBorder": "editor.background",
+  "editor.wordHighlightStrongBorder": "editor.background",
   "tab.hoverBorder": "tab.Border",
   "tab.hoverForeground": "tab.inactiveForeground",
   "variable.other.object.property.cs": "entity.name.variable.property.cs"
