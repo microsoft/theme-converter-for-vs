@@ -39,7 +39,7 @@ namespace ThemeConverterTests
             string pkgdefPath = ConvertTheme("Invalid_MissingCriticalColors.json");
             File.Exists(pkgdefPath).Should().BeTrue();
             string[] lines = File.ReadAllLines(pkgdefPath);
-            lines.Where(l => l.Contains("\"Data\"=hex")).Count().Should().Be(1);
+            lines.Where(l => l.Contains("\"Data\"=hex")).Count().Should().Be(10);
         }
 
         private static string ConvertTheme(string testFileName)
