@@ -1,6 +1,8 @@
 # Theme Converter for Visual Studio
  This is a CLI tool that takes in a VS Code theme’s json file and converts it into a VS theme. 
  
+[<img width="700" alt="Tutorial on converting a theme" src="https://user-images.githubusercontent.com/12738587/134434509-c948f72d-82db-404a-95f2-ccdd1ffe353a.png">](https://youtu.be/lsInDJdx6As?t=2133)
+ 
  ## Prerequisites
  1. VS Code
  2. [VS 2022 Preview 3 or later](https://visualstudio.microsoft.com/vs/preview/) for best results
