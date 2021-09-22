@@ -53,7 +53,7 @@ jobs:
       platform: $(Platform)
       configuration: $(BuildConfiguration)
     continueOnError: false    
-
+      
   # Run component governance detection
   # See http://aka.ms/cgdocs for more info
   - task: ComponentGovernanceComponentDetection@0
@@ -74,6 +74,14 @@ jobs:
       microsoftAnalyzersVersion: 2.9.4
     condition: succeededOrFailed()
     continueOnError: True
+
+  # Run tests
+  - task: DotNetCoreCLI@2
+    displayName: Run Tests
+    inputs:
+      command: 'test'
+      projects: '**/ThemeConverterTests.csproj'
+      arguments: '--configuration Release'
 
   # Anti-Malware Scan of build sources and/or artifacts
   # See https://www.1eswiki.com/wiki/AntiMalware_Scan_Build_Task for more info

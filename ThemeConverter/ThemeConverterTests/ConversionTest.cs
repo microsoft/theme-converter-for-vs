@@ -5,6 +5,7 @@ namespace ThemeConverterTests
 {
     using System;
     using System.IO;
+    using System.Linq;
     using System.Reflection;
     using FluentAssertions;
     using ThemeConverter;
@@ -26,10 +27,10 @@ namespace ThemeConverterTests
         [Fact]
         public void Invalid_NoColors()
         {
-            Assert.Throws<NullReferenceException>(() =>
-            {
-                ConvertTheme("Invalid_NoColors.json");
-            });
+            string pkgdefPath = ConvertTheme("Invalid_NoColors.json");
+            File.Exists(pkgdefPath).Should().BeTrue();
+            string[] lines = File.ReadAllLines(pkgdefPath);
+            lines.Where(l => l.Contains("\"Data\"=hex")).Should().BeEmpty();
         }
 
         [Fact]
@@ -37,6 +38,8 @@ namespace ThemeConverterTests
         {
             string pkgdefPath = ConvertTheme("Invalid_MissingCriticalColors.json");
             File.Exists(pkgdefPath).Should().BeTrue();
+            string[] lines = File.ReadAllLines(pkgdefPath);
+            lines.Where(l => l.Contains("\"Data\"=hex")).Count().Should().Be(1);
         }
 
         private static string ConvertTheme(string testFileName)
