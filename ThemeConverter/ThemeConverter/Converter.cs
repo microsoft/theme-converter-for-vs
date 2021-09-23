@@ -13,6 +13,7 @@ namespace ThemeConverter
     public sealed class Converter
     {
         private static Guid DarkThemeId = new Guid("{1ded0138-47ce-435e-84ef-9ec1f439b749}");
+        private static Guid LightThemeId = new Guid("{de3dbbcd-f642-433c-8353-8f1df4370aba}");
 
         private static Lazy<Dictionary<string, ColorKey[]>> ScopeMappings = new Lazy<Dictionary<string, ColorKey[]>>(ParseMapping.CreateScopeMapping());
         private static Lazy<Dictionary<string, string>> CategoryGuids = new Lazy<Dictionary<string, string>>(ParseMapping.CreateCategoryGuids());
@@ -112,9 +113,9 @@ namespace ThemeConverter
                     {
                         writer.WriteLine($"    <Theme Name=\"{themeName}\" GUID=\"{themeGuid:B}\" FallbackId=\"{DarkThemeId:B}\">");
                     }
-                    else // light theme will fallback to VS light theme by default
+                    else
                     {
-                        writer.WriteLine($"    <Theme Name=\"{themeName}\" GUID=\"{themeGuid:B}\">");
+                        writer.WriteLine($"    <Theme Name=\"{themeName}\" GUID=\"{themeGuid:B}\" FallbackId=\"{LightThemeId:B}\">");
                     }
 
                     foreach (var category in colorCategories)
