@@ -5,8 +5,7 @@
       "VS Token": [
         "Text Editor Language Service Items&Comment",
         "Roslyn Text Editor MEF Items&xml doc comment - delimiter",
-        "Roslyn Text Editor MEF Items&xml doc comment - text",
-        "Text Editor Language Service Items&Collapsible Text (Collapsed)"
+        "Roslyn Text Editor MEF Items&xml doc comment - text"
       ]
     },
     {
@@ -84,7 +83,8 @@
     {
       "VSC Token": "string.unquoted.preprocessor.message.cs",
       "VS Token": [
-        "Text Editor MEF Items&preprocessor text"
+        "Text Editor MEF Items&preprocessor text",
+        "Text Editor Text Marker Items&Collapsible Text (Collapsed)&Foreground"
       ]
     },
     {
