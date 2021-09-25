@@ -157,7 +157,7 @@ jobs:
       rootFolderOrFile: '$(ProductBinariesFolder)'
       includeRootFolder: true
       archiveType: 'zip'
-      archiveFile: '$(Build.StagingDirectory)/ThemeConverter-$(Build.BuildNumber).zip' 
+      archiveFile: '$(Build.StagingDirectory)/ThemeConverter-$(VersionMajor).$(VersionMinor).$(Build.BuildNumber).zip' 
       replaceExistingArchive: true
 
   # Publish staging artifacts
