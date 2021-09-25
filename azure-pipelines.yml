@@ -28,6 +28,14 @@ variables:
     value: Release
   - name: ProductBinariesFolder
     value: '$(System.DefaultWorkingDirectory)/ThemeConverter/ThemeConverter/bin/$(BuildConfiguration)/net5.0'
+  - name: VersionMajor
+    value: 0
+  - name: VersionMinor
+    value: 1
+  - name: AssemblyVersion
+    value: $(VersionMajor).$(VersionMinor).0.0
+  - name: ProductVersion
+    value: $(VersionMajor).$(VersionMinor).$(Build.BuildNumber)
     
 jobs:
 - job: Build_And_Compliance
@@ -52,6 +60,7 @@ jobs:
       solution: $(SolutionFile)
       platform: $(Platform)
       configuration: $(BuildConfiguration)
+      msbuildArguments: /Property:Version=$(ProductVersion) /Property:FileVersion=$(ProductVersion) /Property:AssemblyVersion=$(AssemblyVersion)
     continueOnError: false    
       
   # Run component governance detection
@@ -148,7 +157,7 @@ jobs:
       rootFolderOrFile: '$(ProductBinariesFolder)'
       includeRootFolder: true
       archiveType: 'zip'
-      archiveFile: '$(Build.StagingDirectory)/ThemeConverter-$(Build.BuildNumber).zip' 
+      archiveFile: '$(Build.StagingDirectory)/ThemeConverter-$(VersionMajor).$(VersionMinor).$(Build.BuildNumber).zip' 
       replaceExistingArchive: true
 
   # Publish staging artifacts
