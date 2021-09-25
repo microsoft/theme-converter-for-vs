@@ -35,7 +35,7 @@ variables:
   - name: AssemblyVersion
     value: $(VersionMajor).$(VersionMinor).0.0
   - name: ProductVersion
-    value: $(VersionMajor).$(VersionMinor).$(Build.BuildNumber).0
+    value: $(VersionMajor).$(VersionMinor).$(Build.BuildNumber)
     
 jobs:
 - job: Build_And_Compliance
