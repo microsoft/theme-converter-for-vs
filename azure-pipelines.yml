@@ -47,6 +47,12 @@ jobs:
   - checkout: self
     clean: true
 
+  - task: MicroBuildSigningPlugin@3
+    displayName: Install Signing Plugin
+    inputs:
+      signType: 'real'
+      feedSource: 'https://devdiv.pkgs.visualstudio.com/DefaultCollection/_packaging/MicroBuildToolset/nuget/v3/index.json'
+
   - task: NuGetCommand@2
     displayName: Restore NuGet Packages
     inputs:
@@ -166,3 +172,7 @@ jobs:
     inputs:
       PathtoPublish: $(Build.StagingDirectory)
   
+
+  - task: MicroBuildCleanup@1
+    displayName: Build Cleanup
+    condition: succeededOrFailed()
