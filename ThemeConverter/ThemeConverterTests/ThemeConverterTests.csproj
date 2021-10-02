@@ -25,10 +25,16 @@
   </ItemGroup>
 
   <ItemGroup>
-    <None Update="TestFiles\Invalid_MissingCriticalColors.json">
+    <None Update="TestFiles\Complete_Dark.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Update="TestFiles\Invalid_NoColors.json">
+    <None Update="TestFiles\Incomplete_MissingCriticalColors.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="TestFiles\Incomplete_NoColors.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="TestFiles\Complete_Light.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
   </ItemGroup>
