@@ -33,6 +33,20 @@
       ]
     },
     {
+      "VSC Token": "entity.name.class.element.taghelper",
+      "VS Token": [
+        "WebEditor&RazorTagHelperElement",
+        "WebEditor&RazorComponentElement"
+      ]
+    },
+    { 
+      "VSC Token": "entity.name.class.attribute.taghelper",
+      "VS Token": [
+        "WebEditor&RazorTagHelperAttribute",
+        "WebEditor&RazorComponentAttribute"
+      ]
+    },
+    {
       "VSC Token": "entity.name.tag.html",
       "VS Token": [
         "Text Editor MEF Items&HTML Element Name"
@@ -159,7 +173,12 @@
       "VS Token": [
         "Text Editor Language Service Items&String",
         "Roslyn Text Editor MEF Items&string - verbatim",
-        "Roslyn Text Editor MEF Items&xml doc comment - attribute value",
+        "Roslyn Text Editor MEF Items&xml doc comment - attribute value"
+      ]
+    },
+    {
+      "VSC Token": "string.quoted.double.html",
+      "VS Token":[
         "Text Editor MEF Items&HTML Attribute Value"
       ]
     },
