@@ -72,5 +72,6 @@
   "TeamExplorer": "{4aff231b-f28a-44f0-a66b-1beeb17cb920}",
   "VersionControl": "{6be84f44-74e4-4e5f-aee9-1b930f431375}",
   "WorkItemEditor": "{2138d120-456d-425e-80b5-88d2401fca23}",
-  "PackageManifestEditor": "{3f27d653-86e6-4a04-adb6-a35efa6c8f05}"
+  "PackageManifestEditor": "{3f27d653-86e6-4a04-adb6-a35efa6c8f05}",
+  "WebEditor": "{75a05685-00a8-4ded-bae5-e7a50bfa929a}"
 }
