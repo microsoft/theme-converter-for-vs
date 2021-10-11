@@ -2,7 +2,7 @@
 Theme Converter is a CLI tool which allows you to convert your VS Code theme to work in Visual Studio. It's a simple tool that maps the colors of a theme to Visual Studio. Themes can be packaged into VSIXs and uploaded to the Marketplace so that more people can use your theme! This allows developers who use Visual Studio, or use both VS Code and Visual Studio, to quickly get access to a wide range of fun and interesting themes! 
 
 Here's a quick overview on how the Theme Converter works:
-[<img width="700" alt="Tutorial on converting a theme" src="https://user-images.githubusercontent.com/12738587/134434509-c948f72d-82db-404a-95f2-ccdd1ffe353a.png">](https://youtu.be/lsInDJdx6As?t=2133)
+[<img width="700" alt="Tutorial on converting a theme" src="https://user-images.githubusercontent.com/12738587/134434509-c948f72d-82db-404a-95f2-ccdd1ffe353a.png">](https://www.youtube.com/watch?v=2Gwqr5uuBt4)
 
 Our community of authors have already converted a handful of VS Code themes to work in Visual Studio. [Feel free to take a look here](https://aka.ms/vsthemes).
  
