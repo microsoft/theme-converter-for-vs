@@ -2617,6 +2617,7 @@
         "Cider&ListItemSecondarySelected&Foreground",
         "Cider&ListItemSelected&Foreground",
         "CommonControls&ComboBoxListItemTextHover&Background",
+        "CommonDocument&ListItemTextSelected&Background",
         "Diagnostics&AdvancedListItemSelected&Foreground",
         "Diagnostics&ControlSelectedItem&Foreground",
         "Environment&ComboBoxItemMouseOverText&Background", //
@@ -4187,7 +4188,6 @@
         "CommonDocument&ListItemTextFocused&Background",
         "CommonDocument&ListItemTextHover&Background",
         "CommonDocument&ListItemTextPressed&Background",
-        "CommonDocument&ListItemTextSelected&Background",
         "CommonDocument&ListItemTextUnfocused&Background",
         "Diagnostics&AdvancedListItemHover&Foreground",
         "NewProjectDialog&WonderbarMouseOver&Foreground", //
