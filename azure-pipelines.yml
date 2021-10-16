@@ -53,7 +53,7 @@ jobs:
       signType: $(SignType)
       feedSource: 'https://devdiv.pkgs.visualstudio.com/DefaultCollection/_packaging/MicroBuildToolset/nuget/v3/index.json'
     env:
-      TeamName: $(_TeamName)      
+      TeamName: 'VS Core - IDE Experience'
 
   - task: NuGetCommand@2
     displayName: Restore NuGet Packages
