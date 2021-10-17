@@ -68,7 +68,7 @@ jobs:
       solution: $(SolutionFile)
       platform: $(Platform)
       configuration: $(BuildConfiguration)
-      msbuildArguments: /Property:Version=$(ProductVersion) /Property:FileVersion=$(ProductVersion) /Property:AssemblyVersion=$(AssemblyVersion)
+      msbuildArguments: /Property:Version=$(ProductVersion) /Property:FileVersion=$(ProductVersion) /Property:AssemblyVersion=$(AssemblyVersion) /Property:SignType=$(SignType)
     continueOnError: false    
       
   # Run component governance detection
