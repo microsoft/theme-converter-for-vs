@@ -87,8 +87,8 @@ jobs:
   - task: RoslynAnalyzers@2
     displayName: Run Roslyn Analyzers. {Required and Recommended}
     inputs:
-      internalAnalyzersVersion: 2.6.2
-      microsoftAnalyzersVersion: 2.9.4
+      internalAnalyzersVersion: Latest
+      microsoftAnalyzersVersion: Latest
     condition: succeededOrFailed()
     continueOnError: True
 
