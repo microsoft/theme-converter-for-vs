@@ -64,15 +64,12 @@
     </FilesToSign>
     <FilesToSign Include="$(OutputPath)\$(AssemblyName).exe">
       <Authenticode>Microsoft400</Authenticode>
-      <StrongName>StrongName</StrongName>
     </FilesToSign>
     <FilesToSign Include="$(OutputPath)\Mono.Options.dll">
       <Authenticode>3PartySHA2</Authenticode>
-      <StrongName>None</StrongName>
     </FilesToSign>
     <FilesToSign Include="$(OutputPath)\Newtonsoft.Json.dll">
       <Authenticode>3PartySHA2</Authenticode>
-      <StrongName>None</StrongName>
     </FilesToSign>
   </ItemGroup>
 
