@@ -89,7 +89,6 @@ jobs:
     inputs:
       internalAnalyzersVersion: Latest
       microsoftAnalyzersVersion: Latest
-      suppressionFileForCompilerWarnings: ThemeConverter\RoslynAnalyzersSuppressions.txt
     condition: succeededOrFailed()
     continueOnError: True
 
