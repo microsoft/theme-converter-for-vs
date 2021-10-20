@@ -47,6 +47,14 @@ jobs:
   - checkout: self
     clean: true
 
+  - task: MicroBuildSigningPlugin@3
+    displayName: Install Signing Plugin
+    inputs:
+      signType: $(SignType)
+      feedSource: 'https://devdiv.pkgs.visualstudio.com/DefaultCollection/_packaging/MicroBuildToolset/nuget/v3/index.json'
+    env:
+      TeamName: $(_TeamName)
+
   - task: NuGetCommand@2
     displayName: Restore NuGet Packages
     inputs:
@@ -60,7 +68,7 @@ jobs:
       solution: $(SolutionFile)
       platform: $(Platform)
       configuration: $(BuildConfiguration)
-      msbuildArguments: /Property:Version=$(ProductVersion) /Property:FileVersion=$(ProductVersion) /Property:AssemblyVersion=$(AssemblyVersion)
+      msbuildArguments: /Property:Version=$(ProductVersion) /Property:FileVersion=$(ProductVersion) /Property:AssemblyVersion=$(AssemblyVersion) /Property:SignType=$(SignType)
     continueOnError: false    
       
   # Run component governance detection
@@ -79,8 +87,8 @@ jobs:
   - task: RoslynAnalyzers@2
     displayName: Run Roslyn Analyzers. {Required and Recommended}
     inputs:
-      internalAnalyzersVersion: 2.6.2
-      microsoftAnalyzersVersion: 2.9.4
+      internalAnalyzersVersion: Latest
+      microsoftAnalyzersVersion: Latest
     condition: succeededOrFailed()
     continueOnError: True
 
@@ -166,3 +174,10 @@ jobs:
     inputs:
       PathtoPublish: $(Build.StagingDirectory)
   
+
+  - task: MicroBuildCleanup@1
+    displayName: Build Cleanup
+    condition: succeededOrFailed()
+    env:
+      TeamName: $(_TeamName)
+

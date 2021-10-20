@@ -5,8 +5,20 @@
     <TargetFramework>net5.0</TargetFramework>
     <LangVersion>latest</LangVersion>
     <Version Condition="'$(Version)'==''">0.1.0</Version>
+    <NoWarn>8002</NoWarn>
   </PropertyGroup>
+
+  <PropertyGroup Condition="'$(SignType)'!=''">
+    <SignAssembly>True</SignAssembly>
+    <AssemblyOriginatorKeyFile>..\FinalPublicKey.snk</AssemblyOriginatorKeyFile>
+    <DelaySign>True</DelaySign>
+  </PropertyGroup>
+
   <ItemGroup>
+    <PackageReference Include="Microsoft.VisualStudioEng.MicroBuild.Core" Version="0.4.1">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
     <PackageReference Include="Mono.Options" Version="6.12.0.148" />
     <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
     <PackageReference Include="System.CodeDom" Version="5.0.0" />
@@ -44,6 +56,22 @@
     <None Update="VSTokens.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <FilesToSign Include="$(OutputPath)\$(AssemblyName).dll">
+      <Authenticode>Microsoft400</Authenticode>
+      <StrongName>StrongName</StrongName>
+    </FilesToSign>
+    <FilesToSign Include="$(OutputPath)\$(AssemblyName).exe">
+      <Authenticode>Microsoft400</Authenticode>
+    </FilesToSign>
+    <FilesToSign Include="$(OutputPath)\Mono.Options.dll">
+      <Authenticode>3PartySHA2</Authenticode>
+    </FilesToSign>
+    <FilesToSign Include="$(OutputPath)\Newtonsoft.Json.dll">
+      <Authenticode>3PartySHA2</Authenticode>
+    </FilesToSign>
   </ItemGroup>
 
 </Project>
