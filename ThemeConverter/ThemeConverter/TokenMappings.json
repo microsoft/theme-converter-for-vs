@@ -1381,15 +1381,15 @@
     {
       "VSC Token": "banner.foreground",
       "VS Token": [
-        "InfoBar&InfoBarBackground&Foreground"
+        "InfoBar&InfoBarBackground&Foreground",
+        "InfoBar&Hyperlink&Foreground",
+        "InfoBar&HyperlinkMouseDown&Foreground",
+        "InfoBar&HyperlinkMouseOver&Foreground"
       ]
     },
     {
       "VSC Token": "banner.iconForeground",
       "VS Token": [
-        "InfoBar&Hyperlink&Foreground",
-        "InfoBar&HyperlinkMouseDown&Foreground",
-        "InfoBar&HyperlinkMouseOver&Foreground"
       ]
     },
     {
