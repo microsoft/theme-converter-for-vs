@@ -421,9 +421,6 @@
     {
       "VSC Token": "editorGroupHeader.tabsBackground",
       "VS Token": [
-        "ACDCOverview&Chevron&Foreground",
-        "ACDCOverview&ContentSectionHeader&Foreground",
-        "ACDCOverview&H1&Foreground",
         "CommonDocument&TitleText&Background",
         "Environment&AutoHideTabBackgroundBegin&Background",
         "Environment&AutoHideTabBackgroundEnd&Background",
@@ -1159,6 +1156,7 @@
     {
       "VSC Token": "editor.background",
       "VS Token": [
+        "ACDCOverview&Body&Background",
         "Cider&ArtboardBackground&Background",
         "Cider&ArtboardBackgroundAlternate&Background",
         "Cider&ArtboardBackgroundAlternate&Foreground",
@@ -2338,7 +2336,9 @@
     {
       "VSC Token": "foreground",
       "VS Token": [
-        "ACDCOverview&Body&Background",
+        "ACDCOverview&Chevron&Foreground",
+        "ACDCOverview&ContentSectionHeader&Foreground",
+        "ACDCOverview&H1&Foreground",
         "Cider&ArtboardDistance&Foreground",
         "Cider&ArtboardDistanceSelected&Foreground",
         "Cider&ArtboardElement&Foreground",
