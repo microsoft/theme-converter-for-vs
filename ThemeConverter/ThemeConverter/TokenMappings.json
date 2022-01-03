@@ -254,7 +254,6 @@
     {
       "VSC Token": "sideBar.background",
       "VS Token": [
-        "ACDCOverview&NumberedListItem&Background",
         "Cider&BreadcrumbBar&Background",
         "Cider&CategoryTree&Background",
         "Cider&ListHeader&Background",  
@@ -392,8 +391,6 @@
       "VSC Token": "textLink.foreground",
       "VS Token": [
         "ACDCOverview&Hyperlink&Foreground",
-        "ACDCOverview&HyperlinkActive&Foreground",
-        "ACDCOverview&HyperlinkHover&Foreground",
         "Cider&Hyperlink&Background",
         "Cider&HyperlinkDisabled&Background",
         "CommonDocument&Hyperlink&Background",
@@ -884,9 +881,6 @@
     {
       "VSC Token": "panel.background",
       "VS Token": [
-        "ACDCOverview&NumberedListItemActive&Background",
-        "ACDCOverview&NumberedListItemActiveBorder&Background",
-        "ACDCOverview&NumberedListItemHoverBorder&Foreground",
         "ApplicationInsights&Error&Background",
         "ApplicationInsights&LiveMetricsFailedRequestStroke&Background",
         "ApplicationInsights&LiveMetricsRequestStroke&Background",
@@ -1157,6 +1151,7 @@
       "VSC Token": "editor.background",
       "VS Token": [
         "ACDCOverview&Body&Background",
+        "ACDCOverview&NumberedListItem&Background",
         "Cider&ArtboardBackground&Background",
         "Cider&ArtboardBackgroundAlternate&Background",
         "Cider&ArtboardBackgroundAlternate&Foreground",
@@ -1180,6 +1175,11 @@
     {
       "VSC Token": "editor.foreground",
       "VS Token": [
+        "ACDCOverview&Body&Foreground",
+        "ACDCOverview&Chevron&Foreground",
+        "ACDCOverview&ContentSectionHeader&Foreground",
+        "ACDCOverview&H1&Foreground",
+        "ACDCOverview&NumberedListItem&Foreground",
         "Cider&ArtboardBackground&Foreground",
         "Environment&WindowText&Background",
         "Output Window&Plain Text&Foreground",
@@ -2336,9 +2336,6 @@
     {
       "VSC Token": "foreground",
       "VS Token": [
-        "ACDCOverview&Chevron&Foreground",
-        "ACDCOverview&ContentSectionHeader&Foreground",
-        "ACDCOverview&H1&Foreground",
         "Cider&ArtboardDistance&Foreground",
         "Cider&ArtboardDistanceSelected&Foreground",
         "Cider&ArtboardElement&Foreground",
@@ -2676,8 +2673,10 @@
     {
       "VSC Token": "list.hoverBackground",
       "VS Token": [
-        "ACDCOverview&NumberedListItemActive&Foreground",
+        "ACDCOverview&NumberedListItemActive&Background",
+        "ACDCOverview&NumberedListItemActiveBorder&Background",
         "ACDCOverview&NumberedListItemHover&Background",
+        "ACDCOverview&NumberedListItemHoverBorder&Foreground",
         "Cider&ListItemMouseOver&Background",
         "Cider&ListItemMouseOverBorder&Background",
         "Cider&ListItemSecondaryOnHover&Background",
@@ -3756,6 +3755,8 @@
     {
       "VSC Token": "textLink.activeForeground",
       "VS Token": [
+        "ACDCOverview&HyperlinkActive&Foreground",
+        "ACDCOverview&HyperlinkHover&Foreground",
         "Cider&HyperlinkMouseOver&Background",
         "CommonDocument&HyperlinkHover&Background",
         "CommonDocument&HyperlinkPressed&Background",
@@ -4183,6 +4184,7 @@
     {
       "VSC Token": "list.hoverForeground",
       "VS Token": [
+        "ACDCOverview&NumberedListItemActive&Foreground",
         "Cider&ListItemMouseOver&Foreground",
         "CommonDocument&ListItemText&Background",
         "CommonDocument&ListItemTextFocused&Background",
