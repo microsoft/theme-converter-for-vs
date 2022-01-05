@@ -890,17 +890,17 @@
         "Cider&ArtboardDistance&Background",
         "Cider&ArtboardDistanceSelected&Background",
         "Cider&ArtboardElement&Background",
+        "Cider&ArtboardWindow&Background",
         "Cider&ComboBoxMouseOver&Background",
         "Cider&ComboBoxMouseOverBorder&Background",
         "Cider&DialogExpanderGlyphMouseOver&Background",
         "Cider&InteractiveIconMouseOver&Background",
-        "Cider&ArtboardWindow&Background",
         "Cider&ListItemBorder&Background",
         "Cider&ListItemDisabled&Background",
         "Cider&ListItemDisabledBorder&Background",
         "Cider&ListItemSearchResult&Background",
-        "Cider&ListItemSearchResultDisabled&Background",
         "Cider&ListItemSearchResultBorder&Background",
+        "Cider&ListItemSearchResultDisabled&Background",
         "Cider&ListItemSecondary&Background",
         "Cider&ListItemTier1&Background",
         "Cider&ListItemTier1Border&Background",
@@ -2356,10 +2356,6 @@
         "CodeSense&IndicatorTextDisabled&Foreground",
         "CodeSense&IndicatorTextHovered&Foreground",
         "CodeSenseControls&ItemSelectedText&Background",
-        "Command Window&Inactive Selected Text&Background",
-        "Command Window&Plain Text&Background",
-        "Command Window&Selected Text in High Contrast&Background",
-        "Command Window&Selected Text&Background",
         "CommonDocument&InnerTabInactiveHoverText&Background",
         "CommonDocument&InnerTabTextFocused&Background",
         "CommonDocument&InnerTabTextHover&Background",
@@ -2383,9 +2379,6 @@
         "Immediate Window&Selected Text&Background",
         "Locals&SelectedText&Foreground",
         "NewProjectDialog&TextBoxSelection&Background",
-        "Package Manager Console&Plain Text&Background",
-        "Package Manager Console&Selected Text in High Contrast&Background",
-        "Package Manager Console&Selected Text&Background",
         "PackageManifestEditor&CheckBox&Foreground",
         "PackageManifestEditor&CheckBoxMouseOver&Foreground",
         "PackageManifestEditor&TextBoxDisabled&Foreground",
@@ -3655,11 +3648,17 @@
     {
       "VSC Token": "terminal.foreground",
       "VS Token": [
+        "Command Window&Plain Text&Foreground",
+        "Package Manager Console&Plain Text&Foreground",
       ]
     },
     {
       "VSC Token": "terminal.selectionBackground",
       "VS Token": [
+        "Command Window&Inactive Selected Text&Background",
+        "Command Window&Selected Text in High Contrast&Background",
+        "Command Window&Selected Text&Background",
+        "Package Manager Console&Selected Text&Background",
       ]
     },
     {
@@ -4435,6 +4434,8 @@
     {
       "VSC Token": "terminal.background",
       "VS Token": [
+        "Command Window&Plain Text&Background",
+        "Package Manager Console&Plain Text&Background",
       ]
     },
     {

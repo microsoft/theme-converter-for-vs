@@ -27,5 +27,7 @@
   "editor.wordHighlightStrongBorder": "editor.background",
   "tab.hoverBorder": "tab.Border",
   "tab.hoverForeground": "tab.inactiveForeground",
-  "variable.other.object.property.cs": "entity.name.variable.property.cs"
+  "variable.other.object.property.cs": "entity.name.variable.property.cs",
+  "terminal.background": "panel.background",
+  "terminal.foreground": "foreground"
 }
