@@ -546,27 +546,24 @@
       "VS Token": [
         "Environment&AutoHideResizeGrip&Background",
         "Environment&AutoHideResizeGripDisabled&Background",
-        "Environment&ScrollBarArrowDisabledBackground&Background",
         "Environment&ScrollBarDisabledBackground&Background",
+        "Environment&ScrollBarThumbBackground&Background",
         "Environment&ScrollBarThumbDisabled&Background",
-        "StartPage&StartPagePartitionLine&Background",
-        "StartPage&VideoRSSItem&Background",
         "Environment&ScrollBarThumbGlyph&Background",
-        "Environment&ScrollBarThumbBackground&Background"
+        "StartPage&StartPagePartitionLine&Background",
+        "StartPage&VideoRSSItem&Background"
       ]
     },
     {
       "VSC Token": "scrollbar.shadow",
       "VS Token": [
         "Environment&ScrollBarThumbBorder&Background",
-        "Environment&ScrollBarArrowBackground&Background"
       ]
     },
     {
       "VSC Token": "scrollbarSlider.hoverBackground",
       "VS Token": [
-        "Environment&ScrollBarArrowPressedBackground&Background", //
-        "Environment&ScrollBarArrowMouseOverBackground&Background",
+        "Environment&ScrollBarArrowGlyph&Background",
         "Environment&ScrollBarThumbGlyphMouseOverBorder&Background",
         "Environment&ScrollBarThumbMouseOverBackground&Background",
         "Environment&ScrollBarThumbMouseOverBorder&Background"
@@ -1164,11 +1161,13 @@
         "Diagnostics&ControlHeader&Background",
         "Environment&GridHeadingBackground&Background",
         "Environment&ScrollBar&Background", //
+        "Environment&ScrollBarArrowBackground&Background",
+        "Environment&ScrollBarArrowDisabledBackground&Background", //
         "Environment&ScrollBarBackground&Background", //
         "PackageManifestEditor&EditorContent&Background",
         "Text Editor MEF Items&outlining.square&Background",
-        "Text Editor Text Manager Items&Visible Whitespace&Background",
         "Text Editor Text Manager Items&Plain Text&Background", //
+        "Text Editor Text Manager Items&Visible Whitespace&Background",
         "ThemedDialog&GridHeadingBackground&Background"
       ]
     },
@@ -1419,14 +1418,14 @@
     {
       "VSC Token": "button.hoverBackground",
       "VS Token": [
-        "Cider&BreadcrumbButtonSelectedOnHover&Background",
-        "Cider&ComboBoxButtonMouseOverBorder&Background",
         "Cider&BreadcrumbButtonSelected&Background",
+        "Cider&BreadcrumbButtonSelectedOnHover&Background",
+        "Cider&ComboBoxButtonMouseOver&Background",
+        "Cider&ComboBoxButtonMouseOverBorder&Background",
+        "Cider&IconButtonMouseOver&Background",
         "Cider&SplitBarTabSelected&Background",
         "Cider&TabItemMouseOver&Background",
         "Cider&TabItemSelected&Background",
-        "Cider&ComboBoxButtonMouseOver&Background",
-        "Cider&IconButtonMouseOver&Background",
         "ClientDiagnosticsMemory&DropDownButtonHover&Background",
         "ClientDiagnosticsMemory&SnapshotButtonHover&Background",
         "ClientDiagnosticsMemory&SnapshotButtonHover&Foreground",
@@ -1435,10 +1434,6 @@
         "CodeSenseControls&PopupPinButtonHover&Foreground",
         "CommonControls&ButtonBorderHover&Background",
         "CommonControls&ButtonHover&Background",
-        "InfoBar&CloseButtonHover&Background",
-        "InfoBar&CloseButtonHoverBorder&Background",
-        "Environment&MainWindowButtonDown&Background",
-        "Environment&MainWindowButtonHoverActive&Background",
         "Environment&DocWellOverflowButtonMouseOverBackground&Background",
         "Environment&DocWellOverflowButtonMouseOverBorder&Background",
         "Environment&FileTabButtonHoverInactive&Background",
@@ -1447,12 +1442,16 @@
         "Environment&FileTabButtonHoverSelectedActiveBorder&Background",
         "Environment&FileTabButtonHoverSelectedInactive&Background",
         "Environment&FileTabButtonHoverSelectedInactiveBorder&Background",
+        "Environment&FileTabButtonProvisionalHoverInactive&Background",
+        "Environment&FileTabButtonProvisionalHoverInactiveBorder&Background",
         "Environment&FileTabButtonProvisionalHoverSelectedActive&Background",
         "Environment&FileTabButtonProvisionalHoverSelectedActiveBorder&Background",
         "Environment&FileTabButtonProvisionalHoverSelectedInactive&Background",
         "Environment&FileTabButtonProvisionalHoverSelectedInactiveBorder&Background",
-        "Environment&FileTabButtonProvisionalHoverInactive&Background",
-        "Environment&FileTabButtonProvisionalHoverInactiveBorder&Background",
+        "Environment&MainWindowButtonDown&Background",
+        "Environment&MainWindowButtonHoverActive&Background",
+        "Environment&ScrollBarArrowMouseOverBackground&Background",
+        "Environment&ScrollBarArrowPressedBackground&Background", //
         "Environment&StartPageButtonMouseOverBackgroundBegin&Background",
         "Environment&StartPageButtonMouseOverBackgroundEnd&Background",
         "Environment&StartPageButtonMouseOverBackgroundMiddle1&Background",
@@ -1468,6 +1467,8 @@
         "GraphicsDesigners&DropDownButtonHover&Background",
         "GraphicsDesigners&SnapshotButtonHover&Background",
         "InfoBar&ButtonMouseOver&Background",
+        "InfoBar&CloseButtonHover&Background",
+        "InfoBar&CloseButtonHoverBorder&Background",
         "InformationBadge&BackgroundFocused&Background",
         "InformationBadge&BackgroundHover&Background",
         "InformationBadge&BackgroundPressed&Background",
@@ -1478,9 +1479,9 @@
         "TeamExplorer&ButtonMouseOverBorder&Background",
         "TeamExplorer&CallToActionButtonMouseOver&Background",
         "TeamExplorer&CallToActionButtonMouseOverBorder&Background",
+        "ThemedDialog&CloseWindowButtonHover&Background",
         "ThemedDialog&WindowButtonDown&Background",
         "ThemedDialog&WindowButtonHover&Background",
-        "ThemedDialog&CloseWindowButtonHover&Background",
         "UserNotifications&BadgeButtonCountMouseOverActive&Background",
         "UserNotifications&BadgeButtonCountMouseOverInactive&Background",
         "UserNotifications&ToastActionButtonBorderHover&Background",
