@@ -70,5 +70,9 @@
   "sideBarSectionHeader.background": {
     "Item1": 1.0,
     "Item2": "sideBar.background"
+  },
+  "scrollbarSlider.background": {
+    "Item1": 1.0,
+    "Item2": "editor.background"
   }
 }
