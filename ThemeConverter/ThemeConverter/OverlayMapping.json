@@ -74,5 +74,9 @@
   "scrollbarSlider.background": {
     "Item1": 1.0,
     "Item2": "editor.background"
+  },
+  "scrollbarSlider.hoverBackground": {
+    "Item1": 1.0,
+    "Item2": "editor.background"
   }
 }
