@@ -390,6 +390,9 @@
     {
       "VSC Token": "textLink.foreground",
       "VS Token": [
+        "CodeSenseControls&ActionLink&Background",
+        "CodeSenseControls&ActionLinkDisabled&Background",
+        "CodeSenseControls&ActionLinkItem&Foreground",
         "ACDCOverview&Hyperlink&Foreground",
         "Cider&Hyperlink&Background",
         "Cider&HyperlinkDisabled&Background",
@@ -929,8 +932,6 @@
         "ClientDiagnosticsTools&MouseOverBackgroundColor&Background",
         "ClientDiagnosticsTools&Progress&Background",
         "ClientDiagnosticsTools&SelectedBackgroundColor&Background",
-        "CodeSenseControls&ActionLink&Background",
-        "CodeSenseControls&ActionLinkItem&Foreground",
         "CodeSenseControls&PopupHover&Background",
         "CodeSenseControls&PopupSelected&Background",
         "CodeSenseControls&PopupSelectedInactive&Background",
