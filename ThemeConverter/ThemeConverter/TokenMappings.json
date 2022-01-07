@@ -390,6 +390,9 @@
     {
       "VSC Token": "textLink.foreground",
       "VS Token": [
+        "CodeSenseControls&ActionLink&Background",
+        "CodeSenseControls&ActionLinkDisabled&Background",
+        "CodeSenseControls&ActionLinkItem&Foreground",
         "ACDCOverview&Hyperlink&Foreground",
         "Cider&Hyperlink&Background",
         "Cider&HyperlinkDisabled&Background",
@@ -424,7 +427,7 @@
         "Environment&AutoHideTabMouseOverBackgroundBegin&Background",
         "Environment&AutoHideTabMouseOverBackgroundEnd&Background",
         "Environment&EnvironmentBackground&Background",
-        "Environment&EnvironmentBackgroundGradientBegin&Backgrsound",
+        "Environment&EnvironmentBackgroundGradientBegin&Background",
         "Environment&EnvironmentBackgroundGradientEnd&Background",
         "Environment&EnvironmentBackgroundGradientMiddle1&Background",
         "Environment&EnvironmentBackgroundGradientMiddle2&Background",
@@ -497,6 +500,8 @@
         "Environment&ProjectDesignerTabBackgroundGradientBegin&Background",
         "Environment&ProjectDesignerTabBackgroundGradientEnd&Background",
         "Environment&ProjectDesignerTabSepBottomGradientBegin&Background",
+        "Environment&ProjectDesignerTabSepBottomGradientEnd&Background",
+        "Environment&ProjectDesignerTabSepTopGradientBegin&Background",
         "Environment&ProjectDesignerTabSepTopGradientEnd&Background",
         "Environment&TitleBarDragHandleActive&Background",
         "Environment&TitleBarInactive&Background",
@@ -929,11 +934,7 @@
         "ClientDiagnosticsTools&MouseOverBackgroundColor&Background",
         "ClientDiagnosticsTools&Progress&Background",
         "ClientDiagnosticsTools&SelectedBackgroundColor&Background",
-        "CodeSenseControls&ActionLink&Background",
-        "CodeSenseControls&ActionLinkItem&Foreground",
         "CodeSenseControls&PopupHover&Background",
-        "CodeSenseControls&PopupSelected&Background",
-        "CodeSenseControls&PopupSelectedInactive&Background",
         "CodeSenseControls&RankedItemsFifth&Background",
         "CodeSenseControls&RankedItemsFourth&Background",
         "CommonDocument&InnerTabActiveIndicator&Background",
@@ -1157,6 +1158,7 @@
         "Cider&ArtboardSecondaryBackground&Background",
         "Cider&ArtboardSecondaryBackgroundAlternate&Background",
         "Cider&ArtboardSecondaryBackgroundDefault&Background",
+        "CodeSenseControls&Popup&Background",
         "CommonDocument&GridHeadingBackground&Background",
         "Diagnostics&ControlHeader&Background",
         "Environment&GridHeadingBackground&Background",
@@ -1180,6 +1182,7 @@
         "ACDCOverview&H1&Foreground",
         "ACDCOverview&NumberedListItem&Foreground",
         "Cider&ArtboardBackground&Foreground",
+        "CodeSenseControls&Popup&Foreground",
         "Environment&WindowText&Background",
         "Output Window&Plain Text&Foreground",
         "PackageManifestEditor&EditorContent&Foreground",
@@ -2572,6 +2575,7 @@
     {
       "VSC Token": "list.activeSelectionBackground",
       "VS Token": [
+        "CodeSenseControls&PopupSelected&Background",
         "Cider&ListItemSecondarySelected&Background",
         "Cider&ListItemSelected&Background",
         "Cider&ListItemSelectedBorder&Background",
@@ -2607,6 +2611,7 @@
         "Cider&ListItemSecondaryOnHover&Foreground",
         "Cider&ListItemSecondarySelected&Foreground",
         "Cider&ListItemSelected&Foreground",
+        "CodeSenseControls&TextSelected&Background",
         "CommonControls&ComboBoxListItemTextHover&Background",
         "CommonDocument&ListItemTextSelected&Background",
         "Diagnostics&AdvancedListItemSelected&Foreground",
@@ -2704,6 +2709,7 @@
     {
       "VSC Token": "list.inactiveSelectionBackground",
       "VS Token": [
+        "CodeSenseControls&PopupSelectedInactive&Background",
         "NewProjectDialog&ContentInactiveSelected&Background",
         "ThemedDialog&SelectedItemInactive&Background",
         "TreeView&SelectedItemInactive&Background",
@@ -4186,6 +4192,7 @@
       "VS Token": [
         "ACDCOverview&NumberedListItemActive&Foreground",
         "Cider&ListItemMouseOver&Foreground",
+        "CodeSenseControls&TextHover&Background",
         "CommonDocument&ListItemText&Background",
         "CommonDocument&ListItemTextFocused&Background",
         "CommonDocument&ListItemTextHover&Background",
@@ -4193,13 +4200,13 @@
         "CommonDocument&ListItemTextUnfocused&Background",
         "Diagnostics&AdvancedListItemHover&Foreground",
         "NewProjectDialog&WonderbarMouseOver&Foreground", //
+        "PackageManifestEditor&MouseOverCategoryTab&Foreground",
         "StartPage&StartPageListItemHover&Foreground",
         "ThemedDialog&ActionButtonTextActive&Background",
         "ThemedDialog&ListItemMouseOver&Foreground",
         "ThemedDialog&StartWindowDescriptionHover&Foreground",
         "ThemedUtilityDialog&ActiveCaption&Foreground",
         "VSSearch&ListItemBorderHover&Background",
-        "PackageManifestEditor&MouseOverCategoryTab&Foreground",
         "VSSearch&ListItemSupportTextHover&Background"
       ]
     },
