@@ -2382,11 +2382,9 @@
         "Immediate Window&Selected Text in High Contrast&Background",
         "Immediate Window&Selected Text&Background",
         "Locals&SelectedText&Foreground",
-        "NewProjectDialog&TextBoxSelection&Background",
         "PackageManifestEditor&CheckBox&Foreground",
         "PackageManifestEditor&CheckBoxMouseOver&Foreground",
         "PackageManifestEditor&TextBoxDisabled&Foreground",
-        "PackageManifestEditor&TextBoxSelection&Background",
         "Performance Tips&Selected Text&Foreground",
         "StartPage&ItemHeadingText&Foreground",
         "StartPage&StartPageCheckBoxCheckMark&Foreground",
@@ -4355,9 +4353,11 @@
     {
       "VSC Token": "selection.background",
       "VS Token": [
-        "Output Window&Selected Text&Background",
-        "Output Window&Selected Text in High Contrast&Background",
         "CommonControls&ComboBoxTextInputSelection&Background", //
+        "NewProjectDialog&TextBoxSelection&Background",
+        "Output Window&Selected Text in High Contrast&Background",
+        "Output Window&Selected Text&Background",
+        "PackageManifestEditor&TextBoxSelection&Background",
         "SearchControl&Selection&Background" //
       ]
     },
