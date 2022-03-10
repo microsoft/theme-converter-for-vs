@@ -247,7 +247,6 @@
       "VS Token": [
         "Environment&StatusBarBuilding&Background",
         "Environment&StatusBarDefault&Background",
-        "Environment&StatusBarNoSolution&Background",
         "UserNotifications&ToastPanelBorder&Background"
       ]
     },
@@ -514,7 +513,6 @@
         "Environment&ToolWindowButtonInactive&Background",
         "Environment&ToolWindowButtonInactiveBorder&Background",
         "Environment&ToolWindowFloatingFrame&Background",
-        "Environment&ToolWindowFloatingFrameInactive&Background",
         "Environment&VerticalResizeGripBegin&Background",
         "Environment&VerticalResizeGripEnd&Background",
         "Environment&VerticalResizeGripMiddle&Background",
@@ -543,6 +541,7 @@
         "Environment&MainWindowButtonActiveGlyph&Background",
         "Environment&MainWindowButtonInactiveGlyph&Background",
         "Environment&MainWindowInactiveCaption&Foreground",
+        "Environment&ToolWindowFloatingFrame&Foreground",
         "Environment&TitleBarActive&Background"
       ]
     },
@@ -1314,18 +1313,19 @@
       "VS Token": [
         "Environment&StatusBarBuilding&Foreground",
         "Environment&StatusBarDefault&Foreground",
-        "Environment&StatusBarNoSolution&Foreground",
         "Environment&StatusBarText&Background"
       ]
     },
     {
       "VSC Token": "statusBar.noFolderBackground",
       "VS Token": [
+        "Environment&StatusBarNoSolution&Background"
       ]
     },
     {
       "VSC Token": "statusBar.noFolderForeground",
       "VS Token": [
+        "Environment&StatusBarNoSolution&Foreground"
       ]
     },
     {
@@ -1805,7 +1805,6 @@
         "CommonControls&ComboBoxGlyphBackgroundHover&Background",
         "CommonControls&ComboBoxGlyphBackgroundPressed&Background",
         "CommonControls&ComboBoxListBackground&Background",
-        "CommonControls&ComboBoxSelection&Background",
         "Environment&ComboBoxBackground&Background",
         "Environment&ComboBoxButtonMouseDownBackground&Background",
         "Environment&ComboBoxButtonMouseOverBackground&Background",
@@ -1813,13 +1812,8 @@
         "Environment&ComboBoxFocusedBackground&Background",
         "Environment&ComboBoxFocusedButtonBackground&Background",
         "Environment&ComboBoxMouseDownBackground&Background",
-        "Environment&ComboBoxMouseOverBackgroundBegin&Background",
-        "Environment&ComboBoxMouseOverBackgroundEnd&Background",
-        "Environment&ComboBoxMouseOverBackgroundMiddle1&Background",
-        "Environment&ComboBoxMouseOverBackgroundMiddle2&Background",
         "Environment&ComboBoxPopupBackgroundBegin&Background",
         "Environment&ComboBoxPopupBackgroundEnd&Background",
-        "Environment&ComboBoxSelection&Background",
         "Environment&DropDownBackground&Background",
         "Environment&DropDownButtonMouseDownBackground&Background",
         "Environment&DropDownButtonMouseOverBackground&Background", //watch refresh button hover background
@@ -2382,11 +2376,9 @@
         "Immediate Window&Selected Text in High Contrast&Background",
         "Immediate Window&Selected Text&Background",
         "Locals&SelectedText&Foreground",
-        "NewProjectDialog&TextBoxSelection&Background",
         "PackageManifestEditor&CheckBox&Foreground",
         "PackageManifestEditor&CheckBoxMouseOver&Foreground",
         "PackageManifestEditor&TextBoxDisabled&Foreground",
-        "PackageManifestEditor&TextBoxSelection&Background",
         "Performance Tips&Selected Text&Foreground",
         "StartPage&ItemHeadingText&Foreground",
         "StartPage&StartPageCheckBoxCheckMark&Foreground",
@@ -3789,11 +3781,13 @@
     {
       "VSC Token": "titleBar.inactiveBackground",
       "VS Token": [
+        "Environment&ToolWindowFloatingFrameInactive&Background"
       ]
     },
     {
       "VSC Token": "titleBar.inactiveForeground",
       "VS Token": [
+        "Environment&ToolWindowFloatingFrameInactive&Foreground"
       ]
     },
     {
@@ -3985,8 +3979,6 @@
         "Environment&ComboBoxFocusedGlyph&Background",
         "Environment&ComboBoxFocusedText&Background",
         "Environment&ComboBoxMouseDownText&Background",
-        "Environment&ComboBoxMouseOverGlyph&Background",
-        "Environment&ComboBoxMouseOverText&Background",
         "Environment&CommandBarOptionsGlyph&Background",
         "Environment&DropDownDisabledGlyph&Background",
         "Environment&DropDownDisabledText&Background",
