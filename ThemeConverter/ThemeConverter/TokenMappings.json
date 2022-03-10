@@ -247,7 +247,6 @@
       "VS Token": [
         "Environment&StatusBarBuilding&Background",
         "Environment&StatusBarDefault&Background",
-        "Environment&StatusBarNoSolution&Background",
         "UserNotifications&ToastPanelBorder&Background"
       ]
     },
@@ -514,7 +513,6 @@
         "Environment&ToolWindowButtonInactive&Background",
         "Environment&ToolWindowButtonInactiveBorder&Background",
         "Environment&ToolWindowFloatingFrame&Background",
-        "Environment&ToolWindowFloatingFrameInactive&Background",
         "Environment&VerticalResizeGripBegin&Background",
         "Environment&VerticalResizeGripEnd&Background",
         "Environment&VerticalResizeGripMiddle&Background",
@@ -536,13 +534,14 @@
         "Cider&GlyphMouseOver&Background",
         "Cider&IconButton&Foreground",
         "Cider&IconButtonPressed&Foreground",
-        "Cider&InteractiveIcon&Foreground", 
+        "Cider&InteractiveIcon&Foreground",
         "Cider&InteractiveIconMouseOver&Foreground",
         "Environment&CommandBarTextMouseDown&Background",
         "Environment&FileTabIndicatorTextSelectedInactive&Background",
         "Environment&MainWindowButtonActiveGlyph&Background",
         "Environment&MainWindowButtonInactiveGlyph&Background",
         "Environment&MainWindowInactiveCaption&Foreground",
+        "Environment&ToolWindowFloatingFrame&Foreground",
         "Environment&TitleBarActive&Background"
       ]
     },
@@ -1314,18 +1313,19 @@
       "VS Token": [
         "Environment&StatusBarBuilding&Foreground",
         "Environment&StatusBarDefault&Foreground",
-        "Environment&StatusBarNoSolution&Foreground",
         "Environment&StatusBarText&Background"
       ]
     },
     {
       "VSC Token": "statusBar.noFolderBackground",
       "VS Token": [
+        "Environment&StatusBarNoSolution&Background"
       ]
     },
     {
       "VSC Token": "statusBar.noFolderForeground",
       "VS Token": [
+        "Environment&StatusBarNoSolution&Foreground"
       ]
     },
     {
@@ -3789,11 +3789,13 @@
     {
       "VSC Token": "titleBar.inactiveBackground",
       "VS Token": [
+        "Environment&ToolWindowFloatingFrameInactive&Background"
       ]
     },
     {
       "VSC Token": "titleBar.inactiveForeground",
       "VS Token": [
+        "Environment&ToolWindowFloatingFrameInactive&Foreground"
       ]
     },
     {
