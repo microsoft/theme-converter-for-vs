@@ -245,7 +245,6 @@
     {
       "VSC Token": "statusBar.background",
       "VS Token": [
-        "Environment&StatusBarBuilding&Background",
         "Environment&StatusBarDefault&Background",
         "UserNotifications&ToastPanelBorder&Background"
       ]
@@ -1299,19 +1298,20 @@
     {
       "VSC Token": "statusBar.debuggingBackground",
       "VS Token": [
+        "Environment&StatusBarBuilding&Background",
         "Environment&StatusBarDebugging&Background"
       ]
     },
     {
       "VSC Token": "statusBar.debuggingForeground",
       "VS Token": [
+        "Environment&StatusBarBuilding&Foreground",
         "Environment&StatusBarDebugging&Foreground"
       ]
     },
     {
       "VSC Token": "statusBar.foreground",
       "VS Token": [
-        "Environment&StatusBarBuilding&Foreground",
         "Environment&StatusBarDefault&Foreground",
         "Environment&StatusBarText&Background"
       ]
