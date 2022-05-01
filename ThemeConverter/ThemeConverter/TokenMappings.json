@@ -2758,7 +2758,7 @@
         "Environment&CommandBarMenuSubmenuGlyph&Background",
         "Environment&CommandBarSplitButtonGlyph&Background",
         "Environment&CommandBarTextActive&Background", //
-        "Environment&CommandBarTextInactive&Background",
+        "Environment&CommandBarTextInactive&Background&0.4&menu.background",
         "UserInformation&ErrorText&Background",
         "UserInformation&IDCardInactiveText&Background",
         "UserInformation&IDCardMinimalModeInactiveWindowText&Background",

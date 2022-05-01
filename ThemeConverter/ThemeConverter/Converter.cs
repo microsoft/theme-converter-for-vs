@@ -1,11 +1,14 @@
 ﻿// Copyright (c) Microsoft Corporation.
 // Licensed under the MIT License.
 
+#nullable enable
+
 namespace ThemeConverter
 {
     using System;
     using System.CodeDom.Compiler;
     using System.Collections.Generic;
+    using System.Globalization;
     using System.IO;
     using Newtonsoft.Json.Linq;
     using ThemeConverter.ColorCompiler;
@@ -57,6 +60,9 @@ namespace ThemeConverter
 
             var jobject = JObject.Parse(text);
             var theme = jobject.ToObject<ThemeFileContract>();
+
+            if (theme == null)
+                throw new Exception("Failed to get theme object.");
 
             // Group colors by category.
             var colorCategories = GroupColorsByCategory(theme);
@@ -209,7 +215,7 @@ namespace ThemeConverter
                         {
                             if (ScopeMappings.Value.TryGetValue(key, out var colorKeys))
                             {
-                                AssignShellColors(theme.Colors["foreground"], colorKeys, ref colorCategories);
+                                AssignShellColors(theme, theme.Colors["foreground"], colorKeys, ref colorCategories);
                             }
                         }
 
@@ -244,25 +250,25 @@ namespace ThemeConverter
             {
                 if (ScopeMappings.Value.TryGetValue(color.Key.Trim(), out var colorKeyList))
                 {
-                    if (!TryGetColorValue(theme, color.Key, out string colorValue))
+                    if (!TryGetColorValue(theme, color.Key, out string? colorValue))
                     {
                         continue;
                     }
 
                     // calculate the actual border color for editor overlay colors
-                    if (OverlayMappings.Value.ContainsKey(color.Key) && TryGetColorValue(theme, OverlayMappings.Value[color.Key].Item2, out string backgroundColor))
+                    if (OverlayMappings.Value.ContainsKey(color.Key) && TryGetColorValue(theme, OverlayMappings.Value[color.Key].Item2, out string? backgroundColor))
                     {
-                        colorValue = GetCompoundColor(colorValue, backgroundColor, OverlayMappings.Value[color.Key].Item1);
+                        colorValue = GetCompoundColor(colorValue!, backgroundColor!, VSOpacity: OverlayMappings.Value[color.Key].Item1);
                     }
 
-                    AssignShellColors(colorValue, colorKeyList, ref colorCategories);
+                    AssignShellColors(theme, colorValue!, colorKeyList, ref colorCategories);
                 }
             }
 
             return colorCategories;
         }
 
-        private static bool TryGetColorValue(ThemeFileContract theme, string token, out string colorValue)
+        private static bool TryGetColorValue(ThemeFileContract theme, string token, out string? colorValue)
         {
             theme.Colors.TryGetValue(token, out colorValue);
 
@@ -288,12 +294,13 @@ namespace ThemeConverter
         /// Compute what is the compound color of 2 overlayed colors with transparency
         /// </summary>
         /// <param name="VSOpacity">What is the opacity that VS will use when displaying this color</param>
+        /// <param name="VSCOpacity">The opacity that VSC will apply to this token under special circumstances.</param>
         /// <returns>Color value for VS</returns>
-        private static string GetCompoundColor(string overlayColor, string baseColor, float VSOpacity = 1)
+        private static string GetCompoundColor(string overlayColor, string baseColor, float VSOpacity = 1, float VSCOpacity = 1)
         {
             overlayColor = ReviseColor(overlayColor);
             baseColor = ReviseColor(baseColor);
-            float overlayA = (float)System.Convert.ToInt32(overlayColor.Substring(0, 2), 16) / 255;
+            float overlayA = (float)System.Convert.ToInt32(overlayColor.Substring(0, 2), 16) * VSCOpacity / 255;
             float overlayR = System.Convert.ToInt32(overlayColor.Substring(2, 2), 16);
             float overlayG = System.Convert.ToInt32(overlayColor.Substring(4, 2), 16);
             float overlayB = System.Convert.ToInt32(overlayColor.Substring(6, 2), 16);
@@ -350,10 +357,18 @@ namespace ThemeConverter
             }
         }
 
-        private static void AssignShellColors(string colorValue, ColorKey[] colorKeys, ref Dictionary<string, Dictionary<string, SettingsContract>> colorCategories)
+        private static void AssignShellColors(ThemeFileContract theme, string colorValue, ColorKey[] colorKeys, ref Dictionary<string, Dictionary<string, SettingsContract>> colorCategories)
         {
             foreach (var colorKey in colorKeys)
             {
+                if (colorKey.ForegroundOpacity is not null && colorKey.VSCBackground is not null)
+                {
+                    if (TryGetColorValue(theme, colorKey.VSCBackground, out string? backgroundColor))
+                    {
+                        colorValue = GetCompoundColor(colorValue, backgroundColor!, 1, colorKey.ForegroundOpacity.Value);
+                    }
+                }
+
                 if (!colorCategories.TryGetValue(colorKey.CategoryName, out var rulesList))
                 {
                     // token name to colors
@@ -382,7 +397,7 @@ namespace ThemeConverter
 
         #region Write VS Theme
 
-        private static void WriteColor(StreamWriter writer, string colorKeyName, string foregroundColor, string backgroundColor)
+        private static void WriteColor(StreamWriter writer, string colorKeyName, string? foregroundColor, string? backgroundColor)
         {
             writer.WriteLine($"            <Color Name=\"{colorKeyName}\">");
 
@@ -443,7 +458,7 @@ namespace ThemeConverter
 
     internal sealed class ColorKey
     {
-        public ColorKey(string categoryName, string keyName, string backgroundOrForeground)
+        public ColorKey(string categoryName, string keyName, string backgroundOrForeground, string? foregroundOpacity = null, string? vscBackgorund = null)
         {
             this.CategoryName = categoryName;
             this.KeyName = keyName;
@@ -457,6 +472,9 @@ namespace ThemeConverter
             {
                 isBackground = false;
             }
+
+            this.ForegroundOpacity = foregroundOpacity == null ? null : float.Parse(foregroundOpacity, CultureInfo.InvariantCulture.NumberFormat); ;
+            this.VSCBackground = vscBackgorund;
         }
 
         public string CategoryName { get; }
@@ -466,6 +484,10 @@ namespace ThemeConverter
         public string Aspect { get; }
 
         public bool isBackground { get; }
+
+        public float? ForegroundOpacity { get; }
+
+        public string? VSCBackground { get; }
 
         public override string ToString()
         {
