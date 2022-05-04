@@ -458,7 +458,7 @@ namespace ThemeConverter
 
     internal sealed class ColorKey
     {
-        public ColorKey(string categoryName, string keyName, string backgroundOrForeground, string? foregroundOpacity = null, string? vscBackgorund = null)
+        public ColorKey(string categoryName, string keyName, string backgroundOrForeground, string? foregroundOpacity = null, string? vscBackground = null)
         {
             this.CategoryName = categoryName;
             this.KeyName = keyName;
@@ -473,8 +473,8 @@ namespace ThemeConverter
                 isBackground = false;
             }
 
-            this.ForegroundOpacity = foregroundOpacity == null ? null : float.Parse(foregroundOpacity, CultureInfo.InvariantCulture.NumberFormat); ;
-            this.VSCBackground = vscBackgorund;
+            this.ForegroundOpacity = foregroundOpacity == null ? null : float.Parse(foregroundOpacity, CultureInfo.InvariantCulture.NumberFormat);
+            this.VSCBackground = vscBackground;
         }
 
         public string CategoryName { get; }
