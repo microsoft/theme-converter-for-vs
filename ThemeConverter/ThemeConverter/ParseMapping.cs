@@ -69,15 +69,24 @@ namespace ThemeConverter
                 {
                     string[] colorKey = VSToken.ToString()?.Split("&");
                     ColorKey newColorKey;
-                    if (colorKey.Length > 2)
+                    switch(colorKey.Length)
                     {
-                        newColorKey = new ColorKey(colorKey[0], colorKey[1], colorKey[2]);
+                        case 2: // category & token name (by default foreground)
+                            newColorKey = new ColorKey(colorKey[0], colorKey[1], "Foreground");
+                            break;
+                        case 3: // category & token name & aspect
+                            newColorKey = new ColorKey(colorKey[0], colorKey[1], colorKey[2]);
+                            break;
+                        case 4: // category & token name & vsc opacity & vscode background
+                            newColorKey = new ColorKey(colorKey[0], colorKey[1], "Foreground", colorKey[2], colorKey[3]);
+                            break;
+                        case 5: // category & token name & aspect & vsc opacity & vscode background
+                            newColorKey = new ColorKey(colorKey[0], colorKey[1], colorKey[2], colorKey[3], colorKey[4]);
+                            break;
+                        default:
+                            throw new Exception("Invalid mapping format");
                     }
-                    else
-                    {
-                        // if not specified, default to foreground
-                        newColorKey = new ColorKey(colorKey[0], colorKey[1], "Foreground");
-                    }
+
                     values.Add(newColorKey);
                     MappedVSTokens.Add(string.Format("{0}&{1}&{2}", newColorKey.CategoryName, newColorKey.KeyName, newColorKey.Aspect));
                 }
