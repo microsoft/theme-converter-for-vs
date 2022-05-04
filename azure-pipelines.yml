@@ -147,7 +147,7 @@ jobs:
       instanceUrlForTsaV2: DEVDIV
       projectNameDEVDIV: DevDiv
       areaPath: DevDiv\VS Core\IDE Experience\Theming
-      iterationPath: DevDiv\OneVS
+      iterationPath: DevDiv
       uploadCredScan: true
       uploadPoliCheck: true
       uploadRoslyn: true
