@@ -1,0 +1,62 @@
+{
+  "$schema": "https://aka.ms/codetour-schema",
+  "title": "How is a theme converted?",
+  "steps": [
+    {
+      "file": "ThemeConverter/ThemeConverter/Program.cs",
+      "description": "Read the user input\r\n\r\nFirst of all, we will read the user input from command line and this will determine several things:\r\n1. The source VS Code theme file(s)\r\n2. The output path for the generated pkgdef file(s) (Visual Studio stores themes in pkgdef files)\r\n3. The target Visual Studio for applying the newly converted themes (if specified)",
+      "line": 25
+    },
+    {
+      "file": "ThemeConverter/ThemeConverter/Program.cs",
+      "description": "Convert the theme!\r\n\r\nHere is where we start to convert a VSCode theme into a VS theme. Let's take a closer look next...",
+      "line": 84
+    },
+    {
+      "file": "ThemeConverter/ThemeConverter/Converter.cs",
+      "description": "Parse the VSCode theme\r\n\r\nVSCode themes are stored in jsonc files, where color tokens that are not explicitly specified by the user will be commented out. Here, we uncomment all the code and parse them into a ThemeFileContract for later usage.",
+      "line": 62
+    },
+    {
+      "file": "ThemeConverter/ThemeConverter/Converter.cs",
+      "description": "Convert the colors and Group them by VS color categories\r\n\r\nIn VSCode theme files, there are 2 different major color types: token colors (colors used for colorizing the code inside editor) and shell colors (colors used for general UI, like a menu.). While VS also differentiates these 2 broad types, in a VS theme file, you can also see that colors are grouped under a lot of different categories.\r\nLet's look at one entry in the TokenMappings.json (this is the file where majority of the mappings are stored):\r\n\r\n\"Environment&Menu&Background\"\r\n\r\nComponents are devided by the '&' in the middle, and this is what each component means:\r\n1. \"Environment\": the category\r\n2. \"Menu\": the color key name\r\n3. \"Background\": the aspect of this color token, where background means this token is used as a background of some control (menu, in this case)\r\n\r\nIn this method, we generate a Dictionary that maps from categories to different color keys.",
+      "line": 166,
+      "selection": {
+        "start": {
+          "line": 166,
+          "character": 62
+        },
+        "end": {
+          "line": 166,
+          "character": 78
+        }
+      }
+    },
+    {
+      "file": "ThemeConverter/ThemeConverter/Converter.cs",
+      "description": "Write the converted theme\r\n\r\nNow we store the converted theme in to a temp vstheme file, which is an xml file with a specific structure. A valid theme file must follow the following hierarchy:\r\n\r\nThemes > Theme > Category > Color Name > (Background, Foreground, or both)\r\n",
+      "line": 108,
+      "selection": {
+        "start": {
+          "line": 135,
+          "character": 33
+        },
+        "end": {
+          "line": 135,
+          "character": 43
+        }
+      }
+    },
+    {
+      "file": "ThemeConverter/ThemeConverter/Converter.cs",
+      "description": "Compile the vstheme file into a pkgdef\r\n\r\nAs mentioned before, VS uses pkgdefs to store themes. Here, we read the vstheme files that we just wrote and compile it into a pkgdef file.",
+      "line": 148
+    },
+    {
+      "file": "ThemeConverter/ThemeConverter/Program.cs",
+      "description": "Launch VS with the new theme!\r\n\r\nWelcome to the last stop of this tour! This is where we patch the newly converted theme into user specified target VS and launch it with the shiny new theme! \r\n\r\nCongratulations!",
+      "line": 114
+    }
+  ],
+  "ref": "dev/ketyang/codetour"
+}

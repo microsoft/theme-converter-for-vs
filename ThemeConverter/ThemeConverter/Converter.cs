@@ -119,10 +119,10 @@ namespace ThemeConverter
                     {
                         writer.WriteLine($"    <Theme Name=\"{themeName}\" GUID=\"{themeGuid:B}\" FallbackId=\"{DarkThemeId:B}\">");
                     }
-                    else
-                    {
-                        writer.WriteLine($"    <Theme Name=\"{themeName}\" GUID=\"{themeGuid:B}\" FallbackId=\"{LightThemeId:B}\">");
-                    }
+                    // else
+                    // {
+                    //     writer.WriteLine($"    <Theme Name=\"{themeName}\" GUID=\"{themeGuid:B}\" FallbackId=\"{LightThemeId:B}\">");
+                    // }
 
                     foreach (var category in colorCategories)
                     {
