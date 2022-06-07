@@ -599,7 +599,6 @@
     {
       "VSC Token": "tab.activeBorder",
       "VS Token": [
-        "Environment&FileTabDocumentBorderBackground&Background" //
       ]
     },
     {
@@ -608,6 +607,7 @@
         "Cider&TabItem&Background",
         "Cider&TabItemDisabled&Background",
         "Environment&FileTabBackground&Background",
+        "Environment&FileTabDocumentBorderBackground&Background", //
         "Environment&FileTabInactiveDocumentBorderBackground&Background",
         "Environment&FileTabInactiveGradientBottom&Background",
         "Environment&FileTabInactiveGradientTop&Background",

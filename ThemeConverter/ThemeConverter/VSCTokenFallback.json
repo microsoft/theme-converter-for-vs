@@ -18,7 +18,7 @@
   "sideBarSectionHeader.foreground": "foreground",
   "sideBarTitle.foreground": "sideBar.foreground",
   "tab.activeBorder": "tab.activeBackground",
-  "tab.activeBorderTop": "tab.activeBackground",
+  "tab.activeBorderTop": "tab.activeBorder",
   "tab.border": "tab.inactiveBackground",
   "tab.hoverBackground": "tab.inactiveBackground",
   "editor.selectionForeground": "editor.foreground",
