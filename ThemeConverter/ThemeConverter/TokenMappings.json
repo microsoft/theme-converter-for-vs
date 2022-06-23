@@ -1263,7 +1263,6 @@
     {
       "VSC Token": "sideBar.border",
       "VS Token": [
-        "Environment&ToolWindowBorder&Background",
         "ThemedDialog&WindowBorder&Background"
       ]
     },
@@ -3020,6 +3019,7 @@
         "Diagnostics&TargetBorderPressed&Background",
         "Diagnostics&ToolBorderHover&Background",
         "Environment&GridLine&Background",//test
+        "Environment&ToolWindowBorder&Background",
         "ThemedUtilityDialog&WindowBorder&Background",
         "VisualStudioInstaller&Border&Background"
       ]
