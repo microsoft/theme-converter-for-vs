@@ -59,7 +59,9 @@ jobs:
     displayName: Restore NuGet Packages
     inputs:
       command: 'restore'
-      restoreSolution: $(SolutionFile)
+      restoreSolution: '$(SolutionFile)'
+      feedsToUse: 'config'
+      nugetConfigPath: 'Nuget.config'
     
   # Build the product
   - task: MSBuild@1
