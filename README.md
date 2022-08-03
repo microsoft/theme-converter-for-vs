@@ -8,17 +8,17 @@ Our community of authors have already converted a handful of VS Code themes to w
  
  ## Prerequisites
  1. VS Code
- 2. [VS 2022 Preview 3 or later](https://visualstudio.microsoft.com/vs/preview/) for best results
- 3. The following individual components can be installed via the Visual Studio installer: .NET 5.0 Runtime, .NET Desktop development workload, and Visual Studio extension development workload.
-
-![image](https://user-images.githubusercontent.com/12738587/130517823-6703dcd0-2c53-49c4-a9e0-a79c9b539468.png)
+ 2. [Visual Studio 2022](https://visualstudio.microsoft.com/downloads/)
+ 3. The following individual workloads can be installed via the Visual Studio installer:
+    - .NET Desktop development
+    - Visual Studio extension development
 
  ## Instructions
  ### Using the tool
 1. Open command line in **Admin** mode. 
 2. Clone the repo
 3. Go to `<your_clone_path>\ThemeConverter\ThemeConverter` and build the converter project with `dotnet build ThemeConverter.csproj`. 
-4. Go to `<your_clone_path>\ThemeConverter\ThemeConverter\bin\Debug\net5.0`. 
+4. Go to `<your_clone_path>\ThemeConverter\ThemeConverter\bin\Debug\net6.0`. 
 5. Get the theme file with steps described in section [Getting a theme's json file](https://github.com/microsoft/theme-converter#getting-a-themes-json-file)
 7. Run `ThemeConverter.exe -h` to see the usage of the tool and use the tool according to your needs.
     - If you want to convert a theme and patch it to a target VS:
@@ -53,11 +53,11 @@ This section describes how you can create a VSIX with the converted theme for pu
 9. Set `Type` to `Microsoft.VisualStudio.VsPackage`, and `Source` to `File on filesystem`.
 10. Select Browse and select the .pkgdef you added. Select OK.
 11. Edit other fields in the vsixmanifest as desired (author, version, company, etc).
-12. Build solution and you now have a vsix in the output folder! Your new theme is most compatible with Visual Studio 2022 Preview 3 and up.
+12. Build solution and you now have a vsix in the output folder! Your new theme is most compatible with Visual Studio 2022.
 
 ### Removing a converted theme from VS
 1. Open target VS and switch to some theme that will not be deleted (like Blue theme).
-2. Go to `<vs_install_dir>\Common7\IDE\CommonExtensions\Platform`. e.g: `C:\Program Files\Microsoft Visual Studio\2022\Preview\Common7\IDE\CommonExtensions\Platform`
+2. Go to `<vs_install_dir>\Common7\IDE\CommonExtensions\Platform`. e.g: `C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Platform`
 and delete the pkgdef of the theme that the you want to remove (The name of the pkgdef will match the name of the theme).
 3. Open Developer Command Prompt of the target VS and run `devenv /updateConfiguration`.
 4. Launch VS again, and the themes should now be removed.
