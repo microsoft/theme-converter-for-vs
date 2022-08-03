@@ -27,7 +27,7 @@ variables:
   - name: BuildConfiguration
     value: Release
   - name: ProductBinariesFolder
-    value: '$(System.DefaultWorkingDirectory)/ThemeConverter/ThemeConverter/bin/$(BuildConfiguration)/net5.0'
+    value: '$(System.DefaultWorkingDirectory)/ThemeConverter/ThemeConverter/bin/$(BuildConfiguration)/net6.0'
   - name: VersionMajor
     value: 0
   - name: VersionMinor
