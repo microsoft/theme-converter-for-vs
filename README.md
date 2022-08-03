@@ -23,7 +23,7 @@ Our community of authors have already converted a handful of VS Code themes to w
 7. Run `ThemeConverter.exe -h` to see the usage of the tool and use the tool according to your needs.
     - If you want to convert a theme and patch it to a target VS:
       - Run `ThemeConverter.exe -i <path_to_theme_json> -t <target_vs_installation_path>`
-      - Example: `ThemeConverter.exe -i "C:\myTheme\TestTheme.json" -t "C:\Program Files\Microsoft Visual Studio\2022\Preview"`. This command will convert the TestTheme, patch the generated json to the target VS and launch the VS with the converted theme.
+      - Example: `ThemeConverter.exe -i "C:\myTheme\TestTheme.json" -t "C:\Program Files\Microsoft Visual Studio\2022\Community"`. This command will convert the TestTheme, patch the generated json to the target VS and launch the VS with the converted theme.
       - Note: the VS installation path can be found in your VS installer (the location field on the modify page).
       - Now you can see the your converted theme under `Tools -> Themes`! Enjoy!
 
