@@ -9,7 +9,7 @@ Our community of authors have already converted a handful of VS Code themes to w
  ## Prerequisites
  1. VS Code
  2. [Visual Studio 2022](https://visualstudio.microsoft.com/downloads/)
- 3. The following individual workloads can be installed via the Visual Studio installer:
+ 3. The following workloads can be installed via the Visual Studio installer:
     - .NET Desktop development
     - Visual Studio extension development
 
