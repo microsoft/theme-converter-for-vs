@@ -168,6 +168,11 @@ jobs:
       archiveFile: '$(Build.StagingDirectory)/ThemeConverter-$(VersionMajor).$(VersionMinor).$(Build.BuildNumber).zip' 
       replaceExistingArchive: true
 
+  - task: AzureArtifacts.manifest-generator-task.manifest-generator-task.ManifestGeneratorTask@0
+    displayName: 'Generation Task'
+    inputs:
+        BuildDropPath: '$(Build.StagingDirectory)'
+
   # Publish staging artifacts
   - task: PublishBuildArtifacts@1
     displayName: Publish Staging Directory
