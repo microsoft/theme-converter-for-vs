@@ -67,7 +67,7 @@ namespace ThemeConverter
                 List<ColorKey> values = new List<ColorKey>();
                 foreach (var VSToken in VSTokens)
                 {
-                    string[] colorKey = VSToken.ToString()?.Split("&");
+                    string[] colorKey = VSToken.ToString()?.Split('&');
                     ColorKey newColorKey;
                     switch(colorKey.Length)
                     {
