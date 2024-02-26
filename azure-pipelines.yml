@@ -9,24 +9,16 @@ pr:
     - main
   drafts: false
 variables:
-- name: SolutionFile
-  value: ThemeConverter/ThemeConverter.sln
-- name: Platform
-  value: Any CPU
-- name: BuildConfiguration
-  value: Release
-- name: ProductBinariesFolder
-  value: '$(System.DefaultWorkingDirectory)/ThemeConverter/ThemeConverter/bin/$(BuildConfiguration)/net6.0'
-- name: VersionMajor
-  value: 0
-- name: VersionMinor
-  value: 1
-- name: AssemblyVersion
-  value: $(VersionMajor).$(VersionMinor).0.0
-- name: ProductVersion
-  value: $(VersionMajor).$(VersionMinor).$(Build.BuildNumber)
-- name: SignType
-  value: Test
+  TeamName: VS Core - IDE Experience
+  SolutionFile: ThemeConverter/ThemeConverter.sln
+  Platform: Any CPU
+  BuildConfiguration: Release
+  ProductBinariesFolder: '$(System.DefaultWorkingDirectory)/ThemeConverter/ThemeConverter/bin/$(BuildConfiguration)/net6.0'
+  VersionMajor: 0
+  VersionMinor: 1
+  AssemblyVersion: $(VersionMajor).$(VersionMinor).0.0
+  ProductVersion: $(VersionMajor).$(VersionMinor).$(Build.BuildNumber)
+  SignType: Test
 resources:
   repositories:
   - repository: MicroBuildTemplate
@@ -47,7 +39,7 @@ extends:
     customBuildTags:
     - ES365AIMigrationTooling
     stages:
-    - stage: stage
+    - stage: Build
       jobs:
       - job: Build_And_Compliance
         displayName: Build and Compliance
@@ -77,14 +69,6 @@ extends:
             configuration: $(BuildConfiguration)
             msbuildArguments: /Property:Version=$(ProductVersion) /Property:FileVersion=$(ProductVersion) /Property:AssemblyVersion=$(AssemblyVersion) /Property:SignType=$(SignType)
           continueOnError: false
-        - task: ComponentGovernanceComponentDetection@0
-          displayName: Run Component Detection
-          inputs:
-            scanType: 'Register'
-            verbosity: 'Verbose'
-            alertWarningLevel: 'High'
-          condition: succeededOrFailed()
-          continueOnError: True
         - task: RoslynAnalyzers@2
           displayName: Run Roslyn Analyzers. {Required and Recommended}
           inputs:
@@ -98,31 +82,6 @@ extends:
             command: 'test'
             projects: '**/ThemeConverterTests.csproj'
             arguments: '--configuration Release'
-        - task: AntiMalware@4
-          displayName: Run Anti-Malware Scan
-          inputs:
-            InputType: 'Basic'
-            ScanType: 'CustomScan'
-            FileDirPath: '$(Build.StagingDirectory)'
-            EnableServices: true
-            TreatSignatureUpdateFailureAs: 'Warning'
-            SignatureFreshness: 'UpToDate'
-            TreatStaleSignatureAs: 'Error'
-          condition: succeededOrFailed()
-          continueOnError: True
-        - task: CredScan@2
-          displayName: Run CredScan
-          inputs:
-            toolMajorVersion: V2
-          condition: succeededOrFailed()
-          continueOnError: True
-        - task: PoliCheck@1
-          displayName: Run PoliCheck
-          inputs:
-            importEx: 0
-            optionsFC: 1
-          condition: succeededOrFailed()
-          continueOnError: True
         - task: TSAUpload@1
           displayName: TSA Upload
           inputs:
