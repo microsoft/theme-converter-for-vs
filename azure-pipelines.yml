@@ -20,7 +20,7 @@ variables:
   ProductVersion: $(VersionMajor).$(VersionMinor).$(Build.BuildNumber)
   SignType: Test
   CodeQL.Enabled: true
-  Codeql.TSAEnabled: true
+  Codeql.TSAEnabled: false
   Codeql.TSAOptionsPath: $(Build.SourcesDirectory)/.config/tsaoptions.json
 resources:
   repositories:
@@ -35,7 +35,7 @@ extends:
       policheck:
         enabled: true
       tsa:
-        enabled: true
+        enabled: false
     pool:
       name: VSEngSS-MicroBuild2022-1ES
       demands:
