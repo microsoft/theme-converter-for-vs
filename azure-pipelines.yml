@@ -96,4 +96,5 @@ extends:
           inputs:
             GdnPublishTsaOnboard: True
             GdnPublishTsaConfigFile: '$(Build.SourcesDirectory)/.config/tsaoptions.json'
+          condition: false
         
