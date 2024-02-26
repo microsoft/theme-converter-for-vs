@@ -35,7 +35,7 @@ extends:
       policheck:
         enabled: true
       tsa:
-        enabled: true
+        enabled: false
     pool:
       name: VSEngSS-MicroBuild2022-1ES
       demands:
@@ -91,6 +91,10 @@ extends:
             archiveType: 'zip'
             archiveFile: '$(Build.StagingDirectory)/ThemeConverter-$(VersionMajor).$(VersionMinor).$(Build.BuildNumber).zip'
             replaceExistingArchive: true
+        - task: ManifestGeneratorTask@0
+          displayName: 'Generation Task'
+          inputs:
+            BuildDropPath: '$(Build.StagingDirectory)'
         - task: TSAUpload@2
           displayName: 'TSA upload to Codebase (Theme Converter for VS)'
           inputs:
