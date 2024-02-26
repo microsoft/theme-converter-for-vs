@@ -19,6 +19,9 @@ variables:
   AssemblyVersion: $(VersionMajor).$(VersionMinor).0.0
   ProductVersion: $(VersionMajor).$(VersionMinor).$(Build.BuildNumber)
   SignType: Test
+  CodeQL.Enabled: true
+  Codeql.TSAEnabled: true
+  Codeql.TSAOptionsPath: $(Build.SourcesDirectory)/.config/tsaoptions.json
 resources:
   repositories:
   - repository: MicroBuildTemplate
@@ -30,6 +33,8 @@ extends:
   parameters:
     sdl:
       policheck:
+        enabled: true
+      tsa:
         enabled: true
     pool:
       name: VSEngSS-MicroBuild2022-1ES
@@ -47,7 +52,6 @@ extends:
           mb:
             signing:
               enabled: true
-              feedSource: 'https://devdiv.pkgs.visualstudio.com/DefaultCollection/_packaging/MicroBuildToolset/nuget/v3/index.json'
               signType: $(SignType)
           outputs:
           - output: pipelineArtifact
@@ -69,41 +73,12 @@ extends:
             configuration: $(BuildConfiguration)
             msbuildArguments: /Property:Version=$(ProductVersion) /Property:FileVersion=$(ProductVersion) /Property:AssemblyVersion=$(AssemblyVersion) /Property:SignType=$(SignType)
           continueOnError: false
-        - task: RoslynAnalyzers@2
-          displayName: Run Roslyn Analyzers. {Required and Recommended}
-          inputs:
-            internalAnalyzersVersion: Latest
-            microsoftAnalyzersVersion: Latest
-          condition: succeededOrFailed()
-          continueOnError: True
         - task: DotNetCoreCLI@2
           displayName: Run Tests
           inputs:
             command: 'test'
             projects: '**/ThemeConverterTests.csproj'
             arguments: '--configuration Release'
-        - task: TSAUpload@1
-          displayName: TSA Upload
-          inputs:
-            tsaVersion: TsaV2
-            codebase: NewOrUpdate
-            codeBaseName: Theme Converter for VS
-            notificationAlias: vspersonalization@microsoft.com
-            codeBaseAdmins: redmond\ketyang;redmond\huvalo;redmond\jekelly;redmond\naesteve
-            instanceUrlForTsaV2: DEVDIV
-            projectNameDEVDIV: DevDiv
-            areaPath: DevDiv\VS Core\IDE Experience\Theming
-            iterationPath: DevDiv
-            uploadCredScan: true
-            uploadPoliCheck: true
-            uploadRoslyn: true
-            uploadAPIScan: false
-            uploadBinSkim: false
-            uploadFortifySCA: false
-            uploadFxCop: false
-            uploadModernCop: false
-            uploadPREfast: false
-            uploadTSLint: false
         - task: ArchiveFiles@2
           displayName: Archive Binaries
           inputs:
