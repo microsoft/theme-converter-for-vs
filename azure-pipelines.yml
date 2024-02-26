@@ -35,7 +35,7 @@ extends:
       policheck:
         enabled: true
       tsa:
-        enabled: false
+        enabled: true
     pool:
       name: VSEngSS-MicroBuild2022-1ES
       demands:

@@ -6,8 +6,11 @@
     "tsaEnvironment": "PROD",
     "areaPath": "DevDiv\\VS Core\\IDE Experience\\Theming",
     "instanceUrl": "https://devdiv.visualstudio.com/",
+    "instanceUrlDevDiv": "DEVDIV",
+    "instanceUrlForTsaV2": "DEVDIV",
     "projectName": "DevDiv",
-    "iterationPath": "DevDiv\\Future Backlog",
+    "projectNameDEVDIV": "DEVDIV",
+    "iterationPath": "DevDiv",
     "allTools": true,
     "notificationAliases":  [
         "vspersonalization@microsoft.com"
