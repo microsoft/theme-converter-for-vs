@@ -11,7 +11,11 @@
     "projectName": "DevDiv",
     "projectNameDEVDIV": "DEVDIV",
     "iterationPath": "DevDiv",
-    "allTools": true,
+    "tools": [
+        "CredScan",
+        "PoliCheck",
+        "Roslyn"
+    ],
     "notificationAliases":  [
         "vspersonalization@microsoft.com"
     ],
