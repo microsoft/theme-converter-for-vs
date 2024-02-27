@@ -1,0 +1,28 @@
+{
+    "tsaVersion": "TsaV2",
+    "codebase": "NewOrUpdate",
+    "codebaseName": "Theme Converter for VS",
+    "tsaStamp": "DevDiv",
+    "tsaEnvironment": "PROD",
+    "areaPath": "DevDiv\\VS Core\\IDE Experience\\Theming",
+    "instanceUrl": "https://devdiv.visualstudio.com/",
+    "instanceUrlDevDiv": "DEVDIV",
+    "instanceUrlForTsaV2": "DEVDIV",
+    "projectName": "DevDiv",
+    "projectNameDEVDIV": "DEVDIV",
+    "iterationPath": "DevDiv",
+    "tools": [
+        "CredScan",
+        "PoliCheck",
+        "Roslyn"
+    ],
+    "notificationAliases":  [
+        "vspersonalization@microsoft.com"
+    ],
+    "codebaseAdmins": [
+        "REDMOND\\jekelly",
+        "REDMOND\\naesteve",
+        "REDMOND\\chawill"
+    ],
+    "repositoryName": "microsoft/theme-converter-for-vs"
+}

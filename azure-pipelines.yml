@@ -1,188 +1,104 @@
-# build number format
 name: $(date:yy)$(DayOfYear)$(rev:.r)
-
 trigger:
   branches:
     include:
-      - main
-
+    - main
 pr:
   branches:
     include:
-      - main
+    - main
   drafts: false
-
-# The agent pool the build will run on
-pool:
-  name: VSEngSS-MicroBuild2022-1ES
-  demands: 
-  - msbuild
-  - VisualStudio_17.0
-
 variables:
-  - name: SolutionFile
-    value: ThemeConverter/ThemeConverter.sln
-  - name: Platform
-    value: Any CPU
-  - name: BuildConfiguration
-    value: Release
-  - name: ProductBinariesFolder
-    value: '$(System.DefaultWorkingDirectory)/ThemeConverter/ThemeConverter/bin/$(BuildConfiguration)/net6.0'
-  - name: VersionMajor
-    value: 0
-  - name: VersionMinor
-    value: 1
-  - name: AssemblyVersion
-    value: $(VersionMajor).$(VersionMinor).0.0
-  - name: ProductVersion
-    value: $(VersionMajor).$(VersionMinor).$(Build.BuildNumber)
-    
-jobs:
-- job: Build_And_Compliance
-  displayName: Build and Compliance
-
-  steps:
-
-  # Check out code clean from source control
-  - checkout: self
-    clean: true
-
-  - task: MicroBuildSigningPlugin@3
-    displayName: Install Signing Plugin
-    inputs:
-      signType: $(SignType)
-      feedSource: 'https://devdiv.pkgs.visualstudio.com/DefaultCollection/_packaging/MicroBuildToolset/nuget/v3/index.json'
-    env:
-      TeamName: $(_TeamName)
-
-  - task: NuGetCommand@2
-    displayName: Restore NuGet Packages
-    inputs:
-      command: 'restore'
-      restoreSolution: $(SolutionFile)
-    
-  # Build the product
-  - task: MSBuild@1
-    displayName: Build Product
-    inputs:
-      solution: $(SolutionFile)
-      platform: $(Platform)
-      configuration: $(BuildConfiguration)
-      msbuildArguments: /Property:Version=$(ProductVersion) /Property:FileVersion=$(ProductVersion) /Property:AssemblyVersion=$(AssemblyVersion) /Property:SignType=$(SignType)
-    continueOnError: false    
-      
-  # Run component governance detection
-  # See http://aka.ms/cgdocs for more info
-  - task: ComponentGovernanceComponentDetection@0
-    displayName: Run Component Detection
-    inputs:
-      scanType: 'Register'
-      verbosity: 'Verbose'
-      alertWarningLevel: 'High'
-    condition: succeededOrFailed()
-    continueOnError: True
-
-  # Analyze managed C#/VB code (.NET framework and .NET Core) for security vulnerabilities
-  # See https://www.1eswiki.com/wiki/Roslyn_Analyzers_Build_Task for more info
-  - task: RoslynAnalyzers@2
-    displayName: Run Roslyn Analyzers. {Required and Recommended}
-    inputs:
-      internalAnalyzersVersion: Latest
-      microsoftAnalyzersVersion: Latest
-    condition: succeededOrFailed()
-    continueOnError: True
-
-  # Run tests
-  - task: DotNetCoreCLI@2
-    displayName: Run Tests
-    inputs:
-      command: 'test'
-      projects: '**/ThemeConverterTests.csproj'
-      arguments: '--configuration Release'
-
-  # Anti-Malware Scan of build sources and/or artifacts
-  # See https://www.1eswiki.com/wiki/AntiMalware_Scan_Build_Task for more info
-  - task: AntiMalware@4
-    displayName: Run Anti-Malware Scan
-    inputs:
-      InputType: 'Basic'
-      ScanType: 'CustomScan'
-      FileDirPath: '$(Build.StagingDirectory)'
-      EnableServices: true
-      TreatSignatureUpdateFailureAs: 'Warning'
-      SignatureFreshness: 'UpToDate'
-      TreatStaleSignatureAs: 'Error'
-    condition: succeededOrFailed()
-    continueOnError: True
-    
-  # Analyze source and build output text files for credentials
-  # See https://www.1eswiki.com/wiki/CredScan_Azure_DevOps_Build_Task for more info
-  - task: CredScan@2
-    displayName: Run CredScan
-    inputs:
-      toolMajorVersion: V2
-    condition: succeededOrFailed()
-    continueOnError: True
-    
-  # Scan text elements including code, code comments, and content/web pages, for sensitive terms based on legal, cultural, or geopolitical reasons
-  # See https://www.1eswiki.com/wiki/PoliCheck_Build_Task for more info
-  - task: PoliCheck@1
-    displayName: Run PoliCheck
-    inputs:
-      importEx: 0
-      optionsFC: 1
-    condition: succeededOrFailed()
-    continueOnError: True
-
-  # Upload results to TSA
-  # See https://www.1eswiki.com/wiki/TSAUpload_VSTS_Build_Task for more info
-  - task: TSAUpload@1
-    displayName: TSA Upload
-    inputs:
-      tsaVersion: TsaV2
-      codebase: NewOrUpdate
-      codeBaseName: Theme Converter for VS
-      notificationAlias: vspersonalization@microsoft.com
-      codeBaseAdmins: redmond\ketyang;redmond\huvalo;redmond\jekelly;redmond\naesteve
-      instanceUrlForTsaV2: DEVDIV
-      projectNameDEVDIV: DevDiv
-      areaPath: DevDiv\VS Core\IDE Experience\Theming
-      iterationPath: DevDiv
-      uploadCredScan: true
-      uploadPoliCheck: true
-      uploadRoslyn: true
-      uploadAPIScan: false
-      uploadBinSkim: false
-      uploadFortifySCA: false
-      uploadFxCop: false
-      uploadModernCop: false
-      uploadPREfast: false
-      uploadTSLint: false
-
-  - task: ArchiveFiles@2
-    displayName: Archive Binaries
-    inputs:
-      rootFolderOrFile: '$(ProductBinariesFolder)'
-      includeRootFolder: true
-      archiveType: 'zip'
-      archiveFile: '$(Build.StagingDirectory)/ThemeConverter-$(VersionMajor).$(VersionMinor).$(Build.BuildNumber).zip' 
-      replaceExistingArchive: true
-
-  - task: AzureArtifacts.manifest-generator-task.manifest-generator-task.ManifestGeneratorTask@0
-    displayName: 'Generation Task'
-    inputs:
-        BuildDropPath: '$(Build.StagingDirectory)'
-
-  # Publish staging artifacts
-  - task: PublishBuildArtifacts@1
-    displayName: Publish Staging Directory
-    inputs:
-      PathtoPublish: $(Build.StagingDirectory)
-  
-
-  - task: MicroBuildCleanup@1
-    displayName: Build Cleanup
-    condition: succeededOrFailed()
-    env:
-      TeamName: $(_TeamName)
-
+  TeamName: VS Core - IDE Experience
+  SolutionFile: ThemeConverter/ThemeConverter.sln
+  Platform: Any CPU
+  BuildConfiguration: Release
+  ProductBinariesFolder: '$(System.DefaultWorkingDirectory)/ThemeConverter/ThemeConverter/bin/$(BuildConfiguration)/net6.0'
+  VersionMajor: 0
+  VersionMinor: 1
+  AssemblyVersion: $(VersionMajor).$(VersionMinor).0.0
+  ProductVersion: $(VersionMajor).$(VersionMinor).$(Build.BuildNumber)
+  SignType: Test
+  CodeQL.Enabled: true
+  Codeql.TSAEnabled: false
+  Codeql.TSAOptionsPath: $(Build.SourcesDirectory)/.config/tsaoptions.json
+resources:
+  repositories:
+  - repository: MicroBuildTemplate
+    type: git
+    name: 1ESPipelineTemplates/MicroBuildTemplate
+    ref: refs/tags/release
+extends:
+  template: azure-pipelines/MicroBuild.1ES.Official.yml@MicroBuildTemplate
+  parameters:
+    sdl:
+      policheck:
+        enabled: true
+      tsa:
+        enabled: false
+    pool:
+      name: VSEngSS-MicroBuild2022-1ES
+      demands:
+      - msbuild
+      - VisualStudio_17.0
+    customBuildTags:
+    - ES365AIMigrationTooling
+    stages:
+    - stage: Build
+      jobs:
+      - job: Build_And_Compliance
+        displayName: Build and Compliance
+        templateContext:
+          mb:
+            signing:
+              enabled: true
+              signType: $(SignType)
+              feedSource: 'https://pkgs.dev.azure.com/devdiv/_packaging/MicroBuildToolset/nuget/v3/index.json'
+            sbom:
+              enabled: true
+              feedSource: 'https://pkgs.dev.azure.com/devdiv/_packaging/MicroBuildToolset/nuget/v3/index.json'
+          outputs:
+          - output: pipelineArtifact
+            displayName: 'Publish Staging Directory'
+            targetPath: $(Build.StagingDirectory)
+        steps:
+        - checkout: self
+          clean: true
+        - task: NuGetCommand@2
+          displayName: Restore NuGet Packages
+          inputs:
+            command: 'restore'
+            restoreSolution: $(SolutionFile)
+        - task: MSBuild@1
+          displayName: Build Product
+          inputs:
+            solution: $(SolutionFile)
+            platform: $(Platform)
+            configuration: $(BuildConfiguration)
+            msbuildArguments: /Property:Version=$(ProductVersion) /Property:FileVersion=$(ProductVersion) /Property:AssemblyVersion=$(AssemblyVersion) /Property:SignType=$(SignType)
+          continueOnError: false
+        - task: DotNetCoreCLI@2
+          displayName: Run Tests
+          inputs:
+            command: 'test'
+            projects: '**/ThemeConverterTests.csproj'
+            arguments: '--configuration Release'
+        - task: ArchiveFiles@2
+          displayName: Archive Binaries
+          inputs:
+            rootFolderOrFile: '$(ProductBinariesFolder)'
+            includeRootFolder: true
+            archiveType: 'zip'
+            archiveFile: '$(Build.StagingDirectory)/ThemeConverter-$(VersionMajor).$(VersionMinor).$(Build.BuildNumber).zip'
+            replaceExistingArchive: true
+        - task: ManifestGeneratorTask@0
+          displayName: 'Generation Task'
+          inputs:
+            BuildDropPath: '$(Build.StagingDirectory)'
+        - task: TSAUpload@2
+          displayName: 'TSA upload to Codebase (Theme Converter for VS)'
+          inputs:
+            GdnPublishTsaOnboard: True
+            GdnPublishTsaConfigFile: '$(Build.SourcesDirectory)/.config/tsaoptions.json'
+          condition: false
+        
