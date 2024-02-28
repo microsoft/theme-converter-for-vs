@@ -18,10 +18,10 @@ namespace ThemeConverter
         private static Guid DarkThemeId = new Guid("{1ded0138-47ce-435e-84ef-9ec1f439b749}");
         private static Guid LightThemeId = new Guid("{de3dbbcd-f642-433c-8353-8f1df4370aba}");
 
-        private static Lazy<Dictionary<string, ColorKey[]>> ScopeMappings = new Lazy<Dictionary<string, ColorKey[]>>(ParseMapping.CreateScopeMapping());
-        private static Lazy<Dictionary<string, string>> CategoryGuids = new Lazy<Dictionary<string, string>>(ParseMapping.CreateCategoryGuids());
-        private static Lazy<Dictionary<string, string>> VSCTokenFallback = new Lazy<Dictionary<string, string>>(ParseMapping.CreateVSCTokenFallback());
-        private static Lazy<Dictionary<string, (float, string)>> OverlayMappings = new Lazy<Dictionary<string, (float, string)>>(ParseMapping.CreateOverlayMapping());
+        private static Lazy<Dictionary<string, ColorKey[]>> ScopeMappings = new Lazy<Dictionary<string, ColorKey[]>>(() => { return ParseMapping.CreateScopeMapping(); });
+        private static Lazy<Dictionary<string, string>> CategoryGuids = new Lazy<Dictionary<string, string>>(() => { return ParseMapping.CreateCategoryGuids(); });
+        private static Lazy<Dictionary<string, string>> VSCTokenFallback = new Lazy<Dictionary<string, string>>(() => { return ParseMapping.CreateVSCTokenFallback(); });
+        private static Lazy<Dictionary<string, (float, string)>> OverlayMappings = new Lazy<Dictionary<string, (float, string)>>(() => { return ParseMapping.CreateOverlayMapping(); });
 
         /// <summary>
         /// Convert the theme file and patch the pkgdef to the target VS if specified.
@@ -45,7 +45,7 @@ namespace ThemeConverter
                 {
                     lines[i] = lines[i].Remove(lines[i].IndexOf("//"), 2);
 
-                    if (!lines[i - 1].EndsWith(',') && !lines[i - 1].EndsWith('{'))
+                    if (!lines[i - 1].EndsWith(",") && !lines[i - 1].EndsWith("{"))
                     {
                         lines[i - 1] = lines[i - 1] + ",";
                     }
@@ -314,14 +314,29 @@ namespace ThemeConverter
             float G = (overlayA / VSOpacity) * overlayG + (1 - overlayA / VSOpacity) * baseA * baseG;
             float B = (overlayA / VSOpacity) * overlayB + (1 - overlayA / VSOpacity) * baseA * baseB;
 
-            R = Math.Clamp(R, 0, 255);
-            G = Math.Clamp(G, 0, 255);
-            B = Math.Clamp(B, 0, 255);
+            R = Clamp(R, 0, 255);
+            G = Clamp(G, 0, 255);
+            B = Clamp(B, 0, 255);
 
             return $"{(int)R:X2}{(int)G:X2}{(int)B:X2}FF";
         }
 
-        private static void AssignEditorColors(ColorKey[] colorKeys,
+    public static float Clamp(float value, float min, float max) {
+      if (min > max) {
+        throw new ArgumentException($"min ('{min}') is greater than max ('{max}')");
+      }
+
+      if (value < min) {
+        return min;
+      }
+      else if (value > max) {
+        return max;
+      }
+
+      return value;
+    }
+
+    private static void AssignEditorColors(ColorKey[] colorKeys,
                                         string scope,
                                         RuleContract ruleContract,
                                         ref Dictionary<string, Dictionary<string, SettingsContract>> colorCategories,

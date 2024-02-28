@@ -1,0 +1,194 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\..\..\packages\Microsoft.VisualStudioEng.MicroBuild.Core.1.0.0\build\Microsoft.VisualStudioEng.MicroBuild.Core.props" Condition="Exists('..\..\..\packages\Microsoft.VisualStudioEng.MicroBuild.Core.1.0.0\build\Microsoft.VisualStudioEng.MicroBuild.Core.props')" />
+  <Import Project="..\..\..\packages\Costura.Fody.4.1.0\build\Costura.Fody.props" Condition="Exists('..\..\..\packages\Costura.Fody.4.1.0\build\Costura.Fody.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{446273D4-20A1-4DE6-BC5E-3CB2DCA36D81}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>ThemeConverter</RootNamespace>
+    <AssemblyName>ThemeConverterP</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>false</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <Nullable>enable</Nullable>
+    <LangVersion>9.0</LangVersion>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Costura, Version=4.1.0.0, Culture=neutral, PublicKeyToken=9919ef960d84173d, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\Costura.Fody.4.1.0\lib\net40\Costura.dll</HintPath>
+    </Reference>
+    <Reference Include="Mono.Options, Version=6.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\Mono.Options.6.12.0.148\lib\net40\Mono.Options.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\Newtonsoft.Json.13.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.CodeDom, Version=8.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\System.CodeDom.8.0.0\lib\net462\System.CodeDom.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\ThemeConverter\ColorCompiler\CategoryCollectionRecord.cs">
+      <Link>ColorCompiler\CategoryCollectionRecord.cs</Link>
+    </Compile>
+    <Compile Include="..\ThemeConverter\ColorCompiler\CategoryRecord.cs">
+      <Link>ColorCompiler\CategoryRecord.cs</Link>
+    </Compile>
+    <Compile Include="..\ThemeConverter\ColorCompiler\CategoryThemeKey.cs">
+      <Link>ColorCompiler\CategoryThemeKey.cs</Link>
+    </Compile>
+    <Compile Include="..\ThemeConverter\ColorCompiler\ColorCategory.cs">
+      <Link>ColorCompiler\ColorCategory.cs</Link>
+    </Compile>
+    <Compile Include="..\ThemeConverter\ColorCompiler\ColorEntry.cs">
+      <Link>ColorCompiler\ColorEntry.cs</Link>
+    </Compile>
+    <Compile Include="..\ThemeConverter\ColorCompiler\ColorManager.cs">
+      <Link>ColorCompiler\ColorManager.cs</Link>
+    </Compile>
+    <Compile Include="..\ThemeConverter\ColorCompiler\ColorName.cs">
+      <Link>ColorCompiler\ColorName.cs</Link>
+    </Compile>
+    <Compile Include="..\ThemeConverter\ColorCompiler\ColorRecord.cs">
+      <Link>ColorCompiler\ColorRecord.cs</Link>
+    </Compile>
+    <Compile Include="..\ThemeConverter\ColorCompiler\ColorRow.cs">
+      <Link>ColorCompiler\ColorRow.cs</Link>
+    </Compile>
+    <Compile Include="..\ThemeConverter\ColorCompiler\ColorTheme.cs">
+      <Link>ColorCompiler\ColorTheme.cs</Link>
+    </Compile>
+    <Compile Include="..\ThemeConverter\ColorCompiler\FileWriter.cs">
+      <Link>ColorCompiler\FileWriter.cs</Link>
+    </Compile>
+    <Compile Include="..\ThemeConverter\ColorCompiler\OwnershipCollection.cs">
+      <Link>ColorCompiler\OwnershipCollection.cs</Link>
+    </Compile>
+    <Compile Include="..\ThemeConverter\ColorCompiler\PkgDefConstants.cs">
+      <Link>ColorCompiler\PkgDefConstants.cs</Link>
+    </Compile>
+    <Compile Include="..\ThemeConverter\ColorCompiler\PkgDefFileWriter.cs">
+      <Link>ColorCompiler\PkgDefFileWriter.cs</Link>
+    </Compile>
+    <Compile Include="..\ThemeConverter\ColorCompiler\PkgDefItem.cs">
+      <Link>ColorCompiler\PkgDefItem.cs</Link>
+    </Compile>
+    <Compile Include="..\ThemeConverter\ColorCompiler\PkgDefValueType.cs">
+      <Link>ColorCompiler\PkgDefValueType.cs</Link>
+    </Compile>
+    <Compile Include="..\ThemeConverter\ColorCompiler\PkgDefWriter.cs">
+      <Link>ColorCompiler\PkgDefWriter.cs</Link>
+    </Compile>
+    <Compile Include="..\ThemeConverter\ColorCompiler\VersionedBinaryWriter.cs">
+      <Link>ColorCompiler\VersionedBinaryWriter.cs</Link>
+    </Compile>
+    <Compile Include="..\ThemeConverter\ColorCompiler\XmlFileReader.cs">
+      <Link>ColorCompiler\XmlFileReader.cs</Link>
+    </Compile>
+    <Compile Include="..\ThemeConverter\ColorCompiler\XmlFileWriter.cs">
+      <Link>ColorCompiler\XmlFileWriter.cs</Link>
+    </Compile>
+    <Compile Include="..\ThemeConverter\ColorCompiler\__VSCOLORTYPE.cs">
+      <Link>ColorCompiler\__VSCOLORTYPE.cs</Link>
+    </Compile>
+    <Compile Include="..\ThemeConverter\Converter.cs">
+      <Link>Converter.cs</Link>
+    </Compile>
+    <Compile Include="..\ThemeConverter\JSON\RuleContract.cs">
+      <Link>JSON\RuleContract.cs</Link>
+    </Compile>
+    <Compile Include="..\ThemeConverter\JSON\SettingsContract.cs">
+      <Link>JSON\SettingsContract.cs</Link>
+    </Compile>
+    <Compile Include="..\ThemeConverter\JSON\ThemeContract.cs">
+      <Link>JSON\ThemeContract.cs</Link>
+    </Compile>
+    <Compile Include="..\ThemeConverter\ParseMapping.cs">
+      <Link>ParseMapping.cs</Link>
+    </Compile>
+    <Compile Include="..\ThemeConverter\Program.cs">
+      <Link>Program.cs</Link>
+    </Compile>
+    <Compile Include="..\ThemeConverter\Resources.Designer.cs">
+      <Link>Resources.Designer.cs</Link>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\ThemeConverter\CategoryGuid.json">
+      <Link>CategoryGuid.json</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="..\ThemeConverter\OverlayMapping.json">
+      <Link>OverlayMapping.json</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="..\ThemeConverter\TokenMappings.json">
+      <Link>TokenMappings.json</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="..\ThemeConverter\VSCTokenFallback.json">
+      <Link>VSCTokenFallback.json</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="..\ThemeConverter\VSTokens.json">
+      <Link>VSTokens.json</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="..\ThemeConverter\Resources.resx">
+      <Link>Resources.resx</Link>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="..\..\..\packages\Fody.6.8.0\build\Fody.targets" Condition="Exists('..\..\..\packages\Fody.6.8.0\build\Fody.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\..\..\packages\Fody.6.8.0\build\Fody.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\..\..\packages\Fody.6.8.0\build\Fody.targets'))" />
+    <Error Condition="!Exists('..\..\..\packages\Costura.Fody.4.1.0\build\Costura.Fody.props')" Text="$([System.String]::Format('$(ErrorText)', '..\..\..\packages\Costura.Fody.4.1.0\build\Costura.Fody.props'))" />
+    <Error Condition="!Exists('..\..\..\packages\Microsoft.VisualStudioEng.MicroBuild.Core.1.0.0\build\Microsoft.VisualStudioEng.MicroBuild.Core.props')" Text="$([System.String]::Format('$(ErrorText)', '..\..\..\packages\Microsoft.VisualStudioEng.MicroBuild.Core.1.0.0\build\Microsoft.VisualStudioEng.MicroBuild.Core.props'))" />
+    <Error Condition="!Exists('..\..\..\packages\Microsoft.VisualStudioEng.MicroBuild.Core.1.0.0\build\Microsoft.VisualStudioEng.MicroBuild.Core.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\..\..\packages\Microsoft.VisualStudioEng.MicroBuild.Core.1.0.0\build\Microsoft.VisualStudioEng.MicroBuild.Core.targets'))" />
+  </Target>
+  <Import Project="..\..\..\packages\Microsoft.VisualStudioEng.MicroBuild.Core.1.0.0\build\Microsoft.VisualStudioEng.MicroBuild.Core.targets" Condition="Exists('..\..\..\packages\Microsoft.VisualStudioEng.MicroBuild.Core.1.0.0\build\Microsoft.VisualStudioEng.MicroBuild.Core.targets')" />
+</Project>
